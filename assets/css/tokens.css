@@ -1,18 +1,18 @@
 :root {
-  --bg-cream: #efede8;
-  --bg-sand: #cdc7be;
-  --olive: #26381f;
-  --rust: #8f4327;
-  --charcoal: #11151b;
-  --ink: #191d23;
-  --mist: #f7f5f2;
-  --line: rgba(17, 21, 27, 0.16);
-  --line-strong: rgba(17, 21, 27, 0.26);
+  --bg-cream: #d6d3ce;
+  --bg-sand: #c7c2b8;
+  --olive: #2a3919;
+  --rust: #855840;
+  --charcoal: #16181a;
+  --ink: #1f2228;
+  --mist: #f4f2ee;
+  --line: rgba(22, 24, 26, 0.17);
+  --line-strong: rgba(22, 24, 26, 0.3);
 
   --shadow-soft: 0 12px 40px rgba(17, 21, 27, 0.12);
   --shadow-card: 0 14px 40px rgba(17, 21, 27, 0.1);
 
-  --font-display: "Fraunces", "Iowan Old Style", "Book Antiqua", serif;
+  --font-display: "Bodoni Moda", "Baskerville", "Times New Roman", serif;
   --font-body: "Work Sans", "Avenir Next", "Segoe UI", sans-serif;
 
   --step--1: clamp(0.86rem, 0.82rem + 0.2vw, 0.95rem);

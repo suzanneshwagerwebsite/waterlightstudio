@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Waterlight Studio | Coastal Editorial Imagery</title>
+    <title>Waterlight Studio | Handmade Ceramics</title>
     <meta
       name="description"
-      content="Waterlight Studio creates editorial coastal imagery with an earthy visual language for brands, campaigns, and destination stories."
+      content="Waterlight Studio creates handmade ceramics for everyday rituals, with earthy forms, small-batch collections, and journal-inspired storytelling."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Work+Sans:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&family=Work+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/css/tokens.css" />
@@ -20,21 +20,15 @@
     <link rel="stylesheet" href="/assets/css/components.css" />
     <link rel="stylesheet" href="/assets/css/pages.css" />
   </head>
-  <body>
+  <body class="home-template">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
-      <div class="texture-blur texture-blur--olive" aria-hidden="true"></div>
-      <div class="texture-blur texture-blur--rust" aria-hidden="true"></div>
-
-      <header class="site-header">
-        <div class="site-header__inner">
-          <a class="brand" href="/">
-            <strong>Waterlight Studio</strong>
-            <span>Editorial Image House</span>
-          </a>
+      <header class="site-header home-header">
+        <div class="container-wide home-header__top">
+          <a class="home-header__icon" href="#" aria-label="Waterlight Studio on Instagram">Instagram</a>
 
           <button
-            class="menu-toggle"
+            class="menu-toggle home-menu-toggle"
             type="button"
             data-menu-toggle
             aria-expanded="false"
@@ -46,184 +40,189 @@
             </svg>
           </button>
 
-          <nav id="primary-nav" class="site-nav" data-site-nav aria-label="Primary navigation">
-            <a href="/" data-nav-link>Home</a>
+          <a class="home-header__cart" href="#" aria-label="Shopping cart">
+            Cart
+            <span>0</span>
+          </a>
+        </div>
+
+        <div class="container-wide home-header__brandrow">
+          <a class="home-brand" href="/">Waterlight Studio</a>
+
+          <nav id="primary-nav" class="home-nav" data-site-nav aria-label="Primary navigation">
+            <a href="#shop">Shop</a>
+            <a href="#journal">Journal</a>
             <a href="/about/" data-nav-link>About</a>
-            <a href="/gallery/" data-nav-link>Gallery</a>
-            <a class="button-ghost js-mail-link" href="#">Book a Consult</a>
+            <a href="#" class="js-mail-link">Contact</a>
           </nav>
         </div>
       </header>
 
       <main id="main-content">
-        <section class="hero">
-          <div class="container-wide hero__layout">
-            <div class="hero__content" data-reveal>
-              <span class="hero__kicker">Coast. Texture. Light.</span>
-              <h1>Earth-toned visual stories shaped by water and place.</h1>
-              <p>
-                Waterlight Studio produces imagery for brands and founders who want a softer, tactile
-                presence online. Every frame is designed to feel grounded, cinematic, and naturally human.
-              </p>
-              <div class="cluster">
-                <a class="button js-mail-link" href="#">Start Your Project</a>
-                <a class="button-ghost" href="/gallery/">See Gallery</a>
-              </div>
-
-              <ul class="lead-metrics" aria-label="Waterlight metrics">
-                <li>
-                  <strong>120+</strong>
-                  <span>Shoots Directed</span>
-                </li>
-                <li>
-                  <strong>14</strong>
-                  <span>Coastal Regions</span>
-                </li>
-                <li>
-                  <strong>48 hr</strong>
-                  <span>Preview Turnaround</span>
-                </li>
-              </ul>
+        <section class="home-section home-hero">
+          <div class="container-wide home-hero__layout">
+            <div class="home-hero__copy" data-reveal="left">
+              <h1>Ceramics for every table and ritual.</h1>
+              <a class="home-pill home-pill--outline" href="#shop">Shop Now</a>
             </div>
 
-            <figure class="hero__media" data-reveal="right">
+            <figure class="home-hero__media" data-reveal="right">
               <img
-                src="/assets/img/placeholders/home-hero.svg"
-                alt="Placeholder coastal portrait for Waterlight Studio"
+                src="/assets/img/placeholders/home-hero-ceramics.svg"
+                alt="Handmade ceramic objects styled in neutral tones"
                 loading="eager"
               />
             </figure>
           </div>
         </section>
 
-        <section class="section">
-          <div class="container-wide home-story">
-            <figure class="home-story__visual" data-reveal="left">
+        <section id="shop" class="home-section home-products">
+          <div class="container-wide">
+            <h2 class="home-section-title" data-reveal>Shop our favorite ceramics</h2>
+
+            <div class="home-product-grid">
+              <article class="home-product" data-reveal>
+                <img src="/assets/img/placeholders/home-product-terracotta.svg" alt="Terracotta vessel placeholder" loading="lazy" />
+                <h3>Terracotta Vessel</h3>
+                <p class="home-product__price">$48.00</p>
+                <div class="home-product__actions">
+                  <div class="home-qty" aria-hidden="true">
+                    <button class="home-qty__btn" type="button">-</button>
+                    <span>1</span>
+                    <button class="home-qty__btn" type="button">+</button>
+                  </div>
+                  <button class="home-pill home-pill--wide" type="button">Add to Cart</button>
+                </div>
+              </article>
+
+              <article class="home-product" data-reveal>
+                <img src="/assets/img/placeholders/home-product-sage.svg" alt="Sage glazed mug placeholder" loading="lazy" />
+                <h3>Sage Glaze Mug</h3>
+                <p class="home-product__price">$36.00</p>
+                <div class="home-product__actions">
+                  <div class="home-qty" aria-hidden="true">
+                    <button class="home-qty__btn" type="button">-</button>
+                    <span>1</span>
+                    <button class="home-qty__btn" type="button">+</button>
+                  </div>
+                  <button class="home-pill home-pill--wide" type="button">Add to Cart</button>
+                </div>
+              </article>
+
+              <article class="home-product" data-reveal>
+                <img src="/assets/img/placeholders/home-product-sand.svg" alt="Sand stone serving bowl placeholder" loading="lazy" />
+                <h3>Sand Stone Bowl</h3>
+                <p class="home-product__price">$54.00</p>
+                <div class="home-product__actions">
+                  <div class="home-qty" aria-hidden="true">
+                    <button class="home-qty__btn" type="button">-</button>
+                    <span>1</span>
+                    <button class="home-qty__btn" type="button">+</button>
+                  </div>
+                  <button class="home-pill home-pill--wide" type="button">Add to Cart</button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-feature home-feature--dark">
+          <div class="container-wide home-feature__layout">
+            <figure class="home-feature__image" data-reveal>
               <img
-                src="/assets/img/placeholders/story-scene.svg"
-                alt="Placeholder image of studio process"
+                src="/assets/img/placeholders/home-feature-craft.svg"
+                alt="Ceramic pieces in process on a studio table"
                 loading="lazy"
               />
             </figure>
-            <div class="home-story__copy" data-reveal>
-              <span class="badge">Narrative-led sessions</span>
-              <h2>Built like an editorial spread, delivered for modern websites.</h2>
+
+            <div class="home-feature__copy" data-reveal>
+              <h2>Made to be held.</h2>
+              <p>Every Waterlight piece is hand-thrown, kiln-fired, and finished in small batches.</p>
+              <a href="/about/">Learn More</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-values home-feature--dark">
+          <div class="container-wide">
+            <h2>Forever and Always</h2>
+
+            <div class="home-values__grid">
+              <article class="home-value">
+                <h3>Pure Materials</h3>
+                <p>Stoneware clay bodies and mineral glazes selected for daily use and longevity.</p>
+              </article>
+
+              <article class="home-value">
+                <h3>Small Batch</h3>
+                <p>Limited drops let each collection stay intentional, tactile, and carefully finished.</p>
+              </article>
+
+              <article class="home-value">
+                <h3>Made by Hand</h3>
+                <p>No two forms are identical. Natural variation is treated as part of the signature.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="journal" class="home-section home-journal">
+          <div class="container-wide home-journal__layout">
+            <div class="home-journal__intro" data-reveal="left">
               <p>
-                We shape each shoot around atmosphere first: sand, paper textures, weather, and natural
-                movement. The result feels composed without becoming over-styled.
+                It all begins with an idea. Maybe you want a collection for your table. Maybe you want
+                heirloom pieces that feel grounded and personal.
               </p>
-              <p>
-                This launch version uses placeholder copy and image blocks so your team can approve structure
-                and pacing before final assets are added.
-              </p>
+              <a class="home-pill home-pill--outline" href="/about/">All Posts</a>
             </div>
-          </div>
-        </section>
 
-        <section class="section">
-          <div class="container-wide">
-            <div class="section-heading" data-reveal>
-              <h2>Featured directions</h2>
-              <p>Three visual directions modeled after the Altaloma-style section rhythm.</p>
-            </div>
-            <div class="work-grid">
-              <article class="work-item" data-reveal>
-                <img src="/assets/img/placeholders/work-shoreline.svg" alt="Shoreline concept placeholder" loading="lazy" />
-                <div class="work-item__meta">
-                  <strong>Shoreline Portrait</strong>
-                  <span>Campaign</span>
-                </div>
+            <div class="home-journal__cards" data-reveal="right">
+              <article class="home-journal-card">
+                <img src="/assets/img/placeholders/home-journal-process.svg" alt="Ceramics process placeholder" loading="lazy" />
+                <h3>My wheel-thrown process</h3>
               </article>
-              <article class="work-item" data-reveal>
-                <img src="/assets/img/placeholders/work-studio.svg" alt="Studio concept placeholder" loading="lazy" />
-                <div class="work-item__meta">
-                  <strong>Studio Still Life</strong>
-                  <span>Editorial</span>
-                </div>
-              </article>
-              <article class="work-item" data-reveal>
-                <img src="/assets/img/placeholders/work-travel.svg" alt="Travel concept placeholder" loading="lazy" />
-                <div class="work-item__meta">
-                  <strong>Travel Sequence</strong>
-                  <span>Journal</span>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
 
-        <section class="section">
-          <div class="container-wide">
-            <div class="section-heading" data-reveal>
-              <h2>Services</h2>
-              <p>Modular support for founders, hospitality brands, and publication teams.</p>
-            </div>
-            <div class="services-grid">
-              <article class="card" data-reveal>
-                <h3>Direction + Shot Lists</h3>
-                <p>Pre-production mapping for scene hierarchy, wardrobe, props, and location pacing.</p>
+              <article class="home-journal-card">
+                <img src="/assets/img/placeholders/home-journal-glaze.svg" alt="Glaze testing placeholder" loading="lazy" />
+                <h3>Introducing our spring glaze study</h3>
               </article>
-              <article class="card card--accent" data-reveal>
-                <h3>On-Location Sessions</h3>
-                <p>Half-day and full-day sessions with natural-light-first setup and collaborative blocking.</p>
-              </article>
-              <article class="card" data-reveal>
-                <h3>Web Delivery Packs</h3>
-                <p>Final exports tailored for homepage hero, gallery grids, and social-first support images.</p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="container-wide">
-            <div class="section-heading" data-reveal>
-              <h2>How projects move</h2>
-              <p>A straightforward production cadence from concept call to launch-ready assets.</p>
-            </div>
-            <ol class="timeline" data-reveal>
-              <li>
-                <strong>Week 1</strong>
-                <p>Discovery call, mood references, and production planning.</p>
-              </li>
-              <li>
-                <strong>Week 2</strong>
-                <p>Shoot day(s), direction, and same-day safety previews.</p>
-              </li>
-              <li>
-                <strong>Week 3</strong>
-                <p>Edits, selection round, and final exports for web launch.</p>
-              </li>
-            </ol>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="container-wide">
-            <div class="cta-band" data-reveal>
-              <h2>Ready to shape your next visual chapter?</h2>
-              <p>
-                Send your timeline, goals, and rough scope. We will return a recommended production path and
-                calendar options.
-              </p>
-              <div class="cluster">
-                <a class="button js-mail-link" href="#">Email Inquiry</a>
-                <a class="button-ghost" href="/about/">View Studio Philosophy</a>
-              </div>
             </div>
           </div>
         </section>
       </main>
 
-      <footer class="site-footer">
-        <div class="site-footer__inner">
-          <p>(c) <span data-year></span> Waterlight Studio. Placeholder launch build.</p>
-          <nav aria-label="Footer navigation">
-            <a href="/">Home</a>
+      <footer class="home-newsletter">
+        <div class="container-wide home-newsletter__inner">
+          <div class="home-newsletter__visual" data-reveal>
+            <img
+              src="/assets/img/placeholders/home-newsletter-visual.svg"
+              alt="Ceramic detail placeholder"
+              loading="lazy"
+            />
+            <a href="#" aria-label="Follow Waterlight Studio on Instagram">Follow us on Instagram</a>
+          </div>
+
+          <div class="home-newsletter__signup" data-reveal>
+            <p>Sign up to receive updates and 10% off your first purchase.</p>
+            <form action="#" method="post" onsubmit="return false;" class="home-signup-form">
+              <input type="email" aria-label="Email address" placeholder="Email Address" />
+              <button class="home-pill home-pill--outline" type="submit">Sign Up</button>
+            </form>
+          </div>
+
+          <nav class="home-newsletter__links" aria-label="Footer links" data-reveal>
+            <a href="#shop">Shop</a>
+            <a href="#journal">Journal</a>
             <a href="/about/">About</a>
-            <a href="/gallery/">Gallery</a>
-            <a class="js-mail-link" href="#">Contact</a>
+            <a href="#" class="js-mail-link">Contact</a>
+            <a href="#">Shipping and Returns</a>
+            <a href="#">Stockists</a>
           </nav>
+        </div>
+
+        <div class="container-wide home-legal">
+          <p>(c) <span data-year></span> Waterlight Studio.</p>
         </div>
       </footer>
     </div>
