@@ -681,6 +681,7 @@ body.home-template .skip-link {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    align-items: center;
   }
 
   .home-hero__copy h1 {
@@ -699,10 +700,23 @@ body.home-template .skip-link {
     order: 2;
     gap: 1.25rem;
     padding-bottom: 0;
+    width: min(100%, 36rem);
+    margin-inline: auto;
+    align-items: center;
+    text-align: center;
   }
 
   .home-journal__cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-hero__copy h1 {
+    margin-inline: auto;
+  }
+
+  .home-hero__media {
+    width: min(100%, 42rem);
+    margin-inline: auto;
   }
 
   .home-product-grid {
