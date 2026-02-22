@@ -693,8 +693,50 @@ body.home-template .skip-link {
     line-height: 1;
   }
 
-  .home-values__grid,
+  .home-hero__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .home-hero__media {
+    order: 1;
+  }
+
+  .home-hero__copy {
+    order: 2;
+    gap: 1.25rem;
+    padding-bottom: 0;
+  }
+
   .home-journal__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-newsletter__inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "visual links"
+      "signup signup";
+    column-gap: 1rem;
+    row-gap: 1.4rem;
+    align-items: start;
+  }
+
+  .home-newsletter__visual {
+    grid-area: visual;
+  }
+
+  .home-newsletter__links {
+    grid-area: links;
+    justify-self: end;
+  }
+
+  .home-newsletter__signup {
+    grid-area: signup;
+  }
+
+  .home-values__grid {
     grid-template-columns: 1fr;
   }
 }
