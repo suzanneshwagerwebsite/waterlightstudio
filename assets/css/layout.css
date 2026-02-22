@@ -125,9 +125,15 @@
   color: rgba(25, 29, 35, 0.83);
 }
 
-@media (max-width: 64rem) {
+@media (max-width: 56rem) {
+  .container,
+  .container-wide {
+    width: min(100% - 1.3rem, var(--container-max));
+  }
+
+  .grid-2,
   .grid-3 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 
   .hero__layout {
@@ -137,18 +143,6 @@
 
   .hero__media img {
     aspect-ratio: 5 / 4;
-  }
-}
-
-@media (max-width: 44rem) {
-  .container,
-  .container-wide {
-    width: min(100% - 1.3rem, var(--container-max));
-  }
-
-  .grid-2,
-  .grid-3 {
-    grid-template-columns: 1fr;
   }
 
   .section-heading {
