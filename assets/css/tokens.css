@@ -1,0 +1,46 @@
+:root {
+  --bg-cream: #efede8;
+  --bg-sand: #cdc7be;
+  --olive: #26381f;
+  --rust: #8f4327;
+  --charcoal: #11151b;
+  --ink: #191d23;
+  --mist: #f7f5f2;
+  --line: rgba(17, 21, 27, 0.16);
+  --line-strong: rgba(17, 21, 27, 0.26);
+
+  --shadow-soft: 0 12px 40px rgba(17, 21, 27, 0.12);
+  --shadow-card: 0 14px 40px rgba(17, 21, 27, 0.1);
+
+  --font-display: "Fraunces", "Iowan Old Style", "Book Antiqua", serif;
+  --font-body: "Work Sans", "Avenir Next", "Segoe UI", sans-serif;
+
+  --step--1: clamp(0.86rem, 0.82rem + 0.2vw, 0.95rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.12rem);
+  --step-1: clamp(1.2rem, 1.08rem + 0.55vw, 1.45rem);
+  --step-2: clamp(1.48rem, 1.23rem + 1.2vw, 1.95rem);
+  --step-3: clamp(1.85rem, 1.4rem + 2vw, 2.8rem);
+  --step-4: clamp(2.5rem, 1.95rem + 2.6vw, 4.15rem);
+
+  --space-2xs: clamp(0.4rem, 0.35rem + 0.22vw, 0.56rem);
+  --space-xs: clamp(0.68rem, 0.6rem + 0.4vw, 0.95rem);
+  --space-s: clamp(0.95rem, 0.84rem + 0.55vw, 1.35rem);
+  --space-m: clamp(1.3rem, 1.1rem + 0.98vw, 2rem);
+  --space-l: clamp(1.8rem, 1.43rem + 1.75vw, 3rem);
+  --space-xl: clamp(2.6rem, 1.9rem + 3vw, 4.4rem);
+  --space-2xl: clamp(3.6rem, 2.6rem + 4.2vw, 6.4rem);
+
+  --radius-xs: 0.45rem;
+  --radius-sm: 0.75rem;
+  --radius-md: 1.1rem;
+  --radius-lg: 1.7rem;
+  --radius-pill: 999px;
+
+  --container-max: 72rem;
+  --container-wide: 82rem;
+
+  --timing-fast: 160ms;
+  --timing-base: 240ms;
+  --timing-slow: 450ms;
+  --ease-main: cubic-bezier(0.2, 0.65, 0.2, 1);
+}

@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery | Waterlight Studio</title>
+    <meta
+      name="description"
+      content="Explore Waterlight Studio's gallery layout for coastal portraits, editorial still life, travel sequences, and studio textures."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/tokens.css" />
+    <link rel="stylesheet" href="/assets/css/base.css" />
+    <link rel="stylesheet" href="/assets/css/layout.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="stylesheet" href="/assets/css/pages.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="site-shell">
+      <div class="texture-blur texture-blur--olive" aria-hidden="true"></div>
+      <div class="texture-blur texture-blur--rust" aria-hidden="true"></div>
+
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a class="brand" href="/">
+            <strong>Waterlight Studio</strong>
+            <span>Editorial Image House</span>
+          </a>
+
+          <button
+            class="menu-toggle"
+            type="button"
+            data-menu-toggle
+            aria-expanded="false"
+            aria-controls="primary-nav"
+            aria-label="Toggle navigation"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M3 6h18M3 12h18M3 18h18" />
+            </svg>
+          </button>
+
+          <nav id="primary-nav" class="site-nav" data-site-nav aria-label="Primary navigation">
+            <a href="/" data-nav-link>Home</a>
+            <a href="/about/" data-nav-link>About</a>
+            <a href="/gallery/" data-nav-link>Gallery</a>
+            <a class="button-ghost js-mail-link" href="#">Book a Consult</a>
+          </nav>
+        </div>
+      </header>
+
+      <main id="main-content">
+        <section class="page-hero">
+          <div class="container page-hero__inner gallery-intro" data-reveal>
+            <span class="hero__kicker">Image Library</span>
+            <h1>Gallery rhythms in the same calm, earthy direction.</h1>
+            <p>
+              Placeholder image blocks are organized by mood and context so final photography can be inserted
+              quickly once selections are approved.
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container-wide">
+            <div class="gallery-toolbar" data-reveal>
+              <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All</button>
+              <button class="filter-button" type="button" data-filter="coast" aria-pressed="false">Coast</button>
+              <button class="filter-button" type="button" data-filter="portrait" aria-pressed="false">Portrait</button>
+              <button class="filter-button" type="button" data-filter="studio" aria-pressed="false">Studio</button>
+              <button class="filter-button" type="button" data-filter="travel" aria-pressed="false">Travel</button>
+            </div>
+
+            <div class="work-grid">
+              <article class="gallery-item" data-category="coast portrait" data-reveal>
+                <figure class="gallery-card">
+                  <img src="/assets/img/placeholders/gallery-coast-01.svg" alt="Coastal portrait placeholder" loading="lazy" />
+                  <figcaption class="gallery-card__info">
+                    <strong>Tidal Portrait</strong>
+                    <span>Coast / Portrait</span>
+                  </figcaption>
+                  <button
+                    class="gallery-card__open"
+                    type="button"
+                    data-lightbox-trigger
+                    data-lightbox-image="/assets/img/placeholders/gallery-coast-01.svg"
+                    data-lightbox-caption="Tidal Portrait"
+                    data-lightbox-alt="Coastal portrait placeholder"
+                  >
+                    View
+                  </button>
+                </figure>
+              </article>
+
+              <article class="gallery-item" data-category="studio" data-reveal>
+                <figure class="gallery-card">
+                  <img src="/assets/img/placeholders/gallery-studio-01.svg" alt="Studio still life placeholder" loading="lazy" />
+                  <figcaption class="gallery-card__info">
+                    <strong>Clay + Linen</strong>
+                    <span>Studio</span>
+                  </figcaption>
+                  <button
+                    class="gallery-card__open"
+                    type="button"
+                    data-lightbox-trigger
+                    data-lightbox-image="/assets/img/placeholders/gallery-studio-01.svg"
+                    data-lightbox-caption="Clay + Linen"
+                    data-lightbox-alt="Studio still life placeholder"
+                  >
+                    View
+                  </button>
+                </figure>
+              </article>
+
+              <article class="gallery-item" data-category="travel coast" data-reveal>
+                <figure class="gallery-card">
+                  <img src="/assets/img/placeholders/gallery-travel-01.svg" alt="Travel scene placeholder" loading="lazy" />
+                  <figcaption class="gallery-card__info">
+                    <strong>Harbor Morning</strong>
+                    <span>Travel / Coast</span>
+                  </figcaption>
+                  <button
+                    class="gallery-card__open"
+                    type="button"
+                    data-lightbox-trigger
+                    data-lightbox-image="/assets/img/placeholders/gallery-travel-01.svg"
+                    data-lightbox-caption="Harbor Morning"
+                    data-lightbox-alt="Travel scene placeholder"
+                  >
+                    View
+                  </button>
+                </figure>
+              </article>
+
+              <article class="gallery-item" data-category="portrait" data-reveal>
+                <figure class="gallery-card">
+                  <img src="/assets/img/placeholders/gallery-portrait-01.svg" alt="Portrait placeholder" loading="lazy" />
+                  <figcaption class="gallery-card__info">
+                    <strong>Window Study</strong>
+                    <span>Portrait</span>
+                  </figcaption>
+                  <button
+                    class="gallery-card__open"
+                    type="button"
+                    data-lightbox-trigger
+                    data-lightbox-image="/assets/img/placeholders/gallery-portrait-01.svg"
+                    data-lightbox-caption="Window Study"
+                    data-lightbox-alt="Portrait placeholder"
+                  >
+                    View
+                  </button>
+                </figure>
+              </article>
+
+              <article class="gallery-item" data-category="coast travel" data-reveal>
+                <figure class="gallery-card">
+                  <img src="/assets/img/placeholders/gallery-coast-02.svg" alt="Coastal walk placeholder" loading="lazy" />
+                  <figcaption class="gallery-card__info">
+                    <strong>Cliff Path</strong>
+                    <span>Coast / Travel</span>
+                  </figcaption>
+                  <button
+                    class="gallery-card__open"
+                    type="button"
+                    data-lightbox-trigger
+                    data-lightbox-image="/assets/img/placeholders/gallery-coast-02.svg"
+                    data-lightbox-caption="Cliff Path"
+                    data-lightbox-alt="Coastal walk placeholder"
+                  >
+                    View
+                  </button>
+                </figure>
+              </article>
+
+              <article class="gallery-item" data-category="studio portrait" data-reveal>
+                <figure class="gallery-card">
+                  <img src="/assets/img/placeholders/gallery-studio-02.svg" alt="Studio portrait placeholder" loading="lazy" />
+                  <figcaption class="gallery-card__info">
+                    <strong>Studio Frame</strong>
+                    <span>Studio / Portrait</span>
+                  </figcaption>
+                  <button
+                    class="gallery-card__open"
+                    type="button"
+                    data-lightbox-trigger
+                    data-lightbox-image="/assets/img/placeholders/gallery-studio-02.svg"
+                    data-lightbox-caption="Studio Frame"
+                    data-lightbox-alt="Studio portrait placeholder"
+                  >
+                    View
+                  </button>
+                </figure>
+              </article>
+
+              <article class="gallery-item" data-category="travel" data-reveal>
+                <figure class="gallery-card">
+                  <img src="/assets/img/placeholders/gallery-travel-02.svg" alt="Travel editorial placeholder" loading="lazy" />
+                  <figcaption class="gallery-card__info">
+                    <strong>Street Texture</strong>
+                    <span>Travel</span>
+                  </figcaption>
+                  <button
+                    class="gallery-card__open"
+                    type="button"
+                    data-lightbox-trigger
+                    data-lightbox-image="/assets/img/placeholders/gallery-travel-02.svg"
+                    data-lightbox-caption="Street Texture"
+                    data-lightbox-alt="Travel editorial placeholder"
+                  >
+                    View
+                  </button>
+                </figure>
+              </article>
+
+              <article class="gallery-item" data-category="coast" data-reveal>
+                <figure class="gallery-card">
+                  <img src="/assets/img/placeholders/gallery-coast-03.svg" alt="Ocean horizon placeholder" loading="lazy" />
+                  <figcaption class="gallery-card__info">
+                    <strong>Low Horizon</strong>
+                    <span>Coast</span>
+                  </figcaption>
+                  <button
+                    class="gallery-card__open"
+                    type="button"
+                    data-lightbox-trigger
+                    data-lightbox-image="/assets/img/placeholders/gallery-coast-03.svg"
+                    data-lightbox-caption="Low Horizon"
+                    data-lightbox-alt="Ocean horizon placeholder"
+                  >
+                    View
+                  </button>
+                </figure>
+              </article>
+
+              <article class="gallery-item" data-category="studio travel" data-reveal>
+                <figure class="gallery-card">
+                  <img src="/assets/img/placeholders/gallery-studio-03.svg" alt="Studio tabletop placeholder" loading="lazy" />
+                  <figcaption class="gallery-card__info">
+                    <strong>Table Study</strong>
+                    <span>Studio / Travel</span>
+                  </figcaption>
+                  <button
+                    class="gallery-card__open"
+                    type="button"
+                    data-lightbox-trigger
+                    data-lightbox-image="/assets/img/placeholders/gallery-studio-03.svg"
+                    data-lightbox-caption="Table Study"
+                    data-lightbox-alt="Studio tabletop placeholder"
+                  >
+                    View
+                  </button>
+                </figure>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <p>(c) <span data-year></span> Waterlight Studio. Placeholder launch build.</p>
+          <nav aria-label="Footer navigation">
+            <a href="/">Home</a>
+            <a href="/about/">About</a>
+            <a href="/gallery/">Gallery</a>
+            <a class="js-mail-link" href="#">Contact</a>
+          </nav>
+        </div>
+      </footer>
+    </div>
+
+    <div class="lightbox" data-lightbox hidden role="dialog" aria-modal="true" aria-label="Expanded gallery image">
+      <div class="lightbox__panel">
+        <button class="lightbox__close" type="button" data-lightbox-close aria-label="Close image">X</button>
+        <img data-lightbox-image src="" alt="" />
+        <p class="lightbox__caption" data-lightbox-caption></p>
+      </div>
+    </div>
+
+    <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/reveal.js" defer></script>
+  </body>
+</html>
