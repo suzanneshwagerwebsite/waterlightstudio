@@ -25,7 +25,13 @@
     <div class="site-shell">
       <header class="site-header home-header">
         <div class="container-wide home-header__top">
-          <a class="home-header__icon" href="#" aria-label="Waterlight Studio on Instagram">Instagram</a>
+          <a class="home-header__icon home-header__icon-link" href="#" aria-label="Waterlight Studio on Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+              <circle cx="12" cy="12" r="4.2"></circle>
+              <circle cx="17.3" cy="6.7" r="1"></circle>
+            </svg>
+          </a>
 
           <button
             class="menu-toggle home-menu-toggle"
@@ -40,9 +46,13 @@
             </svg>
           </button>
 
-          <a class="home-header__cart" href="#" aria-label="Shopping cart">
-            Cart
-            <span>0</span>
+          <a class="home-header__cart home-header__icon-link" href="#" aria-label="Shopping cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <circle cx="9" cy="20" r="1.6"></circle>
+              <circle cx="18" cy="20" r="1.6"></circle>
+              <path d="M3 4h2.2l2.1 10.2a1.1 1.1 0 0 0 1.1 0.9h10.1a1.1 1.1 0 0 0 1.1-0.9L21 7.6H7.1"></path>
+            </svg>
+            <span class="home-header__cart-count">0</span>
           </a>
         </div>
 
