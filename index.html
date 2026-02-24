@@ -46,13 +46,13 @@
             </svg>
           </button>
 
-          <a class="home-header__cart home-header__icon-link" href="#" aria-label="Shopping cart">
+          <a class="home-header__cart home-header__icon-link" href="#" data-cart-items="0" aria-label="Shopping cart">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
               <circle cx="9" cy="20" r="1.6"></circle>
               <circle cx="18" cy="20" r="1.6"></circle>
               <path d="M3 4h2.2l2.1 10.2a1.1 1.1 0 0 0 1.1 0.9h10.1a1.1 1.1 0 0 0 1.1-0.9L21 7.6H7.1"></path>
             </svg>
-            <span class="home-header__cart-count">0</span>
+            <span class="home-header__cart-count" aria-live="polite" hidden></span>
           </a>
         </div>
 

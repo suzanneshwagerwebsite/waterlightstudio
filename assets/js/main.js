@@ -34,6 +34,22 @@
     });
   };
 
+  const formatCartCount = (value) => {
+    const count = Number.parseInt(String(value ?? ""), 10);
+    return Number.isFinite(count) && count > 0 ? `(${count})` : "";
+  };
+
+  const syncCartCount = () => {
+    document.querySelectorAll(".home-header__cart").forEach((cartLink) => {
+      const countEl = cartLink.querySelector(".home-header__cart-count");
+      if (!countEl) return;
+
+      const displayCount = formatCartCount(cartLink.getAttribute("data-cart-items") ?? countEl.textContent);
+      countEl.textContent = displayCount;
+      countEl.toggleAttribute("hidden", displayCount.length === 0);
+    });
+  };
+
   const setupMobileNav = () => {
     const toggle = document.querySelector("[data-menu-toggle]");
     const nav = document.querySelector("[data-site-nav]");
@@ -72,6 +88,7 @@
     applyMailLinks();
     syncYear();
     markCurrentNav();
+    syncCartCount();
     setupMobileNav();
   });
 })();
