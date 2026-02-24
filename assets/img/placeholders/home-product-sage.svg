@@ -1,4 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-label="placeholder image">
-  <rect width="1200" height="1200" fill="#ffffff"/>
-  <text x="600" y="600" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="72" fill="#8a8a8a">placeholder</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title>Sage Glaze Mug</title>
+  <desc>Ceramics placeholder image for Waterlight Studio</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8d9cf"/>
+      <stop offset="1" stop-color="#bec6bc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+  <rect x="80" y="86" width="1040" height="1028" rx="28" fill="none" stroke="rgba(22,24,26,0.2)" stroke-width="4"/>
+  <ellipse cx="816" cy="320" rx="180" ry="132" fill="#5a6751" fill-opacity="0.66"/>
+  <rect x="220" y="360" width="420" height="480" rx="46" fill="rgba(244,242,238,0.52)"/>
+  <ellipse cx="430" cy="780" rx="210" ry="70" fill="rgba(22,24,26,0.16)"/>
+  <path d="M250 860 C340 760, 528 758, 616 860" fill="none" stroke="rgba(22,24,26,0.38)" stroke-width="12"/>
+  <text x="126" y="1034" fill="rgba(22,24,26,0.84)" font-family="Bodoni Moda,serif" font-size="88">Sage Glaze Mug</text>
 </svg>
