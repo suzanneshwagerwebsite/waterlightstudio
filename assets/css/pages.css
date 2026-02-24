@@ -190,6 +190,10 @@ body.home-template .skip-link {
   color: rgba(22, 24, 26, 0.86);
 }
 
+.home-header__icon {
+  justify-self: start;
+}
+
 .home-header__cart {
   justify-self: end;
 }
