@@ -120,22 +120,11 @@
 }
 
 .gallery-card__open {
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  background: transparent;
-  font-size: 0.82rem;
-  letter-spacing: 0.03em;
-  text-transform: none;
-  color: rgba(22, 24, 26, 0.55);
-  cursor: pointer;
-  text-align: left;
-  transition: color var(--timing-fast) var(--ease-main);
+  display: none;
 }
 
-.gallery-card__open:is(:hover, :focus-visible) {
-  background: transparent;
-  color: rgba(22, 24, 26, 0.9);
+.gallery-card img {
+  cursor: pointer;
 }
 
 @media (max-width: 56rem) {

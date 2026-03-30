@@ -55,50 +55,33 @@
   const setupLightbox = () => {
     const modal = document.querySelector("[data-lightbox]");
     const modalImage = modal && modal.querySelector("[data-lightbox-image]");
-    const modalCaption = modal && modal.querySelector("[data-lightbox-caption]");
-    const closeButton = modal && modal.querySelector("[data-lightbox-close]");
 
-    if (!modal || !modalImage || !modalCaption || !closeButton) {
-      return;
-    }
-
-    let previousFocus = null;
+    if (!modal || !modalImage) return;
 
     const close = () => {
       modal.hidden = true;
       document.body.style.overflow = "";
-      if (previousFocus instanceof HTMLElement) {
-        previousFocus.focus();
-      }
     };
 
-    const open = (trigger) => {
-      const image = trigger.getAttribute("data-lightbox-image");
-      const caption = trigger.getAttribute("data-lightbox-caption") || "";
-      const alt = trigger.getAttribute("data-lightbox-alt") || "Gallery image";
-      if (!image) return;
-
-      previousFocus = trigger;
-      modalImage.setAttribute("src", image);
-      modalImage.setAttribute("alt", alt);
-      modalCaption.textContent = caption;
+    const open = (src, alt) => {
+      if (!src) return;
+      modalImage.setAttribute("src", src);
+      modalImage.setAttribute("alt", alt || "");
       modal.hidden = false;
       document.body.style.overflow = "hidden";
-      closeButton.focus();
     };
 
+    // Click on any content image to enlarge
     document.addEventListener("click", (event) => {
-      const trigger = event.target.closest("[data-lightbox-trigger]");
-      if (trigger) open(trigger);
+      const img = event.target.closest("img");
+      if (!img) return;
+      // Skip images inside the lightbox itself, admin, or nav
+      if (img.closest("[data-lightbox]") || img.closest("nav") || img.closest("header .home-brand")) return;
+      open(img.src, img.alt);
     });
 
-    closeButton.addEventListener("click", close);
-
-    modal.addEventListener("click", (event) => {
-      if (event.target === modal) {
-        close();
-      }
-    });
+    // Click anywhere on lightbox to close
+    modal.addEventListener("click", close);
 
     document.addEventListener("keydown", (event) => {
       if (!modal.hidden && event.key === "Escape") {

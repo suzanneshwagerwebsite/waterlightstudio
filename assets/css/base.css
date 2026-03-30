@@ -29,6 +29,7 @@ a {
 img {
   display: block;
   max-width: 100%;
+  cursor: pointer;
 }
 
 h1,
