@@ -45,6 +45,7 @@ h2,
 h3,
 h4 {
   font-family: var(--font-display);
+  font-weight: 200;
   line-height: 1.12;
   letter-spacing: 0.02em;
   text-wrap: balance;

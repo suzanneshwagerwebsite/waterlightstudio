@@ -1,0 +1,14 @@
+name = "waterlightstudio-cms"
+main = "cms-worker.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+REPO_OWNER = "REPLACE_WITH_GITHUB_USERNAME"
+REPO_NAME = "waterlightstudio"
+REPO_BRANCH = "main"
+CMS_PATH = "data/cms.json"
+ALLOWED_ORIGIN = "https://waterlightstudio.com"
+
+# Secrets (set via `wrangler secret put`):
+# GITHUB_TOKEN - GitHub personal access token with repo contents write
+# ADMIN_KEY - secret admin password for CMS updates

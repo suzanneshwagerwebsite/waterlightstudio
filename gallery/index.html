@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Work+Sans:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@200&family=Work+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/css/tokens.css" />
@@ -20,21 +20,13 @@
     <link rel="stylesheet" href="/assets/css/components.css" />
     <link rel="stylesheet" href="/assets/css/pages.css" />
   </head>
-  <body>
+  <body class="home-template">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
-      <div class="texture-blur texture-blur--olive" aria-hidden="true"></div>
-      <div class="texture-blur texture-blur--rust" aria-hidden="true"></div>
-
-      <header class="site-header">
-        <div class="site-header__inner">
-          <a class="brand" href="/">
-            <strong>Waterlight Studio</strong>
-            <span>Handmade Ceramic Studio</span>
-          </a>
-
+      <header class="site-header home-header">
+        <div class="container-wide home-header__top">
           <button
-            class="menu-toggle"
+            class="menu-toggle home-menu-toggle"
             type="button"
             data-menu-toggle
             aria-expanded="false"
@@ -45,12 +37,19 @@
               <path d="M3 6h18M3 12h18M3 18h18" />
             </svg>
           </button>
+        </div>
 
-          <nav id="primary-nav" class="site-nav" data-site-nav aria-label="Primary navigation">
+        <div class="container-wide home-header__brandrow">
+          <a class="home-brand" href="/">
+            <img src="/assets/img/Waterlight-Logo-Black.png" alt="" class="home-brand__logo" />
+            <span class="home-brand__name">Waterlight Studio</span>
+          </a>
+
+          <nav id="primary-nav" class="home-nav" data-site-nav aria-label="Primary navigation">
             <a href="/" data-nav-link>Home</a>
             <a href="/about/" data-nav-link>About</a>
             <a href="/gallery/" data-nav-link>Gallery</a>
-            <a class="button-ghost js-mail-link" href="#">Book a Consult</a>
+            <a href="#" class="js-mail-link">Contact</a>
           </nav>
         </div>
       </header>
@@ -283,7 +282,48 @@
       </div>
     </div>
 
+    <script src="/cms-client.js"></script>
     <script src="/assets/js/main.js" defer></script>
     <script src="/assets/js/reveal.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', async () => {
+        try {
+          const cms = await window.CMS.fetchCms();
+          const g = cms.gallery;
+
+          const kicker = document.querySelector('.hero__kicker');
+          if (kicker && g.kicker) kicker.textContent = g.kicker;
+          const heroH1 = document.querySelector('.page-hero h1');
+          if (heroH1 && g.hero_title) heroH1.textContent = g.hero_title;
+          const heroP = document.querySelector('.page-hero__inner > p');
+          if (heroP && g.hero_description) heroP.textContent = g.hero_description;
+
+          const grid = document.querySelector('.work-grid');
+          if (grid && g.items.length) {
+            const visible = g.items.filter(i => i.visibility !== 'hidden');
+            grid.innerHTML = visible.map(i => {
+              const cats = (i.categories || '').split(' ').filter(Boolean);
+              const catLabel = cats.map(c => c.charAt(0).toUpperCase() + c.slice(1)).join(' / ');
+              return `<article class="gallery-item is-visible" data-category="${i.categories}">
+                <figure class="gallery-card">
+                  <img src="${i.image}" alt="${i.image_alt || ''}" loading="lazy" />
+                  <figcaption class="gallery-card__info">
+                    <strong>${i.title}</strong>
+                    <span>${catLabel}</span>
+                  </figcaption>
+                  <button class="gallery-card__open" type="button"
+                    data-lightbox-trigger
+                    data-lightbox-image="${i.image}"
+                    data-lightbox-caption="${i.title}"
+                    data-lightbox-alt="${i.image_alt || ''}">View</button>
+                </figure>
+              </article>`;
+            }).join('');
+          }
+        } catch (e) {
+          // CMS fetch failed; static HTML remains.
+        }
+      });
+    </script>
   </body>
 </html>

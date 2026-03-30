@@ -1,0 +1,226 @@
+{
+  "version": 1,
+  "updatedAt": "2026-03-29T00:00:00.000Z",
+  "settings": {
+    "sectionOrder": ["hero", "products", "feature", "values", "journal", "newsletter"],
+    "showHeroSection": true,
+    "showProductsSection": true,
+    "showFeatureSection": true,
+    "showValuesSection": true,
+    "showJournalSection": true,
+    "showNewsletterSection": true
+  },
+  "hero": {
+    "title": "Ceramics for every table and ritual.",
+    "cta_text": "View Gallery",
+    "cta_link": "/gallery/",
+    "image": "/assets/img/placeholders/home-hero-ceramics.svg",
+    "image_alt": "Handmade ceramic objects styled in neutral tones"
+  },
+  "products": {
+    "section_title": "View our favorite ceramics",
+    "items": [
+      {
+        "id": "product_1",
+        "image": "/assets/img/placeholders/home-product-terracotta.svg",
+        "image_alt": "Terracotta vessel",
+        "title": "Terracotta Vessel",
+        "learn_more_link": "/about/",
+        "gallery_link": "/gallery/",
+        "visibility": "visible"
+      },
+      {
+        "id": "product_2",
+        "image": "/assets/img/placeholders/home-product-sage.svg",
+        "image_alt": "Sage glazed mug",
+        "title": "Sage Glaze Mug",
+        "learn_more_link": "/about/",
+        "gallery_link": "/gallery/",
+        "visibility": "visible"
+      },
+      {
+        "id": "product_3",
+        "image": "/assets/img/placeholders/home-product-sand.svg",
+        "image_alt": "Sand stone serving bowl",
+        "title": "Sand Stone Bowl",
+        "learn_more_link": "/about/",
+        "gallery_link": "/gallery/",
+        "visibility": "visible"
+      }
+    ]
+  },
+  "feature": {
+    "image": "/assets/img/placeholders/home-feature-craft.svg",
+    "image_alt": "Ceramic pieces in process on a studio table",
+    "title": "Made to be held.",
+    "description": "Every Waterlight piece is hand-thrown, kiln-fired, and finished in small batches.",
+    "link_text": "Learn More",
+    "link_url": "/about/"
+  },
+  "values": {
+    "title": "Forever and Always",
+    "items": [
+      {
+        "id": "value_1",
+        "title": "Pure Materials",
+        "description": "Stoneware clay bodies and mineral glazes selected for daily use and longevity."
+      },
+      {
+        "id": "value_2",
+        "title": "Small Batch",
+        "description": "Limited drops let each collection stay intentional, tactile, and carefully finished."
+      },
+      {
+        "id": "value_3",
+        "title": "Made by Hand",
+        "description": "No two forms are identical. Natural variation is treated as part of the signature."
+      }
+    ]
+  },
+  "journal": {
+    "intro_text": "It all begins with an idea. Maybe you want a collection for your table. Maybe you want heirloom pieces that feel grounded and personal.",
+    "cta_text": "All Posts",
+    "cta_link": "/about/",
+    "cards": [
+      {
+        "id": "journal_1",
+        "image": "/assets/img/placeholders/home-journal-process.svg",
+        "image_alt": "Ceramics process",
+        "title": "My wheel-thrown process",
+        "visibility": "visible"
+      },
+      {
+        "id": "journal_2",
+        "image": "/assets/img/placeholders/home-journal-glaze.svg",
+        "image_alt": "Glaze testing",
+        "title": "Introducing our spring glaze study",
+        "visibility": "visible"
+      }
+    ]
+  },
+  "newsletter": {
+    "signup_text": "",
+    "image": "/assets/img/placeholders/home-newsletter-visual.svg",
+    "image_alt": "Ceramic detail",
+    "instagram_text": "Follow us on Instagram"
+  },
+  "about": {
+    "kicker": "About the Studio",
+    "hero_title": "A tactile, calm approach to commercial storytelling.",
+    "hero_description": "Waterlight Studio blends documentary pacing with editorial refinement. We design image systems that feel lived-in, not overproduced.",
+    "origin_title": "Studio Origin",
+    "origin_text_1": "The studio began as a response to fast visual trends. Instead of high-gloss sameness, we work with weathered surfaces, coastal movement, and directional natural light to give each set an honest atmosphere.",
+    "origin_text_2": "This launch build intentionally uses placeholder narrative copy. Final story details can replace these sections without changing the approved layout.",
+    "origin_image": "/assets/img/placeholders/about-portrait.svg",
+    "origin_image_alt": "Studio founder portrait",
+    "principles": [
+      {
+        "id": "principle_1",
+        "title": "Material honesty",
+        "description": "Let linen, stone, skin texture, and grain remain visible instead of over-smoothing."
+      },
+      {
+        "id": "principle_2",
+        "title": "Directional light",
+        "description": "Build depth with natural and practical lighting before adding post-production contrast."
+      },
+      {
+        "id": "principle_3",
+        "title": "Human pacing",
+        "description": "Frame people in motion and pause to preserve natural gesture instead of static posing."
+      }
+    ],
+    "engagement": [
+      {
+        "id": "engage_1",
+        "title": "Editorial Day Session",
+        "description": "Ideal for founder portraits, homepage narrative moments, and launch campaign assets."
+      },
+      {
+        "id": "engage_2",
+        "title": "Brand Narrative Package",
+        "description": "Multi-location coverage and expanded library for website, social, and seasonal releases."
+      }
+    ]
+  },
+  "gallery": {
+    "kicker": "Image Library",
+    "hero_title": "Gallery rhythms in the same calm, earthy direction.",
+    "hero_description": "Placeholder image blocks are organized by mood and context so final photography can be inserted quickly once selections are approved.",
+    "categories": ["coast", "portrait", "studio", "travel"],
+    "items": [
+      {
+        "id": "gallery_1",
+        "image": "/assets/img/placeholders/gallery-coast-01.svg",
+        "image_alt": "Coastal portrait",
+        "title": "Tidal Portrait",
+        "categories": "coast portrait",
+        "visibility": "visible"
+      },
+      {
+        "id": "gallery_2",
+        "image": "/assets/img/placeholders/gallery-studio-01.svg",
+        "image_alt": "Studio still life",
+        "title": "Clay + Linen",
+        "categories": "studio",
+        "visibility": "visible"
+      },
+      {
+        "id": "gallery_3",
+        "image": "/assets/img/placeholders/gallery-travel-01.svg",
+        "image_alt": "Travel scene",
+        "title": "Harbor Morning",
+        "categories": "travel coast",
+        "visibility": "visible"
+      },
+      {
+        "id": "gallery_4",
+        "image": "/assets/img/placeholders/gallery-portrait-01.svg",
+        "image_alt": "Portrait",
+        "title": "Window Study",
+        "categories": "portrait",
+        "visibility": "visible"
+      },
+      {
+        "id": "gallery_5",
+        "image": "/assets/img/placeholders/gallery-coast-02.svg",
+        "image_alt": "Coastal walk",
+        "title": "Cliff Path",
+        "categories": "coast travel",
+        "visibility": "visible"
+      },
+      {
+        "id": "gallery_6",
+        "image": "/assets/img/placeholders/gallery-studio-02.svg",
+        "image_alt": "Studio portrait",
+        "title": "Studio Frame",
+        "categories": "studio portrait",
+        "visibility": "visible"
+      },
+      {
+        "id": "gallery_7",
+        "image": "/assets/img/placeholders/gallery-travel-02.svg",
+        "image_alt": "Travel editorial",
+        "title": "Street Texture",
+        "categories": "travel",
+        "visibility": "visible"
+      },
+      {
+        "id": "gallery_8",
+        "image": "/assets/img/placeholders/gallery-coast-03.svg",
+        "image_alt": "Ocean horizon",
+        "title": "Low Horizon",
+        "categories": "coast",
+        "visibility": "visible"
+      },
+      {
+        "id": "gallery_9",
+        "image": "/assets/img/placeholders/gallery-studio-03.svg",
+        "image_alt": "Studio tabletop",
+        "title": "Table Study",
+        "categories": "studio travel",
+        "visibility": "visible"
+      }
+    ]
+  }
+}

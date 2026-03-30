@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&family=Work+Sans:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@200&family=Work+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/css/tokens.css" />
@@ -25,14 +25,6 @@
     <div class="site-shell">
       <header class="site-header home-header">
         <div class="container-wide home-header__top">
-          <a class="home-header__icon home-header__icon-link" href="#" aria-label="Waterlight Studio on Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
-              <circle cx="12" cy="12" r="4.2"></circle>
-              <circle cx="17.3" cy="6.7" r="1"></circle>
-            </svg>
-          </a>
-
           <button
             class="menu-toggle home-menu-toggle"
             type="button"
@@ -45,22 +37,16 @@
               <path d="M3 6h18M3 12h18M3 18h18" />
             </svg>
           </button>
-
-          <a class="home-header__cart home-header__icon-link" href="#" data-cart-items="0" aria-label="Shopping cart">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <circle cx="9" cy="20" r="1.6"></circle>
-              <circle cx="18" cy="20" r="1.6"></circle>
-              <path d="M3 4h2.2l2.1 10.2a1.1 1.1 0 0 0 1.1 0.9h10.1a1.1 1.1 0 0 0 1.1-0.9L21 7.6H7.1"></path>
-            </svg>
-            <span class="home-header__cart-count" aria-live="polite" hidden></span>
-          </a>
         </div>
 
         <div class="container-wide home-header__brandrow">
-          <a class="home-brand" href="/">Waterlight Studio</a>
+          <a class="home-brand" href="/">
+            <img src="/assets/img/Waterlight-Logo-Black.png" alt="" class="home-brand__logo" />
+            <span class="home-brand__name">Waterlight Studio</span>
+          </a>
 
           <nav id="primary-nav" class="home-nav" data-site-nav aria-label="Primary navigation">
-            <a href="#shop">Shop</a>
+            <a href="/gallery/" data-nav-link>Gallery</a>
             <a href="#journal">Journal</a>
             <a href="/about/" data-nav-link>About</a>
             <a href="#" class="js-mail-link">Contact</a>
@@ -73,7 +59,7 @@
           <div class="container-wide home-hero__layout">
             <div class="home-hero__copy" data-reveal="left">
               <h1>Ceramics for every table and ritual.</h1>
-              <a class="home-pill home-pill--outline" href="#shop">Shop Now</a>
+              <a class="home-pill home-pill--outline" href="/gallery/">View Gallery</a>
             </div>
 
             <figure class="home-hero__media" data-reveal="right">
@@ -88,48 +74,36 @@
 
         <section id="shop" class="home-section home-products">
           <div class="container-wide">
-            <h2 class="home-section-title" data-reveal>Shop our favorite ceramics</h2>
+            <h2 class="home-section-title" data-reveal>View our favorite ceramics</h2>
 
             <div class="home-product-grid">
               <article class="home-product" data-reveal>
                 <img src="/assets/img/placeholders/home-product-terracotta.svg" alt="Terracotta vessel placeholder" loading="lazy" />
                 <h3>Terracotta Vessel</h3>
-                <p class="home-product__price">$48.00</p>
                 <div class="home-product__actions">
-                  <div class="home-qty" aria-hidden="true">
-                    <button class="home-qty__btn" type="button">-</button>
-                    <span>1</span>
-                    <button class="home-qty__btn" type="button">+</button>
-                  </div>
-                  <button class="home-pill home-pill--wide" type="button">Add to Cart</button>
+                  <a href="/about/">Learn More</a>
+                  <span class="home-product__dot"></span>
+                  <a href="/gallery/">View Gallery</a>
                 </div>
               </article>
 
               <article class="home-product" data-reveal>
                 <img src="/assets/img/placeholders/home-product-sage.svg" alt="Sage glazed mug placeholder" loading="lazy" />
                 <h3>Sage Glaze Mug</h3>
-                <p class="home-product__price">$36.00</p>
                 <div class="home-product__actions">
-                  <div class="home-qty" aria-hidden="true">
-                    <button class="home-qty__btn" type="button">-</button>
-                    <span>1</span>
-                    <button class="home-qty__btn" type="button">+</button>
-                  </div>
-                  <button class="home-pill home-pill--wide" type="button">Add to Cart</button>
+                  <a href="/about/">Learn More</a>
+                  <span class="home-product__dot"></span>
+                  <a href="/gallery/">View Gallery</a>
                 </div>
               </article>
 
               <article class="home-product" data-reveal>
                 <img src="/assets/img/placeholders/home-product-sand.svg" alt="Sand stone serving bowl placeholder" loading="lazy" />
                 <h3>Sand Stone Bowl</h3>
-                <p class="home-product__price">$54.00</p>
                 <div class="home-product__actions">
-                  <div class="home-qty" aria-hidden="true">
-                    <button class="home-qty__btn" type="button">-</button>
-                    <span>1</span>
-                    <button class="home-qty__btn" type="button">+</button>
-                  </div>
-                  <button class="home-pill home-pill--wide" type="button">Add to Cart</button>
+                  <a href="/about/">Learn More</a>
+                  <span class="home-product__dot"></span>
+                  <a href="/gallery/">View Gallery</a>
                 </div>
               </article>
             </div>
@@ -204,30 +178,11 @@
 
       <footer class="home-newsletter">
         <div class="container-wide home-newsletter__inner">
-          <div class="home-newsletter__visual" data-reveal>
-            <img
-              src="/assets/img/placeholders/home-newsletter-visual.svg"
-              alt="Ceramic detail placeholder"
-              loading="lazy"
-            />
-            <a href="#" aria-label="Follow Waterlight Studio on Instagram">Follow us on Instagram</a>
-          </div>
-
-          <div class="home-newsletter__signup" data-reveal>
-            <p>Sign up to receive updates and 10% off your first purchase.</p>
-            <form action="#" method="post" onsubmit="return false;" class="home-signup-form">
-              <input type="email" aria-label="Email address" placeholder="Email Address" />
-              <button class="home-pill home-pill--outline" type="submit">Sign Up</button>
-            </form>
-          </div>
-
           <nav class="home-newsletter__links" aria-label="Footer links" data-reveal>
-            <a href="#shop">Shop</a>
             <a href="#journal">Journal</a>
             <a href="/about/">About</a>
+            <a href="/gallery/">Gallery</a>
             <a href="#" class="js-mail-link">Contact</a>
-            <a href="#">Shipping and Returns</a>
-            <a href="#">Stockists</a>
           </nav>
         </div>
 
@@ -237,7 +192,108 @@
       </footer>
     </div>
 
+    <script src="/cms-client.js"></script>
     <script src="/assets/js/main.js" defer></script>
     <script src="/assets/js/reveal.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', async () => {
+        try {
+          const cms = await window.CMS.fetchCms();
+
+          // Hero
+          const heroTitle = document.querySelector('.home-hero__copy h1');
+          if (heroTitle && cms.hero.title) heroTitle.textContent = cms.hero.title;
+          const heroCta = document.querySelector('.home-hero__copy .home-pill');
+          if (heroCta && cms.hero.cta_text) { heroCta.textContent = cms.hero.cta_text; heroCta.href = cms.hero.cta_link || '/gallery/'; }
+          const heroImg = document.querySelector('.home-hero__media img');
+          if (heroImg && cms.hero.image) { heroImg.src = cms.hero.image; heroImg.alt = cms.hero.image_alt || ''; }
+
+          // Products
+          const prodTitle = document.querySelector('.home-products .home-section-title');
+          if (prodTitle && cms.products.section_title) prodTitle.textContent = cms.products.section_title;
+          const prodGrid = document.querySelector('.home-product-grid');
+          if (prodGrid && cms.products.items.length) {
+            prodGrid.innerHTML = cms.products.items
+              .filter(p => p.visibility !== 'hidden')
+              .map(p => `<article class="home-product is-visible">
+                <img src="${p.image}" alt="${p.image_alt || ''}" loading="lazy" />
+                <h3>${p.title}</h3>
+                <div class="home-product__actions">
+                  <a href="${p.learn_more_link || '/about/'}">Learn More</a>
+                  <span class="home-product__dot"></span>
+                  <a href="${p.gallery_link || '/gallery/'}">View Gallery</a>
+                </div>
+              </article>`).join('');
+          }
+
+          // Feature
+          const featImg = document.querySelector('.home-feature__image img');
+          if (featImg && cms.feature.image) { featImg.src = cms.feature.image; featImg.alt = cms.feature.image_alt || ''; }
+          const featTitle = document.querySelector('.home-feature__copy h2');
+          if (featTitle && cms.feature.title) featTitle.textContent = cms.feature.title;
+          const featDesc = document.querySelector('.home-feature__copy p');
+          if (featDesc && cms.feature.description) featDesc.textContent = cms.feature.description;
+          const featLink = document.querySelector('.home-feature__copy a');
+          if (featLink && cms.feature.link_text) { featLink.textContent = cms.feature.link_text; featLink.href = cms.feature.link_url || '/about/'; }
+
+          // Values
+          const valTitle = document.querySelector('.home-values h2');
+          if (valTitle && cms.values.title) valTitle.textContent = cms.values.title;
+          const valGrid = document.querySelector('.home-values__grid');
+          if (valGrid && cms.values.items.length) {
+            valGrid.innerHTML = cms.values.items.map(v =>
+              `<article class="home-value is-visible"><h3>${v.title}</h3><p>${v.description}</p></article>`
+            ).join('');
+          }
+
+          // Journal
+          const journalIntro = document.querySelector('.home-journal__intro p');
+          if (journalIntro && cms.journal.intro_text) journalIntro.textContent = cms.journal.intro_text;
+          const journalCta = document.querySelector('.home-journal__intro .home-pill');
+          if (journalCta && cms.journal.cta_text) { journalCta.textContent = cms.journal.cta_text; journalCta.href = cms.journal.cta_link || '/about/'; }
+          const journalCards = document.querySelector('.home-journal__cards');
+          if (journalCards && cms.journal.cards.length) {
+            journalCards.innerHTML = cms.journal.cards
+              .filter(j => j.visibility !== 'hidden')
+              .map(j => `<article class="home-journal-card is-visible">
+                <img src="${j.image}" alt="${j.image_alt || ''}" loading="lazy" />
+                <h3>${j.title}</h3>
+              </article>`).join('');
+          }
+
+          // Newsletter
+          const nlText = document.querySelector('.home-newsletter__signup p');
+          if (nlText && cms.newsletter.signup_text) nlText.textContent = cms.newsletter.signup_text;
+          const nlImg = document.querySelector('.home-newsletter__visual img');
+          if (nlImg && cms.newsletter.image) { nlImg.src = cms.newsletter.image; nlImg.alt = cms.newsletter.image_alt || ''; }
+          const nlInsta = document.querySelector('.home-newsletter__visual a');
+          if (nlInsta && cms.newsletter.instagram_text) nlInsta.textContent = cms.newsletter.instagram_text;
+
+          // Section visibility
+          const sectionMap = {
+            hero: '.home-hero',
+            products: '.home-products',
+            feature: '.home-feature',
+            values: '.home-values',
+            journal: '.home-journal',
+            newsletter: '.home-newsletter'
+          };
+          const settingMap = {
+            hero: 'showHeroSection',
+            products: 'showProductsSection',
+            feature: 'showFeatureSection',
+            values: 'showValuesSection',
+            journal: 'showJournalSection',
+            newsletter: 'showNewsletterSection'
+          };
+          Object.entries(sectionMap).forEach(([key, sel]) => {
+            const el = document.querySelector(sel);
+            if (el && cms.settings[settingMap[key]] === false) el.style.display = 'none';
+          });
+        } catch (e) {
+          // CMS fetch failed; static HTML remains as fallback.
+        }
+      });
+    </script>
   </body>
 </html>

@@ -30,6 +30,11 @@
   color: var(--charcoal);
 }
 
+.brand__logo {
+  height: clamp(1.8rem, 1.4rem + 1.2vw, 2.6rem);
+  width: auto;
+}
+
 .brand span {
   margin-top: 0.18rem;
   font-size: 0.68rem;

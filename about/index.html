@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Work+Sans:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@200&family=Work+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/css/tokens.css" />
@@ -20,21 +20,13 @@
     <link rel="stylesheet" href="/assets/css/components.css" />
     <link rel="stylesheet" href="/assets/css/pages.css" />
   </head>
-  <body>
+  <body class="home-template">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
-      <div class="texture-blur texture-blur--olive" aria-hidden="true"></div>
-      <div class="texture-blur texture-blur--rust" aria-hidden="true"></div>
-
-      <header class="site-header">
-        <div class="site-header__inner">
-          <a class="brand" href="/">
-            <strong>Waterlight Studio</strong>
-            <span>Handmade Ceramic Studio</span>
-          </a>
-
+      <header class="site-header home-header">
+        <div class="container-wide home-header__top">
           <button
-            class="menu-toggle"
+            class="menu-toggle home-menu-toggle"
             type="button"
             data-menu-toggle
             aria-expanded="false"
@@ -45,12 +37,19 @@
               <path d="M3 6h18M3 12h18M3 18h18" />
             </svg>
           </button>
+        </div>
 
-          <nav id="primary-nav" class="site-nav" data-site-nav aria-label="Primary navigation">
+        <div class="container-wide home-header__brandrow">
+          <a class="home-brand" href="/">
+            <img src="/assets/img/Waterlight-Logo-Black.png" alt="" class="home-brand__logo" />
+            <span class="home-brand__name">Waterlight Studio</span>
+          </a>
+
+          <nav id="primary-nav" class="home-nav" data-site-nav aria-label="Primary navigation">
             <a href="/" data-nav-link>Home</a>
             <a href="/about/" data-nav-link>About</a>
             <a href="/gallery/" data-nav-link>Gallery</a>
-            <a class="button-ghost js-mail-link" href="#">Book a Consult</a>
+            <a href="#" class="js-mail-link">Contact</a>
           </nav>
         </div>
       </header>
@@ -163,7 +162,47 @@
       </footer>
     </div>
 
+    <script src="/cms-client.js"></script>
     <script src="/assets/js/main.js" defer></script>
     <script src="/assets/js/reveal.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', async () => {
+        try {
+          const cms = await window.CMS.fetchCms();
+          const a = cms.about;
+
+          const kicker = document.querySelector('.hero__kicker');
+          if (kicker && a.kicker) kicker.textContent = a.kicker;
+          const heroH1 = document.querySelector('.page-hero h1');
+          if (heroH1 && a.hero_title) heroH1.textContent = a.hero_title;
+          const heroP = document.querySelector('.page-hero__inner > p');
+          if (heroP && a.hero_description) heroP.textContent = a.hero_description;
+
+          const originH2 = document.querySelector('.about-block h2');
+          if (originH2 && a.origin_title) originH2.textContent = a.origin_title;
+          const originPs = document.querySelectorAll('.about-block p');
+          if (originPs[0] && a.origin_text_1) originPs[0].textContent = a.origin_text_1;
+          if (originPs[1] && a.origin_text_2) originPs[1].textContent = a.origin_text_2;
+          const originImg = document.querySelector('.about-layout .card img');
+          if (originImg && a.origin_image) { originImg.src = a.origin_image; originImg.alt = a.origin_image_alt || ''; }
+
+          const valGrid = document.querySelector('.values-grid');
+          if (valGrid && a.principles.length) {
+            valGrid.innerHTML = a.principles.map(p =>
+              `<article class="card is-visible"><h3>${p.title}</h3><p>${p.description}</p></article>`
+            ).join('');
+          }
+
+          const engGrid = document.querySelector('.grid-2');
+          if (engGrid && a.engagement.length) {
+            engGrid.innerHTML = a.engagement.map(e =>
+              `<article class="card is-visible"><h3>${e.title}</h3><p>${e.description}</p></article>`
+            ).join('');
+          }
+        } catch (e) {
+          // CMS fetch failed; static HTML remains.
+        }
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Waterlight Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;400;500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="/cms-client.js"></script>
+    <style>
+        :root {
+            --bg: #1a1c1e;
+            --bg-card: #22252a;
+            --bg-input: #2a2d33;
+            --text: #e8e6e1;
+            --text-dim: #9a978f;
+            --accent: #2a3919;
+            --accent-hover: #3a4f26;
+            --danger: #8b3a2a;
+            --border: rgba(255,255,255,0.08);
+            --radius: 0.6rem;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Work Sans", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            min-height: 100vh;
+        }
+        .admin-dashboard { max-width: 64rem; margin: 0 auto; padding: 1.5rem; }
+        .admin-dashboard > nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 1.5rem;
+        }
+        .admin-dashboard > nav a { color: var(--text-dim); text-decoration: none; font-size: 0.88rem; }
+        .admin-dashboard > nav a:hover { color: var(--text); }
+        .admin-brand { font-family: "Lexend", sans-serif; font-weight: 200; font-size: 1.4rem; color: var(--text); }
+        .admin-brand img { height: 1.6rem; margin-right: 0.5rem; vertical-align: middle; filter: invert(1); }
+
+        .admin-header-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+        .admin-header-row h1 { font-family: "Lexend", sans-serif; font-weight: 200; font-size: 1.8rem; }
+
+        .admin-capsule-group { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+        .admin-capsule {
+            padding: 0.45rem 1rem;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-dim);
+            font-size: 0.82rem;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .admin-capsule:hover { border-color: var(--text-dim); color: var(--text); }
+        .admin-capsule.active { background: var(--accent); border-color: var(--accent); color: var(--text); }
+
+        .admin-actions { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .admin-btn {
+            padding: 0.5rem 1.1rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text);
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .admin-btn:hover { border-color: var(--text-dim); }
+        .admin-btn.primary { background: var(--accent); border-color: var(--accent); }
+        .admin-btn.primary:hover { background: var(--accent-hover); }
+        .admin-btn.danger { color: #e07060; border-color: rgba(224,112,96,0.3); }
+        .admin-btn.danger:hover { background: var(--danger); color: var(--text); }
+        .admin-btn.small { padding: 0.3rem 0.7rem; font-size: 0.78rem; }
+        .admin-empty { color: var(--text-dim); font-size: 0.88rem; }
+
+        .admin-panel { margin-bottom: 2rem; }
+        .admin-panel h2 { font-family: "Lexend", sans-serif; font-weight: 200; font-size: 1.3rem; margin-bottom: 1rem; }
+        .admin-subsection { margin-bottom: 1.5rem; }
+        .admin-subsection h3 { font-size: 0.95rem; color: var(--text-dim); margin-bottom: 0.75rem; }
+
+        .admin-content-list { display: grid; gap: 0.5rem; }
+        .admin-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 1rem;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            gap: 1rem;
+        }
+        .admin-card-info { flex: 1; min-width: 0; }
+        .admin-card-info strong { display: block; font-weight: 500; }
+        .admin-card-info small { color: var(--text-dim); font-size: 0.8rem; }
+        .admin-card-info .admin-thumb {
+            width: 3rem; height: 3rem; border-radius: 0.35rem;
+            object-fit: cover; margin-right: 0.75rem; vertical-align: middle;
+        }
+        .admin-card-actions { display: flex; gap: 0.35rem; flex-shrink: 0; }
+        .status-hidden { opacity: 0.45; }
+
+        .admin-sortable-list { display: grid; gap: 0.4rem; }
+        .admin-sortable-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.65rem 1rem;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            cursor: grab;
+        }
+        .admin-sortable-item.dragging { opacity: 0.4; }
+        .admin-drag-handle { cursor: grab; color: var(--text-dim); user-select: none; }
+        .admin-item-name { flex: 1; }
+        .admin-toggle { position: relative; display: inline-block; width: 2.4rem; height: 1.3rem; }
+        .admin-toggle input { opacity: 0; width: 0; height: 0; }
+        .admin-toggle-slider {
+            position: absolute; cursor: pointer; inset: 0;
+            background: var(--bg-input); border-radius: 999px;
+            transition: 0.2s;
+        }
+        .admin-toggle-slider::before {
+            content: ""; position: absolute;
+            height: 1rem; width: 1rem;
+            left: 0.15rem; bottom: 0.15rem;
+            background: var(--text-dim); border-radius: 50%;
+            transition: 0.2s;
+        }
+        .admin-toggle input:checked + .admin-toggle-slider { background: var(--accent); }
+        .admin-toggle input:checked + .admin-toggle-slider::before { transform: translateX(1.1rem); background: var(--text); }
+
+        /* Modal */
+        .admin-modal {
+            display: none;
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.65);
+            align-items: center; justify-content: center;
+            z-index: 1000;
+            padding: 1rem;
+        }
+        .admin-modal-content {
+            background: var(--bg-card);
+            border-radius: 0.8rem;
+            padding: 1.8rem;
+            width: 100%;
+            max-width: 32rem;
+            max-height: 90vh;
+            overflow-y: auto;
+            border: 1px solid var(--border);
+        }
+        .admin-modal-content h2 { font-family: "Lexend", sans-serif; font-weight: 200; margin-bottom: 1.2rem; }
+        .admin-form-group { margin-bottom: 1rem; }
+        .admin-form-group label { display: block; font-size: 0.82rem; color: var(--text-dim); margin-bottom: 0.3rem; }
+        .admin-form-group input,
+        .admin-form-group textarea,
+        .admin-form-group select {
+            width: 100%;
+            padding: 0.55rem 0.75rem;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            color: var(--text);
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+        .admin-form-group textarea { resize: vertical; min-height: 4rem; }
+        .admin-form-group input:focus,
+        .admin-form-group textarea:focus,
+        .admin-form-group select:focus { outline: none; border-color: var(--accent); }
+        .admin-form-actions { display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 1.2rem; }
+
+        .admin-preview-img { max-width: 100%; max-height: 6rem; border-radius: 0.35rem; margin-top: 0.35rem; }
+
+        @media (max-width: 40rem) {
+            .admin-header-row { flex-direction: column; align-items: flex-start; }
+            .admin-card { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-dashboard">
+        <nav>
+            <a href="/" class="admin-brand">
+                <img src="/assets/img/Waterlight-Logo-Black.png" alt="Logo">
+                Waterlight Studio
+            </a>
+            <a href="/">View Site</a>
+        </nav>
+
+        <main>
+            <section class="admin-header-row">
+                <h1>Admin Dashboard</h1>
+                <div class="admin-capsule-group">
+                    <button class="admin-capsule active" data-panel="homepage">Homepage</button>
+                    <button class="admin-capsule" data-panel="about">About</button>
+                    <button class="admin-capsule" data-panel="gallery">Gallery</button>
+                    <button class="admin-capsule" data-panel="settings">Settings</button>
+                </div>
+            </section>
+
+            <div class="admin-actions" id="cms-sync-controls">
+                <button id="cms-config-btn" class="admin-btn">Configure Sync</button>
+                <span id="cms-sync-status" class="admin-empty">Sync idle</span>
+            </div>
+
+            <!-- Homepage Panel -->
+            <section class="admin-panel" id="panel-homepage">
+                <div class="admin-subsection">
+                    <h3>Hero Section</h3>
+                    <div class="admin-actions"><button id="edit-hero-btn" class="admin-btn primary">Edit Hero</button></div>
+                    <div class="admin-content-list" id="hero-preview"></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>Product Cards</h3>
+                    <div class="admin-actions"><button id="new-product-btn" class="admin-btn primary">+ New Product</button></div>
+                    <div class="admin-content-list" id="product-list"></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>Feature Section</h3>
+                    <div class="admin-actions"><button id="edit-feature-btn" class="admin-btn primary">Edit Feature</button></div>
+                    <div class="admin-content-list" id="feature-preview"></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>Values Section</h3>
+                    <div class="admin-actions"><button id="new-value-btn" class="admin-btn primary">+ New Value</button></div>
+                    <div class="admin-content-list" id="values-list"></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>Journal Cards</h3>
+                    <div class="admin-actions"><button id="new-journal-btn" class="admin-btn primary">+ New Journal Card</button></div>
+                    <div class="admin-content-list" id="journal-list"></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>Newsletter Section</h3>
+                    <div class="admin-actions"><button id="edit-newsletter-btn" class="admin-btn primary">Edit Newsletter</button></div>
+                    <div class="admin-content-list" id="newsletter-preview"></div>
+                </div>
+            </section>
+
+            <!-- About Panel -->
+            <section class="admin-panel" id="panel-about" style="display:none">
+                <div class="admin-subsection">
+                    <h3>Hero & Origin</h3>
+                    <div class="admin-actions"><button id="edit-about-btn" class="admin-btn primary">Edit About Content</button></div>
+                    <div class="admin-content-list" id="about-preview"></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>Creative Principles</h3>
+                    <div class="admin-actions"><button id="new-principle-btn" class="admin-btn primary">+ New Principle</button></div>
+                    <div class="admin-content-list" id="principles-list"></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>Engagement Model</h3>
+                    <div class="admin-actions"><button id="new-engagement-btn" class="admin-btn primary">+ New Tier</button></div>
+                    <div class="admin-content-list" id="engagement-list"></div>
+                </div>
+            </section>
+
+            <!-- Gallery Panel -->
+            <section class="admin-panel" id="panel-gallery" style="display:none">
+                <div class="admin-subsection">
+                    <h3>Gallery Hero</h3>
+                    <div class="admin-actions"><button id="edit-gallery-hero-btn" class="admin-btn primary">Edit Gallery Hero</button></div>
+                    <div class="admin-content-list" id="gallery-hero-preview"></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>Gallery Items</h3>
+                    <div class="admin-actions"><button id="new-gallery-btn" class="admin-btn primary">+ New Gallery Item</button></div>
+                    <div class="admin-content-list" id="gallery-list"></div>
+                </div>
+            </section>
+
+            <!-- Settings Panel -->
+            <section class="admin-panel" id="panel-settings" style="display:none">
+                <h2>Section Visibility & Order</h2>
+                <div class="admin-sortable-list" id="section-list"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Hero Modal -->
+    <div id="hero-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2>Edit Hero</h2>
+            <form id="hero-form">
+                <div class="admin-form-group"><label for="hero-title">Title</label><input type="text" id="hero-title"></div>
+                <div class="admin-form-group"><label for="hero-cta-text">CTA Text</label><input type="text" id="hero-cta-text"></div>
+                <div class="admin-form-group"><label for="hero-cta-link">CTA Link</label><input type="text" id="hero-cta-link"></div>
+                <div class="admin-form-group"><label for="hero-image">Image URL</label><input type="text" id="hero-image"></div>
+                <div class="admin-form-group"><label for="hero-image-alt">Image Alt</label><input type="text" id="hero-image-alt"></div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2 id="product-modal-title">New Product</h2>
+            <form id="product-form">
+                <input type="hidden" id="product-id">
+                <div class="admin-form-group"><label for="product-title">Title</label><input type="text" id="product-title" required></div>
+                <div class="admin-form-group"><label for="product-image">Image URL</label><input type="text" id="product-image"></div>
+                <div class="admin-form-group"><label for="product-image-alt">Image Alt</label><input type="text" id="product-image-alt"></div>
+                <div class="admin-form-group"><label for="product-learn-link">Learn More Link</label><input type="text" id="product-learn-link" value="/about/"></div>
+                <div class="admin-form-group"><label for="product-gallery-link">Gallery Link</label><input type="text" id="product-gallery-link" value="/gallery/"></div>
+                <div class="admin-form-group"><label for="product-visibility">Visibility</label>
+                    <select id="product-visibility"><option value="visible">Visible</option><option value="hidden">Hidden</option></select>
+                </div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Feature Modal -->
+    <div id="feature-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2>Edit Feature Section</h2>
+            <form id="feature-form">
+                <div class="admin-form-group"><label for="feature-title">Title</label><input type="text" id="feature-title"></div>
+                <div class="admin-form-group"><label for="feature-desc">Description</label><textarea id="feature-desc" rows="3"></textarea></div>
+                <div class="admin-form-group"><label for="feature-image">Image URL</label><input type="text" id="feature-image"></div>
+                <div class="admin-form-group"><label for="feature-image-alt">Image Alt</label><input type="text" id="feature-image-alt"></div>
+                <div class="admin-form-group"><label for="feature-link-text">Link Text</label><input type="text" id="feature-link-text"></div>
+                <div class="admin-form-group"><label for="feature-link-url">Link URL</label><input type="text" id="feature-link-url"></div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Value Modal -->
+    <div id="value-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2 id="value-modal-title">New Value</h2>
+            <form id="value-form">
+                <input type="hidden" id="value-id">
+                <div class="admin-form-group"><label for="value-title">Title</label><input type="text" id="value-title" required></div>
+                <div class="admin-form-group"><label for="value-desc">Description</label><textarea id="value-desc" rows="3"></textarea></div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Journal Modal -->
+    <div id="journal-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2 id="journal-modal-title">New Journal Card</h2>
+            <form id="journal-form">
+                <input type="hidden" id="journal-id">
+                <div class="admin-form-group"><label for="journal-title">Title</label><input type="text" id="journal-title" required></div>
+                <div class="admin-form-group"><label for="journal-image">Image URL</label><input type="text" id="journal-image"></div>
+                <div class="admin-form-group"><label for="journal-image-alt">Image Alt</label><input type="text" id="journal-image-alt"></div>
+                <div class="admin-form-group"><label for="journal-visibility">Visibility</label>
+                    <select id="journal-visibility"><option value="visible">Visible</option><option value="hidden">Hidden</option></select>
+                </div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Newsletter Modal -->
+    <div id="newsletter-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2>Edit Newsletter</h2>
+            <form id="newsletter-form">
+                <div class="admin-form-group"><label for="newsletter-text">Signup Text</label><textarea id="newsletter-text" rows="2"></textarea></div>
+                <div class="admin-form-group"><label for="newsletter-image">Image URL</label><input type="text" id="newsletter-image"></div>
+                <div class="admin-form-group"><label for="newsletter-image-alt">Image Alt</label><input type="text" id="newsletter-image-alt"></div>
+                <div class="admin-form-group"><label for="newsletter-instagram">Instagram Text</label><input type="text" id="newsletter-instagram"></div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div id="about-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2>Edit About Content</h2>
+            <form id="about-form">
+                <div class="admin-form-group"><label for="about-kicker">Kicker</label><input type="text" id="about-kicker"></div>
+                <div class="admin-form-group"><label for="about-hero-title">Hero Title</label><input type="text" id="about-hero-title"></div>
+                <div class="admin-form-group"><label for="about-hero-desc">Hero Description</label><textarea id="about-hero-desc" rows="3"></textarea></div>
+                <div class="admin-form-group"><label for="about-origin-title">Origin Section Title</label><input type="text" id="about-origin-title"></div>
+                <div class="admin-form-group"><label for="about-origin-1">Origin Text 1</label><textarea id="about-origin-1" rows="3"></textarea></div>
+                <div class="admin-form-group"><label for="about-origin-2">Origin Text 2</label><textarea id="about-origin-2" rows="3"></textarea></div>
+                <div class="admin-form-group"><label for="about-origin-image">Origin Image URL</label><input type="text" id="about-origin-image"></div>
+                <div class="admin-form-group"><label for="about-origin-image-alt">Origin Image Alt</label><input type="text" id="about-origin-image-alt"></div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Principle Modal -->
+    <div id="principle-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2 id="principle-modal-title">New Principle</h2>
+            <form id="principle-form">
+                <input type="hidden" id="principle-id">
+                <div class="admin-form-group"><label for="principle-title">Title</label><input type="text" id="principle-title" required></div>
+                <div class="admin-form-group"><label for="principle-desc">Description</label><textarea id="principle-desc" rows="3"></textarea></div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Engagement Modal -->
+    <div id="engagement-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2 id="engagement-modal-title">New Tier</h2>
+            <form id="engagement-form">
+                <input type="hidden" id="engagement-id">
+                <div class="admin-form-group"><label for="engagement-title">Title</label><input type="text" id="engagement-title" required></div>
+                <div class="admin-form-group"><label for="engagement-desc">Description</label><textarea id="engagement-desc" rows="3"></textarea></div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Gallery Hero Modal -->
+    <div id="gallery-hero-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2>Edit Gallery Hero</h2>
+            <form id="gallery-hero-form">
+                <div class="admin-form-group"><label for="ghero-kicker">Kicker</label><input type="text" id="ghero-kicker"></div>
+                <div class="admin-form-group"><label for="ghero-title">Title</label><input type="text" id="ghero-title"></div>
+                <div class="admin-form-group"><label for="ghero-desc">Description</label><textarea id="ghero-desc" rows="3"></textarea></div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Gallery Item Modal -->
+    <div id="gallery-item-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2 id="gallery-item-modal-title">New Gallery Item</h2>
+            <form id="gallery-item-form">
+                <input type="hidden" id="gitem-id">
+                <div class="admin-form-group"><label for="gitem-title">Title</label><input type="text" id="gitem-title" required></div>
+                <div class="admin-form-group"><label for="gitem-image">Image URL</label><input type="text" id="gitem-image"></div>
+                <div class="admin-form-group"><label for="gitem-image-alt">Image Alt</label><input type="text" id="gitem-image-alt"></div>
+                <div class="admin-form-group"><label for="gitem-categories">Categories (space-separated)</label><input type="text" id="gitem-categories" placeholder="coast portrait studio travel"></div>
+                <div class="admin-form-group"><label for="gitem-visibility">Visibility</label>
+                    <select id="gitem-visibility"><option value="visible">Visible</option><option value="hidden">Hidden</option></select>
+                </div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+    (() => {
+        'use strict';
+
+        const CMS_WORKER_URL_KEY = 'wl_cms_worker_url';
+        let cmsData = null;
+        let cmsSyncTimer = null;
+        let cmsSyncReason = '';
+        let cmsSyncInFlight = false;
+
+        function setSyncStatus(msg) {
+            const el = document.getElementById('cms-sync-status');
+            if (el) el.textContent = msg;
+        }
+
+        function generateId(prefix) {
+            return (prefix || 'item') + '_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
+        }
+
+        // ===== CMS Sync =====
+        async function getSyncConfig() {
+            let workerUrl = (localStorage.getItem(CMS_WORKER_URL_KEY) || '').trim();
+            if (!workerUrl) {
+                const entered = prompt('Enter your Cloudflare Worker base URL');
+                if (!entered) throw new Error('Sync canceled: no Worker URL.');
+                workerUrl = entered.trim().replace(/\/$/, '');
+                localStorage.setItem(CMS_WORKER_URL_KEY, workerUrl);
+            }
+            let adminKey = window.CMS.getAdminKey();
+            if (!adminKey) {
+                const entered = prompt('Enter CMS admin key');
+                if (!entered) throw new Error('Sync canceled: no admin key.');
+                adminKey = entered.trim();
+                window.CMS.setAdminKey(adminKey);
+            }
+            return { workerUrl, adminKey };
+        }
+
+        async function flushCmsSync() {
+            if (cmsSyncInFlight || !cmsSyncReason) return;
+            cmsSyncInFlight = true;
+            while (cmsSyncReason) {
+                const reason = cmsSyncReason;
+                cmsSyncReason = '';
+                try {
+                    setSyncStatus(`Syncing... (${reason})`);
+                    const { workerUrl, adminKey } = await getSyncConfig();
+                    await window.CMS.saveCmsViaWorker(cmsData, { workerUrl, adminKey, commitMessage: `cms: ${reason} ${new Date().toISOString()}` });
+                    setSyncStatus(`Synced at ${new Date().toLocaleTimeString()}`);
+                } catch (err) {
+                    setSyncStatus(`Sync failed: ${err.message}`);
+                }
+            }
+            cmsSyncInFlight = false;
+        }
+
+        function queueSync(reason) {
+            cmsSyncReason = reason || 'save';
+            clearTimeout(cmsSyncTimer);
+            cmsSyncTimer = setTimeout(flushCmsSync, 400);
+        }
+
+        function save(reason) {
+            cmsData.updatedAt = new Date().toISOString();
+            window.CMS.writeCachedCms(cmsData);
+            queueSync(reason);
+        }
+
+        // ===== Modal helpers =====
+        function openModal(id) { document.getElementById(id).style.display = 'flex'; }
+        function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+
+        document.querySelectorAll('.cancel-modal').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.closest('.admin-modal').style.display = 'none';
+            });
+        });
+
+        document.querySelectorAll('.admin-modal').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) modal.style.display = 'none';
+            });
+        });
+
+        // ===== Render helpers =====
+        function cardHtml(title, subtitle, id, editFn, deleteFn) {
+            return `<div class="admin-card" data-id="${id}">
+                <div class="admin-card-info"><strong>${esc(title)}</strong>${subtitle ? `<small>${esc(subtitle)}</small>` : ''}</div>
+                <div class="admin-card-actions">
+                    <button class="admin-btn small" onclick="${editFn}('${id}')">Edit</button>
+                    <button class="admin-btn small danger" onclick="${deleteFn}('${id}')">Delete</button>
+                </div>
+            </div>`;
+        }
+
+        function singletonCard(title, subtitle) {
+            return `<div class="admin-card"><div class="admin-card-info"><strong>${esc(title)}</strong>${subtitle ? `<small>${esc(subtitle)}</small>` : ''}</div></div>`;
+        }
+
+        function esc(str) {
+            const d = document.createElement('div');
+            d.textContent = str || '';
+            return d.innerHTML;
+        }
+
+        // ===== HERO =====
+        function renderHero() {
+            document.getElementById('hero-preview').innerHTML = singletonCard(cmsData.hero.title, cmsData.hero.cta_text);
+        }
+        document.getElementById('edit-hero-btn').addEventListener('click', () => {
+            document.getElementById('hero-title').value = cmsData.hero.title || '';
+            document.getElementById('hero-cta-text').value = cmsData.hero.cta_text || '';
+            document.getElementById('hero-cta-link').value = cmsData.hero.cta_link || '';
+            document.getElementById('hero-image').value = cmsData.hero.image || '';
+            document.getElementById('hero-image-alt').value = cmsData.hero.image_alt || '';
+            openModal('hero-modal');
+        });
+        document.getElementById('hero-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            cmsData.hero.title = document.getElementById('hero-title').value;
+            cmsData.hero.cta_text = document.getElementById('hero-cta-text').value;
+            cmsData.hero.cta_link = document.getElementById('hero-cta-link').value;
+            cmsData.hero.image = document.getElementById('hero-image').value;
+            cmsData.hero.image_alt = document.getElementById('hero-image-alt').value;
+            save('hero-update');
+            closeModal('hero-modal');
+            renderHero();
+        });
+
+        // ===== PRODUCTS =====
+        function renderProducts() {
+            const el = document.getElementById('product-list');
+            if (!cmsData.products.items.length) { el.innerHTML = '<p class="admin-empty">No products.</p>'; return; }
+            el.innerHTML = cmsData.products.items.map(p =>
+                cardHtml(p.title, p.visibility === 'hidden' ? 'Hidden' : '', p.id, 'editProduct', 'deleteProduct')
+            ).join('');
+        }
+        window.editProduct = function(id) {
+            const p = cmsData.products.items.find(x => x.id === id);
+            if (!p) return;
+            document.getElementById('product-modal-title').textContent = 'Edit Product';
+            document.getElementById('product-id').value = p.id;
+            document.getElementById('product-title').value = p.title || '';
+            document.getElementById('product-image').value = p.image || '';
+            document.getElementById('product-image-alt').value = p.image_alt || '';
+            document.getElementById('product-learn-link').value = p.learn_more_link || '/about/';
+            document.getElementById('product-gallery-link').value = p.gallery_link || '/gallery/';
+            document.getElementById('product-visibility').value = p.visibility || 'visible';
+            openModal('product-modal');
+        };
+        window.deleteProduct = function(id) {
+            if (!confirm('Delete this product?')) return;
+            cmsData.products.items = cmsData.products.items.filter(x => x.id !== id);
+            save('product-delete');
+            renderProducts();
+        };
+        document.getElementById('new-product-btn').addEventListener('click', () => {
+            document.getElementById('product-modal-title').textContent = 'New Product';
+            document.getElementById('product-form').reset();
+            document.getElementById('product-id').value = '';
+            document.getElementById('product-learn-link').value = '/about/';
+            document.getElementById('product-gallery-link').value = '/gallery/';
+            openModal('product-modal');
+        });
+        document.getElementById('product-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const id = document.getElementById('product-id').value;
+            const item = {
+                id: id || generateId('product'),
+                title: document.getElementById('product-title').value,
+                image: document.getElementById('product-image').value,
+                image_alt: document.getElementById('product-image-alt').value,
+                learn_more_link: document.getElementById('product-learn-link').value,
+                gallery_link: document.getElementById('product-gallery-link').value,
+                visibility: document.getElementById('product-visibility').value
+            };
+            if (id) {
+                const idx = cmsData.products.items.findIndex(x => x.id === id);
+                if (idx !== -1) cmsData.products.items[idx] = item;
+            } else {
+                cmsData.products.items.push(item);
+            }
+            save('product-update');
+            closeModal('product-modal');
+            renderProducts();
+        });
+
+        // ===== FEATURE =====
+        function renderFeature() {
+            document.getElementById('feature-preview').innerHTML = singletonCard(cmsData.feature.title, cmsData.feature.description);
+        }
+        document.getElementById('edit-feature-btn').addEventListener('click', () => {
+            document.getElementById('feature-title').value = cmsData.feature.title || '';
+            document.getElementById('feature-desc').value = cmsData.feature.description || '';
+            document.getElementById('feature-image').value = cmsData.feature.image || '';
+            document.getElementById('feature-image-alt').value = cmsData.feature.image_alt || '';
+            document.getElementById('feature-link-text').value = cmsData.feature.link_text || '';
+            document.getElementById('feature-link-url').value = cmsData.feature.link_url || '';
+            openModal('feature-modal');
+        });
+        document.getElementById('feature-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            cmsData.feature.title = document.getElementById('feature-title').value;
+            cmsData.feature.description = document.getElementById('feature-desc').value;
+            cmsData.feature.image = document.getElementById('feature-image').value;
+            cmsData.feature.image_alt = document.getElementById('feature-image-alt').value;
+            cmsData.feature.link_text = document.getElementById('feature-link-text').value;
+            cmsData.feature.link_url = document.getElementById('feature-link-url').value;
+            save('feature-update');
+            closeModal('feature-modal');
+            renderFeature();
+        });
+
+        // ===== VALUES =====
+        function renderValues() {
+            const el = document.getElementById('values-list');
+            if (!cmsData.values.items.length) { el.innerHTML = '<p class="admin-empty">No values.</p>'; return; }
+            el.innerHTML = cmsData.values.items.map(v =>
+                cardHtml(v.title, v.description, v.id, 'editValue', 'deleteValue')
+            ).join('');
+        }
+        window.editValue = function(id) {
+            const v = cmsData.values.items.find(x => x.id === id);
+            if (!v) return;
+            document.getElementById('value-modal-title').textContent = 'Edit Value';
+            document.getElementById('value-id').value = v.id;
+            document.getElementById('value-title').value = v.title || '';
+            document.getElementById('value-desc').value = v.description || '';
+            openModal('value-modal');
+        };
+        window.deleteValue = function(id) {
+            if (!confirm('Delete this value?')) return;
+            cmsData.values.items = cmsData.values.items.filter(x => x.id !== id);
+            save('value-delete');
+            renderValues();
+        };
+        document.getElementById('new-value-btn').addEventListener('click', () => {
+            document.getElementById('value-modal-title').textContent = 'New Value';
+            document.getElementById('value-form').reset();
+            document.getElementById('value-id').value = '';
+            openModal('value-modal');
+        });
+        document.getElementById('value-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const id = document.getElementById('value-id').value;
+            const item = { id: id || generateId('value'), title: document.getElementById('value-title').value, description: document.getElementById('value-desc').value };
+            if (id) { const idx = cmsData.values.items.findIndex(x => x.id === id); if (idx !== -1) cmsData.values.items[idx] = item; }
+            else { cmsData.values.items.push(item); }
+            save('value-update');
+            closeModal('value-modal');
+            renderValues();
+        });
+
+        // ===== JOURNAL =====
+        function renderJournal() {
+            const el = document.getElementById('journal-list');
+            if (!cmsData.journal.cards.length) { el.innerHTML = '<p class="admin-empty">No journal cards.</p>'; return; }
+            el.innerHTML = cmsData.journal.cards.map(j =>
+                cardHtml(j.title, j.visibility === 'hidden' ? 'Hidden' : '', j.id, 'editJournal', 'deleteJournal')
+            ).join('');
+        }
+        window.editJournal = function(id) {
+            const j = cmsData.journal.cards.find(x => x.id === id);
+            if (!j) return;
+            document.getElementById('journal-modal-title').textContent = 'Edit Journal Card';
+            document.getElementById('journal-id').value = j.id;
+            document.getElementById('journal-title').value = j.title || '';
+            document.getElementById('journal-image').value = j.image || '';
+            document.getElementById('journal-image-alt').value = j.image_alt || '';
+            document.getElementById('journal-visibility').value = j.visibility || 'visible';
+            openModal('journal-modal');
+        };
+        window.deleteJournal = function(id) {
+            if (!confirm('Delete this journal card?')) return;
+            cmsData.journal.cards = cmsData.journal.cards.filter(x => x.id !== id);
+            save('journal-delete');
+            renderJournal();
+        };
+        document.getElementById('new-journal-btn').addEventListener('click', () => {
+            document.getElementById('journal-modal-title').textContent = 'New Journal Card';
+            document.getElementById('journal-form').reset();
+            document.getElementById('journal-id').value = '';
+            openModal('journal-modal');
+        });
+        document.getElementById('journal-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const id = document.getElementById('journal-id').value;
+            const item = { id: id || generateId('journal'), title: document.getElementById('journal-title').value, image: document.getElementById('journal-image').value, image_alt: document.getElementById('journal-image-alt').value, visibility: document.getElementById('journal-visibility').value };
+            if (id) { const idx = cmsData.journal.cards.findIndex(x => x.id === id); if (idx !== -1) cmsData.journal.cards[idx] = item; }
+            else { cmsData.journal.cards.push(item); }
+            save('journal-update');
+            closeModal('journal-modal');
+            renderJournal();
+        });
+
+        // ===== NEWSLETTER =====
+        function renderNewsletter() {
+            document.getElementById('newsletter-preview').innerHTML = singletonCard(cmsData.newsletter.signup_text, cmsData.newsletter.instagram_text);
+        }
+        document.getElementById('edit-newsletter-btn').addEventListener('click', () => {
+            document.getElementById('newsletter-text').value = cmsData.newsletter.signup_text || '';
+            document.getElementById('newsletter-image').value = cmsData.newsletter.image || '';
+            document.getElementById('newsletter-image-alt').value = cmsData.newsletter.image_alt || '';
+            document.getElementById('newsletter-instagram').value = cmsData.newsletter.instagram_text || '';
+            openModal('newsletter-modal');
+        });
+        document.getElementById('newsletter-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            cmsData.newsletter.signup_text = document.getElementById('newsletter-text').value;
+            cmsData.newsletter.image = document.getElementById('newsletter-image').value;
+            cmsData.newsletter.image_alt = document.getElementById('newsletter-image-alt').value;
+            cmsData.newsletter.instagram_text = document.getElementById('newsletter-instagram').value;
+            save('newsletter-update');
+            closeModal('newsletter-modal');
+            renderNewsletter();
+        });
+
+        // ===== ABOUT =====
+        function renderAbout() {
+            document.getElementById('about-preview').innerHTML = singletonCard(cmsData.about.hero_title, cmsData.about.kicker);
+        }
+        document.getElementById('edit-about-btn').addEventListener('click', () => {
+            document.getElementById('about-kicker').value = cmsData.about.kicker || '';
+            document.getElementById('about-hero-title').value = cmsData.about.hero_title || '';
+            document.getElementById('about-hero-desc').value = cmsData.about.hero_description || '';
+            document.getElementById('about-origin-title').value = cmsData.about.origin_title || '';
+            document.getElementById('about-origin-1').value = cmsData.about.origin_text_1 || '';
+            document.getElementById('about-origin-2').value = cmsData.about.origin_text_2 || '';
+            document.getElementById('about-origin-image').value = cmsData.about.origin_image || '';
+            document.getElementById('about-origin-image-alt').value = cmsData.about.origin_image_alt || '';
+            openModal('about-modal');
+        });
+        document.getElementById('about-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            cmsData.about.kicker = document.getElementById('about-kicker').value;
+            cmsData.about.hero_title = document.getElementById('about-hero-title').value;
+            cmsData.about.hero_description = document.getElementById('about-hero-desc').value;
+            cmsData.about.origin_title = document.getElementById('about-origin-title').value;
+            cmsData.about.origin_text_1 = document.getElementById('about-origin-1').value;
+            cmsData.about.origin_text_2 = document.getElementById('about-origin-2').value;
+            cmsData.about.origin_image = document.getElementById('about-origin-image').value;
+            cmsData.about.origin_image_alt = document.getElementById('about-origin-image-alt').value;
+            save('about-update');
+            closeModal('about-modal');
+            renderAbout();
+        });
+
+        // ===== PRINCIPLES =====
+        function renderPrinciples() {
+            const el = document.getElementById('principles-list');
+            if (!cmsData.about.principles.length) { el.innerHTML = '<p class="admin-empty">No principles.</p>'; return; }
+            el.innerHTML = cmsData.about.principles.map(p =>
+                cardHtml(p.title, p.description, p.id, 'editPrinciple', 'deletePrinciple')
+            ).join('');
+        }
+        window.editPrinciple = function(id) {
+            const p = cmsData.about.principles.find(x => x.id === id);
+            if (!p) return;
+            document.getElementById('principle-modal-title').textContent = 'Edit Principle';
+            document.getElementById('principle-id').value = p.id;
+            document.getElementById('principle-title').value = p.title || '';
+            document.getElementById('principle-desc').value = p.description || '';
+            openModal('principle-modal');
+        };
+        window.deletePrinciple = function(id) {
+            if (!confirm('Delete?')) return;
+            cmsData.about.principles = cmsData.about.principles.filter(x => x.id !== id);
+            save('principle-delete');
+            renderPrinciples();
+        };
+        document.getElementById('new-principle-btn').addEventListener('click', () => {
+            document.getElementById('principle-modal-title').textContent = 'New Principle';
+            document.getElementById('principle-form').reset();
+            document.getElementById('principle-id').value = '';
+            openModal('principle-modal');
+        });
+        document.getElementById('principle-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const id = document.getElementById('principle-id').value;
+            const item = { id: id || generateId('principle'), title: document.getElementById('principle-title').value, description: document.getElementById('principle-desc').value };
+            if (id) { const idx = cmsData.about.principles.findIndex(x => x.id === id); if (idx !== -1) cmsData.about.principles[idx] = item; }
+            else { cmsData.about.principles.push(item); }
+            save('principle-update');
+            closeModal('principle-modal');
+            renderPrinciples();
+        });
+
+        // ===== ENGAGEMENT =====
+        function renderEngagement() {
+            const el = document.getElementById('engagement-list');
+            if (!cmsData.about.engagement.length) { el.innerHTML = '<p class="admin-empty">No tiers.</p>'; return; }
+            el.innerHTML = cmsData.about.engagement.map(e =>
+                cardHtml(e.title, e.description, e.id, 'editEngagement', 'deleteEngagement')
+            ).join('');
+        }
+        window.editEngagement = function(id) {
+            const e = cmsData.about.engagement.find(x => x.id === id);
+            if (!e) return;
+            document.getElementById('engagement-modal-title').textContent = 'Edit Tier';
+            document.getElementById('engagement-id').value = e.id;
+            document.getElementById('engagement-title').value = e.title || '';
+            document.getElementById('engagement-desc').value = e.description || '';
+            openModal('engagement-modal');
+        };
+        window.deleteEngagement = function(id) {
+            if (!confirm('Delete?')) return;
+            cmsData.about.engagement = cmsData.about.engagement.filter(x => x.id !== id);
+            save('engagement-delete');
+            renderEngagement();
+        };
+        document.getElementById('new-engagement-btn').addEventListener('click', () => {
+            document.getElementById('engagement-modal-title').textContent = 'New Tier';
+            document.getElementById('engagement-form').reset();
+            document.getElementById('engagement-id').value = '';
+            openModal('engagement-modal');
+        });
+        document.getElementById('engagement-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const id = document.getElementById('engagement-id').value;
+            const item = { id: id || generateId('engage'), title: document.getElementById('engagement-title').value, description: document.getElementById('engagement-desc').value };
+            if (id) { const idx = cmsData.about.engagement.findIndex(x => x.id === id); if (idx !== -1) cmsData.about.engagement[idx] = item; }
+            else { cmsData.about.engagement.push(item); }
+            save('engagement-update');
+            closeModal('engagement-modal');
+            renderEngagement();
+        });
+
+        // ===== GALLERY HERO =====
+        function renderGalleryHero() {
+            document.getElementById('gallery-hero-preview').innerHTML = singletonCard(cmsData.gallery.hero_title, cmsData.gallery.kicker);
+        }
+        document.getElementById('edit-gallery-hero-btn').addEventListener('click', () => {
+            document.getElementById('ghero-kicker').value = cmsData.gallery.kicker || '';
+            document.getElementById('ghero-title').value = cmsData.gallery.hero_title || '';
+            document.getElementById('ghero-desc').value = cmsData.gallery.hero_description || '';
+            openModal('gallery-hero-modal');
+        });
+        document.getElementById('gallery-hero-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            cmsData.gallery.kicker = document.getElementById('ghero-kicker').value;
+            cmsData.gallery.hero_title = document.getElementById('ghero-title').value;
+            cmsData.gallery.hero_description = document.getElementById('ghero-desc').value;
+            save('gallery-hero-update');
+            closeModal('gallery-hero-modal');
+            renderGalleryHero();
+        });
+
+        // ===== GALLERY ITEMS =====
+        function renderGalleryItems() {
+            const el = document.getElementById('gallery-list');
+            if (!cmsData.gallery.items.length) { el.innerHTML = '<p class="admin-empty">No gallery items.</p>'; return; }
+            el.innerHTML = cmsData.gallery.items.map(g =>
+                cardHtml(g.title, g.categories, g.id, 'editGalleryItem', 'deleteGalleryItem')
+            ).join('');
+        }
+        window.editGalleryItem = function(id) {
+            const g = cmsData.gallery.items.find(x => x.id === id);
+            if (!g) return;
+            document.getElementById('gallery-item-modal-title').textContent = 'Edit Gallery Item';
+            document.getElementById('gitem-id').value = g.id;
+            document.getElementById('gitem-title').value = g.title || '';
+            document.getElementById('gitem-image').value = g.image || '';
+            document.getElementById('gitem-image-alt').value = g.image_alt || '';
+            document.getElementById('gitem-categories').value = g.categories || '';
+            document.getElementById('gitem-visibility').value = g.visibility || 'visible';
+            openModal('gallery-item-modal');
+        };
+        window.deleteGalleryItem = function(id) {
+            if (!confirm('Delete?')) return;
+            cmsData.gallery.items = cmsData.gallery.items.filter(x => x.id !== id);
+            save('gallery-delete');
+            renderGalleryItems();
+        };
+        document.getElementById('new-gallery-btn').addEventListener('click', () => {
+            document.getElementById('gallery-item-modal-title').textContent = 'New Gallery Item';
+            document.getElementById('gallery-item-form').reset();
+            document.getElementById('gitem-id').value = '';
+            openModal('gallery-item-modal');
+        });
+        document.getElementById('gallery-item-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const id = document.getElementById('gitem-id').value;
+            const item = { id: id || generateId('gallery'), title: document.getElementById('gitem-title').value, image: document.getElementById('gitem-image').value, image_alt: document.getElementById('gitem-image-alt').value, categories: document.getElementById('gitem-categories').value, visibility: document.getElementById('gitem-visibility').value };
+            if (id) { const idx = cmsData.gallery.items.findIndex(x => x.id === id); if (idx !== -1) cmsData.gallery.items[idx] = item; }
+            else { cmsData.gallery.items.push(item); }
+            save('gallery-update');
+            closeModal('gallery-item-modal');
+            renderGalleryItems();
+        });
+
+        // ===== SETTINGS =====
+        function renderSettings() {
+            const sections = [
+                { key: 'hero', label: 'Hero', setting: 'showHeroSection' },
+                { key: 'products', label: 'Products', setting: 'showProductsSection' },
+                { key: 'feature', label: 'Feature', setting: 'showFeatureSection' },
+                { key: 'values', label: 'Values', setting: 'showValuesSection' },
+                { key: 'journal', label: 'Journal', setting: 'showJournalSection' },
+                { key: 'newsletter', label: 'Newsletter', setting: 'showNewsletterSection' }
+            ];
+            const order = cmsData.settings.sectionOrder || sections.map(s => s.key);
+            const ordered = order.map(k => sections.find(s => s.key === k)).filter(Boolean);
+            const el = document.getElementById('section-list');
+            el.innerHTML = ordered.map(s => `
+                <div class="admin-sortable-item" data-section="${s.key}" draggable="true">
+                    <span class="admin-drag-handle">☰</span>
+                    <span class="admin-item-name">${s.label}</span>
+                    <label class="admin-toggle">
+                        <input type="checkbox" data-setting="${s.setting}" ${cmsData.settings[s.setting] !== false ? 'checked' : ''}>
+                        <span class="admin-toggle-slider"></span>
+                    </label>
+                </div>
+            `).join('');
+
+            el.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+                cb.addEventListener('change', () => {
+                    cmsData.settings[cb.dataset.setting] = cb.checked;
+                    save('settings-update');
+                });
+            });
+
+            setupDragAndDrop(el);
+        }
+
+        function setupDragAndDrop(list) {
+            let draggedItem = null;
+            list.addEventListener('dragstart', (e) => {
+                if (e.target.classList.contains('admin-sortable-item')) {
+                    draggedItem = e.target;
+                    e.target.classList.add('dragging');
+                }
+            });
+            list.addEventListener('dragend', (e) => {
+                if (e.target.classList.contains('admin-sortable-item')) {
+                    e.target.classList.remove('dragging');
+                    draggedItem = null;
+                    const items = list.querySelectorAll('.admin-sortable-item');
+                    cmsData.settings.sectionOrder = Array.from(items).map(i => i.dataset.section);
+                    save('reorder-sections');
+                }
+            });
+            list.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                const els = [...list.querySelectorAll('.admin-sortable-item:not(.dragging)')];
+                const after = els.reduce((closest, child) => {
+                    const box = child.getBoundingClientRect();
+                    const offset = e.clientY - box.top - box.height / 2;
+                    if (offset < 0 && offset > closest.offset) return { offset, element: child };
+                    return closest;
+                }, { offset: Number.NEGATIVE_INFINITY }).element;
+                if (draggedItem) {
+                    if (after) list.insertBefore(draggedItem, after);
+                    else list.appendChild(draggedItem);
+                }
+            });
+        }
+
+        // ===== PANEL TOGGLES =====
+        document.querySelectorAll('.admin-capsule[data-panel]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.admin-capsule[data-panel]').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                document.querySelectorAll('.admin-panel').forEach(p => p.style.display = 'none');
+                const panel = document.getElementById('panel-' + btn.dataset.panel);
+                if (panel) panel.style.display = 'block';
+            });
+        });
+
+        // ===== SYNC CONFIG =====
+        document.getElementById('cms-config-btn').addEventListener('click', () => {
+            window.CMS.clearAdminKey();
+            localStorage.removeItem(CMS_WORKER_URL_KEY);
+            getSyncConfig()
+                .then(() => setSyncStatus('Sync configured. Next save will push to GitHub.'))
+                .catch(err => setSyncStatus(err.message));
+        });
+
+        // ===== INIT =====
+        function renderAll() {
+            renderHero();
+            renderProducts();
+            renderFeature();
+            renderValues();
+            renderJournal();
+            renderNewsletter();
+            renderAbout();
+            renderPrinciples();
+            renderEngagement();
+            renderGalleryHero();
+            renderGalleryItems();
+            renderSettings();
+        }
+
+        async function init() {
+            try {
+                cmsData = await window.CMS.fetchCms();
+                setSyncStatus('Loaded from CMS.');
+            } catch {
+                cmsData = window.CMS.mergeCms({});
+                setSyncStatus('Using defaults (CMS fetch failed).');
+            }
+            renderAll();
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    })();
+    </script>
+</body>
+</html>

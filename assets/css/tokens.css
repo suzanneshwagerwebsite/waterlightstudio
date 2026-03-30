@@ -12,7 +12,7 @@
   --shadow-soft: 0 12px 40px rgba(17, 21, 27, 0.12);
   --shadow-card: 0 14px 40px rgba(17, 21, 27, 0.1);
 
-  --font-display: "Bodoni Moda", "Baskerville", "Times New Roman", serif;
+  --font-display: "Lexend", "Avenir Next", "Segoe UI", sans-serif;
   --font-body: "Work Sans", "Avenir Next", "Segoe UI", sans-serif;
 
   --step--1: clamp(0.86rem, 0.82rem + 0.2vw, 0.95rem);
