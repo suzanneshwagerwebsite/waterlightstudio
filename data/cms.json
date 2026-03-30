@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-03-30T22:09:57.401Z",
+  "updatedAt": "2026-03-30T22:10:22.987Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -20,7 +20,7 @@
     "title": "Ceramics for every table and ritual.",
     "cta_text": "View Gallery",
     "cta_link": "/gallery/",
-    "image": "/assets/img/placeholders/home-hero-ceramics.svg",
+    "image": "/assets/img/Studio Quality Ceramics Example from Waterlight Studio.png",
     "image_alt": "Handmade ceramic objects styled in neutral tones"
   },
   "products": {
