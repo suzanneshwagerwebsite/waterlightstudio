@@ -50,6 +50,17 @@ async function handlePost(request, env) {
         return json({ error: 'Invalid CMS payload schema' }, 422, env);
     }
 
+    // Upload any attached files to the repo
+    const files = Array.isArray(payload.files) ? payload.files : [];
+    for (const file of files) {
+        if (!file.path || !file.base64) continue;
+        if (!file.path.startsWith('assets/img/')) continue;
+        if (file.base64.length > 5 * 1024 * 1024) continue;
+
+        const sha = await getFileSha(env, file.path);
+        await writeGitHubFile(env, file.path, file.base64, sha, `cms: upload ${file.path}`);
+    }
+
     try {
         const existing = await readCmsFile(env);
         const normalized = {
@@ -122,16 +133,18 @@ async function readCmsFile(env) {
     return { cms, sha: payload.sha };
 }
 
-async function writeCmsFile(env, args) {
+async function writeGitHubFile(env, filePath, contentBase64, sha, message) {
     const cfg = getRepoConfig(env);
-    const endpoint = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${cfg.path}`;
+    const endpoint = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${filePath}`;
 
     const body = {
-        message: args.message,
-        content: encodeBase64(JSON.stringify(args.content, null, 2) + '\n'),
-        sha: args.sha,
+        message: message,
+        content: contentBase64,
         branch: cfg.branch
     };
+    if (sha) {
+        body.sha = sha;
+    }
 
     const response = await fetch(endpoint, {
         method: 'PUT',
@@ -141,10 +154,26 @@ async function writeCmsFile(env, args) {
 
     if (!response.ok) {
         const text = await response.text();
-        throw new Error(`GitHub write failed (${response.status}): ${text}`);
+        throw new Error(`GitHub write failed for ${filePath} (${response.status}): ${text}`);
     }
 
     return response.json();
+}
+
+async function getFileSha(env, filePath) {
+    const cfg = getRepoConfig(env);
+    const endpoint = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${filePath}?ref=${cfg.branch}`;
+    const response = await fetch(endpoint, { headers: githubHeaders(env) });
+    if (response.status === 404) return null;
+    if (!response.ok) return null;
+    const payload = await response.json();
+    return payload.sha;
+}
+
+async function writeCmsFile(env, args) {
+    const cfg = getRepoConfig(env);
+    const contentBase64 = encodeBase64(JSON.stringify(args.content, null, 2) + '\n');
+    return writeGitHubFile(env, cfg.path, contentBase64, args.sha, args.message);
 }
 
 function isValidCmsPayload(cms) {

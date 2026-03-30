@@ -479,6 +479,7 @@
         let cmsSyncTimer = null;
         let cmsSyncReason = '';
         let cmsSyncInFlight = false;
+        let pendingFiles = [];
 
         function setSyncStatus(msg) {
             const el = document.getElementById('cms-sync-status');
@@ -503,12 +504,19 @@
             const file = fileInput.files[0];
             if (!file) return;
             const url = '/assets/img/' + file.name;
+            const repoPath = 'assets/img/' + file.name;
             document.getElementById(inputId).value = url;
-            // Show local preview
+
             const reader = new FileReader();
             reader.onload = (e) => {
+                const dataUrl = e.target.result;
+                // Show local preview
                 const preview = document.getElementById(inputId + '-preview');
-                if (preview) { preview.src = e.target.result; preview.hidden = false; }
+                if (preview) { preview.src = dataUrl; preview.hidden = false; }
+                // Extract raw base64 and queue for upload
+                const base64 = dataUrl.split(',')[1];
+                pendingFiles = pendingFiles.filter(f => f.path !== repoPath);
+                pendingFiles.push({ path: repoPath, base64: base64 });
             };
             reader.readAsDataURL(file);
         };
@@ -525,12 +533,16 @@
             while (cmsSyncReason) {
                 const reason = cmsSyncReason;
                 cmsSyncReason = '';
+                const filesToUpload = pendingFiles.slice();
+                pendingFiles = [];
                 try {
-                    setSyncStatus(`Syncing... (${reason})`);
+                    if (filesToUpload.length) setSyncStatus(`Uploading ${filesToUpload.length} image(s)...`);
+                    else setSyncStatus(`Syncing... (${reason})`);
                     const { workerUrl, adminKey } = await getSyncConfig();
-                    await window.CMS.saveCmsViaWorker(cmsData, { workerUrl, adminKey, commitMessage: `cms: ${reason} ${new Date().toISOString()}` });
+                    await window.CMS.saveCmsViaWorker(cmsData, { workerUrl, adminKey, commitMessage: `cms: ${reason} ${new Date().toISOString()}`, files: filesToUpload });
                     setSyncStatus(`Synced at ${new Date().toLocaleTimeString()}`);
                 } catch (err) {
+                    pendingFiles = filesToUpload.concat(pendingFiles);
                     setSyncStatus(`Sync failed: ${err.message}`);
                 }
             }

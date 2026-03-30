@@ -155,7 +155,8 @@
 
         const body = {
             cms: mergeCms(cms),
-            commitMessage: cfg.commitMessage || `cms: update ${new Date().toISOString()}`
+            commitMessage: cfg.commitMessage || `cms: update ${new Date().toISOString()}`,
+            files: Array.isArray(cfg.files) && cfg.files.length > 0 ? cfg.files : undefined
         };
 
         const response = await fetch(`${workerUrl}/cms`, {
