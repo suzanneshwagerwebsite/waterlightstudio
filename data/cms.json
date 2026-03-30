@@ -1,8 +1,14 @@
 {
   "version": 1,
-  "updatedAt": "2026-03-29T00:00:00.000Z",
+  "updatedAt": "2026-03-30T06:09:27.059Z",
   "settings": {
-    "sectionOrder": ["hero", "products", "feature", "values", "journal", "newsletter"],
+    "sectionOrder": [
+      "hero",
+      "feature",
+      "products",
+      "values",
+      "journal"
+    ],
     "showHeroSection": true,
     "showProductsSection": true,
     "showFeatureSection": true,
@@ -22,27 +28,27 @@
     "items": [
       {
         "id": "product_1",
-        "image": "/assets/img/placeholders/home-product-terracotta.svg",
-        "image_alt": "Terracotta vessel",
-        "title": "Terracotta Vessel",
+        "image": "/assets/img/sunset-tree-vase.jpg",
+        "image_alt": "Handmade vase with painted sunset tree landscape",
+        "title": "Sunset Tree Vase",
         "learn_more_link": "/about/",
         "gallery_link": "/gallery/",
         "visibility": "visible"
       },
       {
         "id": "product_2",
-        "image": "/assets/img/placeholders/home-product-sage.svg",
-        "image_alt": "Sage glazed mug",
-        "title": "Sage Glaze Mug",
+        "image": "/assets/img/cherry-blossom-bowl.jpg",
+        "image_alt": "Handmade bowl with pink cherry blossom branches",
+        "title": "Cherry Blossom Bowl",
         "learn_more_link": "/about/",
         "gallery_link": "/gallery/",
         "visibility": "visible"
       },
       {
         "id": "product_3",
-        "image": "/assets/img/placeholders/home-product-sand.svg",
-        "image_alt": "Sand stone serving bowl",
-        "title": "Sand Stone Bowl",
+        "image": "/assets/img/sailboat-vase.jpg",
+        "image_alt": "Handmade vase with painted sailboat on blue water",
+        "title": "Sailboat Vase",
         "learn_more_link": "/about/",
         "gallery_link": "/gallery/",
         "visibility": "visible"
@@ -50,8 +56,8 @@
     ]
   },
   "feature": {
-    "image": "/assets/img/placeholders/home-feature-craft.svg",
-    "image_alt": "Ceramic pieces in process on a studio table",
+    "image": "/assets/img/meadow-sunset-bowl.jpg",
+    "image_alt": "Handmade bowl with painted meadow and sunset landscape",
     "title": "Made to be held.",
     "description": "Every Waterlight piece is hand-thrown, kiln-fired, and finished in small batches.",
     "link_text": "Learn More",
@@ -84,16 +90,16 @@
     "cards": [
       {
         "id": "journal_1",
-        "image": "/assets/img/placeholders/home-journal-process.svg",
-        "image_alt": "Ceramics process",
-        "title": "My wheel-thrown process",
+        "image": "/assets/img/wisteria-bowl.jpg",
+        "image_alt": "Handmade bowl with cascading purple wisteria",
+        "title": "Painting with wisteria glazes",
         "visibility": "visible"
       },
       {
         "id": "journal_2",
-        "image": "/assets/img/placeholders/home-journal-glaze.svg",
-        "image_alt": "Glaze testing",
-        "title": "Introducing our spring glaze study",
+        "image": "/assets/img/magnolia-plate.jpg",
+        "image_alt": "Handmade plate with magnolia flower",
+        "title": "Introducing our spring floral collection",
         "visibility": "visible"
       }
     ]
@@ -111,8 +117,8 @@
     "origin_title": "Studio Origin",
     "origin_text_1": "The studio began as a response to fast visual trends. Instead of high-gloss sameness, we work with weathered surfaces, coastal movement, and directional natural light to give each set an honest atmosphere.",
     "origin_text_2": "This launch build intentionally uses placeholder narrative copy. Final story details can replace these sections without changing the approved layout.",
-    "origin_image": "/assets/img/placeholders/about-portrait.svg",
-    "origin_image_alt": "Studio founder portrait",
+    "origin_image": "/assets/img/palm-shore-planter.jpg",
+    "origin_image_alt": "Handmade planter with painted palm trees and beach scene",
     "principles": [
       {
         "id": "principle_1",
@@ -147,78 +153,84 @@
     "kicker": "Image Library",
     "hero_title": "Gallery rhythms in the same calm, earthy direction.",
     "hero_description": "Placeholder image blocks are organized by mood and context so final photography can be inserted quickly once selections are approved.",
-    "categories": ["coast", "portrait", "studio", "travel"],
+    "categories": [
+      "landscape",
+      "floral",
+      "coastal",
+      "vases",
+      "bowls"
+    ],
     "items": [
       {
         "id": "gallery_1",
-        "image": "/assets/img/placeholders/gallery-coast-01.svg",
-        "image_alt": "Coastal portrait",
-        "title": "Tidal Portrait",
-        "categories": "coast portrait",
+        "image": "/assets/img/sunset-tree-vase.jpg",
+        "image_alt": "Handmade vase with painted sunset tree landscape",
+        "title": "Sunset Tree Vase",
+        "categories": "landscape vases",
         "visibility": "visible"
       },
       {
         "id": "gallery_2",
-        "image": "/assets/img/placeholders/gallery-studio-01.svg",
-        "image_alt": "Studio still life",
-        "title": "Clay + Linen",
-        "categories": "studio",
+        "image": "/assets/img/garden-vine-bowl.jpg",
+        "image_alt": "Handmade bowl with trailing garden vines and flowers",
+        "title": "Garden Vine Bowl",
+        "categories": "floral bowls",
         "visibility": "visible"
       },
       {
         "id": "gallery_3",
-        "image": "/assets/img/placeholders/gallery-travel-01.svg",
-        "image_alt": "Travel scene",
-        "title": "Harbor Morning",
-        "categories": "travel coast",
+        "image": "/assets/img/cherry-blossom-bowl.jpg",
+        "image_alt": "Handmade bowl with pink cherry blossom branches",
+        "title": "Cherry Blossom Bowl",
+        "categories": "floral bowls",
         "visibility": "visible"
       },
       {
         "id": "gallery_4",
-        "image": "/assets/img/placeholders/gallery-portrait-01.svg",
-        "image_alt": "Portrait",
-        "title": "Window Study",
-        "categories": "portrait",
+        "image": "/assets/img/sailboat-vase.jpg",
+        "image_alt": "Handmade vase with painted sailboat on blue water",
+        "title": "Sailboat Vase",
+        "categories": "coastal vases",
         "visibility": "visible"
       },
       {
         "id": "gallery_5",
-        "image": "/assets/img/placeholders/gallery-coast-02.svg",
-        "image_alt": "Coastal walk",
-        "title": "Cliff Path",
-        "categories": "coast travel",
+        "image": "/assets/img/wisteria-bowl.jpg",
+        "image_alt": "Handmade bowl with cascading purple wisteria",
+        "title": "Wisteria Bowl",
+        "categories": "floral bowls",
         "visibility": "visible"
       },
       {
         "id": "gallery_6",
-        "image": "/assets/img/placeholders/gallery-studio-02.svg",
-        "image_alt": "Studio portrait",
-        "title": "Studio Frame",
-        "categories": "studio portrait",
+        "image": "/assets/img/palm-shore-planter.jpg",
+        "image_alt": "Handmade planter with palm trees and beach scene",
+        "title": "Palm Shore Planter",
+        "categories": "coastal landscape",
         "visibility": "visible"
       },
       {
         "id": "gallery_7",
-        "image": "/assets/img/placeholders/gallery-travel-02.svg",
-        "image_alt": "Travel editorial",
-        "title": "Street Texture",
-        "categories": "travel",
+        "image": "/assets/img/meadow-sunset-bowl.jpg",
+        "image_alt": "Handmade bowl with painted meadow and sunset",
+        "title": "Meadow Sunset Bowl",
+        "categories": "landscape bowls",
         "visibility": "visible"
       },
       {
         "id": "gallery_8",
-        "image": "/assets/img/placeholders/gallery-coast-03.svg",
-        "image_alt": "Ocean horizon",
-        "title": "Low Horizon",
-        "categories": "coast",
+        "image": "/assets/img/magnolia-plate.jpg",
+        "image_alt": "Handmade plate with magnolia flower",
+        "title": "Magnolia Plate",
+        "categories": "floral",
         "visibility": "visible"
       },
       {
         "id": "gallery_9",
-        "image": "/assets/img/placeholders/gallery-studio-03.svg",
-        "image_alt": "Studio tabletop",
-        "title": "Table Study",
-        "categories": "studio travel",
+        "image": "/assets/img/hillside-tree-vase.jpg",
+        "image_alt": "Handmade vase with green hillside tree landscape",
+        "title": "Hillside Tree Vase",
+        "categories": "landscape vases",
         "visibility": "visible"
       }
     ]
