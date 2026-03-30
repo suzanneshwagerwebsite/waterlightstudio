@@ -514,8 +514,9 @@
         window.handleFilePick = function(fileInput, inputId) {
             const file = fileInput.files[0];
             if (!file) return;
-            const url = '/assets/img/' + file.name;
-            const repoPath = 'assets/img/' + file.name;
+            const safeName = file.name.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9._-]/g, '').toLowerCase();
+            const url = '/assets/img/' + safeName;
+            const repoPath = 'assets/img/' + safeName;
             document.getElementById(inputId).value = url;
 
             const promise = readFileAsBase64(file).then((dataUrl) => {
