@@ -55,7 +55,7 @@ async function handlePost(request, env) {
     for (const file of files) {
         if (!file.path || !file.base64) continue;
         if (!file.path.startsWith('assets/img/')) continue;
-        if (file.base64.length > 5 * 1024 * 1024) continue;
+        if (file.base64.length > 20 * 1024 * 1024) continue;
 
         const sha = await getFileSha(env, file.path);
         await writeGitHubFile(env, file.path, file.base64, sha, `cms: upload ${file.path}`);
