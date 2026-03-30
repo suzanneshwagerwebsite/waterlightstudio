@@ -158,6 +158,11 @@
   box-shadow: var(--shadow-card);
 }
 
+.card img {
+  width: 100%;
+  border-radius: var(--radius-md);
+}
+
 .card h3 {
   font-size: var(--step-2);
   margin-bottom: var(--space-2xs);
@@ -175,7 +180,7 @@
 .work-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-s);
+  gap: 0.4rem;
 }
 
 .work-item {
@@ -313,22 +318,29 @@
 .gallery-toolbar {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  justify-content: center;
+  gap: clamp(1.1rem, 0.68rem + 1.2vw, 2rem);
   margin-bottom: var(--space-l);
 }
 
 .filter-button {
-  padding: 0.46rem 0.85rem;
-  border-color: var(--line-strong);
-  background: rgba(247, 245, 242, 0.74);
-  color: rgba(25, 29, 35, 0.84);
+  padding: 0.2rem 0;
+  border: none;
+  border-bottom: 1px solid transparent;
+  border-radius: 0;
+  background: transparent;
+  font-size: 0.88rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: rgba(22, 24, 26, 0.86);
 }
 
 .filter-button.active,
 .filter-button:is(:hover, :focus-visible) {
   border-color: transparent;
-  background: var(--olive);
-  color: var(--mist);
+  border-bottom-color: rgba(22, 24, 26, 0.66);
+  background: transparent;
+  color: rgba(22, 24, 26, 0.86);
 }
 
 .lightbox {

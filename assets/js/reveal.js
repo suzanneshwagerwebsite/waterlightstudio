@@ -26,8 +26,7 @@
 
   const setupGalleryFilters = () => {
     const buttons = [...document.querySelectorAll("[data-filter]")];
-    const items = [...document.querySelectorAll("[data-category]")];
-    if (!buttons.length || !items.length) return;
+    if (!buttons.length) return;
 
     const setFilter = (filter) => {
       buttons.forEach((button) => {
@@ -36,6 +35,7 @@
         button.setAttribute("aria-pressed", String(isActive));
       });
 
+      const items = [...document.querySelectorAll("[data-category]")];
       items.forEach((item) => {
         const tags = item.getAttribute("data-category") || "";
         const matches = filter === "all" || tags.split(" ").includes(filter);
@@ -54,12 +54,11 @@
 
   const setupLightbox = () => {
     const modal = document.querySelector("[data-lightbox]");
-    const modalImage = document.querySelector("[data-lightbox-image]");
-    const modalCaption = document.querySelector("[data-lightbox-caption]");
-    const closeButton = document.querySelector("[data-lightbox-close]");
-    const triggers = [...document.querySelectorAll("[data-lightbox-trigger]")];
+    const modalImage = modal && modal.querySelector("[data-lightbox-image]");
+    const modalCaption = modal && modal.querySelector("[data-lightbox-caption]");
+    const closeButton = modal && modal.querySelector("[data-lightbox-close]");
 
-    if (!modal || !modalImage || !modalCaption || !closeButton || !triggers.length) {
+    if (!modal || !modalImage || !modalCaption || !closeButton) {
       return;
     }
 
@@ -88,8 +87,9 @@
       closeButton.focus();
     };
 
-    triggers.forEach((trigger) => {
-      trigger.addEventListener("click", () => open(trigger));
+    document.addEventListener("click", (event) => {
+      const trigger = event.target.closest("[data-lightbox-trigger]");
+      if (trigger) open(trigger);
     });
 
     closeButton.addEventListener("click", close);

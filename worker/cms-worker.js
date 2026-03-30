@@ -177,9 +177,8 @@ function decodeBase64(value) {
 }
 
 function corsHeaders(env) {
-    const origin = env.ALLOWED_ORIGIN || 'https://waterlightstudio.com';
     return {
-        'Access-Control-Allow-Origin': origin,
+        'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type, Authorization'
     };

@@ -187,15 +187,15 @@
     }
 
     function getAdminKey() {
-        return sessionStorage.getItem(ADMIN_KEY_SESSION) || '';
+        return localStorage.getItem(ADMIN_KEY_SESSION) || '';
     }
 
     function setAdminKey(value) {
-        sessionStorage.setItem(ADMIN_KEY_SESSION, value);
+        localStorage.setItem(ADMIN_KEY_SESSION, value);
     }
 
     function clearAdminKey() {
-        sessionStorage.removeItem(ADMIN_KEY_SESSION);
+        localStorage.removeItem(ADMIN_KEY_SESSION);
     }
 
     global.CMS = {

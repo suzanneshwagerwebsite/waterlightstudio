@@ -47,8 +47,9 @@
 
           <nav id="primary-nav" class="home-nav" data-site-nav aria-label="Primary navigation">
             <a href="/" data-nav-link>Home</a>
-            <a href="/about/" data-nav-link>About</a>
             <a href="/gallery/" data-nav-link>Gallery</a>
+            <a href="/#journal">Journal</a>
+            <a href="/about/" data-nav-link>About</a>
             <a href="#" class="js-mail-link">Contact</a>
           </nav>
         </div>
@@ -70,190 +71,110 @@
           <div class="container-wide">
             <div class="gallery-toolbar" data-reveal>
               <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All</button>
-              <button class="filter-button" type="button" data-filter="coast" aria-pressed="false">Coast</button>
-              <button class="filter-button" type="button" data-filter="portrait" aria-pressed="false">Portrait</button>
-              <button class="filter-button" type="button" data-filter="studio" aria-pressed="false">Studio</button>
-              <button class="filter-button" type="button" data-filter="travel" aria-pressed="false">Travel</button>
+              <button class="filter-button" type="button" data-filter="landscape" aria-pressed="false">Landscape</button>
+              <button class="filter-button" type="button" data-filter="floral" aria-pressed="false">Floral</button>
+              <button class="filter-button" type="button" data-filter="coastal" aria-pressed="false">Coastal</button>
+              <button class="filter-button" type="button" data-filter="vases" aria-pressed="false">Vases</button>
+              <button class="filter-button" type="button" data-filter="bowls" aria-pressed="false">Bowls</button>
             </div>
 
             <div class="work-grid">
-              <article class="gallery-item" data-category="coast portrait" data-reveal>
+              <article class="gallery-item" data-category="landscape vases" data-reveal>
                 <figure class="gallery-card">
-                  <img src="/assets/img/placeholders/gallery-coast-01.svg" alt="Coastal portrait placeholder" loading="lazy" />
+                  <img src="/assets/img/sunset-tree-vase.jpg" alt="Handmade vase with painted sunset tree landscape" loading="lazy" />
                   <figcaption class="gallery-card__info">
-                    <strong>Tidal Portrait</strong>
-                    <span>Coast / Portrait</span>
+                    <strong>Sunset Tree Vase</strong>
+                    <span>Landscape / Vases</span>
                   </figcaption>
-                  <button
-                    class="gallery-card__open"
-                    type="button"
-                    data-lightbox-trigger
-                    data-lightbox-image="/assets/img/placeholders/gallery-coast-01.svg"
-                    data-lightbox-caption="Tidal Portrait"
-                    data-lightbox-alt="Coastal portrait placeholder"
-                  >
-                    View
-                  </button>
+                  <button class="gallery-card__open" type="button" data-lightbox-trigger data-lightbox-image="/assets/img/sunset-tree-vase.jpg" data-lightbox-caption="Sunset Tree Vase" data-lightbox-alt="Handmade vase with painted sunset tree landscape">View</button>
                 </figure>
               </article>
 
-              <article class="gallery-item" data-category="studio" data-reveal>
+              <article class="gallery-item" data-category="floral bowls" data-reveal>
                 <figure class="gallery-card">
-                  <img src="/assets/img/placeholders/gallery-studio-01.svg" alt="Studio still life placeholder" loading="lazy" />
+                  <img src="/assets/img/garden-vine-bowl.jpg" alt="Handmade bowl with trailing garden vines and flowers" loading="lazy" />
                   <figcaption class="gallery-card__info">
-                    <strong>Clay + Linen</strong>
-                    <span>Studio</span>
+                    <strong>Garden Vine Bowl</strong>
+                    <span>Floral / Bowls</span>
                   </figcaption>
-                  <button
-                    class="gallery-card__open"
-                    type="button"
-                    data-lightbox-trigger
-                    data-lightbox-image="/assets/img/placeholders/gallery-studio-01.svg"
-                    data-lightbox-caption="Clay + Linen"
-                    data-lightbox-alt="Studio still life placeholder"
-                  >
-                    View
-                  </button>
+                  <button class="gallery-card__open" type="button" data-lightbox-trigger data-lightbox-image="/assets/img/garden-vine-bowl.jpg" data-lightbox-caption="Garden Vine Bowl" data-lightbox-alt="Handmade bowl with trailing garden vines and flowers">View</button>
                 </figure>
               </article>
 
-              <article class="gallery-item" data-category="travel coast" data-reveal>
+              <article class="gallery-item" data-category="floral bowls" data-reveal>
                 <figure class="gallery-card">
-                  <img src="/assets/img/placeholders/gallery-travel-01.svg" alt="Travel scene placeholder" loading="lazy" />
+                  <img src="/assets/img/cherry-blossom-bowl.jpg" alt="Handmade bowl with pink cherry blossom branches" loading="lazy" />
                   <figcaption class="gallery-card__info">
-                    <strong>Harbor Morning</strong>
-                    <span>Travel / Coast</span>
+                    <strong>Cherry Blossom Bowl</strong>
+                    <span>Floral / Bowls</span>
                   </figcaption>
-                  <button
-                    class="gallery-card__open"
-                    type="button"
-                    data-lightbox-trigger
-                    data-lightbox-image="/assets/img/placeholders/gallery-travel-01.svg"
-                    data-lightbox-caption="Harbor Morning"
-                    data-lightbox-alt="Travel scene placeholder"
-                  >
-                    View
-                  </button>
+                  <button class="gallery-card__open" type="button" data-lightbox-trigger data-lightbox-image="/assets/img/cherry-blossom-bowl.jpg" data-lightbox-caption="Cherry Blossom Bowl" data-lightbox-alt="Handmade bowl with pink cherry blossom branches">View</button>
                 </figure>
               </article>
 
-              <article class="gallery-item" data-category="portrait" data-reveal>
+              <article class="gallery-item" data-category="coastal vases" data-reveal>
                 <figure class="gallery-card">
-                  <img src="/assets/img/placeholders/gallery-portrait-01.svg" alt="Portrait placeholder" loading="lazy" />
+                  <img src="/assets/img/sailboat-vase.jpg" alt="Handmade vase with painted sailboat on blue water" loading="lazy" />
                   <figcaption class="gallery-card__info">
-                    <strong>Window Study</strong>
-                    <span>Portrait</span>
+                    <strong>Sailboat Vase</strong>
+                    <span>Coastal / Vases</span>
                   </figcaption>
-                  <button
-                    class="gallery-card__open"
-                    type="button"
-                    data-lightbox-trigger
-                    data-lightbox-image="/assets/img/placeholders/gallery-portrait-01.svg"
-                    data-lightbox-caption="Window Study"
-                    data-lightbox-alt="Portrait placeholder"
-                  >
-                    View
-                  </button>
+                  <button class="gallery-card__open" type="button" data-lightbox-trigger data-lightbox-image="/assets/img/sailboat-vase.jpg" data-lightbox-caption="Sailboat Vase" data-lightbox-alt="Handmade vase with painted sailboat on blue water">View</button>
                 </figure>
               </article>
 
-              <article class="gallery-item" data-category="coast travel" data-reveal>
+              <article class="gallery-item" data-category="floral bowls" data-reveal>
                 <figure class="gallery-card">
-                  <img src="/assets/img/placeholders/gallery-coast-02.svg" alt="Coastal walk placeholder" loading="lazy" />
+                  <img src="/assets/img/wisteria-bowl.jpg" alt="Handmade bowl with cascading purple wisteria" loading="lazy" />
                   <figcaption class="gallery-card__info">
-                    <strong>Cliff Path</strong>
-                    <span>Coast / Travel</span>
+                    <strong>Wisteria Bowl</strong>
+                    <span>Floral / Bowls</span>
                   </figcaption>
-                  <button
-                    class="gallery-card__open"
-                    type="button"
-                    data-lightbox-trigger
-                    data-lightbox-image="/assets/img/placeholders/gallery-coast-02.svg"
-                    data-lightbox-caption="Cliff Path"
-                    data-lightbox-alt="Coastal walk placeholder"
-                  >
-                    View
-                  </button>
+                  <button class="gallery-card__open" type="button" data-lightbox-trigger data-lightbox-image="/assets/img/wisteria-bowl.jpg" data-lightbox-caption="Wisteria Bowl" data-lightbox-alt="Handmade bowl with cascading purple wisteria">View</button>
                 </figure>
               </article>
 
-              <article class="gallery-item" data-category="studio portrait" data-reveal>
+              <article class="gallery-item" data-category="coastal landscape" data-reveal>
                 <figure class="gallery-card">
-                  <img src="/assets/img/placeholders/gallery-studio-02.svg" alt="Studio portrait placeholder" loading="lazy" />
+                  <img src="/assets/img/palm-shore-planter.jpg" alt="Handmade planter with palm trees and beach scene" loading="lazy" />
                   <figcaption class="gallery-card__info">
-                    <strong>Studio Frame</strong>
-                    <span>Studio / Portrait</span>
+                    <strong>Palm Shore Planter</strong>
+                    <span>Coastal / Landscape</span>
                   </figcaption>
-                  <button
-                    class="gallery-card__open"
-                    type="button"
-                    data-lightbox-trigger
-                    data-lightbox-image="/assets/img/placeholders/gallery-studio-02.svg"
-                    data-lightbox-caption="Studio Frame"
-                    data-lightbox-alt="Studio portrait placeholder"
-                  >
-                    View
-                  </button>
+                  <button class="gallery-card__open" type="button" data-lightbox-trigger data-lightbox-image="/assets/img/palm-shore-planter.jpg" data-lightbox-caption="Palm Shore Planter" data-lightbox-alt="Handmade planter with palm trees and beach scene">View</button>
                 </figure>
               </article>
 
-              <article class="gallery-item" data-category="travel" data-reveal>
+              <article class="gallery-item" data-category="landscape bowls" data-reveal>
                 <figure class="gallery-card">
-                  <img src="/assets/img/placeholders/gallery-travel-02.svg" alt="Travel editorial placeholder" loading="lazy" />
+                  <img src="/assets/img/meadow-sunset-bowl.jpg" alt="Handmade bowl with painted meadow and sunset" loading="lazy" />
                   <figcaption class="gallery-card__info">
-                    <strong>Street Texture</strong>
-                    <span>Travel</span>
+                    <strong>Meadow Sunset Bowl</strong>
+                    <span>Landscape / Bowls</span>
                   </figcaption>
-                  <button
-                    class="gallery-card__open"
-                    type="button"
-                    data-lightbox-trigger
-                    data-lightbox-image="/assets/img/placeholders/gallery-travel-02.svg"
-                    data-lightbox-caption="Street Texture"
-                    data-lightbox-alt="Travel editorial placeholder"
-                  >
-                    View
-                  </button>
+                  <button class="gallery-card__open" type="button" data-lightbox-trigger data-lightbox-image="/assets/img/meadow-sunset-bowl.jpg" data-lightbox-caption="Meadow Sunset Bowl" data-lightbox-alt="Handmade bowl with painted meadow and sunset">View</button>
                 </figure>
               </article>
 
-              <article class="gallery-item" data-category="coast" data-reveal>
+              <article class="gallery-item" data-category="floral" data-reveal>
                 <figure class="gallery-card">
-                  <img src="/assets/img/placeholders/gallery-coast-03.svg" alt="Ocean horizon placeholder" loading="lazy" />
+                  <img src="/assets/img/magnolia-plate.jpg" alt="Handmade plate with magnolia flower" loading="lazy" />
                   <figcaption class="gallery-card__info">
-                    <strong>Low Horizon</strong>
-                    <span>Coast</span>
+                    <strong>Magnolia Plate</strong>
+                    <span>Floral</span>
                   </figcaption>
-                  <button
-                    class="gallery-card__open"
-                    type="button"
-                    data-lightbox-trigger
-                    data-lightbox-image="/assets/img/placeholders/gallery-coast-03.svg"
-                    data-lightbox-caption="Low Horizon"
-                    data-lightbox-alt="Ocean horizon placeholder"
-                  >
-                    View
-                  </button>
+                  <button class="gallery-card__open" type="button" data-lightbox-trigger data-lightbox-image="/assets/img/magnolia-plate.jpg" data-lightbox-caption="Magnolia Plate" data-lightbox-alt="Handmade plate with magnolia flower">View</button>
                 </figure>
               </article>
 
-              <article class="gallery-item" data-category="studio travel" data-reveal>
+              <article class="gallery-item" data-category="landscape vases" data-reveal>
                 <figure class="gallery-card">
-                  <img src="/assets/img/placeholders/gallery-studio-03.svg" alt="Studio tabletop placeholder" loading="lazy" />
+                  <img src="/assets/img/hillside-tree-vase.jpg" alt="Handmade vase with green hillside tree landscape" loading="lazy" />
                   <figcaption class="gallery-card__info">
-                    <strong>Table Study</strong>
-                    <span>Studio / Travel</span>
+                    <strong>Hillside Tree Vase</strong>
+                    <span>Landscape / Vases</span>
                   </figcaption>
-                  <button
-                    class="gallery-card__open"
-                    type="button"
-                    data-lightbox-trigger
-                    data-lightbox-image="/assets/img/placeholders/gallery-studio-03.svg"
-                    data-lightbox-caption="Table Study"
-                    data-lightbox-alt="Studio tabletop placeholder"
-                  >
-                    View
-                  </button>
+                  <button class="gallery-card__open" type="button" data-lightbox-trigger data-lightbox-image="/assets/img/hillside-tree-vase.jpg" data-lightbox-caption="Hillside Tree Vase" data-lightbox-alt="Handmade vase with green hillside tree landscape">View</button>
                 </figure>
               </article>
             </div>

@@ -153,13 +153,7 @@
     "kicker": "Image Library",
     "hero_title": "Gallery rhythms in the same calm, earthy direction.",
     "hero_description": "Placeholder image blocks are organized by mood and context so final photography can be inserted quickly once selections are approved.",
-    "categories": [
-      "landscape",
-      "floral",
-      "coastal",
-      "vases",
-      "bowls"
-    ],
+    "categories": ["landscape", "floral", "coastal", "vases", "bowls"],
     "items": [
       {
         "id": "gallery_1",

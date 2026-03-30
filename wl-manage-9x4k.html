@@ -60,7 +60,7 @@
         .admin-capsule:hover { border-color: var(--text-dim); color: var(--text); }
         .admin-capsule.active { background: var(--accent); border-color: var(--accent); color: var(--text); }
 
-        .admin-actions { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .admin-actions { display: flex; align-items: center; gap: 0.75rem; margin-top: 0.75rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
         .admin-btn {
             padding: 0.5rem 1.1rem;
             border-radius: var(--radius);
@@ -102,6 +102,7 @@
             width: 3rem; height: 3rem; border-radius: 0.35rem;
             object-fit: cover; margin-right: 0.75rem; vertical-align: middle;
         }
+        .admin-card-thumb { width: 3.2rem; height: 3.2rem; border-radius: 0.35rem; object-fit: cover; flex-shrink: 0; }
         .admin-card-actions { display: flex; gap: 0.35rem; flex-shrink: 0; }
         .status-hidden { opacity: 0.45; }
 
@@ -176,7 +177,10 @@
         .admin-form-group select:focus { outline: none; border-color: var(--accent); }
         .admin-form-actions { display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 1.2rem; }
 
-        .admin-preview-img { max-width: 100%; max-height: 6rem; border-radius: 0.35rem; margin-top: 0.35rem; }
+        .admin-preview-img { max-width: 100%; max-height: 8rem; border-radius: 0.35rem; margin-top: 0.35rem; object-fit: cover; }
+        .admin-img-picker { display: none; }
+        .admin-img-picker input[type="file"] { display: none; }
+        .admin-img-browse { margin-top: 0.4rem; }
 
         @media (max-width: 40rem) {
             .admin-header-row { flex-direction: column; align-items: flex-start; }
@@ -205,42 +209,32 @@
                 </div>
             </section>
 
-            <div class="admin-actions" id="cms-sync-controls">
-                <button id="cms-config-btn" class="admin-btn">Configure Sync</button>
-                <span id="cms-sync-status" class="admin-empty">Sync idle</span>
-            </div>
-
             <!-- Homepage Panel -->
             <section class="admin-panel" id="panel-homepage">
                 <div class="admin-subsection">
                     <h3>Hero Section</h3>
-                    <div class="admin-actions"><button id="edit-hero-btn" class="admin-btn primary">Edit Hero</button></div>
                     <div class="admin-content-list" id="hero-preview"></div>
+                    <div class="admin-actions"><button id="edit-hero-btn" class="admin-btn primary">Edit Hero</button></div>
                 </div>
                 <div class="admin-subsection">
                     <h3>Product Cards</h3>
-                    <div class="admin-actions"><button id="new-product-btn" class="admin-btn primary">+ New Product</button></div>
                     <div class="admin-content-list" id="product-list"></div>
+                    <div class="admin-actions"><button id="new-product-btn" class="admin-btn primary">+ New Product</button></div>
                 </div>
                 <div class="admin-subsection">
                     <h3>Feature Section</h3>
-                    <div class="admin-actions"><button id="edit-feature-btn" class="admin-btn primary">Edit Feature</button></div>
                     <div class="admin-content-list" id="feature-preview"></div>
+                    <div class="admin-actions"><button id="edit-feature-btn" class="admin-btn primary">Edit Feature</button></div>
                 </div>
                 <div class="admin-subsection">
                     <h3>Values Section</h3>
-                    <div class="admin-actions"><button id="new-value-btn" class="admin-btn primary">+ New Value</button></div>
                     <div class="admin-content-list" id="values-list"></div>
+                    <div class="admin-actions"><button id="new-value-btn" class="admin-btn primary">+ New Value</button></div>
                 </div>
                 <div class="admin-subsection">
                     <h3>Journal Cards</h3>
-                    <div class="admin-actions"><button id="new-journal-btn" class="admin-btn primary">+ New Journal Card</button></div>
                     <div class="admin-content-list" id="journal-list"></div>
-                </div>
-                <div class="admin-subsection">
-                    <h3>Newsletter Section</h3>
-                    <div class="admin-actions"><button id="edit-newsletter-btn" class="admin-btn primary">Edit Newsletter</button></div>
-                    <div class="admin-content-list" id="newsletter-preview"></div>
+                    <div class="admin-actions"><button id="new-journal-btn" class="admin-btn primary">+ New Journal Card</button></div>
                 </div>
             </section>
 
@@ -248,18 +242,18 @@
             <section class="admin-panel" id="panel-about" style="display:none">
                 <div class="admin-subsection">
                     <h3>Hero & Origin</h3>
-                    <div class="admin-actions"><button id="edit-about-btn" class="admin-btn primary">Edit About Content</button></div>
                     <div class="admin-content-list" id="about-preview"></div>
+                    <div class="admin-actions"><button id="edit-about-btn" class="admin-btn primary">Edit About Content</button></div>
                 </div>
                 <div class="admin-subsection">
                     <h3>Creative Principles</h3>
-                    <div class="admin-actions"><button id="new-principle-btn" class="admin-btn primary">+ New Principle</button></div>
                     <div class="admin-content-list" id="principles-list"></div>
+                    <div class="admin-actions"><button id="new-principle-btn" class="admin-btn primary">+ New Principle</button></div>
                 </div>
                 <div class="admin-subsection">
                     <h3>Engagement Model</h3>
-                    <div class="admin-actions"><button id="new-engagement-btn" class="admin-btn primary">+ New Tier</button></div>
                     <div class="admin-content-list" id="engagement-list"></div>
+                    <div class="admin-actions"><button id="new-engagement-btn" class="admin-btn primary">+ New Tier</button></div>
                 </div>
             </section>
 
@@ -267,22 +261,27 @@
             <section class="admin-panel" id="panel-gallery" style="display:none">
                 <div class="admin-subsection">
                     <h3>Gallery Hero</h3>
-                    <div class="admin-actions"><button id="edit-gallery-hero-btn" class="admin-btn primary">Edit Gallery Hero</button></div>
                     <div class="admin-content-list" id="gallery-hero-preview"></div>
+                    <div class="admin-actions"><button id="edit-gallery-hero-btn" class="admin-btn primary">Edit Gallery Hero</button></div>
                 </div>
                 <div class="admin-subsection">
                     <h3>Gallery Items</h3>
-                    <div class="admin-actions"><button id="new-gallery-btn" class="admin-btn primary">+ New Gallery Item</button></div>
                     <div class="admin-content-list" id="gallery-list"></div>
+                    <div class="admin-actions"><button id="new-gallery-btn" class="admin-btn primary">+ New Gallery Item</button></div>
                 </div>
             </section>
 
             <!-- Settings Panel -->
             <section class="admin-panel" id="panel-settings" style="display:none">
                 <h2>Section Visibility & Order</h2>
+                <p class="admin-empty" style="margin-bottom: 1rem;">Toggle sections on or off to show or hide them on the homepage. Drag the handle to reorder how they appear on the page.</p>
                 <div class="admin-sortable-list" id="section-list"></div>
             </section>
         </main>
+
+        <footer class="admin-actions" id="cms-sync-controls" style="justify-content:center; padding: 1.5rem 0; border-top: 1px solid var(--border); margin-top: 2rem;">
+            <span id="cms-sync-status" class="admin-empty">Sync idle</span>
+        </footer>
     </div>
 
     <!-- Hero Modal -->
@@ -292,9 +291,9 @@
             <form id="hero-form">
                 <div class="admin-form-group"><label for="hero-title">Title</label><input type="text" id="hero-title"></div>
                 <div class="admin-form-group"><label for="hero-cta-text">CTA Text</label><input type="text" id="hero-cta-text"></div>
-                <div class="admin-form-group"><label for="hero-cta-link">CTA Link</label><input type="text" id="hero-cta-link"></div>
-                <div class="admin-form-group"><label for="hero-image">Image URL</label><input type="text" id="hero-image"></div>
-                <div class="admin-form-group"><label for="hero-image-alt">Image Alt</label><input type="text" id="hero-image-alt"></div>
+                <input type="hidden" id="hero-cta-link">
+                <div class="admin-form-group"><label>Image</label><input type="hidden" id="hero-image"><input type="file" id="hero-image-file" accept="image/*" onchange="handleFilePick(this,'hero-image')" hidden><img id="hero-image-preview" class="admin-preview-img" src="" alt="" hidden><button type="button" class="admin-btn admin-img-browse" onclick="document.getElementById('hero-image-file').click()">Browse</button></div>
+                <input type="hidden" id="hero-image-alt">
                 <div class="admin-form-actions">
                     <button type="button" class="admin-btn cancel-modal">Cancel</button>
                     <button type="submit" class="admin-btn primary">Save</button>
@@ -310,10 +309,11 @@
             <form id="product-form">
                 <input type="hidden" id="product-id">
                 <div class="admin-form-group"><label for="product-title">Title</label><input type="text" id="product-title" required></div>
-                <div class="admin-form-group"><label for="product-image">Image URL</label><input type="text" id="product-image"></div>
-                <div class="admin-form-group"><label for="product-image-alt">Image Alt</label><input type="text" id="product-image-alt"></div>
-                <div class="admin-form-group"><label for="product-learn-link">Learn More Link</label><input type="text" id="product-learn-link" value="/about/"></div>
-                <div class="admin-form-group"><label for="product-gallery-link">Gallery Link</label><input type="text" id="product-gallery-link" value="/gallery/"></div>
+                <div class="admin-form-group"><label for="product-desc">Description</label><textarea id="product-desc" rows="3" placeholder="Short description of this piece..."></textarea></div>
+                <div class="admin-form-group"><label>Image</label><input type="hidden" id="product-image"><input type="file" id="product-image-file" accept="image/*" onchange="handleFilePick(this,'product-image')" hidden><img id="product-image-preview" class="admin-preview-img" src="" alt="" hidden><button type="button" class="admin-btn admin-img-browse" onclick="document.getElementById('product-image-file').click()">Browse</button></div>
+                <input type="hidden" id="product-image-alt">
+                <input type="hidden" id="product-learn-link" value="/about/">
+                <input type="hidden" id="product-gallery-link" value="/gallery/">
                 <div class="admin-form-group"><label for="product-visibility">Visibility</label>
                     <select id="product-visibility"><option value="visible">Visible</option><option value="hidden">Hidden</option></select>
                 </div>
@@ -332,10 +332,10 @@
             <form id="feature-form">
                 <div class="admin-form-group"><label for="feature-title">Title</label><input type="text" id="feature-title"></div>
                 <div class="admin-form-group"><label for="feature-desc">Description</label><textarea id="feature-desc" rows="3"></textarea></div>
-                <div class="admin-form-group"><label for="feature-image">Image URL</label><input type="text" id="feature-image"></div>
-                <div class="admin-form-group"><label for="feature-image-alt">Image Alt</label><input type="text" id="feature-image-alt"></div>
+                <div class="admin-form-group"><label>Image</label><input type="hidden" id="feature-image"><input type="file" id="feature-image-file" accept="image/*" onchange="handleFilePick(this,'feature-image')" hidden><img id="feature-image-preview" class="admin-preview-img" src="" alt="" hidden><button type="button" class="admin-btn admin-img-browse" onclick="document.getElementById('feature-image-file').click()">Browse</button></div>
+                <input type="hidden" id="feature-image-alt">
                 <div class="admin-form-group"><label for="feature-link-text">Link Text</label><input type="text" id="feature-link-text"></div>
-                <div class="admin-form-group"><label for="feature-link-url">Link URL</label><input type="text" id="feature-link-url"></div>
+                <input type="hidden" id="feature-link-url">
                 <div class="admin-form-actions">
                     <button type="button" class="admin-btn cancel-modal">Cancel</button>
                     <button type="submit" class="admin-btn primary">Save</button>
@@ -367,28 +367,11 @@
             <form id="journal-form">
                 <input type="hidden" id="journal-id">
                 <div class="admin-form-group"><label for="journal-title">Title</label><input type="text" id="journal-title" required></div>
-                <div class="admin-form-group"><label for="journal-image">Image URL</label><input type="text" id="journal-image"></div>
-                <div class="admin-form-group"><label for="journal-image-alt">Image Alt</label><input type="text" id="journal-image-alt"></div>
+                <div class="admin-form-group"><label>Image</label><input type="hidden" id="journal-image"><input type="file" id="journal-image-file" accept="image/*" onchange="handleFilePick(this,'journal-image')" hidden><img id="journal-image-preview" class="admin-preview-img" src="" alt="" hidden><button type="button" class="admin-btn admin-img-browse" onclick="document.getElementById('journal-image-file').click()">Browse</button></div>
+                <input type="hidden" id="journal-image-alt">
                 <div class="admin-form-group"><label for="journal-visibility">Visibility</label>
                     <select id="journal-visibility"><option value="visible">Visible</option><option value="hidden">Hidden</option></select>
                 </div>
-                <div class="admin-form-actions">
-                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
-                    <button type="submit" class="admin-btn primary">Save</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Newsletter Modal -->
-    <div id="newsletter-modal" class="admin-modal">
-        <div class="admin-modal-content">
-            <h2>Edit Newsletter</h2>
-            <form id="newsletter-form">
-                <div class="admin-form-group"><label for="newsletter-text">Signup Text</label><textarea id="newsletter-text" rows="2"></textarea></div>
-                <div class="admin-form-group"><label for="newsletter-image">Image URL</label><input type="text" id="newsletter-image"></div>
-                <div class="admin-form-group"><label for="newsletter-image-alt">Image Alt</label><input type="text" id="newsletter-image-alt"></div>
-                <div class="admin-form-group"><label for="newsletter-instagram">Instagram Text</label><input type="text" id="newsletter-instagram"></div>
                 <div class="admin-form-actions">
                     <button type="button" class="admin-btn cancel-modal">Cancel</button>
                     <button type="submit" class="admin-btn primary">Save</button>
@@ -408,8 +391,8 @@
                 <div class="admin-form-group"><label for="about-origin-title">Origin Section Title</label><input type="text" id="about-origin-title"></div>
                 <div class="admin-form-group"><label for="about-origin-1">Origin Text 1</label><textarea id="about-origin-1" rows="3"></textarea></div>
                 <div class="admin-form-group"><label for="about-origin-2">Origin Text 2</label><textarea id="about-origin-2" rows="3"></textarea></div>
-                <div class="admin-form-group"><label for="about-origin-image">Origin Image URL</label><input type="text" id="about-origin-image"></div>
-                <div class="admin-form-group"><label for="about-origin-image-alt">Origin Image Alt</label><input type="text" id="about-origin-image-alt"></div>
+                <div class="admin-form-group"><label>Origin Image</label><input type="hidden" id="about-origin-image"><input type="file" id="about-origin-image-file" accept="image/*" onchange="handleFilePick(this,'about-origin-image')" hidden><img id="about-origin-image-preview" class="admin-preview-img" src="" alt="" hidden><button type="button" class="admin-btn admin-img-browse" onclick="document.getElementById('about-origin-image-file').click()">Browse</button></div>
+                <input type="hidden" id="about-origin-image-alt">
                 <div class="admin-form-actions">
                     <button type="button" class="admin-btn cancel-modal">Cancel</button>
                     <button type="submit" class="admin-btn primary">Save</button>
@@ -473,8 +456,8 @@
             <form id="gallery-item-form">
                 <input type="hidden" id="gitem-id">
                 <div class="admin-form-group"><label for="gitem-title">Title</label><input type="text" id="gitem-title" required></div>
-                <div class="admin-form-group"><label for="gitem-image">Image URL</label><input type="text" id="gitem-image"></div>
-                <div class="admin-form-group"><label for="gitem-image-alt">Image Alt</label><input type="text" id="gitem-image-alt"></div>
+                <div class="admin-form-group"><label>Image</label><input type="hidden" id="gitem-image"><input type="file" id="gitem-image-file" accept="image/*" onchange="handleFilePick(this,'gitem-image')" hidden><img id="gitem-image-preview" class="admin-preview-img" src="" alt="" hidden><button type="button" class="admin-btn admin-img-browse" onclick="document.getElementById('gitem-image-file').click()">Browse</button></div>
+                <input type="hidden" id="gitem-image-alt">
                 <div class="admin-form-group"><label for="gitem-categories">Categories (space-separated)</label><input type="text" id="gitem-categories" placeholder="coast portrait studio travel"></div>
                 <div class="admin-form-group"><label for="gitem-visibility">Visibility</label>
                     <select id="gitem-visibility"><option value="visible">Visible</option><option value="hidden">Hidden</option></select>
@@ -491,7 +474,7 @@
     (() => {
         'use strict';
 
-        const CMS_WORKER_URL_KEY = 'wl_cms_worker_url';
+        const CMS_WORKER_URL = 'https://waterlightstudio-cms.suzanneshwagerwebsite.workers.dev';
         let cmsData = null;
         let cmsSyncTimer = null;
         let cmsSyncReason = '';
@@ -506,23 +489,34 @@
             return (prefix || 'item') + '_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
         }
 
+        // ===== Image helpers =====
+        function showPreview(inputId) {
+            const url = document.getElementById(inputId).value;
+            const preview = document.getElementById(inputId + '-preview');
+            if (preview) {
+                if (url) { preview.src = url; preview.hidden = false; }
+                else { preview.src = ''; preview.hidden = true; }
+            }
+        }
+
+        window.handleFilePick = function(fileInput, inputId) {
+            const file = fileInput.files[0];
+            if (!file) return;
+            const url = '/assets/img/' + file.name;
+            document.getElementById(inputId).value = url;
+            // Show local preview
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const preview = document.getElementById(inputId + '-preview');
+                if (preview) { preview.src = e.target.result; preview.hidden = false; }
+            };
+            reader.readAsDataURL(file);
+        };
+
+
         // ===== CMS Sync =====
-        async function getSyncConfig() {
-            let workerUrl = (localStorage.getItem(CMS_WORKER_URL_KEY) || '').trim();
-            if (!workerUrl) {
-                const entered = prompt('Enter your Cloudflare Worker base URL');
-                if (!entered) throw new Error('Sync canceled: no Worker URL.');
-                workerUrl = entered.trim().replace(/\/$/, '');
-                localStorage.setItem(CMS_WORKER_URL_KEY, workerUrl);
-            }
-            let adminKey = window.CMS.getAdminKey();
-            if (!adminKey) {
-                const entered = prompt('Enter CMS admin key');
-                if (!entered) throw new Error('Sync canceled: no admin key.');
-                adminKey = entered.trim();
-                window.CMS.setAdminKey(adminKey);
-            }
-            return { workerUrl, adminKey };
+        function getSyncConfig() {
+            return { workerUrl: CMS_WORKER_URL, adminKey: 'waterlight-admin-2026' };
         }
 
         async function flushCmsSync() {
@@ -572,8 +566,9 @@
         });
 
         // ===== Render helpers =====
-        function cardHtml(title, subtitle, id, editFn, deleteFn) {
+        function cardHtml(title, subtitle, id, editFn, deleteFn, image) {
             return `<div class="admin-card" data-id="${id}">
+                ${image ? `<img class="admin-card-thumb" src="${image}" alt="">` : ''}
                 <div class="admin-card-info"><strong>${esc(title)}</strong>${subtitle ? `<small>${esc(subtitle)}</small>` : ''}</div>
                 <div class="admin-card-actions">
                     <button class="admin-btn small" onclick="${editFn}('${id}')">Edit</button>
@@ -602,6 +597,7 @@
             document.getElementById('hero-cta-link').value = cmsData.hero.cta_link || '';
             document.getElementById('hero-image').value = cmsData.hero.image || '';
             document.getElementById('hero-image-alt').value = cmsData.hero.image_alt || '';
+            showPreview('hero-image');
             openModal('hero-modal');
         });
         document.getElementById('hero-form').addEventListener('submit', (e) => {
@@ -621,7 +617,7 @@
             const el = document.getElementById('product-list');
             if (!cmsData.products.items.length) { el.innerHTML = '<p class="admin-empty">No products.</p>'; return; }
             el.innerHTML = cmsData.products.items.map(p =>
-                cardHtml(p.title, p.visibility === 'hidden' ? 'Hidden' : '', p.id, 'editProduct', 'deleteProduct')
+                cardHtml(p.title, p.visibility === 'hidden' ? 'Hidden' : '', p.id, 'editProduct', 'deleteProduct', p.image)
             ).join('');
         }
         window.editProduct = function(id) {
@@ -630,8 +626,10 @@
             document.getElementById('product-modal-title').textContent = 'Edit Product';
             document.getElementById('product-id').value = p.id;
             document.getElementById('product-title').value = p.title || '';
+            document.getElementById('product-desc').value = p.description || '';
             document.getElementById('product-image').value = p.image || '';
             document.getElementById('product-image-alt').value = p.image_alt || '';
+            showPreview('product-image');
             document.getElementById('product-learn-link').value = p.learn_more_link || '/about/';
             document.getElementById('product-gallery-link').value = p.gallery_link || '/gallery/';
             document.getElementById('product-visibility').value = p.visibility || 'visible';
@@ -649,6 +647,7 @@
             document.getElementById('product-id').value = '';
             document.getElementById('product-learn-link').value = '/about/';
             document.getElementById('product-gallery-link').value = '/gallery/';
+            showPreview('product-image');
             openModal('product-modal');
         });
         document.getElementById('product-form').addEventListener('submit', (e) => {
@@ -657,6 +656,7 @@
             const item = {
                 id: id || generateId('product'),
                 title: document.getElementById('product-title').value,
+                description: document.getElementById('product-desc').value,
                 image: document.getElementById('product-image').value,
                 image_alt: document.getElementById('product-image-alt').value,
                 learn_more_link: document.getElementById('product-learn-link').value,
@@ -683,6 +683,7 @@
             document.getElementById('feature-desc').value = cmsData.feature.description || '';
             document.getElementById('feature-image').value = cmsData.feature.image || '';
             document.getElementById('feature-image-alt').value = cmsData.feature.image_alt || '';
+            showPreview('feature-image');
             document.getElementById('feature-link-text').value = cmsData.feature.link_text || '';
             document.getElementById('feature-link-url').value = cmsData.feature.link_url || '';
             openModal('feature-modal');
@@ -745,7 +746,7 @@
             const el = document.getElementById('journal-list');
             if (!cmsData.journal.cards.length) { el.innerHTML = '<p class="admin-empty">No journal cards.</p>'; return; }
             el.innerHTML = cmsData.journal.cards.map(j =>
-                cardHtml(j.title, j.visibility === 'hidden' ? 'Hidden' : '', j.id, 'editJournal', 'deleteJournal')
+                cardHtml(j.title, j.visibility === 'hidden' ? 'Hidden' : '', j.id, 'editJournal', 'deleteJournal', j.image)
             ).join('');
         }
         window.editJournal = function(id) {
@@ -756,6 +757,7 @@
             document.getElementById('journal-title').value = j.title || '';
             document.getElementById('journal-image').value = j.image || '';
             document.getElementById('journal-image-alt').value = j.image_alt || '';
+            showPreview('journal-image');
             document.getElementById('journal-visibility').value = j.visibility || 'visible';
             openModal('journal-modal');
         };
@@ -769,6 +771,7 @@
             document.getElementById('journal-modal-title').textContent = 'New Journal Card';
             document.getElementById('journal-form').reset();
             document.getElementById('journal-id').value = '';
+            showPreview('journal-image');
             openModal('journal-modal');
         });
         document.getElementById('journal-form').addEventListener('submit', (e) => {
@@ -780,28 +783,6 @@
             save('journal-update');
             closeModal('journal-modal');
             renderJournal();
-        });
-
-        // ===== NEWSLETTER =====
-        function renderNewsletter() {
-            document.getElementById('newsletter-preview').innerHTML = singletonCard(cmsData.newsletter.signup_text, cmsData.newsletter.instagram_text);
-        }
-        document.getElementById('edit-newsletter-btn').addEventListener('click', () => {
-            document.getElementById('newsletter-text').value = cmsData.newsletter.signup_text || '';
-            document.getElementById('newsletter-image').value = cmsData.newsletter.image || '';
-            document.getElementById('newsletter-image-alt').value = cmsData.newsletter.image_alt || '';
-            document.getElementById('newsletter-instagram').value = cmsData.newsletter.instagram_text || '';
-            openModal('newsletter-modal');
-        });
-        document.getElementById('newsletter-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            cmsData.newsletter.signup_text = document.getElementById('newsletter-text').value;
-            cmsData.newsletter.image = document.getElementById('newsletter-image').value;
-            cmsData.newsletter.image_alt = document.getElementById('newsletter-image-alt').value;
-            cmsData.newsletter.instagram_text = document.getElementById('newsletter-instagram').value;
-            save('newsletter-update');
-            closeModal('newsletter-modal');
-            renderNewsletter();
         });
 
         // ===== ABOUT =====
@@ -817,6 +798,7 @@
             document.getElementById('about-origin-2').value = cmsData.about.origin_text_2 || '';
             document.getElementById('about-origin-image').value = cmsData.about.origin_image || '';
             document.getElementById('about-origin-image-alt').value = cmsData.about.origin_image_alt || '';
+            showPreview('about-origin-image');
             openModal('about-modal');
         });
         document.getElementById('about-form').addEventListener('submit', (e) => {
@@ -939,7 +921,7 @@
             const el = document.getElementById('gallery-list');
             if (!cmsData.gallery.items.length) { el.innerHTML = '<p class="admin-empty">No gallery items.</p>'; return; }
             el.innerHTML = cmsData.gallery.items.map(g =>
-                cardHtml(g.title, g.categories, g.id, 'editGalleryItem', 'deleteGalleryItem')
+                cardHtml(g.title, g.categories, g.id, 'editGalleryItem', 'deleteGalleryItem', g.image)
             ).join('');
         }
         window.editGalleryItem = function(id) {
@@ -950,6 +932,7 @@
             document.getElementById('gitem-title').value = g.title || '';
             document.getElementById('gitem-image').value = g.image || '';
             document.getElementById('gitem-image-alt').value = g.image_alt || '';
+            showPreview('gitem-image');
             document.getElementById('gitem-categories').value = g.categories || '';
             document.getElementById('gitem-visibility').value = g.visibility || 'visible';
             openModal('gallery-item-modal');
@@ -964,6 +947,7 @@
             document.getElementById('gallery-item-modal-title').textContent = 'New Gallery Item';
             document.getElementById('gallery-item-form').reset();
             document.getElementById('gitem-id').value = '';
+            showPreview('gitem-image');
             openModal('gallery-item-modal');
         });
         document.getElementById('gallery-item-form').addEventListener('submit', (e) => {
@@ -984,8 +968,7 @@
                 { key: 'products', label: 'Products', setting: 'showProductsSection' },
                 { key: 'feature', label: 'Feature', setting: 'showFeatureSection' },
                 { key: 'values', label: 'Values', setting: 'showValuesSection' },
-                { key: 'journal', label: 'Journal', setting: 'showJournalSection' },
-                { key: 'newsletter', label: 'Newsletter', setting: 'showNewsletterSection' }
+                { key: 'journal', label: 'Journal', setting: 'showJournalSection' }
             ];
             const order = cmsData.settings.sectionOrder || sections.map(s => s.key);
             const ordered = order.map(k => sections.find(s => s.key === k)).filter(Boolean);
@@ -1055,14 +1038,6 @@
             });
         });
 
-        // ===== SYNC CONFIG =====
-        document.getElementById('cms-config-btn').addEventListener('click', () => {
-            window.CMS.clearAdminKey();
-            localStorage.removeItem(CMS_WORKER_URL_KEY);
-            getSyncConfig()
-                .then(() => setSyncStatus('Sync configured. Next save will push to GitHub.'))
-                .catch(err => setSyncStatus(err.message));
-        });
 
         // ===== INIT =====
         function renderAll() {
@@ -1071,7 +1046,6 @@
             renderFeature();
             renderValues();
             renderJournal();
-            renderNewsletter();
             renderAbout();
             renderPrinciples();
             renderEngagement();

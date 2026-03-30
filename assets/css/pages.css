@@ -90,52 +90,52 @@
 }
 
 .gallery-card {
-  position: relative;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  overflow: clip;
-  background: var(--mist);
+  display: grid;
+  gap: 0.4rem;
 }
 
 .gallery-card img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+  border-radius: var(--radius-md);
 }
 
 .gallery-card__info {
   display: grid;
-  gap: 0.15rem;
-  padding: 0.7rem 0.75rem 0.82rem;
+  gap: 0.1rem;
 }
 
 .gallery-card__info strong {
   font-family: var(--font-display);
-  font-size: var(--step-1);
+  font-weight: 200;
+  font-size: clamp(2rem, 1.6rem + 1vw, 2.9rem);
+  line-height: 0.95;
 }
 
 .gallery-card__info span {
-  font-size: var(--step--1);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(25, 29, 35, 0.72);
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  color: rgba(22, 24, 26, 0.55);
 }
 
 .gallery-card__open {
-  position: absolute;
-  inset: auto 0.62rem 0.62rem auto;
-  border: 1px solid var(--line-strong);
-  border-radius: var(--radius-pill);
-  padding: 0.38rem 0.64rem;
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--mist);
-  background: color-mix(in srgb, var(--charcoal) 80%, transparent);
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  color: rgba(22, 24, 26, 0.55);
+  cursor: pointer;
+  text-align: left;
+  transition: color var(--timing-fast) var(--ease-main);
 }
 
 .gallery-card__open:is(:hover, :focus-visible) {
-  background: var(--rust);
+  background: transparent;
+  color: rgba(22, 24, 26, 0.9);
 }
 
 @media (max-width: 56rem) {
@@ -325,6 +325,7 @@ body.home-template .skip-link {
   width: 100%;
   aspect-ratio: 4 / 3.35;
   object-fit: cover;
+  border-radius: var(--radius-md);
 }
 
 .home-products {
@@ -353,6 +354,7 @@ body.home-template .skip-link {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+  border-radius: var(--radius-md);
 }
 
 .home-product h3 {
@@ -407,8 +409,9 @@ body.home-template .skip-link {
 
 .home-feature__image img {
   width: 100%;
-  aspect-ratio: 4 / 4.2;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+  border-radius: var(--radius-md);
 }
 
 .home-feature__copy {
@@ -517,8 +520,9 @@ body.home-template .skip-link {
 
 .home-journal-card img {
   width: 100%;
-  aspect-ratio: 4 / 3.3;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+  border-radius: var(--radius-md);
 }
 
 .home-journal-card h3 {
