@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <title>Admin - Waterlight Studio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;400;500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <script src="/cms-client.js"></script>
+    <script src="/cms-client.js?v=2"></script>
     <style>
         :root {
             --bg: #1a1c1e;
@@ -536,8 +537,12 @@
                 const filesToUpload = pendingFiles.slice();
                 pendingFiles = [];
                 try {
-                    if (filesToUpload.length) setSyncStatus(`Uploading ${filesToUpload.length} image(s)...`);
-                    else setSyncStatus(`Syncing... (${reason})`);
+                    if (filesToUpload.length) {
+                        setSyncStatus(`Uploading ${filesToUpload.length} image(s)...`);
+                        console.log('Uploading files:', filesToUpload.map(f => f.path));
+                    } else {
+                        setSyncStatus(`Syncing... (${reason})`);
+                    }
                     const { workerUrl, adminKey } = await getSyncConfig();
                     await window.CMS.saveCmsViaWorker(cmsData, { workerUrl, adminKey, commitMessage: `cms: ${reason} ${new Date().toISOString()}`, files: filesToUpload });
                     setSyncStatus(`Synced at ${new Date().toLocaleTimeString()}`);
