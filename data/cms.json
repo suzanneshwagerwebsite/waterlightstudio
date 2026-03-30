@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-03-30T20:49:29.614Z",
+  "updatedAt": "2026-03-30T20:50:37.200Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -17,7 +17,7 @@
     "showNewsletterSection": true
   },
   "hero": {
-    "title": "Ceramics for every table and ritual.",
+    "title": "American Art Pottery",
     "cta_text": "View Gallery",
     "cta_link": "/gallery/",
     "image": "/assets/img/IMG_9160.jpeg",
