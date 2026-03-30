@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-03-30T06:09:30.545Z",
+  "updatedAt": "2026-03-30T20:49:29.614Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -20,7 +20,7 @@
     "title": "Ceramics for every table and ritual.",
     "cta_text": "View Gallery",
     "cta_link": "/gallery/",
-    "image": "/assets/img/placeholders/home-hero-ceramics.svg",
+    "image": "/assets/img/IMG_9160.jpeg",
     "image_alt": "Handmade ceramic objects styled in neutral tones"
   },
   "products": {
@@ -153,7 +153,13 @@
     "kicker": "Image Library",
     "hero_title": "Gallery rhythms in the same calm, earthy direction.",
     "hero_description": "Placeholder image blocks are organized by mood and context so final photography can be inserted quickly once selections are approved.",
-    "categories": ["landscape", "floral", "coastal", "vases", "bowls"],
+    "categories": [
+      "landscape",
+      "floral",
+      "coastal",
+      "vases",
+      "bowls"
+    ],
     "items": [
       {
         "id": "gallery_1",
