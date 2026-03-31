@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-03-31T03:06:01.896Z",
+  "updatedAt": "2026-03-31T03:11:03.847Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -17,7 +17,7 @@
     "showNewsletterSection": true
   },
   "hero": {
-    "title": "Ceramics for every table and ritual.",
+    "title": "Art Pottery Ceramics ",
     "cta_text": "View Gallery",
     "cta_link": "/gallery/",
     "image": "/assets/img/img_9160.jpeg",
