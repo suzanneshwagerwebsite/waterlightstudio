@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-03T01:17:47.434Z",
+  "updatedAt": "2026-04-03T01:19:01.118Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -111,10 +111,10 @@
     "instagram_text": "Follow us on Instagram"
   },
   "about": {
-    "kicker": "About the Studio",
-    "hero_title": "A tactile, calm approach to commercial storytelling.",
+    "kicker": "Waterlight Studio       Suzanne Schwager",
+    "hero_title": "Waterlight ",
     "hero_description": "      Suzanne Schwager began her pottery career while studying ceramics at the University of California Santa Barbara. She was hired by Santa Barbara Ceramic Design to design and decorate art pottery that would be exhibited in various craft shows in the 1980’s. One of these shows included the Smithsonian Institute’s American Art Pottery Exhibit. She has exhibited her pottery in the Los Angeles Art Pottery Show. Her work is found n private collections.",
-    "origin_title": "Studio Origin",
+    "origin_title": "Studio Origin    Suzanne creates her pottery in her home studio where she hand throws each piece on the potter's wheel. She fires the clay pieces after hand painting the individual ware. ",
     "origin_text_1": "The studio began as a response to fast visual trends. Instead of high-gloss sameness, we work with weathered surfaces, coastal movement, and directional natural light to give each set an honest atmosphere.",
     "origin_text_2": "This launch build intentionally uses placeholder narrative copy. Final story details can replace these sections without changing the approved layout.",
     "origin_image": "/assets/img/palm-shore-planter.jpg",
