@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-06T01:51:05.297Z",
+  "updatedAt": "2026-04-06T01:52:08.926Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -79,7 +79,7 @@
       {
         "id": "value_3",
         "title": "Made by Hand",
-        "description": "No two forms are identical. Natural variation is treated as part of the signature."
+        "description": "No two forms are identical. "
       }
     ]
   },
