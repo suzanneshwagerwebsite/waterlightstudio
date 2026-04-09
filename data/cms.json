@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-09T17:26:33.999Z",
+  "updatedAt": "2026-04-09T17:26:46.309Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -124,11 +124,6 @@
         "id": "principle_1",
         "title": "Material honesty",
         "description": "Let linen, stone, skin texture, and grain remain visible instead of over-smoothing."
-      },
-      {
-        "id": "principle_2",
-        "title": "Directional light",
-        "description": "Build depth with natural and practical lighting before adding post-production contrast."
       }
     ],
     "engagement": [
