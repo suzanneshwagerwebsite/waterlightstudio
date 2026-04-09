@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-09T17:23:10.636Z",
+  "updatedAt": "2026-04-09T17:23:27.787Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -49,16 +49,6 @@
         "image": "/assets/img/sailboat-vase.jpg",
         "image_alt": "Handmade vase with painted sailboat on blue water",
         "title": "Sailboat Vase",
-        "learn_more_link": "/about/",
-        "gallery_link": "/gallery/",
-        "visibility": "visible"
-      },
-      {
-        "id": "product_1775755384798_b1nrvd",
-        "title": "Riviera Palm",
-        "description": "",
-        "image": "/assets/img/img_9256.heic",
-        "image_alt": "",
         "learn_more_link": "/about/",
         "gallery_link": "/gallery/",
         "visibility": "visible"
