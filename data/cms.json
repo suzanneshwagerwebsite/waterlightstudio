@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-09T17:23:27.787Z",
+  "updatedAt": "2026-04-09T17:26:33.999Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -129,11 +129,6 @@
         "id": "principle_2",
         "title": "Directional light",
         "description": "Build depth with natural and practical lighting before adding post-production contrast."
-      },
-      {
-        "id": "principle_3",
-        "title": "Human pacing",
-        "description": "Frame people in motion and pause to preserve natural gesture instead of static posing."
       }
     ],
     "engagement": [
