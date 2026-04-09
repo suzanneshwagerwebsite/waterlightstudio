@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-09T17:27:27.531Z",
+  "updatedAt": "2026-04-09T17:28:36.854Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -141,8 +141,8 @@
   },
   "gallery": {
     "kicker": "Image Library",
-    "hero_title": "Gallery rhythms in the same calm, earthy direction.",
-    "hero_description": "Placeholder image blocks are organized by mood and context so final photography can be inserted quickly once selections are approved.",
+    "hero_title": "",
+    "hero_description": "",
     "categories": [
       "landscape",
       "floral",
