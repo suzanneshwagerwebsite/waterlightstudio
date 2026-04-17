@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-17T15:12:02.943Z",
+  "updatedAt": "2026-04-17T15:58:58.446Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -20,9 +20,9 @@
     "showAboutPrinciples": false,
     "showAboutEngagement": false,
     "showAboutCta": false,
-    "showGalleryHero": true,
     "showGalleryFilters": true,
-    "showGalleryGrid": true
+    "showGalleryGrid": true,
+    "showGalleryHero": true
   },
   "hero": {
     "title": "Ceramics for every table and ritual.",
@@ -45,12 +45,14 @@
       },
       {
         "id": "product_2",
+        "title": "Cherry Blossom Bowl",
+        "description": "",
         "image": "/assets/img/cherry-blossom-bowl.jpg",
         "image_alt": "Handmade bowl with pink cherry blossom branches",
-        "title": "Cherry Blossom Bowl",
         "learn_more_link": "/about/",
         "gallery_link": "/gallery/",
-        "visibility": "visible"
+        "visibility": "visible",
+        "sold": true
       },
       {
         "id": "product_3",
@@ -244,8 +246,9 @@
     ]
   },
   "contact": {
+    "intro": "If you have questions about a piece, a commission, or a studio visit, send a note and we'll respond within a few days.",
+    "intro_2": "If you'd like to arrange a studio visit please get in touch close to the time that you'd like to come, rather than months or weeks ahead.",
     "kicker": "Contact",
-    "title": "Get in touch.",
-    "intro": "If you have questions about a piece, a commission, or a studio visit, send a note and we'll respond within a few days."
+    "title": "Get in touch."
   }
 }
