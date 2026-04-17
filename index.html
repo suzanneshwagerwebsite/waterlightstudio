@@ -221,7 +221,10 @@
             prodGrid.innerHTML = cms.products.items
               .filter(p => p.visibility !== 'hidden')
               .map(p => `<article class="home-product is-visible">
-                <img src="${p.image}" alt="${p.image_alt || ''}" loading="lazy" />
+                <div class="home-product__media">
+                  <img src="${p.image}" alt="${p.image_alt || ''}" loading="lazy" />
+                  ${p.sold ? '<span class="sold-badge">SOLD</span>' : ''}
+                </div>
                 <h3>${p.title}</h3>
                 <div class="home-product__actions">
                   <a href="${p.learn_more_link || '/about/'}">Learn More</a>

@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="/assets/css/components.css" />
     <link rel="stylesheet" href="/assets/css/pages.css" />
   </head>
-  <body class="home-template">
+  <body class="home-template gallery-template">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
       <header class="site-header home-header">
@@ -211,6 +211,7 @@
               return `<article class="gallery-item is-visible" data-category="${i.categories}">
                 <figure class="gallery-card">
                   <img src="${i.image}" alt="${i.image_alt || ''}" loading="lazy" />
+                  ${i.sold ? '<span class="sold-badge">SOLD</span>' : ''}
                   <figcaption class="gallery-card__info">
                     <strong>${i.title}</strong>
                     <span>${catLabel}</span>

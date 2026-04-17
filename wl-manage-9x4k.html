@@ -137,6 +137,8 @@
         }
         .admin-toggle input:checked + .admin-toggle-slider { background: var(--accent); }
         .admin-toggle input:checked + .admin-toggle-slider::before { transform: translateX(1.1rem); background: var(--text); }
+        .admin-toggle-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+        .admin-toggle-row > span { font-size: 0.9rem; color: var(--text); }
 
         /* Modal */
         .admin-modal {
@@ -337,6 +339,13 @@
                 <div class="admin-form-group"><label for="product-visibility">Visibility</label>
                     <select id="product-visibility"><option value="visible">Visible</option><option value="hidden">Hidden</option></select>
                 </div>
+                <div class="admin-form-group admin-toggle-row">
+                    <span>Mark as sold</span>
+                    <label class="admin-toggle">
+                        <input type="checkbox" id="product-sold">
+                        <span class="admin-toggle-slider"></span>
+                    </label>
+                </div>
                 <div class="admin-form-actions">
                     <button type="button" class="admin-btn cancel-modal">Cancel</button>
                     <button type="submit" class="admin-btn primary">Save</button>
@@ -465,6 +474,13 @@
                 <div class="admin-form-group"><label for="gitem-categories">Categories (space-separated)</label><input type="text" id="gitem-categories" placeholder="coast portrait studio travel"></div>
                 <div class="admin-form-group"><label for="gitem-visibility">Visibility</label>
                     <select id="gitem-visibility"><option value="visible">Visible</option><option value="hidden">Hidden</option></select>
+                </div>
+                <div class="admin-form-group admin-toggle-row">
+                    <span>Mark as sold</span>
+                    <label class="admin-toggle">
+                        <input type="checkbox" id="gitem-sold">
+                        <span class="admin-toggle-slider"></span>
+                    </label>
                 </div>
                 <div class="admin-form-actions">
                     <button type="button" class="admin-btn cancel-modal">Cancel</button>
@@ -686,6 +702,7 @@
             document.getElementById('product-learn-link').value = p.learn_more_link || '/about/';
             document.getElementById('product-gallery-link').value = p.gallery_link || '/gallery/';
             document.getElementById('product-visibility').value = p.visibility || 'visible';
+            document.getElementById('product-sold').checked = !!p.sold;
             openModal('product-modal');
         };
         window.deleteProduct = function(id) {
@@ -700,6 +717,7 @@
             document.getElementById('product-id').value = '';
             document.getElementById('product-learn-link').value = '/about/';
             document.getElementById('product-gallery-link').value = '/gallery/';
+            document.getElementById('product-sold').checked = false;
             showPreview('product-image');
             openModal('product-modal');
         });
@@ -714,7 +732,8 @@
                 image_alt: document.getElementById('product-image-alt').value,
                 learn_more_link: document.getElementById('product-learn-link').value,
                 gallery_link: document.getElementById('product-gallery-link').value,
-                visibility: document.getElementById('product-visibility').value
+                visibility: document.getElementById('product-visibility').value,
+                sold: document.getElementById('product-sold').checked
             };
             if (id) {
                 const idx = cmsData.products.items.findIndex(x => x.id === id);
@@ -968,6 +987,7 @@
             showPreview('gitem-image');
             document.getElementById('gitem-categories').value = g.categories || '';
             document.getElementById('gitem-visibility').value = g.visibility || 'visible';
+            document.getElementById('gitem-sold').checked = !!g.sold;
             openModal('gallery-item-modal');
         };
         window.deleteGalleryItem = function(id) {
@@ -980,13 +1000,14 @@
             document.getElementById('gallery-item-modal-title').textContent = 'New Gallery Item';
             document.getElementById('gallery-item-form').reset();
             document.getElementById('gitem-id').value = '';
+            document.getElementById('gitem-sold').checked = false;
             showPreview('gitem-image');
             openModal('gallery-item-modal');
         });
         document.getElementById('gallery-item-form').addEventListener('submit', (e) => {
             e.preventDefault();
             const id = document.getElementById('gitem-id').value;
-            const item = { id: id || generateId('gallery'), title: document.getElementById('gitem-title').value, image: document.getElementById('gitem-image').value, image_alt: document.getElementById('gitem-image-alt').value, categories: document.getElementById('gitem-categories').value, visibility: document.getElementById('gitem-visibility').value };
+            const item = { id: id || generateId('gallery'), title: document.getElementById('gitem-title').value, image: document.getElementById('gitem-image').value, image_alt: document.getElementById('gitem-image-alt').value, categories: document.getElementById('gitem-categories').value, visibility: document.getElementById('gitem-visibility').value, sold: document.getElementById('gitem-sold').checked };
             if (id) { const idx = cmsData.gallery.items.findIndex(x => x.id === id); if (idx !== -1) cmsData.gallery.items[idx] = item; }
             else { cmsData.gallery.items.push(item); }
             save('gallery-update');

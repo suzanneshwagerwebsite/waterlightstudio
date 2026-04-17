@@ -127,6 +127,23 @@
   cursor: pointer;
 }
 
+.gallery-template .home-header__brandrow {
+  padding-bottom: 0.6rem;
+}
+
+.gallery-template main > .section:first-child {
+  padding-top: 0.6rem;
+}
+
+.gallery-template main > .section:first-child::before {
+  content: "";
+  display: block;
+  width: min(40%, 22rem);
+  height: 1px;
+  margin: 0 auto 1.2rem;
+  background: rgba(22, 24, 26, 0.22);
+}
+
 @media (max-width: 56rem) {
   .services-grid,
   .values-grid {
@@ -253,14 +270,13 @@ body.home-template .skip-link {
 .home-hero__layout {
   display: grid;
   grid-template-columns: 0.88fr 1.12fr;
-  align-items: end;
+  align-items: center;
   gap: clamp(1.6rem, 1.05rem + 2.5vw, 3.7rem);
 }
 
 .home-hero__copy {
   display: grid;
   gap: 2rem;
-  padding-bottom: clamp(0.5rem, 0.3rem + 0.9vw, 1.4rem);
 }
 
 .home-hero__copy h1 {

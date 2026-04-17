@@ -590,3 +590,33 @@
   }
 }
 
+.gallery-card,
+.home-product__media {
+  position: relative;
+}
+
+.home-product__media {
+  display: block;
+}
+
+.sold-badge {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.32rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(192, 48, 48, 0.18);
+  color: #b32a2a;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+}
+
