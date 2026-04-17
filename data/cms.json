@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-09T17:33:50.997Z",
+  "updatedAt": "2026-04-17T15:12:02.943Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -14,13 +14,21 @@
     "showFeatureSection": true,
     "showValuesSection": true,
     "showJournalSection": true,
-    "showNewsletterSection": true
+    "showNewsletterSection": true,
+    "showAboutHero": true,
+    "showAboutOrigin": true,
+    "showAboutPrinciples": false,
+    "showAboutEngagement": false,
+    "showAboutCta": false,
+    "showGalleryHero": true,
+    "showGalleryFilters": true,
+    "showGalleryGrid": true
   },
   "hero": {
-    "title": "Art Pottery ",
+    "title": "Ceramics for every table and ritual.",
     "cta_text": "View Gallery",
     "cta_link": "/gallery/",
-    "image": "/assets/img/img_9160.jpeg",
+    "image": "/assets/img/waterlight-studio-example-2.jpg",
     "image_alt": "Handmade ceramic objects styled in neutral tones"
   },
   "products": {
@@ -58,8 +66,8 @@
   "feature": {
     "image": "/assets/img/meadow-sunset-bowl.jpg",
     "image_alt": "Handmade bowl with painted meadow and sunset landscape",
-    "title": "Pottery",
-    "description": "Every Waterlight piece is hand-thrown and hand painted.",
+    "title": "Made to be held.",
+    "description": "Every Waterlight piece is hand-thrown, kiln-fired, and finished in small batches.",
     "link_text": "Learn More",
     "link_url": "/about/"
   },
@@ -74,12 +82,12 @@
       {
         "id": "value_2",
         "title": "Small Batch",
-        "description": "Limited drops let each collection stay intentional and carefully finished."
+        "description": "Limited drops let each collection stay intentional, tactile, and carefully finished."
       },
       {
         "id": "value_3",
         "title": "Made by Hand",
-        "description": "No two forms are identical. "
+        "description": "No two forms are identical. Natural variation is treated as part of the signature."
       }
     ]
   },
@@ -111,12 +119,12 @@
     "instagram_text": "Follow us on Instagram"
   },
   "about": {
-    "kicker": "Waterlight Studio       Suzanne Schwager",
-    "hero_title": "Waterlight ",
-    "hero_description": "      Suzanne Schwager began her pottery career while studying ceramics at the University of California Santa Barbara. She was hired by Santa Barbara Ceramic Design to design and decorate art pottery that would be exhibited in various craft shows around the country in the 1980’s. One of these shows included the Smithsonian Institute’s American Art Pottery Exhibit. She has displayed and sold her pottery in the Los Angeles Art Pottery Show. Her work is found in private collections in Santa Barbara and around the United States.",
-    "origin_title": "Waterlight Studio Origin",
-    "origin_text_1": "",
-    "origin_text_2": "",
+    "kicker": "About the Studio",
+    "hero_title": "A tactile, calm approach to commercial storytelling.",
+    "hero_description": "Waterlight Studio blends documentary pacing with editorial refinement. We design image systems that feel lived-in, not overproduced.",
+    "origin_title": "Studio Origin",
+    "origin_text_1": "The studio began as a response to fast visual trends. Instead of high-gloss sameness, we work with weathered surfaces, coastal movement, and directional natural light to give each set an honest atmosphere.",
+    "origin_text_2": "This launch build intentionally uses placeholder narrative copy. Final story details can replace these sections without changing the approved layout.",
     "origin_image": "/assets/img/palm-shore-planter.jpg",
     "origin_image_alt": "Handmade planter with painted palm trees and beach scene",
     "principles": [
@@ -124,6 +132,16 @@
         "id": "principle_1",
         "title": "Material honesty",
         "description": "Let linen, stone, skin texture, and grain remain visible instead of over-smoothing."
+      },
+      {
+        "id": "principle_2",
+        "title": "Directional light",
+        "description": "Build depth with natural and practical lighting before adding post-production contrast."
+      },
+      {
+        "id": "principle_3",
+        "title": "Human pacing",
+        "description": "Frame people in motion and pause to preserve natural gesture instead of static posing."
       }
     ],
     "engagement": [
@@ -141,8 +159,8 @@
   },
   "gallery": {
     "kicker": "Image Library",
-    "hero_title": "",
-    "hero_description": "",
+    "hero_title": "Gallery rhythms in the same calm, earthy direction.",
+    "hero_description": "Placeholder image blocks are organized by mood and context so final photography can be inserted quickly once selections are approved.",
     "categories": [
       "landscape",
       "floral",
@@ -224,5 +242,10 @@
         "visibility": "visible"
       }
     ]
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Get in touch.",
+    "intro": "If you have questions about a piece, a commission, or a studio visit, send a note and we'll respond within a few days."
   }
 }
