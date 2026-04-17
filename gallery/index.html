@@ -54,17 +54,6 @@
       </header>
 
       <main id="main-content">
-        <section class="page-hero" data-section="galleryHero">
-          <div class="container page-hero__inner gallery-intro" data-reveal>
-            <span class="hero__kicker">Image Library</span>
-            <h1>Gallery rhythms in the same calm, earthy direction.</h1>
-            <p>
-              Placeholder image blocks are organized by mood and context so final photography can be inserted
-              quickly once selections are approved.
-            </p>
-          </div>
-        </section>
-
         <section class="section">
           <div class="container-wide">
             <div class="gallery-toolbar" data-section="galleryFilters" data-reveal>
@@ -213,13 +202,6 @@
           const cms = await window.CMS.fetchCms();
           const g = cms.gallery;
 
-          const kicker = document.querySelector('.hero__kicker');
-          if (kicker && g.kicker) kicker.textContent = g.kicker;
-          const heroH1 = document.querySelector('.page-hero h1');
-          if (heroH1 && g.hero_title) heroH1.textContent = g.hero_title;
-          const heroP = document.querySelector('.page-hero__inner > p');
-          if (heroP && g.hero_description) heroP.textContent = g.hero_description;
-
           const grid = document.querySelector('.work-grid');
           if (grid && g.items.length) {
             const visible = g.items.filter(i => i.visibility !== 'hidden');
@@ -244,7 +226,6 @@
           }
 
           const sectionMap = {
-            galleryHero: 'showGalleryHero',
             galleryFilters: 'showGalleryFilters',
             galleryGrid: 'showGalleryGrid'
           };

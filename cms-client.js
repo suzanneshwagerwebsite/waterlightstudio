@@ -21,7 +21,6 @@
             showAboutPrinciples: true,
             showAboutEngagement: true,
             showAboutCta: true,
-            showGalleryHero: true,
             showGalleryFilters: true,
             showGalleryGrid: true
         },

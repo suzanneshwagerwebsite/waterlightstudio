@@ -262,11 +262,6 @@
             <!-- Gallery Panel -->
             <section class="admin-panel" id="panel-gallery" style="display:none">
                 <div class="admin-subsection">
-                    <h3>Gallery Hero</h3>
-                    <div class="admin-content-list" id="gallery-hero-preview"></div>
-                    <div class="admin-actions"><button id="edit-gallery-hero-btn" class="admin-btn primary">Edit Gallery Hero</button></div>
-                </div>
-                <div class="admin-subsection">
                     <h3>Gallery Items</h3>
                     <div class="admin-content-list" id="gallery-list"></div>
                     <div class="admin-actions"><button id="new-gallery-btn" class="admin-btn primary">+ New Gallery Item</button></div>
@@ -450,22 +445,6 @@
                 <input type="hidden" id="engagement-id">
                 <div class="admin-form-group"><label for="engagement-title">Title</label><input type="text" id="engagement-title" required></div>
                 <div class="admin-form-group"><label for="engagement-desc">Description</label><textarea id="engagement-desc" rows="3"></textarea></div>
-                <div class="admin-form-actions">
-                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
-                    <button type="submit" class="admin-btn primary">Save</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Gallery Hero Modal -->
-    <div id="gallery-hero-modal" class="admin-modal">
-        <div class="admin-modal-content">
-            <h2>Edit Gallery Hero</h2>
-            <form id="gallery-hero-form">
-                <div class="admin-form-group"><label for="ghero-kicker">Kicker</label><input type="text" id="ghero-kicker"></div>
-                <div class="admin-form-group"><label for="ghero-title">Title</label><input type="text" id="ghero-title"></div>
-                <div class="admin-form-group"><label for="ghero-desc">Description</label><textarea id="ghero-desc" rows="3"></textarea></div>
                 <div class="admin-form-actions">
                     <button type="button" class="admin-btn cancel-modal">Cancel</button>
                     <button type="submit" class="admin-btn primary">Save</button>
@@ -970,26 +949,6 @@
             renderEngagement();
         });
 
-        // ===== GALLERY HERO =====
-        function renderGalleryHero() {
-            document.getElementById('gallery-hero-preview').innerHTML = singletonCard(cmsData.gallery.hero_title, cmsData.gallery.kicker);
-        }
-        document.getElementById('edit-gallery-hero-btn').addEventListener('click', () => {
-            document.getElementById('ghero-kicker').value = cmsData.gallery.kicker || '';
-            document.getElementById('ghero-title').value = cmsData.gallery.hero_title || '';
-            document.getElementById('ghero-desc').value = cmsData.gallery.hero_description || '';
-            openModal('gallery-hero-modal');
-        });
-        document.getElementById('gallery-hero-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            cmsData.gallery.kicker = document.getElementById('ghero-kicker').value;
-            cmsData.gallery.hero_title = document.getElementById('ghero-title').value;
-            cmsData.gallery.hero_description = document.getElementById('ghero-desc').value;
-            save('gallery-hero-update');
-            closeModal('gallery-hero-modal');
-            renderGalleryHero();
-        });
-
         // ===== GALLERY ITEMS =====
         function renderGalleryItems() {
             const el = document.getElementById('gallery-list');
@@ -1118,7 +1077,6 @@
             ]);
 
             renderToggleList('gallery-section-list', [
-                { key: 'galleryHero', label: 'Hero', setting: 'showGalleryHero' },
                 { key: 'galleryFilters', label: 'Category Filters', setting: 'showGalleryFilters' },
                 { key: 'galleryGrid', label: 'Image Grid', setting: 'showGalleryGrid' }
             ]);
@@ -1179,7 +1137,6 @@
             renderAbout();
             renderPrinciples();
             renderEngagement();
-            renderGalleryHero();
             renderGalleryItems();
             renderContact();
             renderSettings();
