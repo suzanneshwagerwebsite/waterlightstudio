@@ -48,13 +48,13 @@
             <a href="/gallery/" data-nav-link>Gallery</a>
             <a href="/#journal">Journal</a>
             <a href="/about/" data-nav-link>About</a>
-            <a href="#" class="js-mail-link">Contact</a>
+            <a href="/contact/" data-nav-link>Contact</a>
           </nav>
         </div>
       </header>
 
       <main id="main-content">
-        <section class="page-hero">
+        <section class="page-hero" data-section="galleryHero">
           <div class="container page-hero__inner gallery-intro" data-reveal>
             <span class="hero__kicker">Image Library</span>
             <h1>Gallery rhythms in the same calm, earthy direction.</h1>
@@ -67,7 +67,7 @@
 
         <section class="section">
           <div class="container-wide">
-            <div class="gallery-toolbar" data-reveal>
+            <div class="gallery-toolbar" data-section="galleryFilters" data-reveal>
               <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All</button>
               <button class="filter-button" type="button" data-filter="landscape" aria-pressed="false">Landscape</button>
               <button class="filter-button" type="button" data-filter="floral" aria-pressed="false">Floral</button>
@@ -76,7 +76,7 @@
               <button class="filter-button" type="button" data-filter="bowls" aria-pressed="false">Bowls</button>
             </div>
 
-            <div class="work-grid">
+            <div class="work-grid" data-section="galleryGrid">
               <article class="gallery-item" data-category="landscape vases" data-reveal>
                 <figure class="gallery-card">
                   <img src="/assets/img/sunset-tree-vase.jpg" alt="Handmade vase with painted sunset tree landscape" loading="lazy" />
@@ -180,15 +180,18 @@
         </section>
       </main>
 
-      <footer class="site-footer">
-        <div class="site-footer__inner">
-          <p>(c) <span data-year></span> Waterlight Studio. Placeholder launch build.</p>
-          <nav aria-label="Footer navigation">
-            <a href="/">Home</a>
+      <footer class="home-newsletter">
+        <div class="container-wide home-newsletter__inner">
+          <nav class="home-newsletter__links" aria-label="Footer links" data-reveal>
+            <a href="/#journal">Journal</a>
             <a href="/about/">About</a>
             <a href="/gallery/">Gallery</a>
-            <a class="js-mail-link" href="#">Contact</a>
+            <a href="/contact/">Contact</a>
           </nav>
+        </div>
+
+        <div class="container-wide home-legal">
+          <p>(c) <span data-year></span> Waterlight Studio.</p>
         </div>
       </footer>
     </div>
@@ -239,6 +242,18 @@
               </article>`;
             }).join('');
           }
+
+          const sectionMap = {
+            galleryHero: 'showGalleryHero',
+            galleryFilters: 'showGalleryFilters',
+            galleryGrid: 'showGalleryGrid'
+          };
+          Object.entries(sectionMap).forEach(([key, setting]) => {
+            if (cms.settings[setting] === false) {
+              const el = document.querySelector(`[data-section="${key}"]`);
+              if (el) el.style.display = 'none';
+            }
+          });
         } catch (e) {
           // CMS fetch failed; static HTML remains.
         }

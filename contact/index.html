@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Waterlight Studio</title>
+    <meta
+      name="description"
+      content="Get in touch with Waterlight Studio about commissions, studio visits, and inquiries."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@200&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/tokens.css" />
+    <link rel="stylesheet" href="/assets/css/base.css" />
+    <link rel="stylesheet" href="/assets/css/layout.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="stylesheet" href="/assets/css/pages.css" />
+  </head>
+  <body class="home-template">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="site-shell">
+      <header class="site-header home-header">
+        <div class="container-wide home-header__brandrow">
+          <button
+            class="menu-toggle home-menu-toggle"
+            type="button"
+            data-menu-toggle
+            aria-expanded="false"
+            aria-controls="primary-nav"
+            aria-label="Toggle navigation"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M3 6h18M3 12h18M3 18h18" />
+            </svg>
+          </button>
+
+          <a class="home-brand" href="/">
+            <img src="/assets/img/Waterlight-Logo-Black.png" alt="" class="home-brand__logo" />
+            <span class="home-brand__name">Waterlight Studio</span>
+          </a>
+
+          <nav id="primary-nav" class="home-nav" data-site-nav aria-label="Primary navigation">
+            <a href="/" data-nav-link>Home</a>
+            <a href="/gallery/" data-nav-link>Gallery</a>
+            <a href="/#journal">Journal</a>
+            <a href="/about/" data-nav-link>About</a>
+            <a href="/contact/" data-nav-link>Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <main id="main-content">
+        <section class="contact-page">
+          <div class="contact-page__inner" data-reveal>
+            <div class="contact-intro">
+              <p data-contact-intro-1>
+                If you've got any questions regarding my work, sales or anything else please don't hesitate
+                to get in touch. I'll try to get back to you as soon as possible.
+              </p>
+              <p data-contact-intro-2>
+                If you'd like to arrange a studio visit please get in touch close to the time that you'd
+                like to come, rather than months or weeks ahead.
+              </p>
+            </div>
+
+            <form
+              class="contact-form"
+              action="https://formspree.io/f/mlgabjjg"
+              method="POST"
+            >
+              <fieldset class="contact-form__group">
+                <legend class="contact-form__label">Name</legend>
+                <div class="contact-form__row">
+                  <label class="contact-form__sub">
+                    <span>First Name <em>(required)</em></span>
+                    <input type="text" name="first_name" required />
+                  </label>
+                  <label class="contact-form__sub">
+                    <span>Last Name <em>(required)</em></span>
+                    <input type="text" name="last_name" required />
+                  </label>
+                </div>
+              </fieldset>
+
+              <label class="contact-form__group">
+                <span class="contact-form__label">Email Address <em>(required)</em></span>
+                <input type="email" name="email" required />
+              </label>
+
+              <label class="contact-form__group">
+                <span class="contact-form__label">Subject <em>(required)</em></span>
+                <input type="text" name="_subject" required />
+              </label>
+
+              <label class="contact-form__group">
+                <span class="contact-form__label">Message <em>(required)</em></span>
+                <textarea name="message" rows="6" required></textarea>
+              </label>
+
+              <div class="contact-form__submit-row">
+                <button type="submit" class="contact-form__submit">SUBMIT</button>
+              </div>
+            </form>
+
+            <div class="contact-page__divider"></div>
+
+            <div class="contact-page__images">
+              <figure>
+                <img src="/assets/img/garden-vine-bowl.jpg" alt="Handmade bowl with trailing garden vines" loading="lazy" />
+              </figure>
+              <figure>
+                <img src="/assets/img/cherry-blossom-bowl.jpg" alt="Handmade bowl with cherry blossoms" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div class="lightbox" data-lightbox hidden role="dialog" aria-modal="true" aria-label="Expanded image">
+        <div class="lightbox__panel">
+          <img data-lightbox-image src="" alt="" />
+        </div>
+      </div>
+
+      <footer class="home-newsletter">
+        <div class="container-wide home-newsletter__inner">
+          <nav class="home-newsletter__links" aria-label="Footer links" data-reveal>
+            <a href="/#journal">Journal</a>
+            <a href="/about/">About</a>
+            <a href="/gallery/">Gallery</a>
+            <a href="/contact/">Contact</a>
+          </nav>
+        </div>
+
+        <div class="container-wide home-legal">
+          <p>(c) <span data-year></span> Waterlight Studio.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/cms-client.js"></script>
+    <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/reveal.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', async () => {
+        try {
+          const cms = await window.CMS.fetchCms();
+          const c = cms.contact || {};
+          const p1 = document.querySelector('[data-contact-intro-1]');
+          if (p1 && c.intro) p1.textContent = c.intro;
+          const p2 = document.querySelector('[data-contact-intro-2]');
+          if (p2 && c.intro_2) p2.textContent = c.intro_2;
+        } catch (e) {
+          // CMS fetch failed; static HTML remains.
+        }
+      });
+    </script>
+  </body>
+</html>

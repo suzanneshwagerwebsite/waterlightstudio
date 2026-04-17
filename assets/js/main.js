@@ -1,23 +1,4 @@
 (() => {
-  const SITE_CONFIG = {
-    contactEmail: "hello@waterlightstudio.com",
-    emailSubject: "Waterlight Studio Project Inquiry",
-    emailBody:
-      "Hello Waterlight Studio,%0D%0A%0D%0AI would love to discuss a project.%0D%0AProject type:%0D%0ATimeline:%0D%0ABudget range:%0D%0A%0D%0AThank you!"
-  };
-
-  const buildMailtoHref = () => {
-    const subject = encodeURIComponent(SITE_CONFIG.emailSubject);
-    return `mailto:${SITE_CONFIG.contactEmail}?subject=${subject}&body=${SITE_CONFIG.emailBody}`;
-  };
-
-  const applyMailLinks = () => {
-    const href = buildMailtoHref();
-    document.querySelectorAll(".js-mail-link").forEach((link) => {
-      link.setAttribute("href", href);
-    });
-  };
-
   const syncYear = () => {
     document.querySelectorAll("[data-year]").forEach((el) => {
       el.textContent = String(new Date().getFullYear());
@@ -69,7 +50,6 @@
   };
 
   document.addEventListener("DOMContentLoaded", () => {
-    applyMailLinks();
     syncYear();
     markCurrentNav();
     setupMobileNav();

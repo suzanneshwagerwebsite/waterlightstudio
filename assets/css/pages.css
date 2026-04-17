@@ -209,14 +209,14 @@ body.home-template .skip-link {
 }
 
 .home-brand__logo {
-  height: clamp(3rem, 2.4rem + 2vw, 4.6rem);
+  height: clamp(3.25rem, 2.65rem + 2vw, 4.85rem);
   width: auto;
 }
 
 .home-brand__name {
   font-family: var(--font-display);
   font-weight: 200;
-  font-size: clamp(1.6rem, 1.3rem + 1vw, 2.4rem);
+  font-size: clamp(1.75rem, 1.45rem + 1vw, 2.55rem);
   letter-spacing: 0.04em;
   color: var(--charcoal);
 }
@@ -231,7 +231,7 @@ body.home-template .skip-link {
 .home-nav a {
   padding: 0.2rem 0;
   border-bottom: 1px solid transparent;
-  font-size: 0.88rem;
+  font-size: 1rem;
   letter-spacing: 0.11em;
   text-transform: uppercase;
   color: rgba(22, 24, 26, 0.86);
@@ -265,10 +265,10 @@ body.home-template .skip-link {
 
 .home-hero__copy h1 {
   margin: 0;
-  max-width: 7.5ch;
+  max-width: 12ch;
   font-family: var(--font-display);
-  font-size: clamp(3.5rem, 2.35rem + 5.3vw, 7.35rem);
-  line-height: 0.87;
+  font-size: clamp(2.8rem, 2.2rem + 2.2vw, 4.45rem);
+  line-height: 0.95;
   letter-spacing: 0.01em;
   text-wrap: balance;
 }
@@ -278,11 +278,11 @@ body.home-template .skip-link {
   align-items: center;
   justify-content: center;
   width: fit-content;
-  min-width: 10.8rem;
-  padding: 0.85rem 1.5rem;
+  min-width: 8.5rem;
+  padding: 0.6rem 1.1rem;
   border-radius: 999px;
   border: 1.5px solid var(--olive);
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -307,8 +307,7 @@ body.home-template .skip-link {
 
 .home-hero__media img {
   width: 100%;
-  aspect-ratio: 4 / 3.35;
-  object-fit: cover;
+  height: auto;
   border-radius: var(--radius-md);
 }
 
@@ -382,6 +381,8 @@ body.home-template .skip-link {
 .home-feature {
   padding-top: clamp(1.6rem, 1.1rem + 1.8vw, 3.1rem);
   padding-bottom: clamp(1.5rem, 1rem + 2vw, 3.1rem);
+  background: #ffffff;
+  color: var(--olive);
 }
 
 .home-feature__layout {
@@ -408,7 +409,7 @@ body.home-template .skip-link {
   font-family: var(--font-display);
   font-size: clamp(3.3rem, 2.2rem + 4.4vw, 6.1rem);
   line-height: 0.86;
-  color: var(--mist);
+  color: var(--olive);
 }
 
 .home-feature__copy p {
@@ -416,7 +417,7 @@ body.home-template .skip-link {
   max-width: 22ch;
   font-size: clamp(1.3rem, 1.08rem + 0.8vw, 1.85rem);
   line-height: 1.32;
-  color: rgba(244, 242, 238, 0.92);
+  color: rgba(42, 57, 25, 0.9);
 }
 
 .home-feature__copy a {
@@ -424,12 +425,14 @@ body.home-template .skip-link {
   font-size: 1.03rem;
   text-decoration: underline;
   text-underline-offset: 0.17rem;
-  color: rgba(244, 242, 238, 0.95);
+  color: var(--olive);
 }
 
 .home-values {
   padding-top: 1rem;
   padding-bottom: clamp(2.5rem, 1.95rem + 2vw, 4rem);
+  background: #ffffff;
+  color: var(--olive);
 }
 
 .home-values h2 {
@@ -437,7 +440,7 @@ body.home-template .skip-link {
   font-family: var(--font-display);
   font-size: clamp(3.1rem, 2.2rem + 3.9vw, 5.8rem);
   line-height: 0.9;
-  color: var(--mist);
+  color: var(--olive);
 }
 
 .home-values__grid {
@@ -449,7 +452,7 @@ body.home-template .skip-link {
 .home-value {
   padding-right: 1rem;
   padding-bottom: 1.65rem;
-  border-bottom: 1px solid rgba(244, 242, 238, 0.55);
+  border-bottom: 1px solid rgba(42, 57, 25, 0.35);
 }
 
 .home-value h3 {
@@ -457,13 +460,13 @@ body.home-template .skip-link {
   font-family: var(--font-display);
   font-size: clamp(1.9rem, 1.6rem + 0.8vw, 2.45rem);
   font-weight: 200;
-  color: var(--mist);
+  color: var(--olive);
 }
 
 .home-value p {
   margin: 0;
   max-width: 34ch;
-  color: rgba(244, 242, 238, 0.88);
+  color: rgba(42, 57, 25, 0.85);
 }
 
 .home-journal {
@@ -605,9 +608,8 @@ body.home-template .skip-link {
 }
 
 .home-legal {
-  border-top: 1px solid rgba(22, 24, 26, 0.22);
-  margin-top: clamp(1.5rem, 1.15rem + 1.3vw, 2.6rem);
-  padding-top: 0.9rem;
+  margin-top: clamp(2rem, 1.5rem + 2vw, 3.4rem);
+  text-align: center;
 }
 
 .home-legal p {
@@ -711,10 +713,6 @@ body.home-template .skip-link {
 
   .home-hero__copy h1 {
     max-width: 9ch;
-  }
-
-  .home-hero__media img {
-    aspect-ratio: 4 / 3;
   }
 
   .home-hero__media {

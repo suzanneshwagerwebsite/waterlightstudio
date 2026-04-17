@@ -15,7 +15,15 @@
             showFeatureSection: true,
             showValuesSection: true,
             showJournalSection: true,
-            showNewsletterSection: true
+            showNewsletterSection: true,
+            showAboutHero: true,
+            showAboutOrigin: true,
+            showAboutPrinciples: true,
+            showAboutEngagement: true,
+            showAboutCta: true,
+            showGalleryHero: true,
+            showGalleryFilters: true,
+            showGalleryGrid: true
         },
         hero: { title: '', cta_text: '', cta_link: '', image: '', image_alt: '' },
         products: { section_title: '', items: [] },
@@ -32,6 +40,10 @@
         gallery: {
             kicker: '', hero_title: '', hero_description: '',
             categories: [], items: []
+        },
+        contact: {
+            intro: "If you've got any questions regarding my work, sales or anything else please don't hesitate to get in touch. I'll try to get back to you as soon as possible.",
+            intro_2: "If you'd like to arrange a studio visit please get in touch close to the time that you'd like to come, rather than months or weeks ahead."
         }
     };
 
@@ -80,7 +92,8 @@
                 ...(cms.gallery || {}),
                 categories: asArray(cms.gallery && cms.gallery.categories, DEFAULT_CMS.gallery.categories),
                 items: asArray(cms.gallery && cms.gallery.items, DEFAULT_CMS.gallery.items)
-            }
+            },
+            contact: { ...DEFAULT_CMS.contact, ...(cms.contact || {}) }
         };
     }
 

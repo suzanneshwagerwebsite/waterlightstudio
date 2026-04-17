@@ -48,13 +48,13 @@
             <a href="/gallery/" data-nav-link>Gallery</a>
             <a href="/#journal">Journal</a>
             <a href="/about/" data-nav-link>About</a>
-            <a href="#" class="js-mail-link">Contact</a>
+            <a href="/contact/" data-nav-link>Contact</a>
           </nav>
         </div>
       </header>
 
       <main id="main-content">
-        <section class="page-hero">
+        <section class="page-hero" data-section="aboutHero">
           <div class="container page-hero__inner" data-reveal>
             <span class="hero__kicker">About the Studio</span>
             <h1>A tactile, calm approach to commercial storytelling.</h1>
@@ -65,7 +65,7 @@
           </div>
         </section>
 
-        <section class="section">
+        <section class="section" data-section="aboutOrigin">
           <div class="container about-layout">
             <article class="about-block" data-reveal>
               <h2>Studio Origin</h2>
@@ -90,7 +90,7 @@
           </div>
         </section>
 
-        <section class="section">
+        <section class="section" data-section="aboutPrinciples">
           <div class="container">
             <div class="section-heading" data-reveal>
               <h2>Creative principles</h2>
@@ -114,7 +114,7 @@
           </div>
         </section>
 
-        <section class="section">
+        <section class="section" data-section="aboutEngagement">
           <div class="container">
             <div class="section-heading" data-reveal>
               <h2>Engagement model</h2>
@@ -134,13 +134,13 @@
           </div>
         </section>
 
-        <section class="section">
+        <section class="section" data-section="aboutCta">
           <div class="container">
             <div class="cta-band" data-reveal>
               <h2>Let's map your visual direction.</h2>
               <p>Share your goals, timeline, and launch date and we will send a production recommendation.</p>
               <div class="cluster">
-                <a class="button js-mail-link" href="#">Email Inquiry</a>
+                <a class="button" href="/contact/">Email Inquiry</a>
                 <a class="button-ghost" href="/gallery/">Preview Gallery Structure</a>
               </div>
             </div>
@@ -154,15 +154,18 @@
         </div>
       </div>
 
-      <footer class="site-footer">
-        <div class="site-footer__inner">
-          <p>(c) <span data-year></span> Waterlight Studio. Placeholder launch build.</p>
-          <nav aria-label="Footer navigation">
-            <a href="/">Home</a>
+      <footer class="home-newsletter">
+        <div class="container-wide home-newsletter__inner">
+          <nav class="home-newsletter__links" aria-label="Footer links" data-reveal>
+            <a href="/#journal">Journal</a>
             <a href="/about/">About</a>
             <a href="/gallery/">Gallery</a>
-            <a class="js-mail-link" href="#">Contact</a>
+            <a href="/contact/">Contact</a>
           </nav>
+        </div>
+
+        <div class="container-wide home-legal">
+          <p>(c) <span data-year></span> Waterlight Studio.</p>
         </div>
       </footer>
     </div>
@@ -204,6 +207,20 @@
               `<article class="card is-visible"><h3>${e.title}</h3><p>${e.description}</p></article>`
             ).join('');
           }
+
+          const sectionMap = {
+            aboutHero: 'showAboutHero',
+            aboutOrigin: 'showAboutOrigin',
+            aboutPrinciples: 'showAboutPrinciples',
+            aboutEngagement: 'showAboutEngagement',
+            aboutCta: 'showAboutCta'
+          };
+          Object.entries(sectionMap).forEach(([key, setting]) => {
+            if (cms.settings[setting] === false) {
+              const el = document.querySelector(`[data-section="${key}"]`);
+              if (el) el.style.display = 'none';
+            }
+          });
         } catch (e) {
           // CMS fetch failed; static HTML remains.
         }
