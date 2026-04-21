@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-21T16:39:49.540Z",
+  "updatedAt": "2026-04-21T16:41:44.948Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -25,7 +25,7 @@
     "showGalleryHero": true
   },
   "hero": {
-    "title": "Ceramics for every table and ritual.",
+    "title": "Fine Art Pottery",
     "cta_text": "View Gallery",
     "cta_link": "/gallery/",
     "image": "/assets/img/home-page-pic-of-suzanne.jpeg",
