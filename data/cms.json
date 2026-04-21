@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-21T16:56:59.138Z",
+  "updatedAt": "2026-04-21T16:57:33.441Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -134,11 +134,6 @@
         "id": "principle_1",
         "title": "Stoneware and Pure Oxide Stains",
         "description": "Each hand thrown piece is carefully painted in a style that is similar to watercolor. The washes are light and delicate. "
-      },
-      {
-        "id": "principle_2",
-        "title": "Directional light",
-        "description": "Build depth with natural and practical lighting before adding post-production contrast."
       },
       {
         "id": "principle_3",
