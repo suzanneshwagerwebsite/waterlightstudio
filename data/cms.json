@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-17T16:50:47.927Z",
+  "updatedAt": "2026-04-21T16:32:23.469Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -28,7 +28,7 @@
     "title": "Ceramics for every table and ritual.",
     "cta_text": "View Gallery",
     "cta_link": "/gallery/",
-    "image": "/assets/img/waterlight-studio-example-2.jpg",
+    "image": "/assets/img/home-page-pic-of-suzanne.jpeg",
     "image_alt": "Handmade ceramic objects styled in neutral tones"
   },
   "products": {
