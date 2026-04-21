@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-21T16:57:33.441Z",
+  "updatedAt": "2026-04-21T16:57:40.590Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -134,11 +134,6 @@
         "id": "principle_1",
         "title": "Stoneware and Pure Oxide Stains",
         "description": "Each hand thrown piece is carefully painted in a style that is similar to watercolor. The washes are light and delicate. "
-      },
-      {
-        "id": "principle_3",
-        "title": "Human pacing",
-        "description": "Frame people in motion and pause to preserve natural gesture instead of static posing."
       }
     ],
     "engagement": [
