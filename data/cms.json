@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-21T17:02:08.022Z",
+  "updatedAt": "2026-04-21T17:02:57.157Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -68,7 +68,7 @@
   "feature": {
     "image": "/assets/img/meadow-sunset-bowl.jpg",
     "image_alt": "Handmade bowl with painted meadow and sunset landscape",
-    "title": "Made to be held.",
+    "title": "Collectibles",
     "description": "Every Waterlight piece is hand-thrown, kiln-fired, and finished in small batches.",
     "link_text": "Learn More",
     "link_url": "/about/"
