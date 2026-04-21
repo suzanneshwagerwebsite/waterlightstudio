@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-21T17:01:32.186Z",
+  "updatedAt": "2026-04-21T17:01:36.243Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -107,9 +107,9 @@
       },
       {
         "id": "journal_2",
+        "title": "Introducing our spring floral collection",
         "image": "/assets/img/magnolia-plate.jpg",
         "image_alt": "Handmade plate with magnolia flower",
-        "title": "Introducing our spring floral collection",
         "visibility": "visible"
       }
     ]
