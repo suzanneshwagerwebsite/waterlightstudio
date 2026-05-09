@@ -241,9 +241,16 @@
                     <div class="admin-actions"><button id="new-value-btn" class="admin-btn primary">+ New Value</button></div>
                 </div>
                 <div class="admin-subsection">
-                    <h3>Journal Cards</h3>
+                    <h3>Journal Cards <small style="color:#888;font-weight:400">(home page preview)</small></h3>
                     <div class="admin-content-list" id="journal-list"></div>
                     <div class="admin-actions"><button id="new-journal-btn" class="admin-btn primary">+ New Journal Card</button></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>Journal Page Posts</h3>
+                    <p class="admin-empty" style="margin-bottom: 0.6rem;">Full posts shown at /journal/. Each card has title, date, excerpt, body, and optional cover image.</p>
+                    <div class="admin-form-group"><label for="journal-page-intro">Page intro paragraph</label><textarea id="journal-page-intro" rows="2"></textarea></div>
+                    <div class="admin-content-list" id="journal-posts-list"></div>
+                    <div class="admin-actions"><button id="new-journal-post-btn" class="admin-btn primary">+ New Post</button></div>
                 </div>
             </section>
 
@@ -427,6 +434,29 @@
                 <input type="hidden" id="journal-image-alt">
                 <div class="admin-form-group"><label for="journal-visibility">Visibility</label>
                     <select id="journal-visibility"><option value="visible">Visible</option><option value="hidden">Hidden</option></select>
+                </div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Journal Post Modal -->
+    <div id="journal-post-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2 id="journal-post-modal-title">New Journal Post</h2>
+            <form id="journal-post-form">
+                <input type="hidden" id="journal-post-id">
+                <div class="admin-form-group"><label for="journal-post-title">Title</label><input type="text" id="journal-post-title" required></div>
+                <div class="admin-form-group"><label for="journal-post-date">Date <small style="color:#888;font-weight:400">(e.g. "May 2026")</small></label><input type="text" id="journal-post-date" placeholder="May 2026"></div>
+                <div class="admin-form-group"><label for="journal-post-excerpt">Excerpt <small style="color:#888;font-weight:400">(1–2 sentence summary)</small></label><textarea id="journal-post-excerpt" rows="2"></textarea></div>
+                <div class="admin-form-group"><label for="journal-post-body">Body <small style="color:#888;font-weight:400">(blank line = new paragraph)</small></label><textarea id="journal-post-body" rows="8"></textarea></div>
+                <div class="admin-form-group"><label>Cover image</label><input type="hidden" id="journal-post-cover"><input type="file" id="journal-post-cover-file" accept="image/*" onchange="handleFilePick(this,'journal-post-cover')" hidden><img id="journal-post-cover-preview" class="admin-preview-img" src="" alt="" hidden><button type="button" class="admin-btn admin-img-browse" onclick="document.getElementById('journal-post-cover-file').click()">Browse</button></div>
+                <input type="hidden" id="journal-post-cover-alt">
+                <div class="admin-form-group"><label for="journal-post-visibility">Visibility</label>
+                    <select id="journal-post-visibility"><option value="visible">Visible</option><option value="hidden">Hidden</option></select>
                 </div>
                 <div class="admin-form-actions">
                     <button type="button" class="admin-btn cancel-modal">Cancel</button>
@@ -885,6 +915,80 @@
             renderJournal();
         });
 
+        // ===== JOURNAL POSTS (full /journal/ page) =====
+        function renderJournalPosts() {
+            const introInput = document.getElementById('journal-page-intro');
+            if (introInput) introInput.value = cmsData.journal.page_intro || '';
+            const el = document.getElementById('journal-posts-list');
+            if (!el) return;
+            const posts = cmsData.journal.posts || [];
+            if (!posts.length) { el.innerHTML = '<p class="admin-empty">No posts yet.</p>'; return; }
+            el.innerHTML = posts.map(p =>
+                cardHtml(p.title || 'Untitled', [p.date, p.visibility === 'hidden' ? 'Hidden' : ''].filter(Boolean).join(' · '), p.id, 'editJournalPost', 'deleteJournalPost', p.cover)
+            ).join('');
+        }
+        const journalPageIntroInput = document.getElementById('journal-page-intro');
+        if (journalPageIntroInput) {
+            journalPageIntroInput.addEventListener('input', () => {
+                cmsData.journal.page_intro = journalPageIntroInput.value;
+                save('journal-page-intro');
+            });
+        }
+        window.editJournalPost = function(id) {
+            const p = (cmsData.journal.posts || []).find(x => x.id === id);
+            if (!p) return;
+            document.getElementById('journal-post-modal-title').textContent = 'Edit Journal Post';
+            document.getElementById('journal-post-id').value = p.id;
+            document.getElementById('journal-post-title').value = p.title || '';
+            document.getElementById('journal-post-date').value = p.date || '';
+            document.getElementById('journal-post-excerpt').value = p.excerpt || '';
+            document.getElementById('journal-post-body').value = p.body || '';
+            document.getElementById('journal-post-cover').value = p.cover || '';
+            document.getElementById('journal-post-cover-alt').value = p.cover_alt || '';
+            showPreview('journal-post-cover');
+            document.getElementById('journal-post-visibility').value = p.visibility || 'visible';
+            openModal('journal-post-modal');
+        };
+        window.deleteJournalPost = function(id) {
+            if (!confirm('Delete this journal post?')) return;
+            cmsData.journal.posts = (cmsData.journal.posts || []).filter(x => x.id !== id);
+            save('journal-post-delete');
+            renderJournalPosts();
+        };
+        const newJournalPostBtn = document.getElementById('new-journal-post-btn');
+        if (newJournalPostBtn) {
+            newJournalPostBtn.addEventListener('click', () => {
+                document.getElementById('journal-post-modal-title').textContent = 'New Journal Post';
+                document.getElementById('journal-post-form').reset();
+                document.getElementById('journal-post-id').value = '';
+                showPreview('journal-post-cover');
+                openModal('journal-post-modal');
+            });
+        }
+        const journalPostForm = document.getElementById('journal-post-form');
+        if (journalPostForm) {
+            journalPostForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const id = document.getElementById('journal-post-id').value;
+                const item = {
+                    id: id || generateId('post'),
+                    title: document.getElementById('journal-post-title').value,
+                    date: document.getElementById('journal-post-date').value,
+                    excerpt: document.getElementById('journal-post-excerpt').value,
+                    body: document.getElementById('journal-post-body').value,
+                    cover: document.getElementById('journal-post-cover').value,
+                    cover_alt: document.getElementById('journal-post-cover-alt').value,
+                    visibility: document.getElementById('journal-post-visibility').value
+                };
+                cmsData.journal.posts = cmsData.journal.posts || [];
+                if (id) { const idx = cmsData.journal.posts.findIndex(x => x.id === id); if (idx !== -1) cmsData.journal.posts[idx] = item; }
+                else { cmsData.journal.posts.push(item); }
+                save('journal-post-update');
+                closeModal('journal-post-modal');
+                renderJournalPosts();
+            });
+        }
+
         // ===== ABOUT =====
         function renderAbout() {
             document.getElementById('about-preview').innerHTML = singletonCard(cmsData.about.hero_title, cmsData.about.kicker);
@@ -1226,6 +1330,7 @@
             renderFeature();
             renderValues();
             renderJournal();
+            renderJournalPosts();
             renderAbout();
             renderPrinciples();
             renderEngagement();
