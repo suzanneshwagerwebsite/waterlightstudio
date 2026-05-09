@@ -139,6 +139,11 @@
         .admin-toggle input:checked + .admin-toggle-slider::before { transform: translateX(1.1rem); background: var(--text); }
         .admin-toggle-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
         .admin-toggle-row > span { font-size: 0.9rem; color: var(--text); }
+        .admin-slider-row { display: grid; grid-template-columns: 9rem 1fr 3rem auto; align-items: center; gap: 0.6rem; padding: 0.4rem 0; }
+        .admin-slider-row label { font-size: 0.9rem; color: var(--text); }
+        .admin-slider-row input[type="range"] { width: 100%; }
+        .admin-slider-row .admin-slider-value { font-size: 0.85rem; color: var(--text-dim); text-align: right; font-variant-numeric: tabular-nums; }
+        .admin-slider-row .admin-slider-reset { font-size: 0.75rem; padding: 0.3rem 0.55rem; }
 
         /* Modal */
         .admin-modal {
@@ -297,6 +302,28 @@
                     <h3>Gallery Page Sections</h3>
                     <p class="admin-empty" style="margin-bottom: 0.75rem;">Toggle Gallery page sections on or off.</p>
                     <div class="admin-sortable-list" id="gallery-section-list"></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>Header Sizing</h3>
+                    <p class="admin-empty" style="margin-bottom: 0.75rem;">Adjust logo, brand title, and navigation link sizes. Click "Reset" to revert any slider to the responsive default.</p>
+                    <div class="admin-slider-row" data-slider-row>
+                        <label for="setting-logo-size">Logo size</label>
+                        <input type="range" id="setting-logo-size" data-setting="logoSize" min="2" max="7" step="0.05">
+                        <span class="admin-slider-value" data-slider-value-for="setting-logo-size">—</span>
+                        <button type="button" class="admin-btn admin-slider-reset" data-reset-setting="logoSize">Reset</button>
+                    </div>
+                    <div class="admin-slider-row" data-slider-row>
+                        <label for="setting-brand-title-size">Brand title size</label>
+                        <input type="range" id="setting-brand-title-size" data-setting="brandTitleSize" min="1" max="4" step="0.05">
+                        <span class="admin-slider-value" data-slider-value-for="setting-brand-title-size">—</span>
+                        <button type="button" class="admin-btn admin-slider-reset" data-reset-setting="brandTitleSize">Reset</button>
+                    </div>
+                    <div class="admin-slider-row" data-slider-row>
+                        <label for="setting-nav-link-size">Navigation link size</label>
+                        <input type="range" id="setting-nav-link-size" data-setting="navLinkSize" min="0.7" max="1.5" step="0.02">
+                        <span class="admin-slider-value" data-slider-value-for="setting-nav-link-size">—</span>
+                        <button type="button" class="admin-btn admin-slider-reset" data-reset-setting="navLinkSize">Reset</button>
+                    </div>
                 </div>
             </section>
         </main>
@@ -1104,6 +1131,47 @@
                 { key: 'galleryFilters', label: 'Category Filters', setting: 'showGalleryFilters' },
                 { key: 'galleryGrid', label: 'Image Grid', setting: 'showGalleryGrid' }
             ]);
+
+            renderSizeSliders();
+        }
+
+        function renderSizeSliders() {
+            const defaults = { logoSize: 4.85, brandTitleSize: 2.55, navLinkSize: 1.0 };
+            document.querySelectorAll('input[type="range"][data-setting]').forEach(input => {
+                const key = input.dataset.setting;
+                const stored = cmsData.settings[key];
+                const value = stored != null && stored !== '' && !isNaN(Number(stored)) ? Number(stored) : defaults[key];
+                input.value = value;
+                const valueEl = document.querySelector(`[data-slider-value-for="${input.id}"]`);
+                const updateValueLabel = () => {
+                    if (valueEl) valueEl.textContent = Number(input.value).toFixed(2) + 'rem';
+                };
+                updateValueLabel();
+                input.addEventListener('input', () => {
+                    cmsData.settings[key] = Number(input.value);
+                    updateValueLabel();
+                    if (window.CMS && window.CMS.applySettingsToDocument) {
+                        window.CMS.applySettingsToDocument(cmsData);
+                    }
+                    save('settings-slider');
+                });
+            });
+            document.querySelectorAll('[data-reset-setting]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const key = btn.dataset.resetSetting;
+                    cmsData.settings[key] = null;
+                    const input = document.querySelector(`input[data-setting="${key}"]`);
+                    if (input) {
+                        input.value = defaults[key];
+                        const valueEl = document.querySelector(`[data-slider-value-for="${input.id}"]`);
+                        if (valueEl) valueEl.textContent = 'default';
+                    }
+                    if (window.CMS && window.CMS.applySettingsToDocument) {
+                        window.CMS.applySettingsToDocument(cmsData);
+                    }
+                    save('settings-slider-reset');
+                });
+            });
         }
 
         function setupDragAndDrop(list) {

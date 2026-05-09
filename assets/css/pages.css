@@ -226,14 +226,14 @@ body.home-template .skip-link {
 }
 
 .home-brand__logo {
-  height: clamp(3.25rem, 2.65rem + 2vw, 4.85rem);
+  height: var(--logo-size, clamp(3.25rem, 2.65rem + 2vw, 4.85rem));
   width: auto;
 }
 
 .home-brand__name {
   font-family: var(--font-display);
   font-weight: 200;
-  font-size: clamp(1.75rem, 1.45rem + 1vw, 2.55rem);
+  font-size: var(--brand-title-size, clamp(1.75rem, 1.45rem + 1vw, 2.55rem));
   letter-spacing: 0.04em;
   color: var(--charcoal);
 }
@@ -248,7 +248,7 @@ body.home-template .skip-link {
 .home-nav a {
   padding: 0.2rem 0;
   border-bottom: 1px solid transparent;
-  font-size: 1rem;
+  font-size: var(--nav-link-size, 1rem);
   letter-spacing: 0.11em;
   text-transform: uppercase;
   color: rgba(22, 24, 26, 0.86);
