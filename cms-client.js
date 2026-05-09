@@ -22,7 +22,10 @@
             showAboutEngagement: true,
             showAboutCta: true,
             showGalleryFilters: true,
-            showGalleryGrid: true
+            showGalleryGrid: true,
+            logoSize: null,
+            brandTitleSize: null,
+            navLinkSize: null
         },
         hero: { title: '', cta_text: '', cta_link: '', image: '', image_alt: '' },
         products: { section_title: '', items: [] },
@@ -114,11 +117,31 @@
         }
     }
 
+    function applySettingsToDocument(cms) {
+        if (typeof document === 'undefined') return;
+        const root = document.documentElement;
+        const s = (cms && cms.settings) || {};
+        const map = {
+            logoSize: '--logo-size',
+            brandTitleSize: '--brand-title-size',
+            navLinkSize: '--nav-link-size'
+        };
+        Object.entries(map).forEach(([key, cssVar]) => {
+            const v = s[key];
+            if (v == null || v === '' || isNaN(Number(v))) {
+                root.style.removeProperty(cssVar);
+            } else {
+                root.style.setProperty(cssVar, Number(v) + 'rem');
+            }
+        });
+    }
+
     async function fetchCms(options) {
         const opts = options || {};
         const force = !!opts.force;
 
         if (memoryCms && !force) {
+            applySettingsToDocument(memoryCms);
             return deepClone(memoryCms);
         }
 
@@ -137,6 +160,7 @@
                 const merged = mergeCms(payload);
                 memoryCms = merged;
                 writeCachedCms(merged);
+                applySettingsToDocument(merged);
                 return merged;
             } catch (error) {
                 const cached = readCachedCms();
@@ -216,6 +240,7 @@
         DEFAULT_CMS: deepClone(DEFAULT_CMS),
         mergeCms,
         fetchCms,
+        applySettingsToDocument,
         saveCmsViaWorker,
         getAdminKey,
         setAdminKey,
