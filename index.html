@@ -56,18 +56,21 @@
       <main id="main-content">
         <section class="home-section home-hero">
           <div class="container-wide home-hero__layout">
-            <div class="home-hero__copy" data-reveal="left">
+            <div class="home-hero__title" data-reveal>
               <h1>Ceramics for every table and ritual.</h1>
-              <a class="home-pill home-pill--outline" href="/gallery/">View Gallery</a>
             </div>
 
-            <figure class="home-hero__media" data-reveal="right">
+            <figure class="home-hero__media" data-reveal>
               <img
                 src="/assets/img/placeholders/home-hero-ceramics.svg"
                 alt="Handmade ceramic objects styled in neutral tones"
                 loading="eager"
               />
             </figure>
+
+            <div class="home-hero__cta" data-reveal>
+              <a class="home-pill home-pill--outline" href="/gallery/">View Gallery</a>
+            </div>
           </div>
         </section>
 
@@ -206,9 +209,9 @@
           const cms = await window.CMS.fetchCms();
 
           // Hero
-          const heroTitle = document.querySelector('.home-hero__copy h1');
+          const heroTitle = document.querySelector('.home-hero__title h1');
           if (heroTitle && cms.hero.title) heroTitle.textContent = cms.hero.title;
-          const heroCta = document.querySelector('.home-hero__copy .home-pill');
+          const heroCta = document.querySelector('.home-hero__cta .home-pill');
           if (heroCta && cms.hero.cta_text) { heroCta.textContent = cms.hero.cta_text; heroCta.href = cms.hero.cta_link || '/gallery/'; }
           const heroImg = document.querySelector('.home-hero__media img');
           if (heroImg && cms.hero.image) { heroImg.src = cms.hero.image; heroImg.alt = cms.hero.image_alt || ''; }

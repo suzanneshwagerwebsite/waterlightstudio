@@ -268,25 +268,29 @@ body.home-template .skip-link {
 }
 
 .home-hero__layout {
-  display: grid;
-  grid-template-columns: 0.88fr 1.12fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: clamp(1.6rem, 1.05rem + 2.5vw, 3.7rem);
+  gap: clamp(1.4rem, 1rem + 1.6vw, 2.4rem);
 }
 
-.home-hero__copy {
-  display: grid;
-  gap: 2rem;
+.home-hero__title {
+  text-align: center;
+  max-width: 22ch;
 }
 
-.home-hero__copy h1 {
+.home-hero__title h1 {
   margin: 0;
-  max-width: 12ch;
   font-family: var(--font-display);
   font-size: clamp(2.8rem, 2.2rem + 2.2vw, 4.45rem);
-  line-height: 0.95;
+  line-height: 1;
   letter-spacing: 0.01em;
   text-wrap: balance;
+}
+
+.home-hero__cta {
+  display: flex;
+  justify-content: center;
 }
 
 .home-pill {
@@ -297,18 +301,19 @@ body.home-template .skip-link {
   min-width: 8.5rem;
   padding: 0.6rem 1.1rem;
   border-radius: 999px;
-  border: 1.5px solid var(--olive);
+  border: 1.5px solid transparent;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--olive);
   background: transparent;
-  transition: background var(--timing-fast) var(--ease-main), color var(--timing-fast) var(--ease-main);
+  transition: background var(--timing-fast) var(--ease-main), color var(--timing-fast) var(--ease-main), border-color var(--timing-fast) var(--ease-main);
 }
 
 .home-pill:is(:hover, :focus-visible) {
   background: var(--olive);
+  border-color: var(--olive);
   color: var(--mist);
 }
 
