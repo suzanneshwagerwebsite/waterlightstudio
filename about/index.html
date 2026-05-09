@@ -62,6 +62,7 @@
               Waterlight Studio blends documentary pacing with editorial refinement. We design image systems
               that feel lived-in, not overproduced.
             </p>
+            <p class="about-bio" data-about-bio hidden></p>
           </div>
         </section>
 
@@ -183,8 +184,10 @@
           if (kicker && a.kicker) kicker.textContent = a.kicker;
           const heroH1 = document.querySelector('.page-hero h1');
           if (heroH1 && a.hero_title) heroH1.textContent = a.hero_title;
-          const heroP = document.querySelector('.page-hero__inner > p');
+          const heroP = document.querySelector('.page-hero__inner > p:not(.about-bio)');
           if (heroP && a.hero_description) heroP.textContent = a.hero_description;
+          const bioEl = document.querySelector('[data-about-bio]');
+          if (bioEl && a.bio) { bioEl.textContent = a.bio; bioEl.hidden = false; }
 
           const originH2 = document.querySelector('.about-block h2');
           if (originH2 && a.origin_title) originH2.textContent = a.origin_title;

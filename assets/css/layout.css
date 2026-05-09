@@ -125,6 +125,13 @@
   color: rgba(25, 29, 35, 0.83);
 }
 
+.page-hero__inner .about-bio {
+  font-size: var(--step-0);
+  line-height: 1.7;
+  color: rgba(25, 29, 35, 0.78);
+  max-width: 60ch;
+}
+
 @media (max-width: 56rem) {
   .container,
   .container-wide {

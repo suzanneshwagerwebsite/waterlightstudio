@@ -414,9 +414,10 @@
         <div class="admin-modal-content">
             <h2>Edit About Content</h2>
             <form id="about-form">
-                <div class="admin-form-group"><label for="about-kicker">Kicker</label><input type="text" id="about-kicker"></div>
+                <div class="admin-form-group"><label for="about-kicker">Kicker <small style="color:#888;font-weight:400">(short label only, e.g. "About")</small></label><input type="text" id="about-kicker" maxlength="40" placeholder="About"></div>
                 <div class="admin-form-group"><label for="about-hero-title">Hero Title</label><input type="text" id="about-hero-title"></div>
-                <div class="admin-form-group"><label for="about-hero-desc">Hero Description</label><textarea id="about-hero-desc" rows="3"></textarea></div>
+                <div class="admin-form-group"><label for="about-hero-desc">Hero Description <small style="color:#888;font-weight:400">(short intro under the title)</small></label><textarea id="about-hero-desc" rows="3"></textarea></div>
+                <div class="admin-form-group"><label for="about-bio">Biography <small style="color:#888;font-weight:400">(long-form bio paragraph)</small></label><textarea id="about-bio" rows="6"></textarea></div>
                 <div class="admin-form-group"><label for="about-origin-title">Origin Section Title</label><input type="text" id="about-origin-title"></div>
                 <div class="admin-form-group"><label for="about-origin-1">Origin Text 1</label><textarea id="about-origin-1" rows="3"></textarea></div>
                 <div class="admin-form-group"><label for="about-origin-2">Origin Text 2</label><textarea id="about-origin-2" rows="3"></textarea></div>
@@ -865,6 +866,7 @@
             document.getElementById('about-kicker').value = cmsData.about.kicker || '';
             document.getElementById('about-hero-title').value = cmsData.about.hero_title || '';
             document.getElementById('about-hero-desc').value = cmsData.about.hero_description || '';
+            document.getElementById('about-bio').value = cmsData.about.bio || '';
             document.getElementById('about-origin-title').value = cmsData.about.origin_title || '';
             document.getElementById('about-origin-1').value = cmsData.about.origin_text_1 || '';
             document.getElementById('about-origin-2').value = cmsData.about.origin_text_2 || '';
@@ -878,6 +880,7 @@
             cmsData.about.kicker = document.getElementById('about-kicker').value;
             cmsData.about.hero_title = document.getElementById('about-hero-title').value;
             cmsData.about.hero_description = document.getElementById('about-hero-desc').value;
+            cmsData.about.bio = document.getElementById('about-bio').value;
             cmsData.about.origin_title = document.getElementById('about-origin-title').value;
             cmsData.about.origin_text_1 = document.getElementById('about-origin-1').value;
             cmsData.about.origin_text_2 = document.getElementById('about-origin-2').value;

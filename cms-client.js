@@ -31,7 +31,7 @@
         journal: { intro_text: '', cta_text: '', cta_link: '', cards: [] },
         newsletter: { signup_text: '', image: '', image_alt: '', instagram_text: '' },
         about: {
-            kicker: '', hero_title: '', hero_description: '',
+            kicker: '', hero_title: '', hero_description: '', bio: '',
             origin_title: '', origin_text_1: '', origin_text_2: '',
             origin_image: '', origin_image_alt: '',
             principles: [], engagement: []
