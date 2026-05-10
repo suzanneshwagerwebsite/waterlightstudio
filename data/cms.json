@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-10T15:51:49.365Z",
+  "updatedAt": "2026-05-10T15:52:09.745Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -215,11 +215,12 @@
       },
       {
         "id": "gallery_7",
+        "title": "Meadow Sunset Bowl",
         "image": "/assets/img/meadow-sunset-bowl.jpg",
         "image_alt": "Handmade bowl with painted meadow and sunset",
-        "title": "Meadow Sunset Bowl",
         "categories": "landscape bowls",
-        "visibility": "visible"
+        "visibility": "visible",
+        "sold": false
       },
       {
         "id": "gallery_8",
