@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-12T17:30:22.319Z",
+  "updatedAt": "2026-05-12T17:33:57.438Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -116,7 +116,7 @@
         "visibility": "visible"
       }
     ],
-    "page_intro": "",
+    "page_intro": "American Art Pottery Journal",
     "posts": []
   },
   "newsletter": {
