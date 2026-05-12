@@ -99,7 +99,7 @@
   "journal": {
     "intro_text": "It all begins with an idea. Maybe you want a collection for your table. Maybe you want heirloom pieces that feel grounded and personal.",
     "cta_text": "All Posts",
-    "cta_link": "/about/",
+    "cta_link": "/journal/",
     "cards": [
       {
         "id": "journal_1",

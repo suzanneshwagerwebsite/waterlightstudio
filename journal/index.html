@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Journal | Waterlight Studio</title>
+    <meta
+      name="description"
+      content="Notes from the studio: process, glazes, collections, and inspiration from Suzanne Schwager's Santa Barbara pottery practice."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@200&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/tokens.css" />
+    <link rel="stylesheet" href="/assets/css/base.css" />
+    <link rel="stylesheet" href="/assets/css/layout.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="stylesheet" href="/assets/css/pages.css" />
+  </head>
+  <body class="home-template journal-template">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="site-shell">
+      <header class="site-header home-header">
+        <div class="container-wide home-header__brandrow">
+          <button
+            class="menu-toggle home-menu-toggle"
+            type="button"
+            data-menu-toggle
+            aria-expanded="false"
+            aria-controls="primary-nav"
+            aria-label="Toggle navigation"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M3 6h18M3 12h18M3 18h18" />
+            </svg>
+          </button>
+
+          <a class="home-brand" href="/">
+            <img src="/assets/img/Waterlight-Logo-Black.png" alt="" class="home-brand__logo" />
+            <span class="home-brand__name">Waterlight Studio</span>
+          </a>
+
+          <nav id="primary-nav" class="home-nav" data-site-nav aria-label="Primary navigation">
+            <a href="/" data-nav-link>Home</a>
+            <a href="/gallery/" data-nav-link>Gallery</a>
+            <a href="/journal/" data-nav-link>Journal</a>
+            <a href="/about/" data-nav-link>About</a>
+            <a href="/contact/" data-nav-link>Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <main id="main-content">
+        <section class="page-hero">
+          <div class="container page-hero__inner" data-reveal>
+            <span class="hero__kicker">Journal</span>
+            <h1>Notes from the studio.</h1>
+            <p data-journal-page-intro>Process, glazes, and pieces in progress from Suzanne's Santa Barbara studio.</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="journal-grid" data-journal-grid>
+              <p class="admin-empty" data-journal-empty>No journal posts yet. Check back soon.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="home-newsletter">
+        <div class="container-wide home-newsletter__inner">
+          <nav class="home-newsletter__links" aria-label="Footer links" data-reveal>
+            <a href="/journal/">Journal</a>
+            <a href="/about/">About</a>
+            <a href="/gallery/">Gallery</a>
+            <a href="/contact/">Contact</a>
+          </nav>
+        </div>
+
+        <div class="container-wide home-legal">
+          <p>(c) <span data-year></span> Waterlight Studio.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/cms-client.js"></script>
+    <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/reveal.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', async () => {
+        try {
+          const cms = await window.CMS.fetchCms();
+          const j = cms.journal || {};
+
+          const intro = document.querySelector('[data-journal-page-intro]');
+          if (intro && j.page_intro) intro.textContent = j.page_intro;
+
+          const grid = document.querySelector('[data-journal-grid]');
+          const empty = document.querySelector('[data-journal-empty]');
+          const posts = Array.isArray(j.posts) ? j.posts.filter(p => p && p.visibility !== 'hidden') : [];
+          if (grid && posts.length) {
+            posts.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+            grid.innerHTML = posts.map(p => {
+              const cover = p.cover ? `<img src="${p.cover}" alt="${(p.cover_alt || p.title || '').replace(/"/g,'&quot;')}" loading="lazy" />` : '';
+              const dateLabel = p.date ? `<span class="journal-card__date">${p.date}</span>` : '';
+              const excerpt = p.excerpt ? `<p class="journal-card__excerpt">${p.excerpt}</p>` : '';
+              const body = p.body ? `<div class="journal-card__body">${p.body.split(/\n{2,}/).map(par => '<p>' + par.replace(/\n/g,'<br>') + '</p>').join('')}</div>` : '';
+              return `<article class="journal-card" data-reveal>
+                ${cover}
+                ${dateLabel}
+                <h2>${p.title || 'Untitled'}</h2>
+                ${excerpt}
+                ${body}
+              </article>`;
+            }).join('');
+          } else if (empty) {
+            empty.style.display = 'block';
+          }
+        } catch (e) {
+          // CMS fetch failed; static markup remains.
+        }
+      });
+    </script>
+  </body>
+</html>

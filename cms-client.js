@@ -31,7 +31,7 @@
         products: { section_title: '', items: [] },
         feature: { image: '', image_alt: '', title: '', description: '', link_text: '', link_url: '' },
         values: { title: '', items: [] },
-        journal: { intro_text: '', cta_text: '', cta_link: '', cards: [] },
+        journal: { intro_text: '', cta_text: '', cta_link: '', cards: [], page_intro: '', posts: [] },
         newsletter: { signup_text: '', image: '', image_alt: '', instagram_text: '' },
         about: {
             kicker: '', hero_title: '', hero_description: '', bio: '',
@@ -80,7 +80,9 @@
                 intro_text: (cms.journal && cms.journal.intro_text) || DEFAULT_CMS.journal.intro_text,
                 cta_text: (cms.journal && cms.journal.cta_text) || DEFAULT_CMS.journal.cta_text,
                 cta_link: (cms.journal && cms.journal.cta_link) || DEFAULT_CMS.journal.cta_link,
-                cards: asArray(cms.journal && cms.journal.cards, DEFAULT_CMS.journal.cards)
+                cards: asArray(cms.journal && cms.journal.cards, DEFAULT_CMS.journal.cards),
+                page_intro: (cms.journal && cms.journal.page_intro) || DEFAULT_CMS.journal.page_intro,
+                posts: asArray(cms.journal && cms.journal.posts, DEFAULT_CMS.journal.posts)
             },
             newsletter: { ...DEFAULT_CMS.newsletter, ...(cms.newsletter || {}) },
             about: {

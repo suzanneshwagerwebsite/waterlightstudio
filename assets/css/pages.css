@@ -541,6 +541,56 @@ body.home-template .skip-link {
   line-height: 1.23;
 }
 
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+  gap: clamp(1.5rem, 1rem + 1.6vw, 2.6rem);
+}
+
+.journal-card {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.journal-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.journal-card__date {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--olive);
+}
+
+.journal-card h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 1.15rem + 0.7vw, 1.85rem);
+  font-weight: 200;
+  line-height: 1.2;
+}
+
+.journal-card__excerpt {
+  color: rgba(25, 29, 35, 0.78);
+  margin: 0;
+}
+
+.journal-card__body {
+  display: grid;
+  gap: 0.6rem;
+  color: rgba(25, 29, 35, 0.82);
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.journal-card__body p {
+  margin: 0;
+}
+
 .home-newsletter {
   background: var(--bg-cream);
   padding-top: clamp(2.1rem, 1.7rem + 1.8vw, 3.6rem);
