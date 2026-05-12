@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-12T17:12:02.607Z",
+  "updatedAt": "2026-05-12T17:12:22.464Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -31,7 +31,7 @@
     "title": "Fine Art Pottery",
     "cta_text": "View Gallery",
     "cta_link": "/gallery/",
-    "image": "/assets/img/img_9260.heic",
+    "image": "/assets/img/img_9232.heic",
     "image_alt": "Handmade ceramic objects styled in neutral tones"
   },
   "products": {
