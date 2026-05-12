@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-12T17:33:57.438Z",
+  "updatedAt": "2026-05-12T17:34:46.486Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -117,7 +117,18 @@
       }
     ],
     "page_intro": "American Art Pottery Journal",
-    "posts": []
+    "posts": [
+      {
+        "id": "post_1778607282737_fi33bg",
+        "title": "American Art Pottery",
+        "date": "May 2026",
+        "excerpt": "",
+        "body": "Current Edition",
+        "cover": "/assets/img/img_9220.heic",
+        "cover_alt": "",
+        "visibility": "visible"
+      }
+    ]
   },
   "newsletter": {
     "signup_text": "",
