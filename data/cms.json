@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-12T17:25:36.008Z",
+  "updatedAt": "2026-05-12T17:27:23.636Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -9,7 +9,7 @@
       "values",
       "journal"
     ],
-    "showHeroSection": true,
+    "showHeroSection": false,
     "showProductsSection": true,
     "showFeatureSection": true,
     "showValuesSection": true,
@@ -31,7 +31,7 @@
     "title": "Fine Art Pottery",
     "cta_text": "View Gallery",
     "cta_link": "/gallery/",
-    "image": "/assets/img/img_9218.heic",
+    "image": "/assets/img/home-page-pic-of-suzanne.jpeg",
     "image_alt": "Handmade ceramic objects styled in neutral tones"
   },
   "products": {
@@ -39,14 +39,12 @@
     "items": [
       {
         "id": "product_1",
-        "title": "Sunset Tree Vase",
-        "description": "",
-        "image": "/assets/img/img_9224.heic",
+        "image": "/assets/img/sunset-tree-vase.jpg",
         "image_alt": "Handmade vase with painted sunset tree landscape",
+        "title": "Sunset Tree Vase",
         "learn_more_link": "/about/",
         "gallery_link": "/gallery/",
-        "visibility": "visible",
-        "sold": false
+        "visibility": "visible"
       },
       {
         "id": "product_2",
