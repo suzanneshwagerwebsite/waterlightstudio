@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-12T16:50:30.939Z",
+  "updatedAt": "2026-05-12T17:12:02.607Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -31,7 +31,7 @@
     "title": "Fine Art Pottery",
     "cta_text": "View Gallery",
     "cta_link": "/gallery/",
-    "image": "/assets/img/home-page-pic-of-suzanne.jpeg",
+    "image": "/assets/img/img_9260.heic",
     "image_alt": "Handmade ceramic objects styled in neutral tones"
   },
   "products": {
@@ -115,7 +115,9 @@
         "image_alt": "Handmade plate with magnolia flower",
         "visibility": "visible"
       }
-    ]
+    ],
+    "page_intro": "",
+    "posts": []
   },
   "newsletter": {
     "signup_text": "",
