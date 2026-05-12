@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-12T00:56:43.729Z",
+  "updatedAt": "2026-05-12T01:07:15.813Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -22,7 +22,7 @@
     "showAboutCta": false,
     "showGalleryFilters": true,
     "showGalleryGrid": true,
-    "logoSize": null,
+    "logoSize": 4.9,
     "brandTitleSize": null,
     "navLinkSize": null,
     "showGalleryHero": true
@@ -31,7 +31,7 @@
     "title": "Fine Art Pottery",
     "cta_text": "View Gallery",
     "cta_link": "/gallery/",
-    "image": "/assets/img/img_9260.jpeg",
+    "image": "/assets/img/home-page-pic-of-suzanne.jpeg",
     "image_alt": "Handmade ceramic objects styled in neutral tones"
   },
   "products": {
