@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-12T01:07:23.741Z",
+  "updatedAt": "2026-05-12T01:07:28.433Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -23,7 +23,7 @@
     "showGalleryFilters": true,
     "showGalleryGrid": true,
     "logoSize": 5.65,
-    "brandTitleSize": null,
+    "brandTitleSize": 3.3,
     "navLinkSize": null,
     "showGalleryHero": true
   },
