@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-15T17:29:21.193Z",
+  "updatedAt": "2026-05-15T17:30:43.919Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -87,7 +87,7 @@
       {
         "id": "value_2",
         "title": "Small Batch",
-        "description": "Limited drops let each collection stay intentional, tactile, and carefully finished."
+        "description": "Limited drops let each collection stay unique."
       },
       {
         "id": "value_3",
