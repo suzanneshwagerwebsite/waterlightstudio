@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-15T17:24:46.569Z",
+  "updatedAt": "2026-05-15T17:25:28.382Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -55,7 +55,7 @@
         "learn_more_link": "/about/",
         "gallery_link": "/gallery/",
         "visibility": "visible",
-        "sold": true
+        "sold": false
       },
       {
         "id": "product_3",
