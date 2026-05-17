@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-17T00:19:29.711Z",
+  "updatedAt": "2026-05-17T00:34:52.712Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -238,6 +238,15 @@
         "title": "Hillside Tree Vase",
         "categories": "landscape vases",
         "visibility": "visible"
+      },
+      {
+        "id": "gallery_1778978086806_bfesnr",
+        "title": "Sunset Riviera",
+        "image": "/assets/img/img_9218.heic",
+        "image_alt": "",
+        "categories": "vase",
+        "visibility": "visible",
+        "sold": false
       }
     ]
   },
