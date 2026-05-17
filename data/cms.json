@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-17T23:08:18.247Z",
+  "updatedAt": "2026-05-17T23:09:46.466Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -116,7 +116,7 @@
         "visibility": "visible"
       }
     ],
-    "page_intro": "American Art Pottery Association\nhttps://aapa.info › journal",
+    "page_intro": "\nAmerican Art Pottery Association\nhttps://aapa.info › journal",
     "posts": []
   },
   "newsletter": {
