@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-18T16:44:52.288Z",
+  "updatedAt": "2026-05-18T16:44:59.481Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -116,7 +116,7 @@
         "visibility": "visible"
       }
     ],
-    "page_intro": "Suzanne Schwager is a member of the American Art Pottery Association\nAmerican Art Pottery Association\nhttps://aapa.info › journal\n",
+    "page_intro": "Suzanne Schwager \nAmerican Art Pottery Association\nhttps://aapa.info › journal\n",
     "posts": []
   },
   "newsletter": {
