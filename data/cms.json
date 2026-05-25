@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-25T14:17:56.579Z",
+  "updatedAt": "2026-05-25T14:20:30.134Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -256,6 +256,15 @@
         "image": "/assets/img/img_9296.jpeg",
         "image_alt": "",
         "categories": "Bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_1779718825272_w2y3il",
+        "title": "Gardenia Bowl ",
+        "image": "/assets/img/img_9294.jpeg",
+        "image_alt": "",
+        "categories": "Bowls Floral",
         "visibility": "visible",
         "sold": false
       }
