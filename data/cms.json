@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-25T14:20:30.134Z",
+  "updatedAt": "2026-05-25T14:22:00.913Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -263,6 +263,15 @@
         "id": "gallery_1779718825272_w2y3il",
         "title": "Gardenia Bowl ",
         "image": "/assets/img/img_9294.jpeg",
+        "image_alt": "",
+        "categories": "Bowls Floral",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_1779718916173_ssvotn",
+        "title": "Cherry Blossom Serving Bowl",
+        "image": "/assets/img/img_9284.jpeg",
         "image_alt": "",
         "categories": "Bowls Floral",
         "visibility": "visible",
