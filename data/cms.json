@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-25T14:12:08.563Z",
+  "updatedAt": "2026-05-25T14:13:04.334Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -65,6 +65,17 @@
         "learn_more_link": "/about/",
         "gallery_link": "/gallery/",
         "visibility": "visible"
+      },
+      {
+        "id": "product_1779718378281_3z9izj",
+        "title": "Dolphin Bowl",
+        "description": "",
+        "image": "/assets/img/img_9296.jpeg",
+        "image_alt": "",
+        "learn_more_link": "/about/",
+        "gallery_link": "/gallery/",
+        "visibility": "visible",
+        "sold": false
       }
     ]
   },
