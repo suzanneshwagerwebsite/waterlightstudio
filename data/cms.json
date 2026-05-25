@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-25T14:13:21.412Z",
+  "updatedAt": "2026-05-25T14:14:35.520Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -249,6 +249,15 @@
         "title": "Hillside Tree Vase",
         "categories": "landscape vases",
         "visibility": "visible"
+      },
+      {
+        "id": "gallery_1779718470816_qszlfn",
+        "title": "Dolphin Bowl",
+        "image": "/assets/img/img_9296.jpeg",
+        "image_alt": "",
+        "categories": "Bowls",
+        "visibility": "visible",
+        "sold": false
       }
     ]
   },
