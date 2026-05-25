@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-25T14:17:47.289Z",
+  "updatedAt": "2026-05-25T14:17:56.579Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -252,15 +252,6 @@
       },
       {
         "id": "gallery_1779718470816_qszlfn",
-        "title": "Dolphin Bowl",
-        "image": "/assets/img/img_9296.jpeg",
-        "image_alt": "",
-        "categories": "Bowls",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1779718665368_4p2bfh",
         "title": "Dolphin Bowl",
         "image": "/assets/img/img_9296.jpeg",
         "image_alt": "",
