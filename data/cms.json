@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-25T14:22:00.913Z",
+  "updatedAt": "2026-05-25T14:23:35.916Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -274,6 +274,15 @@
         "image": "/assets/img/img_9284.jpeg",
         "image_alt": "",
         "categories": "Bowls Floral",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_1779719010959_ph1ml5",
+        "title": "Sandollar Bowl",
+        "image": "/assets/img/img_9282.jpeg",
+        "image_alt": "",
+        "categories": "Bowls Nature ",
         "visibility": "visible",
         "sold": false
       }
