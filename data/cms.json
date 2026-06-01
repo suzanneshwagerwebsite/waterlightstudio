@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-01T02:49:02.441Z",
+  "updatedAt": "2026-06-01T02:49:59.503Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -71,6 +71,17 @@
         "title": "Sunset Bowl",
         "description": "",
         "image": "/assets/img/img_9277.jpeg",
+        "image_alt": "",
+        "learn_more_link": "/about/",
+        "gallery_link": "/gallery/",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "product_1780282194493_tl7uu4",
+        "title": "Bee Bowl",
+        "description": "",
+        "image": "/assets/img/img_9272.jpeg",
         "image_alt": "",
         "learn_more_link": "/about/",
         "gallery_link": "/gallery/",
