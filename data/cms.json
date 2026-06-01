@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-01T02:57:44.926Z",
+  "updatedAt": "2026-06-01T02:59:22.390Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -148,6 +148,17 @@
         "title": "Wild Rose",
         "description": "",
         "image": "/assets/img/img_9263.jpeg",
+        "image_alt": "",
+        "learn_more_link": "/about/",
+        "gallery_link": "/gallery/",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "product_1780282756056_ps2ppm",
+        "title": "Floral Vine",
+        "description": "",
+        "image": "/assets/img/img_9260.jpeg",
         "image_alt": "",
         "learn_more_link": "/about/",
         "gallery_link": "/gallery/",
