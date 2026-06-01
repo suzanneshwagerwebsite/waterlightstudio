@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-01T02:51:58.869Z",
+  "updatedAt": "2026-06-01T02:53:11.038Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -104,6 +104,17 @@
         "title": "Bamboo ",
         "description": "",
         "image": "/assets/img/img_9269.jpeg",
+        "image_alt": "",
+        "learn_more_link": "/about/",
+        "gallery_link": "/gallery/",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "product_1780282385981_or2v39",
+        "title": "Riviera Palm",
+        "description": "",
+        "image": "/assets/img/img_9267.jpeg",
         "image_alt": "",
         "learn_more_link": "/about/",
         "gallery_link": "/gallery/",
