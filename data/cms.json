@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-01T02:47:43.687Z",
+  "updatedAt": "2026-06-01T02:49:02.441Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -65,6 +65,17 @@
         "learn_more_link": "/about/",
         "gallery_link": "/gallery/",
         "visibility": "visible"
+      },
+      {
+        "id": "product_1780282136977_z2cu9n",
+        "title": "Sunset Bowl",
+        "description": "",
+        "image": "/assets/img/img_9277.jpeg",
+        "image_alt": "",
+        "learn_more_link": "/about/",
+        "gallery_link": "/gallery/",
+        "visibility": "visible",
+        "sold": false
       }
     ]
   },
