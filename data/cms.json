@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-01T02:50:53.831Z",
+  "updatedAt": "2026-06-01T02:51:58.869Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -93,6 +93,17 @@
         "title": "Regatta Vase",
         "description": "",
         "image": "/assets/img/img_9270.jpeg",
+        "image_alt": "",
+        "learn_more_link": "/about/",
+        "gallery_link": "/gallery/",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "product_1780282314314_noakgf",
+        "title": "Bamboo ",
+        "description": "",
+        "image": "/assets/img/img_9269.jpeg",
         "image_alt": "",
         "learn_more_link": "/about/",
         "gallery_link": "/gallery/",
