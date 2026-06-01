@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-01T02:54:11.630Z",
+  "updatedAt": "2026-06-01T02:56:45.422Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -126,6 +126,17 @@
         "title": "Gardenia Bowl",
         "description": "",
         "image": "/assets/img/img_9294.jpeg",
+        "image_alt": "",
+        "learn_more_link": "/about/",
+        "gallery_link": "/gallery/",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "product_1780282600469_wmv3hm",
+        "title": "Pussy Willow",
+        "description": "",
+        "image": "/assets/img/img_9265.jpeg",
         "image_alt": "",
         "learn_more_link": "/about/",
         "gallery_link": "/gallery/",
