@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-02T02:20:42.597Z",
+  "updatedAt": "2026-06-02T02:22:12.974Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -65,39 +65,6 @@
         "learn_more_link": "/about/",
         "gallery_link": "/gallery/",
         "visibility": "visible"
-      },
-      {
-        "id": "product_1780366678557_tua9pa",
-        "title": "Lemon Bowl",
-        "description": "",
-        "image": "/assets/img/img_9280.jpeg",
-        "image_alt": "",
-        "learn_more_link": "/about/",
-        "gallery_link": "/gallery/",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "product_1780366756381_xbof2l",
-        "title": "Eucalyptus Sunset",
-        "description": "",
-        "image": "/assets/img/img_9277.jpeg",
-        "image_alt": "",
-        "learn_more_link": "/about/",
-        "gallery_link": "/gallery/",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "product_1780366836666_nh6jjj",
-        "title": "Bees and Blossoms Bowl",
-        "description": "",
-        "image": "/assets/img/img_9276.jpeg",
-        "image_alt": "",
-        "learn_more_link": "/about/",
-        "gallery_link": "/gallery/",
-        "visibility": "visible",
-        "sold": false
       }
     ]
   },
@@ -296,15 +263,6 @@
         "image": "/assets/img/img_9284.jpeg",
         "image_alt": "",
         "categories": "Bowls Floral",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1779719010959_ph1ml5",
-        "title": "Sandollar Bowl",
-        "image": "/assets/img/img_9282.jpeg",
-        "image_alt": "",
-        "categories": "Bowls Nature ",
         "visibility": "visible",
         "sold": false
       }
