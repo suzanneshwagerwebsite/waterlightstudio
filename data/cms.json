@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-02T02:25:14.339Z",
+  "updatedAt": "2026-06-02T02:26:22.241Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -279,6 +279,15 @@
         "id": "gallery_1780367106420_gsf9pg",
         "title": "Lemon Bowl",
         "image": "/assets/img/img_9280.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_1780367172504_7i5t14",
+        "title": "Eucalyptus Sunset Bowl",
+        "image": "/assets/img/img_9277.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
