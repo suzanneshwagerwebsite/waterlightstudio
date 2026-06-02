@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-02T02:30:06.931Z",
+  "updatedAt": "2026-06-02T02:31:14.341Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -315,6 +315,15 @@
         "id": "gallery_1780367398857_2sklwc",
         "title": "Riviera Palm",
         "image": "/assets/img/img_9267.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_1780367468359_jma3zp",
+        "title": "Wild Rose",
+        "image": "/assets/img/img_9263.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
