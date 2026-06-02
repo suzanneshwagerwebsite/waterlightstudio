@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-01T02:59:22.390Z",
+  "updatedAt": "2026-06-02T02:18:11.193Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -67,98 +67,10 @@
         "visibility": "visible"
       },
       {
-        "id": "product_1780282136977_z2cu9n",
-        "title": "Sunset Bowl",
+        "id": "product_1780366678557_tua9pa",
+        "title": "Lemon Bowl",
         "description": "",
-        "image": "/assets/img/img_9277.jpeg",
-        "image_alt": "",
-        "learn_more_link": "/about/",
-        "gallery_link": "/gallery/",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "product_1780282194493_tl7uu4",
-        "title": "Bee Bowl",
-        "description": "",
-        "image": "/assets/img/img_9272.jpeg",
-        "image_alt": "",
-        "learn_more_link": "/about/",
-        "gallery_link": "/gallery/",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "product_1780282249245_ue9bwr",
-        "title": "Regatta Vase",
-        "description": "",
-        "image": "/assets/img/img_9270.jpeg",
-        "image_alt": "",
-        "learn_more_link": "/about/",
-        "gallery_link": "/gallery/",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "product_1780282314314_noakgf",
-        "title": "Bamboo ",
-        "description": "",
-        "image": "/assets/img/img_9269.jpeg",
-        "image_alt": "",
-        "learn_more_link": "/about/",
-        "gallery_link": "/gallery/",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "product_1780282385981_or2v39",
-        "title": "Riviera Palm",
-        "description": "",
-        "image": "/assets/img/img_9267.jpeg",
-        "image_alt": "",
-        "learn_more_link": "/about/",
-        "gallery_link": "/gallery/",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "product_1780282446016_sx7hwq",
-        "title": "Gardenia Bowl",
-        "description": "",
-        "image": "/assets/img/img_9294.jpeg",
-        "image_alt": "",
-        "learn_more_link": "/about/",
-        "gallery_link": "/gallery/",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "product_1780282600469_wmv3hm",
-        "title": "Pussy Willow",
-        "description": "",
-        "image": "/assets/img/img_9265.jpeg",
-        "image_alt": "",
-        "learn_more_link": "/about/",
-        "gallery_link": "/gallery/",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "product_1780282659387_rugc1k",
-        "title": "Wild Rose",
-        "description": "",
-        "image": "/assets/img/img_9263.jpeg",
-        "image_alt": "",
-        "learn_more_link": "/about/",
-        "gallery_link": "/gallery/",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "product_1780282756056_ps2ppm",
-        "title": "Floral Vine",
-        "description": "",
-        "image": "/assets/img/img_9260.jpeg",
+        "image": "/assets/img/img_9280.jpeg",
         "image_alt": "",
         "learn_more_link": "/about/",
         "gallery_link": "/gallery/",
