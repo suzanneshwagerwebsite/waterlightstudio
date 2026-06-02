@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-02T02:23:54.705Z",
+  "updatedAt": "2026-06-02T02:25:14.339Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -270,6 +270,15 @@
         "id": "gallery_1780367024569_o9wnb5",
         "title": "Plumeria Bowl",
         "image": "/assets/img/img_9292.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_1780367106420_gsf9pg",
+        "title": "Lemon Bowl",
+        "image": "/assets/img/img_9280.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
