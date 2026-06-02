@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-02T02:18:11.193Z",
+  "updatedAt": "2026-06-02T02:19:22.323Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -71,6 +71,17 @@
         "title": "Lemon Bowl",
         "description": "",
         "image": "/assets/img/img_9280.jpeg",
+        "image_alt": "",
+        "learn_more_link": "/about/",
+        "gallery_link": "/gallery/",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "product_1780366756381_xbof2l",
+        "title": "Eucalyptus Sunset",
+        "description": "",
+        "image": "/assets/img/img_9277.jpeg",
         "image_alt": "",
         "learn_more_link": "/about/",
         "gallery_link": "/gallery/",
