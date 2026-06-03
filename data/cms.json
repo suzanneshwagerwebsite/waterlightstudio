@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-03T18:49:31.188Z",
+  "updatedAt": "2026-06-03T18:49:48.713Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -272,15 +272,6 @@
         "image": "/assets/img/img_9282.jpeg",
         "image_alt": "",
         "categories": "Bowls Nature ",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780512566409_lo7l91",
-        "title": "test",
-        "image": "/assets/img/screenshot-2026-06-02-at-9.41.06-am.png",
-        "image_alt": "",
-        "categories": "",
         "visibility": "visible",
         "sold": false
       }
