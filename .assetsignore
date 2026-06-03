@@ -4,6 +4,7 @@
 # gitignore syntax.
 
 .git/
+.github/
 .wrangler/
 .gitignore
 .assetsignore

@@ -1,0 +1,49 @@
+name: Deploy to Cloudflare
+
+# Bulletproof auto-publish: on every push to main, deploy BOTH workers with an
+# explicit `wrangler deploy` (which routes production traffic, unlike the
+# dashboard's `versions upload` that only stages a version). This runs with a
+# stored API token, so it cannot break from a browser logout, and a failure
+# shows as a red X on the commit in GitHub instead of silently freezing the site.
+#
+# Required repo secrets (Settings > Secrets and variables > Actions):
+#   CLOUDFLARE_API_TOKEN  - token with "Edit Cloudflare Workers" permission
+#   CLOUDFLARE_ACCOUNT_ID - 924476770d90ac3ac157044f7ed526ab
+
+on:
+  push:
+    branches:
+      - main
+
+# Newer pushes supersede in-flight runs so we never deploy an older commit last.
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy-site:
+    name: Deploy static site (waterlightstudio)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy Static Assets Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # Uses the repo-root wrangler.jsonc (assets.directory = ".") plus
+          # .assetsignore so .git / worker / docs are never served publicly.
+          command: deploy
+
+  deploy-cms:
+    name: Deploy CMS worker (waterlightstudio-cms)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy CMS Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: worker
+          command: deploy
