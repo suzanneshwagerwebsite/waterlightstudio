@@ -12,3 +12,7 @@ ALLOWED_ORIGIN = "https://waterlightstudio.com"
 # Secrets (set via `wrangler secret put`):
 # GITHUB_TOKEN - GitHub personal access token with repo contents write
 # ADMIN_KEY - secret admin password for CMS updates
+# DEPLOY_HOOK_URL - (optional) Cloudflare Deploy Hook URL for the "waterlightstudio"
+#                   Static Assets Worker. When set, every CMS commit POSTs this URL
+#                   to force a redeploy even if the GitHub build integration breaks.
+#                   Create it in the Worker's Settings > Builds > Deploy Hooks.

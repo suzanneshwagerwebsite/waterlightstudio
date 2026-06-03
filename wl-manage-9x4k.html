@@ -572,12 +572,68 @@
         let cmsSyncTimer = null;
         let cmsSyncReason = '';
         let cmsSyncInFlight = false;
+        let cmsSyncFailCount = 0;
+        const CMS_SYNC_MAX_RETRIES = 5;
+        let deployKnownBroken = false;
         let pendingFilePromises = [];
         let resolvedFiles = [];
+        // Paths whose image bytes failed to prepare this session (e.g. an undecodable
+        // HEIC). If cmsData still references one, the form was submitted pointing at an
+        // image that will never upload, so we must not silently "save" it.
+        let failedImagePaths = new Set();
 
-        function setSyncStatus(msg) {
+        // B#4: warn before leaving only when there is work NOT yet committed to
+        // GitHub: a queued save, or images buffered but not uploaded. Once the POST
+        // succeeds these are all cleared, so the post-save "waiting to publish" poll
+        // does not trigger a spurious warning.
+        function hasUncommittedWork() {
+            return !!cmsSyncReason || pendingFilePromises.length > 0 || resolvedFiles.length > 0;
+        }
+        window.addEventListener('beforeunload', (e) => {
+            if (hasUncommittedWork()) {
+                e.preventDefault();
+                e.returnValue = '';
+                return '';
+            }
+        });
+
+        // A sticky image error must not be silently clobbered by routine sync chatter
+        // ("Saving...", "Saved.") within a few seconds, or the user never learns why
+        // their picture vanished. setImageError(null) clears it (e.g. on a good pick).
+        let imageErrorMsg = null;
+        let imageErrorAt = 0;
+
+        function setSyncStatus(msg, opts) {
+            const force = opts && opts.force;
+            // While an image error is fresh and unacknowledged, only a forced/error
+            // update may overwrite it.
+            if (!force && imageErrorMsg && (Date.now() - imageErrorAt) < 8000) return;
             const el = document.getElementById('cms-sync-status');
             if (el) el.textContent = msg;
+        }
+
+        function setImageError(msg) {
+            imageErrorMsg = msg || null;
+            imageErrorAt = msg ? Date.now() : 0;
+            const el = document.getElementById('cms-sync-status');
+            if (el && msg) el.textContent = `Image error: ${msg}`;
+        }
+
+        // Walk the CMS object and collect every /assets/img/... string it references,
+        // so we can detect items pointing at an image that failed to upload.
+        function collectReferencedImagePaths(obj) {
+            const found = [];
+            (function walk(o) {
+                if (!o) return;
+                if (typeof o === 'string') {
+                    if (o.indexOf('/assets/img/') === 0) found.push(o);
+                } else if (Array.isArray(o)) {
+                    o.forEach(walk);
+                } else if (typeof o === 'object') {
+                    Object.values(o).forEach(walk);
+                }
+            })(obj);
+            return found;
         }
 
         function generateId(prefix) {
@@ -603,23 +659,80 @@
             });
         }
 
+        function isHeic(file) {
+            const name = (file.name || '').toLowerCase();
+            const type = (file.type || '').toLowerCase();
+            return /\.(heic|heif)$/.test(name) || type === 'image/heic' || type === 'image/heif';
+        }
+
+        // iPhone .heic photos upload fine but do not render in Chrome/Firefox/Android,
+        // so they look like a failed upload. Convert to JPEG in-browser before upload.
+        // Returns { dataUrl, ext } with the (possibly) converted bytes.
+        function prepareImageForUpload(file) {
+            if (!isHeic(file)) {
+                return readFileAsBase64(file).then((dataUrl) => ({ dataUrl, ext: null }));
+            }
+            return readFileAsBase64(file).then((dataUrl) => new Promise((resolve, reject) => {
+                const img = new Image();
+                img.onload = () => {
+                    try {
+                        const canvas = document.createElement('canvas');
+                        canvas.width = img.naturalWidth;
+                        canvas.height = img.naturalHeight;
+                        canvas.getContext('2d').drawImage(img, 0, 0);
+                        resolve({ dataUrl: canvas.toDataURL('image/jpeg', 0.85), ext: 'jpg' });
+                    } catch (e) {
+                        reject(new Error('Could not convert HEIC image. Please upload a JPEG.'));
+                    }
+                };
+                // Most browsers cannot decode HEIC into an <img> at all; fail loudly
+                // rather than silently committing an unrenderable file.
+                img.onerror = () => reject(new Error('This browser cannot read HEIC photos. Please upload a JPEG or PNG.'));
+                img.src = dataUrl;
+            }));
+        }
+
         window.handleFilePick = function(fileInput, inputId) {
             const file = fileInput.files[0];
             if (!file) return;
-            const safeName = file.name.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9._-]/g, '').toLowerCase();
+            let safeName = file.name.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9._-]/g, '').toLowerCase();
+            // HEIC will be converted to JPEG below; rewrite the stored path to match.
+            // Normalize the extension whenever HEIC is detected (by name OR MIME type),
+            // so the path, the input value, and the actual JPEG bytes always agree even
+            // when iOS delivers a HEIC with a generic/extensionless filename.
+            if (isHeic(file)) {
+                safeName = /\.[^.]+$/.test(safeName) ? safeName.replace(/\.[^.]+$/, '.jpg') : safeName + '.jpg';
+            }
             const url = '/assets/img/' + safeName;
             const repoPath = 'assets/img/' + safeName;
             document.getElementById(inputId).value = url;
 
-            const promise = readFileAsBase64(file).then((dataUrl) => {
+            const promise = prepareImageForUpload(file).then(({ dataUrl }) => {
                 const preview = document.getElementById(inputId + '-preview');
                 if (preview) { preview.src = dataUrl; preview.hidden = false; }
                 const base64 = dataUrl.split(',')[1];
                 resolvedFiles = resolvedFiles.filter(f => f.path !== repoPath);
                 resolvedFiles.push({ path: repoPath, base64: base64 });
+                failedImagePaths.delete(url); // this path is good now
+                setImageError(null); // a clean pick clears any prior image error
                 console.log('File ready for upload:', repoPath, '(' + Math.round(base64.length / 1024) + ' KB)');
+            }).catch((err) => {
+                document.getElementById(inputId).value = '';
+                failedImagePaths.add(url); // referencing this path = a broken image
+                setImageError(err.message);
+                console.error('Image prep failed:', err);
+                throw err;
+            }).finally(() => {
+                // Drop the settled promise so hasUncommittedWork() doesn't nag forever
+                // after an acknowledged failure, and so a flush doesn't re-await it.
+                pendingFilePromises = pendingFilePromises.filter(p => p !== promise);
             });
             pendingFilePromises.push(promise);
+            // NOTE: we deliberately do NOT queueSync() here. A picked image is bound to
+            // its gallery/product item on form submit (which builds the item, updates
+            // cmsData, then calls save()). Syncing on pick would upload the image with a
+            // stale cmsData that doesn't yet reference it. The beforeunload guard below
+            // covers the "picked but never submitted" loss window instead.
         };
 
 
@@ -635,11 +748,25 @@
                 const reason = cmsSyncReason;
                 cmsSyncReason = '';
 
-                // Wait for ALL file reads to complete before uploading
+                // Wait for ALL file reads to complete before uploading. Snapshot and
+                // clear the array first so a file picked DURING this await accumulates
+                // into the fresh array for the next pass instead of being dropped.
+                // allSettled: a failed read (handled in handleFilePick) doesn't abort.
                 if (pendingFilePromises.length) {
                     setSyncStatus('Reading files...');
-                    await Promise.all(pendingFilePromises);
+                    const toAwait = pendingFilePromises;
                     pendingFilePromises = [];
+                    await Promise.allSettled(toAwait);
+                }
+
+                // Guard against saving an item that references an image whose bytes
+                // failed to prepare (e.g. an undecodable HEIC picked then submitted).
+                // That would commit a permanent broken image on the live site.
+                const dangling = collectReferencedImagePaths(cmsData).filter(p => failedImagePaths.has(p));
+                if (dangling.length) {
+                    setSyncStatus(`Could not save: an image did not process (${dangling.map(p => p.replace('/assets/img/', '')).join(', ')}). Please re-pick a JPEG or PNG for it, then save again.`, { force: true });
+                    cmsSyncReason = ''; // do not retry until the user fixes the image
+                    break;
                 }
 
                 const filesToUpload = resolvedFiles.slice();
@@ -650,15 +777,63 @@
                         setSyncStatus(`Uploading ${filesToUpload.length} image(s)...`);
                         console.log('Uploading files:', filesToUpload.map(f => f.path + ' (' + Math.round(f.base64.length / 1024) + ' KB)'));
                     } else {
-                        setSyncStatus(`Syncing... (${reason})`);
+                        setSyncStatus(`Saving... (${reason})`, { force: true });
                     }
                     const { workerUrl, adminKey } = getSyncConfig();
-                    await window.CMS.saveCmsViaWorker(cmsData, { workerUrl, adminKey, commitMessage: `cms: ${reason} ${new Date().toISOString()}`, files: filesToUpload });
-                    setSyncStatus(`Synced at ${new Date().toLocaleTimeString()}`);
+                    const result = await window.CMS.saveCmsViaWorker(cmsData, { workerUrl, adminKey, commitMessage: `cms: ${reason} ${new Date().toISOString()}`, files: filesToUpload });
+                    cmsSyncFailCount = 0;
+
+                    // The worker drops files it can't store (oversized, bad path) and
+                    // reports them in skipped[]. Never claim success while an image the
+                    // user picked was silently dropped.
+                    const skipped = (result && Array.isArray(result.skipped)) ? result.skipped : [];
+                    if (skipped.length) {
+                        const names = skipped.map(s => (s.path || '').replace('assets/img/', '')).join(', ');
+                        setSyncStatus(`Saved your text, but ${skipped.length} image(s) could not be uploaded (${names}). Please use a smaller JPEG or PNG.`, { force: true });
+                        console.warn('Worker skipped files:', skipped);
+                        continue; // skip the publish-verify; this save needs the user's attention
+                    }
+
+                    // A 200 only means "saved to GitHub". The change is NOT visible to
+                    // visitors until the site redeploys. Verify against the live site,
+                    // but reassure the user first: their work is safe regardless.
+                    const committedAt = (result && result.updatedAt) || cmsData.updatedAt;
+                    setSyncStatus('Saved. Your changes are stored safely and the site usually updates within a few minutes.', { force: true });
+                    // If we already know the auto-publish is stuck this session, don't make
+                    // every later save sit through the full verify timeout.
+                    const verifyTimeout = deployKnownBroken ? 20000 : 90000;
+                    const live = await window.CMS.verifyLiveDeploy(committedAt, {
+                        timeoutMs: verifyTimeout,
+                        intervalMs: 4000,
+                        onTick: () => setSyncStatus('Saved. Waiting for the live site to update...', { force: true })
+                    });
+                    if (live) {
+                        deployKnownBroken = false;
+                        setSyncStatus(`Published live at ${new Date().toLocaleTimeString()}.`, { force: true });
+                    } else {
+                        deployKnownBroken = true;
+                        setSyncStatus('Saved. Your changes are stored safely, but the live site has not refreshed yet (it can take a few minutes). If it stays behind, let Daniel know.', { force: true });
+                        console.warn('Save committed but live site did not reflect updatedAt within timeout:', committedAt);
+                    }
                 } catch (err) {
                     resolvedFiles = filesToUpload.concat(resolvedFiles);
-                    setSyncStatus(`Sync failed: ${err.message}`);
+                    cmsSyncFailCount += 1;
                     console.error('Sync error:', err);
+                    // B#4: re-arm the retry after a backoff instead of stranding queued
+                    // work until the next manual edit. We must NOT set cmsSyncReason here
+                    // (that would make the while-loop retry immediately with no delay);
+                    // instead let the loop exit and re-enter via the timer.
+                    if (cmsSyncFailCount <= CMS_SYNC_MAX_RETRIES) {
+                        const delay = Math.min(30000, 5000 * cmsSyncFailCount);
+                        const retryReason = reason;
+                        setSyncStatus(`Save failed: ${err.message} — retrying in ${Math.round(delay / 1000)}s (${cmsSyncFailCount}/${CMS_SYNC_MAX_RETRIES})`, { force: true });
+                        clearTimeout(cmsSyncTimer);
+                        cmsSyncTimer = setTimeout(() => { cmsSyncReason = cmsSyncReason || retryReason; flushCmsSync(); }, delay);
+                    } else {
+                        setSyncStatus(`Save failed: ${err.message}. Stopped retrying — your changes are cached locally. Reload to retry.`, { force: true });
+                    }
+                    // Stop draining this pass; the timer (if armed) restarts the cycle.
+                    break;
                 }
             }
             cmsSyncInFlight = false;
@@ -673,6 +848,8 @@
         function save(reason) {
             cmsData.updatedAt = new Date().toISOString();
             window.CMS.writeCachedCms(cmsData);
+            // A fresh user edit gets a clean retry budget.
+            cmsSyncFailCount = 0;
             queueSync(reason);
         }
 

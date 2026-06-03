@@ -50,15 +50,34 @@ async function handlePost(request, env) {
         return json({ error: 'Invalid CMS payload schema' }, 422, env);
     }
 
-    // Upload any attached files to the repo
+    // Reject HEIC/HEIF up front: they commit fine but do not render in browsers,
+    // so they look like a failed upload. The admin converts to JPEG client-side;
+    // anything HEIC reaching here is an error worth surfacing, not silently storing.
     const files = Array.isArray(payload.files) ? payload.files : [];
     for (const file of files) {
-        if (!file.path || !file.base64) continue;
-        if (!file.path.startsWith('assets/img/')) continue;
-        if (file.base64.length > 20 * 1024 * 1024) continue;
+        if (file && file.path && /\.(heic|heif)$/i.test(file.path)) {
+            return json({ error: `HEIC/HEIF images are not supported (${file.path}). Please upload a JPEG or PNG.` }, 422, env);
+        }
+    }
 
-        const sha = await getFileSha(env, file.path);
-        await writeGitHubFile(env, file.path, file.base64, sha, `cms: upload ${file.path}`);
+    // Upload any attached files to the repo. Track anything we skip so the client
+    // is never told "saved" while an image was silently dropped. base64 is ~33%
+    // larger than the raw bytes, so the 20MB base64 cap is roughly a 15MB photo.
+    const skipped = [];
+    try {
+        for (const file of files) {
+            if (!file.path || !file.base64) { skipped.push({ path: file && file.path, reason: 'missing path or data' }); continue; }
+            if (!file.path.startsWith('assets/img/')) { skipped.push({ path: file.path, reason: 'path not under assets/img/' }); continue; }
+            if (file.base64.length > 20 * 1024 * 1024) { skipped.push({ path: file.path, reason: 'too large (use a photo under ~15MB)' }); continue; }
+
+            const sha = await getFileSha(env, file.path);
+            await writeGitHubFile(env, file.path, file.base64, sha, `cms: upload ${file.path}`);
+        }
+    } catch (error) {
+        // An image PUT failed (GitHub 409/rate-limit/network). Surface a parseable
+        // JSON error instead of an opaque 500 so the client can retry cleanly. The
+        // image writes are idempotent (getFileSha), so a retry self-heals.
+        return json({ error: `Image upload failed: ${error.message || 'unknown error'}` }, 502, env);
     }
 
     try {
@@ -77,17 +96,32 @@ async function handlePost(request, env) {
             message: commitMessage
         });
 
+        // Belt-and-suspenders: force the Static Assets Worker to redeploy even if
+        // the GitHub->Cloudflare build integration is broken. No-op if the secret
+        // is unset. Never let a hook failure fail the save (the commit already landed).
+        await triggerDeployHook(env);
+
         return json(
             {
                 ok: true,
                 commitSha: commit.commit?.sha || null,
-                updatedAt: normalized.updatedAt
+                updatedAt: normalized.updatedAt,
+                skipped
             },
             200,
             env
         );
     } catch (error) {
         return json({ error: error.message || 'Failed to write cms.json' }, 500, env);
+    }
+}
+
+async function triggerDeployHook(env) {
+    if (!env.DEPLOY_HOOK_URL) return;
+    try {
+        await fetch(env.DEPLOY_HOOK_URL, { method: 'POST' });
+    } catch (e) {
+        // Deploy hook is a safety net; the commit is already saved. Swallow errors.
     }
 }
 

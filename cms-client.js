@@ -225,6 +225,39 @@
         return payload;
     }
 
+    // A 200 from the Worker only means "committed to GitHub", NOT "live on the
+    // site". The live site only updates once the Static Assets Worker redeploys.
+    // This polls the production cms.json until its updatedAt matches what we just
+    // committed, so the admin can tell the difference between "saved" and "live".
+    // Resolves true once the live site reflects expectedUpdatedAt, false on timeout.
+    async function verifyLiveDeploy(expectedUpdatedAt, options) {
+        const opts = options || {};
+        const timeoutMs = typeof opts.timeoutMs === 'number' ? opts.timeoutMs : 120000;
+        const intervalMs = typeof opts.intervalMs === 'number' ? opts.intervalMs : 4000;
+        const onTick = typeof opts.onTick === 'function' ? opts.onTick : null;
+
+        if (!expectedUpdatedAt) return false;
+        const deadline = Date.now() + timeoutMs;
+
+        while (Date.now() < deadline) {
+            try {
+                const bust = `${CMS_DATA_URL}?cb=${Date.now()}`;
+                const response = await fetch(bust, { cache: 'no-store' });
+                if (response.ok) {
+                    const live = await response.json();
+                    if (live && live.updatedAt === expectedUpdatedAt) {
+                        return true;
+                    }
+                }
+            } catch {
+                // Network blip; keep polling until the deadline.
+            }
+            if (onTick) onTick();
+            await new Promise((resolve) => setTimeout(resolve, intervalMs));
+        }
+        return false;
+    }
+
     function getAdminKey() {
         return localStorage.getItem(ADMIN_KEY_SESSION) || '';
     }
@@ -244,6 +277,7 @@
         fetchCms,
         applySettingsToDocument,
         saveCmsViaWorker,
+        verifyLiveDeploy,
         getAdminKey,
         setAdminKey,
         clearAdminKey,
