@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-02T02:31:14.341Z",
+  "updatedAt": "2026-06-03T15:34:37.174Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -267,63 +267,18 @@
         "sold": false
       },
       {
-        "id": "gallery_1780367024569_o9wnb5",
-        "title": "Plumeria Bowl",
-        "image": "/assets/img/img_9292.jpeg",
+        "id": "gallery_1779719010959_ph1ml5",
+        "title": "Sandollar Bowl",
+        "image": "/assets/img/img_9282.jpeg",
         "image_alt": "",
-        "categories": "",
+        "categories": "Bowls Nature ",
         "visibility": "visible",
         "sold": false
       },
       {
-        "id": "gallery_1780367106420_gsf9pg",
-        "title": "Lemon Bowl",
-        "image": "/assets/img/img_9280.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780367172504_7i5t14",
-        "title": "Eucalyptus Sunset Bowl",
-        "image": "/assets/img/img_9277.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780367257772_w2phrf",
-        "title": "Blossoms and Bees Bowl",
-        "image": "/assets/img/img_9272.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780367325773_izpivm",
-        "title": "Santa Barbara Regatta Vase",
-        "image": "/assets/img/img_9270.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780367398857_2sklwc",
-        "title": "Riviera Palm",
-        "image": "/assets/img/img_9267.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780367468359_jma3zp",
-        "title": "Wild Rose",
-        "image": "/assets/img/img_9263.jpeg",
+        "id": "gallery_1780500870405_4nmdf3",
+        "title": "test",
+        "image": "/assets/img/img_6178.png",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
