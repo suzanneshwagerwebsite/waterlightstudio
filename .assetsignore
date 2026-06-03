@@ -1,0 +1,23 @@
+# Files in the repo root that must NOT be served as public static assets.
+# The Static Assets Worker ships the whole repo (assets.directory = "."), so
+# without this the .git history, worker source, and ops docs are downloadable.
+# gitignore syntax.
+
+.git/
+.wrangler/
+.gitignore
+.assetsignore
+.nojekyll
+
+# Wrangler / build config
+wrangler.jsonc
+package.json
+package-lock.json
+node_modules/
+
+# CMS worker source (its own deploy; not part of the public site)
+worker/
+
+# Internal docs / repo meta
+docs/
+README.md
