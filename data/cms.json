@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-05T01:59:08.356Z",
+  "updatedAt": "2026-06-05T01:59:16.104Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -263,6 +263,15 @@
         "image": "/assets/img/img_9284.jpeg",
         "image_alt": "",
         "categories": "Bowls Floral",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_1780624750146_h78eve",
+        "title": "Lemon Bowl",
+        "image": "/assets/img/img_9280.jpeg",
+        "image_alt": "",
+        "categories": "",
         "visibility": "visible",
         "sold": false
       }
