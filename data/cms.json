@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-05T02:22:30.544Z",
+  "updatedAt": "2026-06-05T17:20:49.389Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -65,6 +65,17 @@
         "learn_more_link": "/about/",
         "gallery_link": "/gallery/",
         "visibility": "visible"
+      },
+      {
+        "id": "product_1780680043329_quyhta",
+        "title": "Santa Barbara Vines",
+        "description": "",
+        "image": "/assets/img/img_9260.jpeg",
+        "image_alt": "",
+        "learn_more_link": "/about/",
+        "gallery_link": "/gallery/",
+        "visibility": "visible",
+        "sold": false
       }
     ]
   },
