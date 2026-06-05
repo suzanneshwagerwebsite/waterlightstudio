@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-05T02:01:51.367Z",
+  "updatedAt": "2026-06-05T02:02:12.283Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -288,6 +288,15 @@
         "id": "gallery_1780624860863_6njmgc",
         "title": "Eucalyptus Sunset Bowl (interior)",
         "image": "/assets/img/img_9278.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_1780624909031_m2msnz",
+        "title": "Bees and Blossoms Bowl",
+        "image": "/assets/img/img_9272.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
