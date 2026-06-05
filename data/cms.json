@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-05T02:03:29.004Z",
+  "updatedAt": "2026-06-05T02:04:07.508Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -306,6 +306,15 @@
         "id": "gallery_1780624967281_ulisdv",
         "title": "Santa Barbara Regatta Vase",
         "image": "/assets/img/img_9270.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_1780625014065_asl26z",
+        "title": "Riviera Palm Bowl",
+        "image": "/assets/img/img_9267.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
