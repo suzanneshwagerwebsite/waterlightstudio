@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-05T02:04:41.225Z",
+  "updatedAt": "2026-06-05T02:05:16.748Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -315,6 +315,15 @@
         "id": "gallery_1780625014065_asl26z",
         "title": "Riviera Palm Bowl",
         "image": "/assets/img/img_9267.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_1780625060683_cut8ar",
+        "title": "Wild Rose Cup",
+        "image": "/assets/img/img_9263.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
