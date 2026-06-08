@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-08T01:10:57.780Z",
+  "updatedAt": "2026-06-08T01:11:48.424Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -371,6 +371,15 @@
         "id": "gallery_1780881054209_jn7s1n",
         "title": "Iris Vase",
         "image": "/assets/img/img_9254.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_1780881104477_9a8wo8",
+        "title": "Pussywillow Vase",
+        "image": "/assets/img/img_9252.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
