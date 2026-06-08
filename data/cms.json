@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-08T01:12:46.457Z",
+  "updatedAt": "2026-06-08T01:14:25.714Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -389,6 +389,15 @@
         "id": "gallery_1780881161295_te5xf3",
         "title": "Sunrise Riviera Vase",
         "image": "/assets/img/img_9250.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_1780881261697_22tev1",
+        "title": "Ginkgo Bowl",
+        "image": "/assets/img/img_9248.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
