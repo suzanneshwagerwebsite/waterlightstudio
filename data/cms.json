@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-08T01:17:28.098Z",
+  "updatedAt": "2026-06-08T01:20:02.317Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -416,6 +416,15 @@
         "id": "gallery_1780881444101_ykt977",
         "title": "Palm Branch Cup",
         "image": "/assets/img/img_9238.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_1780881598356_dysftg",
+        "title": "Dandelion Cup",
+        "image": "/assets/img/img_9235.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
