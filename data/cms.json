@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-08T01:07:43.217Z",
+  "updatedAt": "2026-06-08T01:08:39.522Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -353,6 +353,15 @@
         "id": "gallery_1780880857436_ykeswh",
         "title": "Palms at Sunset",
         "image": "/assets/img/img_9256.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_1780880913972_tj1nzx",
+        "title": "Eucalyptus Sunset Vase",
+        "image": "/assets/img/img_9259.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
