@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-08T01:14:25.714Z",
+  "updatedAt": "2026-06-08T01:15:24.970Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -398,6 +398,15 @@
         "id": "gallery_1780881261697_22tev1",
         "title": "Ginkgo Bowl",
         "image": "/assets/img/img_9248.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_1780881320916_7iocne",
+        "title": "Eucalyptus Sunrise Bowl",
+        "image": "/assets/img/img_9244.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
