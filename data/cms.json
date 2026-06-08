@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-08T01:20:02.317Z",
+  "updatedAt": "2026-06-08T01:21:11.321Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -425,6 +425,15 @@
         "id": "gallery_1780881598356_dysftg",
         "title": "Dandelion Cup",
         "image": "/assets/img/img_9235.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_1780881655942_w7zc31",
+        "title": "Wisteria Vase",
+        "image": "/assets/img/img_9227.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
