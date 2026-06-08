@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-08T01:21:11.321Z",
+  "updatedAt": "2026-06-08T01:22:06.376Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -434,6 +434,15 @@
         "id": "gallery_1780881655942_w7zc31",
         "title": "Wisteria Vase",
         "image": "/assets/img/img_9227.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_1780881721976_o9h34z",
+        "title": "Autumn Leaves Cup",
+        "image": "/assets/img/img_9232.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
