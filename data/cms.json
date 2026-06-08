@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-08T01:09:09.137Z",
+  "updatedAt": "2026-06-08T01:10:57.780Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -362,6 +362,15 @@
         "id": "gallery_1780880913972_tj1nzx",
         "title": "Eucalyptus Sunset Vase",
         "image": "/assets/img/img_9259.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_1780881054209_jn7s1n",
+        "title": "Iris Vase",
+        "image": "/assets/img/img_9254.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
