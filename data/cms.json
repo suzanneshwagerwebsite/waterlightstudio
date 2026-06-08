@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-08T01:22:06.376Z",
+  "updatedAt": "2026-06-08T01:25:35.685Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -451,7 +451,7 @@
     ]
   },
   "contact": {
-    "intro": "If you have questions about a piece, a commission, or a studio visit, send a note and we'll respond within a few days.",
+    "intro": "If you have questions about a piece, a commission, or a studio visit, send a note and we'll respond within a few days.      \n         suzanne@waterlightstudio.com",
     "intro_2": "If you'd like to arrange a studio visit please get in touch close to the time that you'd like to come, rather than months or weeks ahead.",
     "kicker": "Contact",
     "title": "Get in touch."
