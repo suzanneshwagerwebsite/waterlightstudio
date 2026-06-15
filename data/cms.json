@@ -569,7 +569,7 @@
         "id": "gallery_45",
         "title": "Bee & Vine Vase",
         "image": "/assets/img/waterlight-edits-14.jpg",
-        "image_alt": "Hand-painted cup with trailing leaves and honeybees",
+        "image_alt": "Hand-painted vase with trailing leaves and honeybees",
         "categories": "floral vases",
         "visibility": "visible",
         "sold": false
@@ -596,7 +596,7 @@
         "id": "gallery_48",
         "title": "Sunset Sail Vase",
         "image": "/assets/img/waterlight-edits-17.jpg",
-        "image_alt": "Hand-painted cup with sailboats at sunset",
+        "image_alt": "Hand-painted vase with sailboats at sunset",
         "categories": "coastal vases",
         "visibility": "visible",
         "sold": false
@@ -614,7 +614,7 @@
         "id": "gallery_50",
         "title": "Palm Cove Vase",
         "image": "/assets/img/waterlight-edits-19.jpg",
-        "image_alt": "Hand-painted cup with a single palm tree",
+        "image_alt": "Hand-painted vase with a single palm tree",
         "categories": "coastal vases",
         "visibility": "visible",
         "sold": false
@@ -623,25 +623,25 @@
         "id": "gallery_51",
         "title": "Palm Grove Vase",
         "image": "/assets/img/waterlight-edits-20.jpg",
-        "image_alt": "Hand-painted cup with palm trees",
+        "image_alt": "Hand-painted vase with palm trees",
         "categories": "coastal vases",
         "visibility": "visible",
         "sold": false
       },
       {
         "id": "gallery_52",
-        "title": "Palm Vase",
+        "title": "Wild Rose Vase",
         "image": "/assets/img/waterlight-edits-21.jpg",
-        "image_alt": "Hand-painted cup with a pink and white wild rose",
+        "image_alt": "Hand-painted vase with a pink and white wild rose",
         "categories": "floral vases",
         "visibility": "visible",
         "sold": false
       },
       {
         "id": "gallery_53",
-        "title": "Palm Vase",
+        "title": "Spring Poppy Vase",
         "image": "/assets/img/waterlight-edits-22.jpg",
-        "image_alt": "Hand-painted cup with peach poppies",
+        "image_alt": "Hand-painted vase with peach poppies",
         "categories": "floral vases",
         "visibility": "visible",
         "sold": false
@@ -657,7 +657,7 @@
       },
       {
         "id": "gallery_55",
-        "title": "Trailing Vine Vase",
+        "title": "Desert Palm Vase",
         "image": "/assets/img/waterlight-edits-24.jpg",
         "image_alt": "Hand-painted vase with a palm tree and foliage",
         "categories": "landscape vases",
@@ -675,16 +675,16 @@
       },
       {
         "id": "gallery_57",
-        "title": "Palm Tree Vase",
+        "title": "Iris Garden Vase",
         "image": "/assets/img/waterlight-edits-26.jpg",
-        "image_alt": "Hand-painted cup with purple irises",
+        "image_alt": "Hand-painted vase with purple irises",
         "categories": "floral vases",
         "visibility": "visible",
         "sold": false
       },
       {
         "id": "gallery_58",
-        "title": "Palm Tree Vase",
+        "title": "Willow Bud Vase",
         "image": "/assets/img/waterlight-edits-27.jpg",
         "image_alt": "Hand-painted vase with willow buds",
         "categories": "floral vases",
@@ -713,7 +713,7 @@
         "id": "gallery_61",
         "title": "Ladybug Vase",
         "image": "/assets/img/waterlight-edits-30.jpg",
-        "image_alt": "Hand-painted cup scattered with ladybugs",
+        "image_alt": "Hand-painted vase scattered with ladybugs",
         "categories": "vases",
         "visibility": "visible",
         "sold": false
@@ -729,9 +729,9 @@
       },
       {
         "id": "gallery_63",
-        "title": "Ladybug Vase",
+        "title": "Blue Iris Vase",
         "image": "/assets/img/waterlight-edits-32.jpg",
-        "image_alt": "Hand-painted cup with blue irises",
+        "image_alt": "Hand-painted vase with blue irises",
         "categories": "floral vases",
         "visibility": "visible",
         "sold": false
@@ -740,7 +740,7 @@
         "id": "gallery_64",
         "title": "Lavender Iris Vase",
         "image": "/assets/img/waterlight-edits-33.jpg",
-        "image_alt": "Hand-painted cup with lavender irises",
+        "image_alt": "Hand-painted vase with lavender irises",
         "categories": "floral vases",
         "visibility": "visible",
         "sold": false
@@ -749,7 +749,7 @@
         "id": "gallery_65",
         "title": "Berry Branch Vase",
         "image": "/assets/img/waterlight-edits-34.jpg",
-        "image_alt": "Hand-painted cup with pink berry branches",
+        "image_alt": "Hand-painted vase with pink berry branches",
         "categories": "floral vases",
         "visibility": "visible",
         "sold": false
@@ -758,7 +758,7 @@
         "id": "gallery_66",
         "title": "Palm Frond Vase",
         "image": "/assets/img/waterlight-edits-35.jpg",
-        "image_alt": "Hand-painted cup with a palm frond",
+        "image_alt": "Hand-painted vase with a palm frond",
         "categories": "coastal vases",
         "visibility": "visible",
         "sold": false
@@ -767,7 +767,7 @@
         "id": "gallery_67",
         "title": "Hillside Walk Vase",
         "image": "/assets/img/waterlight-edits-36.jpg",
-        "image_alt": "Hand-painted cup with a figure walking a hillside path",
+        "image_alt": "Hand-painted vase with a figure walking a hillside path",
         "categories": "landscape vases",
         "visibility": "visible",
         "sold": false
@@ -776,52 +776,52 @@
         "id": "gallery_68",
         "title": "Lemon Orchard Vase",
         "image": "/assets/img/waterlight-edits-37.jpg",
-        "image_alt": "Hand-painted cup with lemons and leaves",
+        "image_alt": "Hand-painted vase with lemons and leaves",
         "categories": "floral vases",
         "visibility": "visible",
         "sold": false
       },
       {
         "id": "gallery_69",
-        "title": "Dandelion Cup",
+        "title": "Dandelion Vase",
         "image": "/assets/img/waterlight-edits-38.jpg",
-        "image_alt": "Hand-painted cup with white dandelions",
+        "image_alt": "Hand-painted vase with white dandelions",
         "categories": "floral vases",
         "visibility": "visible",
         "sold": false
       },
       {
         "id": "gallery_70",
-        "title": "Painter's Path Cup",
+        "title": "Painter's Path Vase",
         "image": "/assets/img/waterlight-edits-39.jpg",
-        "image_alt": "Hand-painted cup with a painter and black cat in a landscape",
+        "image_alt": "Hand-painted vase with a painter and black cat in a landscape",
         "categories": "landscape vases",
         "visibility": "visible",
         "sold": false
       },
       {
         "id": "gallery_71",
-        "title": "Blossom Cup",
+        "title": "Blossom Vase",
         "image": "/assets/img/waterlight-edits-40.jpg",
-        "image_alt": "Hand-painted cup with pink blossoms",
+        "image_alt": "Hand-painted vase with pink blossoms",
         "categories": "floral vases",
         "visibility": "visible",
         "sold": false
       },
       {
         "id": "gallery_72",
-        "title": "Sailboat Bay Cup",
+        "title": "Sailboat Bay Vase",
         "image": "/assets/img/waterlight-edits-41.jpg",
-        "image_alt": "Hand-painted cup with a white sailboat on the bay",
+        "image_alt": "Hand-painted vase with a white sailboat on the bay",
         "categories": "coastal vases",
         "visibility": "visible",
         "sold": false
       },
       {
         "id": "gallery_73",
-        "title": "Tulip Cup",
+        "title": "Tulip Vase",
         "image": "/assets/img/waterlight-edits-42.jpg",
-        "image_alt": "Hand-painted cup with pink tulips",
+        "image_alt": "Hand-painted vase with pink tulips",
         "categories": "floral vases",
         "visibility": "visible",
         "sold": false
@@ -837,9 +837,9 @@
       },
       {
         "id": "gallery_75",
-        "title": "Wisteria Cup",
+        "title": "Wisteria Vase",
         "image": "/assets/img/waterlight-edits-44.jpg",
-        "image_alt": "Hand-painted cup with purple wisteria",
+        "image_alt": "Hand-painted vase with purple wisteria",
         "categories": "floral vases",
         "visibility": "visible",
         "sold": false
@@ -864,18 +864,18 @@
       },
       {
         "id": "gallery_78",
-        "title": "Woodland Tree Cup",
+        "title": "Woodland Tree Vase",
         "image": "/assets/img/waterlight-edits-47.jpg",
-        "image_alt": "Hand-painted cup with bare woodland trees",
+        "image_alt": "Hand-painted vase with bare woodland trees",
         "categories": "landscape vases",
         "visibility": "visible",
         "sold": false
       },
       {
         "id": "gallery_79",
-        "title": "Iris Field Cup",
+        "title": "Iris Field Vase",
         "image": "/assets/img/waterlight-edits-48.jpg",
-        "image_alt": "Hand-painted cup with a field of purple irises",
+        "image_alt": "Hand-painted vase with a field of purple irises",
         "categories": "floral vases",
         "visibility": "visible",
         "sold": false
@@ -909,18 +909,18 @@
       },
       {
         "id": "gallery_83",
-        "title": "Sunlit Grove Cup",
+        "title": "Sunlit Grove Vase",
         "image": "/assets/img/waterlight-edits-52.jpg",
-        "image_alt": "Hand-painted cup with a sunlit pastel grove",
+        "image_alt": "Hand-painted vase with a sunlit pastel grove",
         "categories": "landscape vases",
         "visibility": "visible",
         "sold": false
       },
       {
         "id": "gallery_84",
-        "title": "Purple Iris Cup",
+        "title": "Purple Iris Vase",
         "image": "/assets/img/waterlight-edits-53.jpg",
-        "image_alt": "Hand-painted cup with purple irises",
+        "image_alt": "Hand-painted vase with purple irises",
         "categories": "floral vases",
         "visibility": "visible",
         "sold": false
@@ -936,45 +936,45 @@
       },
       {
         "id": "gallery_86",
-        "title": "Tree at Dawn Cup",
+        "title": "Tree at Dawn Vase",
         "image": "/assets/img/waterlight-edits-55.jpg",
-        "image_alt": "Hand-painted cup with a tree against a pink dawn sky",
+        "image_alt": "Hand-painted vase with a tree against a pink dawn sky",
         "categories": "landscape vases",
         "visibility": "visible",
         "sold": false
       },
       {
         "id": "gallery_87",
-        "title": "Butterfly Cup",
+        "title": "Butterfly Vase",
         "image": "/assets/img/waterlight-edits-56.jpg",
-        "image_alt": "Hand-painted cup with pastel butterflies",
+        "image_alt": "Hand-painted vase with pastel butterflies",
         "categories": "floral vases",
         "visibility": "visible",
         "sold": false
       },
       {
         "id": "gallery_88",
-        "title": "Butterfly Meadow Cup",
+        "title": "Butterfly Meadow Vase",
         "image": "/assets/img/waterlight-edits-57.jpg",
-        "image_alt": "Hand-painted cup with butterflies in a meadow",
+        "image_alt": "Hand-painted vase with butterflies in a meadow",
         "categories": "floral vases",
         "visibility": "visible",
         "sold": false
       },
       {
         "id": "gallery_89",
-        "title": "Spring Branch Cup",
+        "title": "Spring Branch Vase",
         "image": "/assets/img/waterlight-edits-58.jpg",
-        "image_alt": "Hand-painted cup with budding spring branches",
+        "image_alt": "Hand-painted vase with budding spring branches",
         "categories": "floral vases",
         "visibility": "visible",
         "sold": false
       },
       {
         "id": "gallery_90",
-        "title": "Castle Hill Cup",
+        "title": "Castle Hill Vase",
         "image": "/assets/img/waterlight-edits-59.jpg",
-        "image_alt": "Hand-painted cup with a castle on a green hill",
+        "image_alt": "Hand-painted vase with a castle on a green hill",
         "categories": "landscape vases",
         "visibility": "visible",
         "sold": false
