@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-15T03:49:45.570Z",
+  "updatedAt": "2026-06-15T03:50:19.999Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -333,7 +333,7 @@
       },
       {
         "id": "gallery_1780625060683_cut8ar",
-        "title": "Wild Rose Cup",
+        "title": "Wild Rose Vase",
         "image": "/assets/img/img_9263.jpeg",
         "image_alt": "",
         "categories": "",
@@ -342,7 +342,7 @@
       },
       {
         "id": "gallery_1780880775887_pohhwh",
-        "title": "Vines at Sunset Cup",
+        "title": "Vines at Sunset Vase",
         "image": "/assets/img/img_9260.jpeg",
         "image_alt": "",
         "categories": "",
@@ -414,7 +414,7 @@
       },
       {
         "id": "gallery_1780881444101_ykt977",
-        "title": "Palm Branch Cup",
+        "title": "Palm Branch Vase",
         "image": "/assets/img/img_9238.jpeg",
         "image_alt": "",
         "categories": "",
@@ -423,7 +423,7 @@
       },
       {
         "id": "gallery_1780881598356_dysftg",
-        "title": "Dandelion Cup",
+        "title": "Dandelion Vase",
         "image": "/assets/img/img_9235.jpeg",
         "image_alt": "",
         "categories": "",
@@ -441,7 +441,7 @@
       },
       {
         "id": "gallery_1780881721976_o9h34z",
-        "title": "Autumn Leaves Cup",
+        "title": "Autumn Leaves Vase",
         "image": "/assets/img/img_9232.jpeg",
         "image_alt": "",
         "categories": "",
@@ -774,7 +774,7 @@
       },
       {
         "id": "gallery_68",
-        "title": "Lemon Orchard Cup",
+        "title": "Lemon Orchard Vase",
         "image": "/assets/img/waterlight-edits-37.jpg",
         "image_alt": "Hand-painted cup with lemons and leaves",
         "categories": "floral vases",
