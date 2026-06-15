@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-15T03:50:55.489Z",
+  "updatedAt": "2026-06-15T03:51:29.581Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -630,7 +630,7 @@
       },
       {
         "id": "gallery_52",
-        "title": "Wild Rose Vase",
+        "title": "Palm Vase",
         "image": "/assets/img/waterlight-edits-21.jpg",
         "image_alt": "Hand-painted cup with a pink and white wild rose",
         "categories": "floral vases",
