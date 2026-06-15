@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-15T03:49:10.939Z",
+  "updatedAt": "2026-06-15T03:49:45.570Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -684,7 +684,7 @@
       },
       {
         "id": "gallery_58",
-        "title": "Willow Bud Vase",
+        "title": "Palm Tree Vase",
         "image": "/assets/img/waterlight-edits-27.jpg",
         "image_alt": "Hand-painted vase with willow buds",
         "categories": "floral vases",
@@ -747,7 +747,7 @@
       },
       {
         "id": "gallery_65",
-        "title": "Berry Branch Cup",
+        "title": "Berry Branch Vase",
         "image": "/assets/img/waterlight-edits-34.jpg",
         "image_alt": "Hand-painted cup with pink berry branches",
         "categories": "floral vases",
@@ -756,7 +756,7 @@
       },
       {
         "id": "gallery_66",
-        "title": "Palm Frond Cup",
+        "title": "Palm Frond Vase",
         "image": "/assets/img/waterlight-edits-35.jpg",
         "image_alt": "Hand-painted cup with a palm frond",
         "categories": "coastal vases",
@@ -765,7 +765,7 @@
       },
       {
         "id": "gallery_67",
-        "title": "Hillside Walk Cup",
+        "title": "Hillside Walk Vase",
         "image": "/assets/img/waterlight-edits-36.jpg",
         "image_alt": "Hand-painted cup with a figure walking a hillside path",
         "categories": "landscape vases",
