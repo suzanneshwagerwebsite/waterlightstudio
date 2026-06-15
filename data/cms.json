@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-15T03:50:19.999Z",
+  "updatedAt": "2026-06-15T03:50:55.489Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -567,7 +567,7 @@
       },
       {
         "id": "gallery_45",
-        "title": "Bee & Vine Cup",
+        "title": "Bee & Vine Vase",
         "image": "/assets/img/waterlight-edits-14.jpg",
         "image_alt": "Hand-painted cup with trailing leaves and honeybees",
         "categories": "floral vases",
@@ -594,7 +594,7 @@
       },
       {
         "id": "gallery_48",
-        "title": "Sunset Sail Cup",
+        "title": "Sunset Sail Vase",
         "image": "/assets/img/waterlight-edits-17.jpg",
         "image_alt": "Hand-painted cup with sailboats at sunset",
         "categories": "coastal vases",
@@ -612,7 +612,7 @@
       },
       {
         "id": "gallery_50",
-        "title": "Palm Cove Cup",
+        "title": "Palm Cove Vase",
         "image": "/assets/img/waterlight-edits-19.jpg",
         "image_alt": "Hand-painted cup with a single palm tree",
         "categories": "coastal vases",
@@ -621,7 +621,7 @@
       },
       {
         "id": "gallery_51",
-        "title": "Palm Grove Cup",
+        "title": "Palm Grove Vase",
         "image": "/assets/img/waterlight-edits-20.jpg",
         "image_alt": "Hand-painted cup with palm trees",
         "categories": "coastal vases",
@@ -630,7 +630,7 @@
       },
       {
         "id": "gallery_52",
-        "title": "Wild Rose Cup",
+        "title": "Wild Rose Vase",
         "image": "/assets/img/waterlight-edits-21.jpg",
         "image_alt": "Hand-painted cup with a pink and white wild rose",
         "categories": "floral vases",
