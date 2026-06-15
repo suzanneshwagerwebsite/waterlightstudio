@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-15T03:51:59.445Z",
+  "updatedAt": "2026-06-15T03:52:39.415Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -711,7 +711,7 @@
       },
       {
         "id": "gallery_61",
-        "title": "Ladybug Cup",
+        "title": "Ladybug Vase",
         "image": "/assets/img/waterlight-edits-30.jpg",
         "image_alt": "Hand-painted cup scattered with ladybugs",
         "categories": "vases",
@@ -729,7 +729,7 @@
       },
       {
         "id": "gallery_63",
-        "title": "Blue Iris Cup",
+        "title": "Ladybug Vase",
         "image": "/assets/img/waterlight-edits-32.jpg",
         "image_alt": "Hand-painted cup with blue irises",
         "categories": "floral vases",
@@ -738,7 +738,7 @@
       },
       {
         "id": "gallery_64",
-        "title": "Lavender Iris Cup",
+        "title": "Lavender Iris Vase",
         "image": "/assets/img/waterlight-edits-33.jpg",
         "image_alt": "Hand-painted cup with lavender irises",
         "categories": "floral vases",
