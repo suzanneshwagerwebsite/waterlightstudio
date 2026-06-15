@@ -447,6 +447,564 @@
         "categories": "",
         "visibility": "visible",
         "sold": false
+      },
+      {
+        "id": "gallery_32",
+        "title": "Dolphin Pod Bowl",
+        "image": "/assets/img/waterlight-edits-01.jpg",
+        "image_alt": "Hand-thrown bowl painted with blue dolphins swimming in a green swirl",
+        "categories": "coastal bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_33",
+        "title": "Sunrise Glaze Bowl",
+        "image": "/assets/img/waterlight-edits-02.jpg",
+        "image_alt": "Hand-thrown bowl with soft peach and teal glaze",
+        "categories": "bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_34",
+        "title": "Magnolia Bloom Bowl",
+        "image": "/assets/img/waterlight-edits-03.jpg",
+        "image_alt": "Hand-painted bowl with a white magnolia blossom",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_35",
+        "title": "Cherry Blossom Bowl",
+        "image": "/assets/img/waterlight-edits-04.jpg",
+        "image_alt": "Hand-painted bowl with pink cherry blossoms",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_36",
+        "title": "Birch Grove Bowl",
+        "image": "/assets/img/waterlight-edits-05.jpg",
+        "image_alt": "Hand-painted bowl with birch trees beside water",
+        "categories": "landscape bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_37",
+        "title": "Sunset Grove Bowl",
+        "image": "/assets/img/waterlight-edits-06.jpg",
+        "image_alt": "Hand-painted bowl with trees and a red setting sun",
+        "categories": "landscape bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_38",
+        "title": "Yellow Hibiscus Bowl",
+        "image": "/assets/img/waterlight-edits-07.jpg",
+        "image_alt": "Hand-painted bowl with a yellow hibiscus flower",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_39",
+        "title": "Pink Blossom Bowl",
+        "image": "/assets/img/waterlight-edits-08.jpg",
+        "image_alt": "Hand-painted bowl with trailing pink blossoms",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_40",
+        "title": "Cherry Blossom Sun Bowl",
+        "image": "/assets/img/waterlight-edits-09.jpg",
+        "image_alt": "Hand-painted bowl with pink cherry blossoms and a golden center",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_41",
+        "title": "Hillside Sunrise Bowl",
+        "image": "/assets/img/waterlight-edits-10.jpg",
+        "image_alt": "Hand-painted bowl with rolling hills and a red sun",
+        "categories": "landscape bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_42",
+        "title": "Starflower Blue Bowl",
+        "image": "/assets/img/waterlight-edits-11.jpg",
+        "image_alt": "Hand-thrown blue bowl with a star motif at the center",
+        "categories": "bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_43",
+        "title": "Lemon Grove Bowl",
+        "image": "/assets/img/waterlight-edits-12.jpg",
+        "image_alt": "Hand-painted bowl with lemons and green leaves",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_44",
+        "title": "Lemon Branch Bowl",
+        "image": "/assets/img/waterlight-edits-13.jpg",
+        "image_alt": "Hand-painted bowl with lemons on leafy branches",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_45",
+        "title": "Bee & Vine Cup",
+        "image": "/assets/img/waterlight-edits-14.jpg",
+        "image_alt": "Hand-painted cup with trailing leaves and honeybees",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_46",
+        "title": "Honeybee Garden Bowl",
+        "image": "/assets/img/waterlight-edits-15.jpg",
+        "image_alt": "Hand-painted bowl with vines and honeybees",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_47",
+        "title": "Honeybee Meadow Bowl",
+        "image": "/assets/img/waterlight-edits-16.jpg",
+        "image_alt": "Hand-painted bowl with leaves and honeybees",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_48",
+        "title": "Sunset Sail Cup",
+        "image": "/assets/img/waterlight-edits-17.jpg",
+        "image_alt": "Hand-painted cup with sailboats at sunset",
+        "categories": "coastal vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_49",
+        "title": "Marsh Reeds Vase",
+        "image": "/assets/img/waterlight-edits-18.jpg",
+        "image_alt": "Hand-painted vase with green marsh reeds",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_50",
+        "title": "Palm Cove Cup",
+        "image": "/assets/img/waterlight-edits-19.jpg",
+        "image_alt": "Hand-painted cup with a single palm tree",
+        "categories": "coastal vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_51",
+        "title": "Palm Grove Cup",
+        "image": "/assets/img/waterlight-edits-20.jpg",
+        "image_alt": "Hand-painted cup with palm trees",
+        "categories": "coastal vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_52",
+        "title": "Wild Rose Cup",
+        "image": "/assets/img/waterlight-edits-21.jpg",
+        "image_alt": "Hand-painted cup with a pink and white wild rose",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_53",
+        "title": "Spring Poppy Cup",
+        "image": "/assets/img/waterlight-edits-22.jpg",
+        "image_alt": "Hand-painted cup with peach poppies",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_54",
+        "title": "Trailing Vine Vase",
+        "image": "/assets/img/waterlight-edits-23.jpg",
+        "image_alt": "Hand-painted vase with trailing vines and berries",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_55",
+        "title": "Desert Palm Vase",
+        "image": "/assets/img/waterlight-edits-24.jpg",
+        "image_alt": "Hand-painted vase with a palm tree and foliage",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_56",
+        "title": "Twin Palms Vase",
+        "image": "/assets/img/waterlight-edits-25.jpg",
+        "image_alt": "Hand-painted vase with two palm trees",
+        "categories": "coastal vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_57",
+        "title": "Iris Garden Cup",
+        "image": "/assets/img/waterlight-edits-26.jpg",
+        "image_alt": "Hand-painted cup with purple irises",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_58",
+        "title": "Pussy Willow Vase",
+        "image": "/assets/img/waterlight-edits-27.jpg",
+        "image_alt": "Hand-painted vase with pussy willow branches",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_59",
+        "title": "Lone Tree Vase",
+        "image": "/assets/img/waterlight-edits-28.jpg",
+        "image_alt": "Hand-painted vase with a lone tree on a hillside",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_60",
+        "title": "Autumn Leaf Bowl",
+        "image": "/assets/img/waterlight-edits-29.jpg",
+        "image_alt": "Hand-painted bowl with green leaves and golden wash",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_61",
+        "title": "Ladybug Cup",
+        "image": "/assets/img/waterlight-edits-30.jpg",
+        "image_alt": "Hand-painted cup scattered with ladybugs",
+        "categories": "vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_62",
+        "title": "Pastel Grove Bowl",
+        "image": "/assets/img/waterlight-edits-31.jpg",
+        "image_alt": "Hand-painted bowl with pastel trees",
+        "categories": "landscape bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_63",
+        "title": "Blue Iris Cup",
+        "image": "/assets/img/waterlight-edits-32.jpg",
+        "image_alt": "Hand-painted cup with blue irises",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_64",
+        "title": "Lavender Iris Cup",
+        "image": "/assets/img/waterlight-edits-33.jpg",
+        "image_alt": "Hand-painted cup with lavender irises",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_65",
+        "title": "Berry Branch Cup",
+        "image": "/assets/img/waterlight-edits-34.jpg",
+        "image_alt": "Hand-painted cup with pink berry branches",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_66",
+        "title": "Palm Frond Cup",
+        "image": "/assets/img/waterlight-edits-35.jpg",
+        "image_alt": "Hand-painted cup with a palm frond",
+        "categories": "coastal vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_67",
+        "title": "Hillside Walk Cup",
+        "image": "/assets/img/waterlight-edits-36.jpg",
+        "image_alt": "Hand-painted cup with a figure walking a hillside path",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_68",
+        "title": "Lemon Orchard Cup",
+        "image": "/assets/img/waterlight-edits-37.jpg",
+        "image_alt": "Hand-painted cup with lemons and leaves",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_69",
+        "title": "Dandelion Cup",
+        "image": "/assets/img/waterlight-edits-38.jpg",
+        "image_alt": "Hand-painted cup with white dandelions",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_70",
+        "title": "Painter's Path Cup",
+        "image": "/assets/img/waterlight-edits-39.jpg",
+        "image_alt": "Hand-painted cup with a painter and black cat in a landscape",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_71",
+        "title": "Blossom Cup",
+        "image": "/assets/img/waterlight-edits-40.jpg",
+        "image_alt": "Hand-painted cup with pink blossoms",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_72",
+        "title": "Sailboat Bay Cup",
+        "image": "/assets/img/waterlight-edits-41.jpg",
+        "image_alt": "Hand-painted cup with a white sailboat on the bay",
+        "categories": "coastal vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_73",
+        "title": "Tulip Cup",
+        "image": "/assets/img/waterlight-edits-42.jpg",
+        "image_alt": "Hand-painted cup with pink tulips",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_74",
+        "title": "Wisteria Drift Vase",
+        "image": "/assets/img/waterlight-edits-43.jpg",
+        "image_alt": "Hand-painted vase with drifting wisteria vines",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_75",
+        "title": "Wisteria Cup",
+        "image": "/assets/img/waterlight-edits-44.jpg",
+        "image_alt": "Hand-painted cup with purple wisteria",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_76",
+        "title": "Dolphin Sea Bowl",
+        "image": "/assets/img/waterlight-edits-45.jpg",
+        "image_alt": "Hand-painted bowl with blue dolphins",
+        "categories": "coastal bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_77",
+        "title": "Spring Sprig Bowl",
+        "image": "/assets/img/waterlight-edits-46.jpg",
+        "image_alt": "Hand-thrown blue bowl with delicate green sprigs",
+        "categories": "bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_78",
+        "title": "Woodland Tree Cup",
+        "image": "/assets/img/waterlight-edits-47.jpg",
+        "image_alt": "Hand-painted cup with bare woodland trees",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_79",
+        "title": "Iris Field Cup",
+        "image": "/assets/img/waterlight-edits-48.jpg",
+        "image_alt": "Hand-painted cup with a field of purple irises",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_80",
+        "title": "Rosebud Bowl",
+        "image": "/assets/img/waterlight-edits-49.jpg",
+        "image_alt": "Hand-painted bowl with tiny pink rosebuds",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_81",
+        "title": "Seashell & Star Bowl",
+        "image": "/assets/img/waterlight-edits-50.jpg",
+        "image_alt": "Hand-painted bowl with a seashell and starfish",
+        "categories": "coastal bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_82",
+        "title": "Abalone Shell Bowl",
+        "image": "/assets/img/waterlight-edits-51.jpg",
+        "image_alt": "Hand-painted bowl with abalone and spiral shells",
+        "categories": "coastal bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_83",
+        "title": "Sunlit Grove Cup",
+        "image": "/assets/img/waterlight-edits-52.jpg",
+        "image_alt": "Hand-painted cup with a sunlit pastel grove",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_84",
+        "title": "Purple Iris Cup",
+        "image": "/assets/img/waterlight-edits-53.jpg",
+        "image_alt": "Hand-painted cup with purple irises",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_85",
+        "title": "Pussy Willow Branch Vase",
+        "image": "/assets/img/waterlight-edits-54.jpg",
+        "image_alt": "Hand-painted vase with pussy willow branches",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_86",
+        "title": "Tree at Dawn Cup",
+        "image": "/assets/img/waterlight-edits-55.jpg",
+        "image_alt": "Hand-painted cup with a tree against a pink dawn sky",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_87",
+        "title": "Butterfly Cup",
+        "image": "/assets/img/waterlight-edits-56.jpg",
+        "image_alt": "Hand-painted cup with pastel butterflies",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_88",
+        "title": "Butterfly Meadow Cup",
+        "image": "/assets/img/waterlight-edits-57.jpg",
+        "image_alt": "Hand-painted cup with butterflies in a meadow",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_89",
+        "title": "Spring Branch Cup",
+        "image": "/assets/img/waterlight-edits-58.jpg",
+        "image_alt": "Hand-painted cup with budding spring branches",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_90",
+        "title": "Castle Hill Cup",
+        "image": "/assets/img/waterlight-edits-59.jpg",
+        "image_alt": "Hand-painted cup with a castle on a green hill",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_91",
+        "title": "Olive Branch Bowl",
+        "image": "/assets/img/waterlight-edits-60.jpg",
+        "image_alt": "Hand-painted bowl with olive branches",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_92",
+        "title": "Bee Garden Bowl",
+        "image": "/assets/img/waterlight-edits-61.jpg",
+        "image_alt": "Hand-painted bowl with leaves, berries and honeybees",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_93",
+        "title": "Orange Rose Bowl",
+        "image": "/assets/img/waterlight-edits-62.jpg",
+        "image_alt": "Hand-painted bowl with an orange rose",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
       }
     ]
   },
