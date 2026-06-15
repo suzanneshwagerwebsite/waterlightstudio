@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-15T03:51:29.581Z",
+  "updatedAt": "2026-06-15T03:51:59.445Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -639,7 +639,7 @@
       },
       {
         "id": "gallery_53",
-        "title": "Spring Poppy Cup",
+        "title": "Palm Vase",
         "image": "/assets/img/waterlight-edits-22.jpg",
         "image_alt": "Hand-painted cup with peach poppies",
         "categories": "floral vases",
@@ -657,7 +657,7 @@
       },
       {
         "id": "gallery_55",
-        "title": "Desert Palm Vase",
+        "title": "Trailing Vine Vase",
         "image": "/assets/img/waterlight-edits-24.jpg",
         "image_alt": "Hand-painted vase with a palm tree and foliage",
         "categories": "landscape vases",
