@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-08T02:20:00.855Z",
+  "updatedAt": "2026-06-15T03:49:10.939Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -675,7 +675,7 @@
       },
       {
         "id": "gallery_57",
-        "title": "Iris Garden Cup",
+        "title": "Palm Tree Vase",
         "image": "/assets/img/waterlight-edits-26.jpg",
         "image_alt": "Hand-painted cup with purple irises",
         "categories": "floral vases",
