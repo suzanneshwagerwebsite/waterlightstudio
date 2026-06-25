@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-15T03:52:39.415Z",
+  "updatedAt": "2026-06-25T22:42:15.452Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -128,7 +128,18 @@
       }
     ],
     "page_intro": "\nAmerican Art Pottery Association\nhttps://aapa.info › journal\n",
-    "posts": []
+    "posts": [
+      {
+        "id": "post_1782427333009_tk8c1q",
+        "title": "Exhibits",
+        "date": "",
+        "excerpt": "",
+        "body": "",
+        "cover": "",
+        "cover_alt": "",
+        "visibility": "visible"
+      }
+    ]
   },
   "newsletter": {
     "signup_text": "",
