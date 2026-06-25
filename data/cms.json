@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-25T22:43:51.683Z",
+  "updatedAt": "2026-06-25T22:58:22.241Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -191,11 +191,12 @@
     "items": [
       {
         "id": "gallery_1",
+        "title": "Sunset Tree Vase",
         "image": "/assets/img/sunset-tree-vase.jpg",
         "image_alt": "Handmade vase with painted sunset tree landscape",
-        "title": "Sunset Tree Vase",
         "categories": "landscape vases",
-        "visibility": "visible"
+        "visibility": "visible",
+        "sold": true
       },
       {
         "id": "gallery_2",
