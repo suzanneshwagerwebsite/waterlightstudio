@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T17:03:55.786Z",
+  "updatedAt": "2026-07-06T17:04:34.369Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -282,7 +282,7 @@
       },
       {
         "id": "gallery_34",
-        "title": "Magnolia Bloom Bowl",
+        "title": "Gardenia Bowl",
         "image": "/assets/img/waterlight-edits-03.jpg",
         "image_alt": "Hand-painted bowl with a white magnolia blossom",
         "categories": "floral bowls",
@@ -291,7 +291,7 @@
       },
       {
         "id": "gallery_35",
-        "title": "Cherry Blossom Bowl",
+        "title": "Plumeria Bowl",
         "image": "/assets/img/waterlight-edits-04.jpg",
         "image_alt": "Hand-painted bowl with pink cherry blossoms",
         "categories": "floral bowls",
