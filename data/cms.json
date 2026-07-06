@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T17:03:21.538Z",
+  "updatedAt": "2026-07-06T17:03:55.786Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -300,7 +300,7 @@
       },
       {
         "id": "gallery_36",
-        "title": "Birch Grove Bowl",
+        "title": "Sunrise Bowl",
         "image": "/assets/img/waterlight-edits-05.jpg",
         "image_alt": "Hand-painted bowl with birch trees beside water",
         "categories": "landscape bowls",
