@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T16:53:40.230Z",
+  "updatedAt": "2026-07-06T16:54:17.213Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -534,7 +534,7 @@
       },
       {
         "id": "gallery_62",
-        "title": "Pastel Grove Bowl",
+        "title": "Ginkgo Bowl",
         "image": "/assets/img/waterlight-edits-31.jpg",
         "image_alt": "Hand-painted bowl with pastel trees",
         "categories": "landscape bowls",
