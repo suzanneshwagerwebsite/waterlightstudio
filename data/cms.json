@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T17:04:34.369Z",
+  "updatedAt": "2026-07-06T17:06:09.296Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -200,11 +200,12 @@
       },
       {
         "id": "gallery_2",
+        "title": "Honey Bee Bowl",
         "image": "/assets/img/garden-vine-bowl.jpg",
         "image_alt": "Handmade bowl with trailing garden vines and flowers",
-        "title": "Garden Vine Bowl",
         "categories": "floral bowls",
-        "visibility": "visible"
+        "visibility": "visible",
+        "sold": false
       },
       {
         "id": "gallery_3",
@@ -264,19 +265,10 @@
       },
       {
         "id": "gallery_32",
-        "title": "Dolphin Pod Bowl",
+        "title": "Dolphin Bowl",
         "image": "/assets/img/waterlight-edits-01.jpg",
         "image_alt": "Hand-thrown bowl painted with blue dolphins swimming in a green swirl",
         "categories": "coastal bowls",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_33",
-        "title": "Sunrise Glaze Bowl",
-        "image": "/assets/img/waterlight-edits-02.jpg",
-        "image_alt": "Hand-thrown bowl with soft peach and teal glaze",
-        "categories": "bowls",
         "visibility": "visible",
         "sold": false
       },
