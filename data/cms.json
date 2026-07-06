@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T16:17:15.992Z",
+  "updatedAt": "2026-07-06T16:17:56.037Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -261,33 +261,6 @@
         "title": "Hillside Tree Vase",
         "categories": "landscape vases",
         "visibility": "visible"
-      },
-      {
-        "id": "gallery_1780881054209_jn7s1n",
-        "title": "Iris Vase",
-        "image": "/assets/img/img_9254.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780881104477_9a8wo8",
-        "title": "Willow Vase",
-        "image": "/assets/img/img_9252.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780881161295_te5xf3",
-        "title": "Sunrise Riviera Vase",
-        "image": "/assets/img/img_9250.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
       },
       {
         "id": "gallery_32",
