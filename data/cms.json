@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T16:16:08.007Z",
+  "updatedAt": "2026-07-06T16:16:39.372Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -356,42 +356,6 @@
         "id": "gallery_1780881320916_7iocne",
         "title": "Eucalyptus Sunrise Bowl",
         "image": "/assets/img/img_9244.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780881444101_ykt977",
-        "title": "Palm Branch Vase",
-        "image": "/assets/img/img_9238.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780881598356_dysftg",
-        "title": "Dandelion Vase",
-        "image": "/assets/img/img_9235.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780881655942_w7zc31",
-        "title": "Wisteria Vase",
-        "image": "/assets/img/img_9227.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780881721976_o9h34z",
-        "title": "Autumn Leaves Vase",
-        "image": "/assets/img/img_9232.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
