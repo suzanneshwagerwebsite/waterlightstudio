@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T16:54:53.923Z",
+  "updatedAt": "2026-07-06T16:55:28.221Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -507,7 +507,7 @@
       },
       {
         "id": "gallery_59",
-        "title": "Lone Tree Vase",
+        "title": "Lavender Iris Vase",
         "image": "/assets/img/waterlight-edits-28.jpg",
         "image_alt": "Hand-painted vase with a lone tree on a hillside",
         "categories": "landscape vases",
@@ -516,7 +516,7 @@
       },
       {
         "id": "gallery_60",
-        "title": "Autumn Leaf Bowl",
+        "title": "Willow Vase ",
         "image": "/assets/img/waterlight-edits-29.jpg",
         "image_alt": "Hand-painted bowl with green leaves and golden wash",
         "categories": "floral bowls",
