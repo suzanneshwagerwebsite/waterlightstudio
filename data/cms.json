@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T16:51:18.925Z",
+  "updatedAt": "2026-07-06T16:51:57.526Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -579,7 +579,7 @@
       },
       {
         "id": "gallery_67",
-        "title": "Hillside Walk Vase",
+        "title": "Spring Vase",
         "image": "/assets/img/waterlight-edits-36.jpg",
         "image_alt": "Hand-painted vase with a figure walking a hillside path",
         "categories": "landscape vases",
