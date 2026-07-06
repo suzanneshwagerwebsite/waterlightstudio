@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T16:58:01.535Z",
+  "updatedAt": "2026-07-06T16:58:35.758Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -399,7 +399,7 @@
       },
       {
         "id": "gallery_47",
-        "title": "Honeybee Meadow Bowl",
+        "title": "Honeybee Bowl",
         "image": "/assets/img/waterlight-edits-16.jpg",
         "image_alt": "Hand-painted bowl with leaves and honeybees",
         "categories": "floral bowls",
@@ -417,7 +417,7 @@
       },
       {
         "id": "gallery_49",
-        "title": "Marsh Reeds Vase",
+        "title": "Bee Bowl ",
         "image": "/assets/img/waterlight-edits-18.jpg",
         "image_alt": "Hand-painted vase with green marsh reeds",
         "categories": "landscape vases",
