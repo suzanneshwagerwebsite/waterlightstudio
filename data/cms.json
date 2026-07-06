@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T16:15:23.461Z",
+  "updatedAt": "2026-07-06T16:16:08.007Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -261,60 +261,6 @@
         "title": "Hillside Tree Vase",
         "categories": "landscape vases",
         "visibility": "visible"
-      },
-      {
-        "id": "gallery_1779718825272_w2y3il",
-        "title": "Gardenia Bowl ",
-        "image": "/assets/img/img_9294.jpeg",
-        "image_alt": "",
-        "categories": "Bowls Floral",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1779718916173_ssvotn",
-        "title": "Cherry Blossom Serving Bowl",
-        "image": "/assets/img/img_9284.jpeg",
-        "image_alt": "",
-        "categories": "Bowls Floral",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780624750146_h78eve",
-        "title": "Lemon Bowl",
-        "image": "/assets/img/img_9280.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780624801711_6khva2",
-        "title": "Eucalyptus Sunset Bowl",
-        "image": "/assets/img/img_9277.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780624860863_6njmgc",
-        "title": "Eucalyptus Sunset Bowl (interior)",
-        "image": "/assets/img/img_9278.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780624909031_m2msnz",
-        "title": "Bees and Blossoms Bowl",
-        "image": "/assets/img/img_9272.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
       },
       {
         "id": "gallery_1780624967281_ulisdv",
