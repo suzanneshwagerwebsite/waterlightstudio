@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T19:27:29.151Z",
+  "updatedAt": "2026-07-06T19:28:11.845Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -114,7 +114,7 @@
     "cards": [
       {
         "id": "journal_1",
-        "title": "Painting with wisteria glazes",
+        "title": "Painting with underglaze and stains",
         "image": "/assets/img/wisteria-bowl.jpg",
         "image_alt": "Handmade bowl with cascading purple wisteria",
         "visibility": "visible"
