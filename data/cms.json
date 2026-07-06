@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T17:02:26.755Z",
+  "updatedAt": "2026-07-06T17:03:21.538Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -309,7 +309,7 @@
       },
       {
         "id": "gallery_37",
-        "title": "Sunset Grove Bowl",
+        "title": "Sunrise Bowl",
         "image": "/assets/img/waterlight-edits-06.jpg",
         "image_alt": "Hand-painted bowl with trees and a red setting sun",
         "categories": "landscape bowls",
@@ -318,7 +318,7 @@
       },
       {
         "id": "gallery_38",
-        "title": "Yellow Hibiscus Bowl",
+        "title": "Plumeria Bowl",
         "image": "/assets/img/waterlight-edits-07.jpg",
         "image_alt": "Hand-painted bowl with a yellow hibiscus flower",
         "categories": "floral bowls",
