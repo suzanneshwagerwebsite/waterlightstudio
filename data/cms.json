@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T16:56:02.572Z",
+  "updatedAt": "2026-07-06T16:56:40.956Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -471,7 +471,7 @@
       },
       {
         "id": "gallery_55",
-        "title": "Desert Palm Vase",
+        "title": "Wild Rose Vase",
         "image": "/assets/img/waterlight-edits-24.jpg",
         "image_alt": "Hand-painted vase with a palm tree and foliage",
         "categories": "landscape vases",
@@ -480,7 +480,7 @@
       },
       {
         "id": "gallery_56",
-        "title": "Twin Palms Vase",
+        "title": "Colorful Vines Vase",
         "image": "/assets/img/waterlight-edits-25.jpg",
         "image_alt": "Hand-painted vase with two palm trees",
         "categories": "coastal vases",
