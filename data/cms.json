@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T17:01:36.126Z",
+  "updatedAt": "2026-07-06T17:02:26.755Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -327,7 +327,7 @@
       },
       {
         "id": "gallery_39",
-        "title": "Pink Blossom Bowl",
+        "title": "Cherry Blossom Bowl",
         "image": "/assets/img/waterlight-edits-08.jpg",
         "image_alt": "Hand-painted bowl with trailing pink blossoms",
         "categories": "floral bowls",
@@ -336,7 +336,7 @@
       },
       {
         "id": "gallery_40",
-        "title": "Cherry Blossom Sun Bowl",
+        "title": "Cherry Blossom Bowl",
         "image": "/assets/img/waterlight-edits-09.jpg",
         "image_alt": "Hand-painted bowl with pink cherry blossoms and a golden center",
         "categories": "floral bowls",
