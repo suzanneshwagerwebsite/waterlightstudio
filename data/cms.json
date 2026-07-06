@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T17:43:06.604Z",
+  "updatedAt": "2026-07-06T18:43:18.253Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -733,7 +733,7 @@
       },
       {
         "id": "gallery_85",
-        "title": "Willow Branch Vase",
+        "title": "Willow Vase",
         "image": "/assets/img/waterlight-edits-54.jpg",
         "image_alt": "Hand-painted vase with willow branches",
         "categories": "floral vases",
