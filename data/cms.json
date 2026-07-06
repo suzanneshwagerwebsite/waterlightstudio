@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T19:31:19.617Z",
+  "updatedAt": "2026-07-06T19:31:44.386Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -11,7 +11,7 @@
     ],
     "showHeroSection": true,
     "showProductsSection": false,
-    "showFeatureSection": true,
+    "showFeatureSection": false,
     "showValuesSection": false,
     "showJournalSection": true,
     "showNewsletterSection": true,
