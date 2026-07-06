@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T16:47:31.948Z",
+  "updatedAt": "2026-07-06T16:48:01.955Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -687,7 +687,7 @@
       },
       {
         "id": "gallery_79",
-        "title": "Iris Field Vase",
+        "title": "Sunrise Vase",
         "image": "/assets/img/waterlight-edits-48.jpg",
         "image_alt": "Hand-painted vase with a field of purple irises",
         "categories": "floral vases",
