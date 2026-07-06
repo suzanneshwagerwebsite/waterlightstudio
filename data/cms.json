@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T16:54:17.213Z",
+  "updatedAt": "2026-07-06T16:54:53.923Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -525,7 +525,7 @@
       },
       {
         "id": "gallery_61",
-        "title": "Ladybug Vase",
+        "title": "Riviera Sunrise Vase",
         "image": "/assets/img/waterlight-edits-30.jpg",
         "image_alt": "Hand-painted vase scattered with ladybugs",
         "categories": "vases",
