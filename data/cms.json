@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T16:56:40.956Z",
+  "updatedAt": "2026-07-06T16:57:15.297Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -444,7 +444,7 @@
       },
       {
         "id": "gallery_52",
-        "title": "Wild Rose Vase",
+        "title": "Palm Bowl",
         "image": "/assets/img/waterlight-edits-21.jpg",
         "image_alt": "Hand-painted vase with a pink and white wild rose",
         "categories": "floral vases",
@@ -453,7 +453,7 @@
       },
       {
         "id": "gallery_53",
-        "title": "Spring Poppy Vase",
+        "title": "Palm Bowl",
         "image": "/assets/img/waterlight-edits-22.jpg",
         "image_alt": "Hand-painted vase with peach poppies",
         "categories": "floral vases",
