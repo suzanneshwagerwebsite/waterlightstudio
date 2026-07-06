@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T16:57:15.297Z",
+  "updatedAt": "2026-07-06T16:58:01.535Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -426,7 +426,7 @@
       },
       {
         "id": "gallery_50",
-        "title": "Palm Cove Vase",
+        "title": "Regatta Bowl",
         "image": "/assets/img/waterlight-edits-19.jpg",
         "image_alt": "Hand-painted vase with a single palm tree",
         "categories": "coastal vases",
@@ -435,7 +435,7 @@
       },
       {
         "id": "gallery_51",
-        "title": "Palm Grove Vase",
+        "title": "Bamboo Vase",
         "image": "/assets/img/waterlight-edits-20.jpg",
         "image_alt": "Hand-painted vase with palm trees",
         "categories": "coastal vases",
