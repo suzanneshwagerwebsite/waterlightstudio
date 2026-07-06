@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T16:16:39.372Z",
+  "updatedAt": "2026-07-06T16:17:15.992Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -263,60 +263,6 @@
         "visibility": "visible"
       },
       {
-        "id": "gallery_1780624967281_ulisdv",
-        "title": "Santa Barbara Regatta Vase",
-        "image": "/assets/img/img_9270.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780625014065_asl26z",
-        "title": "Riviera Palm Bowl",
-        "image": "/assets/img/img_9267.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780625060683_cut8ar",
-        "title": "Wild Rose Vase",
-        "image": "/assets/img/img_9263.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780880775887_pohhwh",
-        "title": "Vines at Sunset Vase",
-        "image": "/assets/img/img_9260.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780880857436_ykeswh",
-        "title": "Palms at Sunset Vase",
-        "image": "/assets/img/img_9256.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780880913972_tj1nzx",
-        "title": "Eucalyptus Sunset Vase",
-        "image": "/assets/img/img_9259.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
         "id": "gallery_1780881054209_jn7s1n",
         "title": "Iris Vase",
         "image": "/assets/img/img_9254.jpeg",
@@ -338,24 +284,6 @@
         "id": "gallery_1780881161295_te5xf3",
         "title": "Sunrise Riviera Vase",
         "image": "/assets/img/img_9250.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780881261697_22tev1",
-        "title": "Ginkgo Bowl",
-        "image": "/assets/img/img_9248.jpeg",
-        "image_alt": "",
-        "categories": "",
-        "visibility": "visible",
-        "sold": false
-      },
-      {
-        "id": "gallery_1780881320916_7iocne",
-        "title": "Eucalyptus Sunrise Bowl",
-        "image": "/assets/img/img_9244.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
