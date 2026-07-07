@@ -119,6 +119,12 @@
   color: rgba(22, 24, 26, 0.55);
 }
 
+.gallery-card__price {
+  font-size: 0.72rem;
+  color: rgba(22, 24, 26, 0.42);
+  letter-spacing: 0.02em;
+}
+
 .gallery-card__open {
   display: none;
 }

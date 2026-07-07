@@ -530,6 +530,7 @@
                 <div class="admin-form-group"><label>Image</label><input type="hidden" id="gitem-image"><input type="file" id="gitem-image-file" accept="image/*" onchange="handleFilePick(this,'gitem-image')" hidden><img id="gitem-image-preview" class="admin-preview-img" src="" alt="" hidden><button type="button" class="admin-btn admin-img-browse" onclick="document.getElementById('gitem-image-file').click()">Browse</button></div>
                 <input type="hidden" id="gitem-image-alt">
                 <div class="admin-form-group"><label for="gitem-categories">Categories (space-separated)</label><input type="text" id="gitem-categories" placeholder="coast portrait studio travel"></div>
+                <div class="admin-form-group"><label for="gitem-price">Price (USD, numbers only)</label><input type="text" id="gitem-price" inputmode="numeric" placeholder="250"></div>
                 <div class="admin-form-group"><label for="gitem-visibility">Visibility</label>
                     <select id="gitem-visibility"><option value="visible">Visible</option><option value="hidden">Hidden</option></select>
                 </div>
@@ -1297,6 +1298,7 @@
             document.getElementById('gitem-image-alt').value = g.image_alt || '';
             showPreview('gitem-image');
             document.getElementById('gitem-categories').value = g.categories || '';
+            document.getElementById('gitem-price').value = g.price || '';
             document.getElementById('gitem-visibility').value = g.visibility || 'visible';
             document.getElementById('gitem-sold').checked = !!g.sold;
             openModal('gallery-item-modal');
@@ -1318,7 +1320,7 @@
         document.getElementById('gallery-item-form').addEventListener('submit', (e) => {
             e.preventDefault();
             const id = document.getElementById('gitem-id').value;
-            const item = { id: id || generateId('gallery'), title: document.getElementById('gitem-title').value, image: document.getElementById('gitem-image').value, image_alt: document.getElementById('gitem-image-alt').value, categories: document.getElementById('gitem-categories').value, visibility: document.getElementById('gitem-visibility').value, sold: document.getElementById('gitem-sold').checked };
+            const item = { id: id || generateId('gallery'), title: document.getElementById('gitem-title').value, image: document.getElementById('gitem-image').value, image_alt: document.getElementById('gitem-image-alt').value, categories: document.getElementById('gitem-categories').value, visibility: document.getElementById('gitem-visibility').value, sold: document.getElementById('gitem-sold').checked, price: document.getElementById('gitem-price').value.replace(/[$,\s]/g, '') };
             if (id) { const idx = cmsData.gallery.items.findIndex(x => x.id === id); if (idx !== -1) cmsData.gallery.items[idx] = item; }
             else { cmsData.gallery.items.push(item); }
             save('gallery-update');
