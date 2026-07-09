@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-09T20:29:22.783Z",
+  "updatedAt": "2026-07-09T20:30:35.578Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -443,12 +443,13 @@
       },
       {
         "id": "gallery_54",
-        "title": "Trailing Vine Vase",
+        "title": "Wild Rose Vase",
         "image": "/assets/img/waterlight-edits-23.jpg",
         "image_alt": "Hand-painted vase with trailing vines and berries",
         "categories": "floral vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": ""
       },
       {
         "id": "gallery_55",
