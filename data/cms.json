@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-09T20:30:35.578Z",
+  "updatedAt": "2026-07-09T20:31:34.069Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -471,12 +471,13 @@
       },
       {
         "id": "gallery_57",
-        "title": "Iris Garden Vase",
+        "title": "Riviera Palm Vase",
         "image": "/assets/img/waterlight-edits-26.jpg",
         "image_alt": "Hand-painted vase with purple irises",
         "categories": "floral vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": ""
       },
       {
         "id": "gallery_58",
