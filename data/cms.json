@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-09T20:31:34.069Z",
+  "updatedAt": "2026-07-11T02:08:51.695Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -185,7 +185,8 @@
         "image_alt": "Handmade vase with painted sunset tree landscape",
         "categories": "landscape vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_2",
