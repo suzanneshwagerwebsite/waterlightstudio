@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-23T03:01:26.501Z",
+  "updatedAt": "2026-07-23T03:02:16.386Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -247,11 +247,13 @@
       },
       {
         "id": "gallery_9",
+        "title": "Hillside Tree Vase",
         "image": "/assets/img/hillside-tree-vase.jpg",
         "image_alt": "Handmade vase with green hillside tree landscape",
-        "title": "Hillside Tree Vase",
         "categories": "landscape vases",
-        "visibility": "visible"
+        "visibility": "visible",
+        "sold": true,
+        "price": ""
       },
       {
         "id": "gallery_32",
