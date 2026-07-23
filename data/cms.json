@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-23T03:00:46.107Z",
+  "updatedAt": "2026-07-23T03:01:26.501Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -781,6 +781,16 @@
         "id": "gallery_1784775640869_q46i72",
         "title": "Palm Trees at Dusk",
         "image": "/assets/img/img_0510.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1784775682451_9reatv",
+        "title": "Mountain Peaks Jar",
+        "image": "/assets/img/img_0502.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
