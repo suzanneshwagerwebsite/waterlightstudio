@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-23T03:02:16.386Z",
+  "updatedAt": "2026-07-23T03:04:01.617Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -392,12 +392,13 @@
       },
       {
         "id": "gallery_48",
-        "title": "Sunset Sail Vase",
+        "title": "Honey Bee Bowl",
         "image": "/assets/img/waterlight-edits-17.jpg",
         "image_alt": "Hand-painted vase with sailboats at sunset",
         "categories": "coastal vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": ""
       },
       {
         "id": "gallery_49",
