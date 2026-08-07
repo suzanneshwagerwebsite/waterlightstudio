@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T01:42:50.935Z",
+  "updatedAt": "2026-08-07T19:22:12.457Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -797,6 +797,16 @@
         "id": "gallery_1784775682451_9reatv",
         "title": "Mountain Peaks Jar",
         "image": "/assets/img/img_0502.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130527532_n6fdy2",
+        "title": "Eucalyptus in the Wind",
+        "image": "/assets/img/img_0799.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
