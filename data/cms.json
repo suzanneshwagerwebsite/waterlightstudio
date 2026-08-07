@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:34:09.614Z",
+  "updatedAt": "2026-08-07T19:34:49.577Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -977,6 +977,16 @@
         "id": "gallery_1786131245319_862r82",
         "title": "Rosebud Jar",
         "image": "/assets/img/img_0752.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131283952_s0cuqd",
+        "title": "Lavender Plate",
+        "image": "/assets/img/img_0751.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
