@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:36:24.860Z",
+  "updatedAt": "2026-08-07T19:36:54.082Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -1007,6 +1007,16 @@
         "id": "gallery_1786131380503_lptv9j",
         "title": "Tangerine Plate",
         "image": "/assets/img/img_0749.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131409603_b9mcjn",
+        "title": "Plumeria Jar",
+        "image": "/assets/img/img_0727.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
