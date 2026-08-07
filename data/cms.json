@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:23:37.554Z",
+  "updatedAt": "2026-08-07T19:25:22.504Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -817,6 +817,46 @@
         "id": "gallery_1786130558315_706ib8",
         "title": "Wysteria Plate",
         "image": "/assets/img/img_0796.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130617516_i9y6us",
+        "title": "Cherry Blossom Spring Bowl",
+        "image": "/assets/img/img_0792.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130644450_u2rztl",
+        "title": "Leaf Cup",
+        "image": "/assets/img/img_0787.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130684033_4mcj4p",
+        "title": "Wysteria Vine ",
+        "image": "/assets/img/img_0784.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130706533_w6trq6",
+        "title": "Plumeria Cup",
+        "image": "/assets/img/img_0783.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
