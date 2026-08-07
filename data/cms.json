@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:30:14.297Z",
+  "updatedAt": "2026-08-07T19:30:53.853Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -927,6 +927,16 @@
         "id": "gallery_1786131008051_6kbnm1",
         "title": "Grapes Plate",
         "image": "/assets/img/img_0768.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131048151_4bawz6",
+        "title": "Rosebud Bowl",
+        "image": "/assets/img/img_0763.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
