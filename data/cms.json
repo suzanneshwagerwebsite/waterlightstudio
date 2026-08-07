@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T01:40:56.060Z",
+  "updatedAt": "2026-08-07T01:41:54.836Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -463,7 +463,8 @@
         "image_alt": "Hand-painted vase with a palm tree and foliage",
         "categories": "landscape vases",
         "visibility": "visible",
-        "sold": false
+        "sold": true,
+        "price": ""
       },
       {
         "id": "gallery_56",
@@ -572,7 +573,8 @@
         "image_alt": "Hand-painted vase with a figure walking a hillside path",
         "categories": "landscape vases",
         "visibility": "visible",
-        "sold": false
+        "sold": true,
+        "price": ""
       },
       {
         "id": "gallery_68",
