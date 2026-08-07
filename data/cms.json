@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:35:24.455Z",
+  "updatedAt": "2026-08-07T19:36:24.860Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -997,6 +997,16 @@
         "id": "gallery_1786131320053_7slvcc",
         "title": "Grapes Plate medium",
         "image": "/assets/img/img_0750.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131380503_lptv9j",
+        "title": "Tangerine Plate",
+        "image": "/assets/img/img_0749.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
