@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:30:53.853Z",
+  "updatedAt": "2026-08-07T19:31:29.217Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -937,6 +937,16 @@
         "id": "gallery_1786131048151_4bawz6",
         "title": "Rosebud Bowl",
         "image": "/assets/img/img_0763.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131084369_uuzc97",
+        "title": "Rosebud Vase",
+        "image": "/assets/img/img_0762.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
