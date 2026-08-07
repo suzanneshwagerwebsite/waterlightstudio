@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:44:03.551Z",
+  "updatedAt": "2026-08-07T19:45:43.208Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -1087,6 +1087,16 @@
         "id": "gallery_1786131836486_vc36ac",
         "title": "Meadow and Leaves Bowl",
         "image": "/assets/img/img_0733.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131937021_0q229o",
+        "title": "Meadow and Leaves Vase",
+        "image": "/assets/img/img_0725.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
