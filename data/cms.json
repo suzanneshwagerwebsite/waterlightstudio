@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:28:52.538Z",
+  "updatedAt": "2026-08-07T19:29:28.536Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -907,6 +907,16 @@
         "id": "gallery_1786130925551_u3k3q1",
         "title": "Sage Bowl",
         "image": "/assets/img/img_0769.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130963534_b1g0el",
+        "title": "Grapes Plate",
+        "image": "/assets/img/img_0767.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
