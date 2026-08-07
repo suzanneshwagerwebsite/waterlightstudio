@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:40:11.134Z",
+  "updatedAt": "2026-08-07T19:40:49.036Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -1057,6 +1057,16 @@
         "id": "gallery_1786131605937_xhq0o1",
         "title": "Willow Vase",
         "image": "/assets/img/img_0741.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131643604_5xqynr",
+        "title": "California Sunrise Vase",
+        "image": "/assets/img/img_0740.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
