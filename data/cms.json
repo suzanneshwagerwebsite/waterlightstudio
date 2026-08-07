@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:39:32.392Z",
+  "updatedAt": "2026-08-07T19:40:11.134Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -1047,6 +1047,16 @@
         "id": "gallery_1786131567520_8a1lqp",
         "title": "California Poppy Jar",
         "image": "/assets/img/img_0742.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131605937_xhq0o1",
+        "title": "Willow Vase",
+        "image": "/assets/img/img_0741.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
