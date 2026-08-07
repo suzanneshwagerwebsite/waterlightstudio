@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:36:54.082Z",
+  "updatedAt": "2026-08-07T19:38:05.957Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -1017,6 +1017,16 @@
         "id": "gallery_1786131409603_b9mcjn",
         "title": "Plumeria Jar",
         "image": "/assets/img/img_0727.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131481020_visy6e",
+        "title": "Spring Blossoms Bowl",
+        "image": "/assets/img/img_0745.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
