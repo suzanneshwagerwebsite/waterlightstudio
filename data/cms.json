@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T00:49:19.454Z",
+  "updatedAt": "2026-08-07T01:40:56.060Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -262,7 +262,8 @@
         "image_alt": "Hand-thrown bowl painted with blue dolphins swimming in a green swirl",
         "categories": "coastal bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": true,
+        "price": ""
       },
       {
         "id": "gallery_34",
