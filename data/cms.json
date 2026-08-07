@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:27:52.902Z",
+  "updatedAt": "2026-08-07T19:28:27.250Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -887,6 +887,16 @@
         "id": "gallery_1786130867134_jw5tsg",
         "title": "Wild Herbs Plate",
         "image": "/assets/img/img_0776.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130902368_q194rv",
+        "title": "Sage Bowl",
+        "image": "/assets/img/img_0770.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
