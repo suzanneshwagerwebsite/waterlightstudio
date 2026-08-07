@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:33:33.562Z",
+  "updatedAt": "2026-08-07T19:34:09.614Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -967,6 +967,16 @@
         "id": "gallery_1786131208901_ewuzy6",
         "title": "Windy Branches",
         "image": "/assets/img/img_0755.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131245319_862r82",
+        "title": "Rosebud Jar",
+        "image": "/assets/img/img_0752.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
