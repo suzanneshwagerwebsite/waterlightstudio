@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:47:30.292Z",
+  "updatedAt": "2026-08-07T19:48:06.623Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -1117,6 +1117,16 @@
         "id": "gallery_1786132045503_mithra",
         "title": "China Sunset Jar",
         "image": "/assets/img/img_0721.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786132080855_5k93c9",
+        "title": "China Sunset Jar lid",
+        "image": "/assets/img/img_0722.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
