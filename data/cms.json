@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:25:22.504Z",
+  "updatedAt": "2026-08-07T19:26:50.771Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -857,6 +857,16 @@
         "id": "gallery_1786130706533_w6trq6",
         "title": "Plumeria Cup",
         "image": "/assets/img/img_0783.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130805401_n2mtu7",
+        "title": "Peach Rose Bowl",
+        "image": "/assets/img/img_0781.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
