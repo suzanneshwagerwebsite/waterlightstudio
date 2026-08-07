@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:46:34.369Z",
+  "updatedAt": "2026-08-07T19:47:30.292Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -1107,6 +1107,16 @@
         "id": "gallery_1786131989470_g4mwqj",
         "title": "Elderberry Bowl",
         "image": "/assets/img/img_0724.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786132045503_mithra",
+        "title": "China Sunset Jar",
+        "image": "/assets/img/img_0721.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
