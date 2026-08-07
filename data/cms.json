@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:40:49.036Z",
+  "updatedAt": "2026-08-07T19:41:43.742Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -1067,6 +1067,16 @@
         "id": "gallery_1786131643604_5xqynr",
         "title": "California Sunrise Vase",
         "image": "/assets/img/img_0740.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131698553_dbkchl",
+        "title": "California Poppy Bowl",
+        "image": "/assets/img/img_0730.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
