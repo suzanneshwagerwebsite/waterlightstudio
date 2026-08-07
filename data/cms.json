@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:38:05.957Z",
+  "updatedAt": "2026-08-07T19:38:53.870Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -1027,6 +1027,16 @@
         "id": "gallery_1786131481020_visy6e",
         "title": "Spring Blossoms Bowl",
         "image": "/assets/img/img_0745.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131529370_dbsnci",
+        "title": "Herb Vines Bowl",
+        "image": "/assets/img/img_0747.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
