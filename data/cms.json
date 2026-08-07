@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:41:43.742Z",
+  "updatedAt": "2026-08-07T19:44:03.551Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -1077,6 +1077,16 @@
         "id": "gallery_1786131698553_dbkchl",
         "title": "California Poppy Bowl",
         "image": "/assets/img/img_0730.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131836486_vc36ac",
+        "title": "Meadow and Leaves Bowl",
+        "image": "/assets/img/img_0733.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
