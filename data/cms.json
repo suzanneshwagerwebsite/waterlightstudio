@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T19:31:56.525Z",
+  "updatedAt": "2026-08-07T19:33:33.562Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -957,6 +957,16 @@
         "id": "gallery_1786131111668_scosoa",
         "title": "Rosebud Plate",
         "image": "/assets/img/img_0760.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131208901_ewuzy6",
+        "title": "Windy Branches",
+        "image": "/assets/img/img_0755.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
