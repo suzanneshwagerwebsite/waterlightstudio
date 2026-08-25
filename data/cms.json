@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-17T16:15:41.935Z",
+  "updatedAt": "2026-08-25T16:07:50.745Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -156,8 +156,8 @@
     "engagement": [
       {
         "id": "engage_1",
-        "title": "Editorial Day Session",
-        "description": "Ideal for founder portraits, homepage narrative moments, and launch campaign assets."
+        "title": "New Happenings in the studio",
+        "description": ""
       },
       {
         "id": "engage_2",
