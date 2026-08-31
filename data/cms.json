@@ -25,14 +25,15 @@
     "logoSize": 7,
     "brandTitleSize": 4,
     "navLinkSize": 1.5,
-    "showGalleryHero": true
+    "showGalleryHero": true,
+    "showAboutExtra": true
   },
   "hero": {
     "title": "Fine Art Pottery",
     "cta_text": "View Gallery",
     "cta_link": "/gallery/",
-    "image": "/assets/img/screen-shot-2026-07-31-at-9.30.05-pm-2.png",
-    "image_alt": "Handmade ceramic objects styled in neutral tones"
+    "image": "/assets/img/shoot-showroom-shelves.jpg",
+    "image_alt": "Showroom shelves lined with hand-painted Waterlight Studio pottery"
   },
   "products": {
     "section_title": "View our favorite ceramics",
@@ -69,8 +70,8 @@
     ]
   },
   "feature": {
-    "image": "/assets/img/meadow-sunset-bowl.jpg",
-    "image_alt": "Handmade bowl with painted meadow and sunset landscape",
+    "image": "/assets/img/shoot-landscape-bowl.jpg",
+    "image_alt": "Hand-thrown bowl painted with a coastal landscape scene",
     "title": "Collectibles",
     "description": "Every Waterlight piece is hand-thrown, kiln-fired, and finished in small batches.",
     "link_text": "Learn More",
@@ -97,7 +98,7 @@
     ]
   },
   "journal": {
-    "intro_text": "It all begins with an idea. Maybe you want a collection for your table. Maybe you want heirloom pieces that feel grounded and personal.",
+    "intro_text": "It all begins with an idea. Maybe you want a collection for your table.",
     "cta_text": "All Posts",
     "cta_link": "/journal/",
     "cards": [
@@ -128,7 +129,8 @@
         "cover_alt": "",
         "visibility": "visible"
       }
-    ]
+    ],
+    "events": []
   },
   "newsletter": {
     "signup_text": "",
@@ -144,8 +146,8 @@
     "origin_title": "Studio Origin",
     "origin_text_1": "Suzanne's home studio in the Riviera district of Santa Barbara California is a beautiful inspiration for her designs. The views of the Santa Barbara marina, Spanish tiled homes, and scenic foothills are reminiscent of early California days. Her over glazes cast a subtle vintage tone over carefully drawn underglazes. Her travels to the countries of Italy, Greece, France, and Spain have brought a Mediterranean flair to her home pottery studio. ",
     "origin_text_2": "After Suzanne completes a group of individual hand thrown pieces she will bring them to her small art gallery for display. The art gallery is located in the Arlington district in downtown Santa Barbara at 18 West Micheltorena Street Suite D Santa Barbara California 93101. Suzanne can be contacted by sending her a message through email located in the contact tab. ",
-    "origin_image": "/assets/img/img_5748-1.jpeg",
-    "origin_image_alt": "Handmade planter with painted palm trees and beach scene",
+    "origin_image": "/assets/img/shoot-wisteria-vase.jpg",
+    "origin_image_alt": "Hand-painted wisteria vase on a stone ledge",
     "principles": [
       {
         "id": "principle_1",
@@ -164,7 +166,11 @@
         "title": "Brand Narrative Package",
         "description": "Multi-location coverage and expanded library for website, social, and seasonal releases."
       }
-    ]
+    ],
+    "extra_title": "From the Studio",
+    "extra_text": "New work is always underway at the wheel. This space is for a closer look at the studio, the process, and the pieces in progress.",
+    "extra_image": "/assets/img/shoot-waterlight-sign.jpg",
+    "extra_image_alt": "Waterlight Studio sign on the showroom wall beside a palm"
   },
   "gallery": {
     "kicker": "Image Library",

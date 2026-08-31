@@ -62,6 +62,15 @@
           </div>
         </section>
 
+        <section class="section" data-events-section hidden>
+          <div class="container">
+            <div class="section-heading">
+              <h2>Upcoming Events</h2>
+            </div>
+            <div class="grid grid-2" data-events-grid></div>
+          </div>
+        </section>
+
         <section class="section">
           <div class="container">
             <div class="journal-grid" data-journal-grid>
@@ -87,7 +96,7 @@
       </footer>
     </div>
 
-    <script src="/cms-client.js"></script>
+    <script src="/cms-client.js?v=3"></script>
     <script src="/assets/js/main.js" defer></script>
     <script src="/assets/js/reveal.js" defer></script>
     <script>
@@ -98,6 +107,28 @@
 
           const intro = document.querySelector('[data-journal-page-intro]');
           if (intro && j.page_intro) intro.textContent = j.page_intro;
+
+          const esc = s => String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+          const eventsSection = document.querySelector('[data-events-section]');
+          const eventsGrid = document.querySelector('[data-events-grid]');
+          const events = Array.isArray(j.events) ? j.events.filter(ev => ev && ev.visibility !== 'hidden') : [];
+          if (eventsSection && eventsGrid && events.length) {
+            eventsGrid.innerHTML = events.map(ev => {
+              const meta = [ev.date, ev.location].filter(Boolean).map(esc).join(' · ');
+              const metaLine = meta ? `<p class="journal-card__date">${meta}</p>` : '';
+              const desc = ev.description
+                ? ev.description.split(/\n{2,}/).map(par => '<p>' + esc(par).replace(/\n/g, '<br>') + '</p>').join('')
+                : '';
+              const link = ev.link ? `<p><a href="${esc(ev.link)}" target="_blank" rel="noopener">${esc(ev.link_text || 'Event details')}</a></p>` : '';
+              return `<article class="card is-visible">
+                <h3>${esc(ev.title || 'Untitled')}</h3>
+                ${metaLine}
+                ${desc}
+                ${link}
+              </article>`;
+            }).join('');
+            eventsSection.hidden = false;
+          }
 
           const grid = document.querySelector('[data-journal-grid]');
           const empty = document.querySelector('[data-journal-empty]');

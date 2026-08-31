@@ -20,6 +20,7 @@
             showAboutOrigin: true,
             showAboutPrinciples: true,
             showAboutEngagement: true,
+            showAboutExtra: true,
             showAboutCta: true,
             showGalleryFilters: true,
             showGalleryGrid: true,
@@ -31,12 +32,13 @@
         products: { section_title: '', items: [] },
         feature: { image: '', image_alt: '', title: '', description: '', link_text: '', link_url: '' },
         values: { title: '', items: [] },
-        journal: { intro_text: '', cta_text: '', cta_link: '', cards: [], page_intro: '', posts: [] },
+        journal: { intro_text: '', cta_text: '', cta_link: '', cards: [], page_intro: '', posts: [], events: [] },
         newsletter: { signup_text: '', image: '', image_alt: '', instagram_text: '' },
         about: {
             kicker: '', hero_title: '', hero_description: '', bio: '',
             origin_title: '', origin_text_1: '', origin_text_2: '',
             origin_image: '', origin_image_alt: '',
+            extra_title: '', extra_text: '', extra_image: '', extra_image_alt: '',
             principles: [], engagement: []
         },
         gallery: {
@@ -82,7 +84,8 @@
                 cta_link: (cms.journal && cms.journal.cta_link) || DEFAULT_CMS.journal.cta_link,
                 cards: asArray(cms.journal && cms.journal.cards, DEFAULT_CMS.journal.cards),
                 page_intro: (cms.journal && cms.journal.page_intro) || DEFAULT_CMS.journal.page_intro,
-                posts: asArray(cms.journal && cms.journal.posts, DEFAULT_CMS.journal.posts)
+                posts: asArray(cms.journal && cms.journal.posts, DEFAULT_CMS.journal.posts),
+                events: asArray(cms.journal && cms.journal.events, DEFAULT_CMS.journal.events)
             },
             newsletter: { ...DEFAULT_CMS.newsletter, ...(cms.newsletter || {}) },
             about: {

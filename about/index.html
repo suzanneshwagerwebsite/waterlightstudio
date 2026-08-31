@@ -91,6 +91,29 @@
           </div>
         </section>
 
+        <section class="section" data-section="aboutExtra">
+          <div class="container about-layout">
+            <article class="about-block" data-reveal>
+              <h2 data-about-extra-title>From the Studio</h2>
+              <div data-about-extra-text>
+                <p>
+                  New work is always underway at the wheel. This space is for a closer look at the studio,
+                  the process, and the pieces in progress.
+                </p>
+              </div>
+            </article>
+
+            <figure class="card" data-reveal="right">
+              <img
+                data-about-extra-image
+                src="/assets/img/shoot-waterlight-sign.jpg"
+                alt="Waterlight Studio sign on the showroom wall beside a palm"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </section>
+
         <section class="section" data-section="aboutPrinciples">
           <div class="container">
             <div class="section-heading" data-reveal>
@@ -171,7 +194,7 @@
       </footer>
     </div>
 
-    <script src="/cms-client.js"></script>
+    <script src="/cms-client.js?v=3"></script>
     <script src="/assets/js/main.js" defer></script>
     <script src="/assets/js/reveal.js" defer></script>
     <script>
@@ -194,8 +217,22 @@
           const originPs = document.querySelectorAll('.about-block p');
           if (originPs[0] && a.origin_text_1) originPs[0].textContent = a.origin_text_1;
           if (originPs[1] && a.origin_text_2) originPs[1].textContent = a.origin_text_2;
-          const originImg = document.querySelector('.about-layout .card img');
+          const originImg = document.querySelector('[data-section="aboutOrigin"] .card img');
           if (originImg && a.origin_image) { originImg.src = a.origin_image; originImg.alt = a.origin_image_alt || ''; }
+
+          const extraTitle = document.querySelector('[data-about-extra-title]');
+          if (extraTitle && a.extra_title) extraTitle.textContent = a.extra_title;
+          const extraText = document.querySelector('[data-about-extra-text]');
+          if (extraText && a.extra_text) {
+            extraText.innerHTML = '';
+            a.extra_text.split(/\n{2,}/).forEach(par => {
+              const p = document.createElement('p');
+              p.textContent = par;
+              extraText.appendChild(p);
+            });
+          }
+          const extraImg = document.querySelector('[data-about-extra-image]');
+          if (extraImg && a.extra_image) { extraImg.src = a.extra_image; extraImg.alt = a.extra_image_alt || ''; }
 
           const valGrid = document.querySelector('.values-grid');
           if (valGrid && a.principles.length) {
@@ -216,6 +253,7 @@
             aboutOrigin: 'showAboutOrigin',
             aboutPrinciples: 'showAboutPrinciples',
             aboutEngagement: 'showAboutEngagement',
+            aboutExtra: 'showAboutExtra',
             aboutCta: 'showAboutCta'
           };
           Object.entries(sectionMap).forEach(([key, setting]) => {
