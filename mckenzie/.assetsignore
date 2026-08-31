@@ -22,6 +22,3 @@ worker/
 # Internal docs / repo meta
 docs/
 README.md
-
-# Suzanne McKenzie clone (served by its own "suzannemckenzie" Worker)
-mckenzie/

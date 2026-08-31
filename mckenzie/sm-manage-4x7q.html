@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Admin - Suzanne Schwager McKenzie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;400;500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="/cms-client.js?v=3"></script>
+    <style>
+        :root {
+            --bg: #1a1c1e;
+            --bg-card: #22252a;
+            --bg-input: #2a2d33;
+            --text: #e8e6e1;
+            --text-dim: #9a978f;
+            --accent: #2a3919;
+            --accent-hover: #3a4f26;
+            --danger: #8b3a2a;
+            --border: rgba(255,255,255,0.08);
+            --radius: 0.6rem;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Work Sans", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            min-height: 100vh;
+        }
+        .admin-dashboard { max-width: 64rem; margin: 0 auto; padding: 1.5rem; }
+        .admin-dashboard > nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 1.5rem;
+        }
+        .admin-dashboard > nav a { color: var(--text-dim); text-decoration: none; font-size: 0.88rem; }
+        .admin-dashboard > nav a:hover { color: var(--text); }
+        .admin-brand { font-family: "Lexend", sans-serif; font-weight: 200; font-size: 1.4rem; color: var(--text); }
+        .admin-brand img { height: 1.6rem; margin-right: 0.5rem; vertical-align: middle; filter: invert(1); }
+
+        .admin-header-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+        .admin-header-row h1 { font-family: "Lexend", sans-serif; font-weight: 200; font-size: 1.8rem; }
+
+        .admin-capsule-group { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+        .admin-capsule {
+            padding: 0.45rem 1rem;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-dim);
+            font-size: 0.82rem;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .admin-capsule:hover { border-color: var(--text-dim); color: var(--text); }
+        .admin-capsule.active { background: var(--accent); border-color: var(--accent); color: var(--text); }
+
+        .admin-actions { display: flex; align-items: center; gap: 0.75rem; margin-top: 0.75rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .admin-btn {
+            padding: 0.5rem 1.1rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text);
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .admin-btn:hover { border-color: var(--text-dim); }
+        .admin-btn.primary { background: var(--accent); border-color: var(--accent); }
+        .admin-btn.primary:hover { background: var(--accent-hover); }
+        .admin-btn.danger { color: #e07060; border-color: rgba(224,112,96,0.3); }
+        .admin-btn.danger:hover { background: var(--danger); color: var(--text); }
+        .admin-btn.small { padding: 0.3rem 0.7rem; font-size: 0.78rem; }
+        .admin-empty { color: var(--text-dim); font-size: 0.88rem; }
+
+        .admin-panel { margin-bottom: 2rem; }
+        .admin-panel h2 { font-family: "Lexend", sans-serif; font-weight: 200; font-size: 1.3rem; margin-bottom: 1rem; }
+        .admin-subsection { margin-bottom: 1.5rem; }
+        .admin-subsection h3 { font-size: 0.95rem; color: var(--text-dim); margin-bottom: 0.75rem; }
+
+        .admin-content-list { display: grid; gap: 0.5rem; }
+        .admin-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 1rem;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            gap: 1rem;
+        }
+        .admin-card-info { flex: 1; min-width: 0; }
+        .admin-card-info strong { display: block; font-weight: 500; }
+        .admin-card-info small { color: var(--text-dim); font-size: 0.8rem; }
+        .admin-card-info .admin-thumb {
+            width: 3rem; height: 3rem; border-radius: 0.35rem;
+            object-fit: cover; margin-right: 0.75rem; vertical-align: middle;
+        }
+        .admin-card-thumb { width: 3.2rem; height: 3.2rem; border-radius: 0.35rem; object-fit: cover; flex-shrink: 0; }
+        .admin-card-actions { display: flex; gap: 0.35rem; flex-shrink: 0; }
+        .status-hidden { opacity: 0.45; }
+
+        .admin-sortable-list { display: grid; gap: 0.4rem; }
+        .admin-sortable-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.65rem 1rem;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            cursor: grab;
+        }
+        .admin-sortable-item.dragging { opacity: 0.4; }
+        .admin-drag-handle { cursor: grab; color: var(--text-dim); user-select: none; }
+        .admin-item-name { flex: 1; }
+        .admin-toggle { position: relative; display: inline-block; width: 2.4rem; height: 1.3rem; }
+        .admin-toggle input { opacity: 0; width: 0; height: 0; }
+        .admin-toggle-slider {
+            position: absolute; cursor: pointer; inset: 0;
+            background: var(--bg-input); border-radius: 999px;
+            transition: 0.2s;
+        }
+        .admin-toggle-slider::before {
+            content: ""; position: absolute;
+            height: 1rem; width: 1rem;
+            left: 0.15rem; bottom: 0.15rem;
+            background: var(--text-dim); border-radius: 50%;
+            transition: 0.2s;
+        }
+        .admin-toggle input:checked + .admin-toggle-slider { background: var(--accent); }
+        .admin-toggle input:checked + .admin-toggle-slider::before { transform: translateX(1.1rem); background: var(--text); }
+        .admin-toggle-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+        .admin-toggle-row > span { font-size: 0.9rem; color: var(--text); }
+        .admin-slider-row { display: grid; grid-template-columns: 9rem 1fr 3rem auto; align-items: center; gap: 0.6rem; padding: 0.4rem 0; }
+        .admin-slider-row label { font-size: 0.9rem; color: var(--text); }
+        .admin-slider-row input[type="range"] { width: 100%; }
+        .admin-slider-row .admin-slider-value { font-size: 0.85rem; color: var(--text-dim); text-align: right; font-variant-numeric: tabular-nums; }
+        .admin-slider-row .admin-slider-reset { font-size: 0.75rem; padding: 0.3rem 0.55rem; }
+
+        /* Modal */
+        .admin-modal {
+            display: none;
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.65);
+            align-items: center; justify-content: center;
+            z-index: 1000;
+            padding: 1rem;
+        }
+        .admin-modal-content {
+            background: var(--bg-card);
+            border-radius: 0.8rem;
+            padding: 1.8rem;
+            width: 100%;
+            max-width: 32rem;
+            max-height: 90vh;
+            overflow-y: auto;
+            border: 1px solid var(--border);
+        }
+        .admin-modal-content h2 { font-family: "Lexend", sans-serif; font-weight: 200; margin-bottom: 1.2rem; }
+        .admin-form-group { margin-bottom: 1rem; }
+        .admin-form-group label { display: block; font-size: 0.82rem; color: var(--text-dim); margin-bottom: 0.3rem; }
+        .admin-form-group input,
+        .admin-form-group textarea,
+        .admin-form-group select {
+            width: 100%;
+            padding: 0.55rem 0.75rem;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            color: var(--text);
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+        .admin-form-group textarea { resize: vertical; min-height: 4rem; }
+        .admin-form-group input:focus,
+        .admin-form-group textarea:focus,
+        .admin-form-group select:focus { outline: none; border-color: var(--accent); }
+        .admin-form-actions { display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 1.2rem; }
+
+        .admin-preview-img { max-width: 100%; max-height: 8rem; border-radius: 0.35rem; margin-top: 0.35rem; object-fit: cover; }
+        .admin-img-picker { display: none; }
+        .admin-img-picker input[type="file"] { display: none; }
+        .admin-img-browse { margin-top: 0.4rem; }
+
+        @media (max-width: 40rem) {
+            .admin-header-row { flex-direction: column; align-items: flex-start; }
+            .admin-card { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-dashboard">
+        <nav>
+            <a href="/" class="admin-brand">
+                Suzanne Schwager McKenzie
+            </a>
+            <a href="/">View Site</a>
+        </nav>
+
+        <main>
+            <section class="admin-header-row">
+                <h1>Admin Dashboard</h1>
+                <div class="admin-capsule-group">
+                    <button class="admin-capsule active" data-panel="homepage">Homepage</button>
+                    <button class="admin-capsule" data-panel="journal">Journal</button>
+                    <button class="admin-capsule" data-panel="about">About</button>
+                    <button class="admin-capsule" data-panel="gallery">Gallery</button>
+                    <button class="admin-capsule" data-panel="contact">Contact</button>
+                    <button class="admin-capsule" data-panel="settings">Settings</button>
+                </div>
+            </section>
+
+            <!-- Homepage Panel -->
+            <section class="admin-panel" id="panel-homepage">
+                <div class="admin-subsection">
+                    <h3>Hero Section</h3>
+                    <div class="admin-content-list" id="hero-preview"></div>
+                    <div class="admin-actions"><button id="edit-hero-btn" class="admin-btn primary">Edit Hero</button></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>Product Cards</h3>
+                    <div class="admin-content-list" id="product-list"></div>
+                    <div class="admin-actions"><button id="new-product-btn" class="admin-btn primary">+ New Product</button></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>Feature Section</h3>
+                    <div class="admin-content-list" id="feature-preview"></div>
+                    <div class="admin-actions"><button id="edit-feature-btn" class="admin-btn primary">Edit Feature</button></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>Values Section</h3>
+                    <div class="admin-content-list" id="values-list"></div>
+                    <div class="admin-actions"><button id="new-value-btn" class="admin-btn primary">+ New Value</button></div>
+                </div>
+            </section>
+
+            <!-- Journal Panel -->
+            <section class="admin-panel" id="panel-journal" style="display:none">
+                <div class="admin-subsection">
+                    <h3>Homepage Journal Banner</h3>
+                    <p class="admin-empty" style="margin-bottom: 0.6rem;">The journal teaser at the bottom of the homepage: the intro paragraph and the "All Posts" button.</p>
+                    <div class="admin-form-group"><label for="journal-intro-text">Banner text</label><textarea id="journal-intro-text" rows="3"></textarea></div>
+                    <div class="admin-form-group"><label for="journal-cta-text">Button label</label><input type="text" id="journal-cta-text" placeholder="All Posts"></div>
+                    <input type="hidden" id="journal-cta-link">
+                </div>
+                <div class="admin-subsection">
+                    <h3>Journal Cards <small style="color:#888;font-weight:400">(home page preview)</small></h3>
+                    <div class="admin-content-list" id="journal-list"></div>
+                    <div class="admin-actions"><button id="new-journal-btn" class="admin-btn primary">+ New Journal Card</button></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>Events <small style="color:#888;font-weight:400">(shown at the top of /journal/)</small></h3>
+                    <div class="admin-content-list" id="events-list"></div>
+                    <div class="admin-actions"><button id="new-event-btn" class="admin-btn primary">+ New Event</button></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>Journal Page Posts</h3>
+                    <p class="admin-empty" style="margin-bottom: 0.6rem;">Full posts shown at /journal/. Each card has title, date, excerpt, body, and optional cover image.</p>
+                    <div class="admin-form-group"><label for="journal-page-intro">Page intro paragraph</label><textarea id="journal-page-intro" rows="2"></textarea></div>
+                    <div class="admin-content-list" id="journal-posts-list"></div>
+                    <div class="admin-actions"><button id="new-journal-post-btn" class="admin-btn primary">+ New Post</button></div>
+                </div>
+            </section>
+
+            <!-- About Panel -->
+            <section class="admin-panel" id="panel-about" style="display:none">
+                <div class="admin-subsection">
+                    <h3>Hero & Origin</h3>
+                    <div class="admin-content-list" id="about-preview"></div>
+                    <div class="admin-actions"><button id="edit-about-btn" class="admin-btn primary">Edit About Content</button></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>Creative Principles</h3>
+                    <div class="admin-content-list" id="principles-list"></div>
+                    <div class="admin-actions"><button id="new-principle-btn" class="admin-btn primary">+ New Principle</button></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>Engagement Model</h3>
+                    <div class="admin-content-list" id="engagement-list"></div>
+                    <div class="admin-actions"><button id="new-engagement-btn" class="admin-btn primary">+ New Tier</button></div>
+                </div>
+            </section>
+
+            <!-- Gallery Panel -->
+            <section class="admin-panel" id="panel-gallery" style="display:none">
+                <div class="admin-subsection">
+                    <h3>Gallery Items</h3>
+                    <div class="admin-content-list" id="gallery-list"></div>
+                    <div class="admin-actions"><button id="new-gallery-btn" class="admin-btn primary">+ New Gallery Item</button></div>
+                </div>
+            </section>
+
+            <!-- Contact Panel -->
+            <section class="admin-panel" id="panel-contact" style="display:none">
+                <div class="admin-subsection">
+                    <h3>Contact Page Copy</h3>
+                    <p class="admin-empty" style="margin-bottom: 0.75rem;">The contact form fields, submit button, and Formspree integration are fixed in code. Edit the intro copy that appears above the form here.</p>
+                    <div class="admin-content-list" id="contact-preview"></div>
+                    <div class="admin-actions"><button id="edit-contact-btn" class="admin-btn primary">Edit Contact Copy</button></div>
+                </div>
+            </section>
+
+            <!-- Settings Panel -->
+            <section class="admin-panel" id="panel-settings" style="display:none">
+                <h2>Section Visibility & Order</h2>
+                <div class="admin-subsection">
+                    <h3>Homepage Sections</h3>
+                    <p class="admin-empty" style="margin-bottom: 0.75rem;">Toggle homepage sections on or off, or drag to reorder.</p>
+                    <div class="admin-sortable-list" id="section-list"></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>About Page Sections</h3>
+                    <p class="admin-empty" style="margin-bottom: 0.75rem;">Toggle About page sections on or off.</p>
+                    <div class="admin-sortable-list" id="about-section-list"></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>Gallery Page Sections</h3>
+                    <p class="admin-empty" style="margin-bottom: 0.75rem;">Toggle Gallery page sections on or off.</p>
+                    <div class="admin-sortable-list" id="gallery-section-list"></div>
+                </div>
+                <div class="admin-subsection">
+                    <h3>Header Sizing</h3>
+                    <p class="admin-empty" style="margin-bottom: 0.75rem;">Adjust logo, brand title, and navigation link sizes. Click "Reset" to revert any slider to the responsive default.</p>
+                    <div class="admin-slider-row" data-slider-row>
+                        <label for="setting-logo-size">Logo size</label>
+                        <input type="range" id="setting-logo-size" data-setting="logoSize" min="2" max="7" step="0.05">
+                        <span class="admin-slider-value" data-slider-value-for="setting-logo-size">—</span>
+                        <button type="button" class="admin-btn admin-slider-reset" data-reset-setting="logoSize">Reset</button>
+                    </div>
+                    <div class="admin-slider-row" data-slider-row>
+                        <label for="setting-brand-title-size">Brand title size</label>
+                        <input type="range" id="setting-brand-title-size" data-setting="brandTitleSize" min="1" max="4" step="0.05">
+                        <span class="admin-slider-value" data-slider-value-for="setting-brand-title-size">—</span>
+                        <button type="button" class="admin-btn admin-slider-reset" data-reset-setting="brandTitleSize">Reset</button>
+                    </div>
+                    <div class="admin-slider-row" data-slider-row>
+                        <label for="setting-nav-link-size">Navigation link size</label>
+                        <input type="range" id="setting-nav-link-size" data-setting="navLinkSize" min="0.7" max="1.5" step="0.02">
+                        <span class="admin-slider-value" data-slider-value-for="setting-nav-link-size">—</span>
+                        <button type="button" class="admin-btn admin-slider-reset" data-reset-setting="navLinkSize">Reset</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="admin-actions" id="cms-sync-controls" style="justify-content:center; padding: 1.5rem 0; border-top: 1px solid var(--border); margin-top: 2rem;">
+            <span id="cms-sync-status" class="admin-empty">Sync idle</span>
+        </footer>
+    </div>
+
+    <!-- Hero Modal -->
+    <div id="hero-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2>Edit Hero</h2>
+            <form id="hero-form">
+                <div class="admin-form-group"><label for="hero-title">Title</label><input type="text" id="hero-title"></div>
+                <div class="admin-form-group"><label for="hero-cta-text">CTA Text</label><input type="text" id="hero-cta-text"></div>
+                <input type="hidden" id="hero-cta-link">
+                <div class="admin-form-group"><label>Image</label><input type="hidden" id="hero-image"><input type="file" id="hero-image-file" accept="image/*" onchange="handleFilePick(this,'hero-image')" hidden><img id="hero-image-preview" class="admin-preview-img" src="" alt="" hidden><button type="button" class="admin-btn admin-img-browse" onclick="document.getElementById('hero-image-file').click()">Browse</button></div>
+                <input type="hidden" id="hero-image-alt">
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2 id="product-modal-title">New Product</h2>
+            <form id="product-form">
+                <input type="hidden" id="product-id">
+                <div class="admin-form-group"><label for="product-title">Title</label><input type="text" id="product-title" required></div>
+                <div class="admin-form-group"><label for="product-desc">Description</label><textarea id="product-desc" rows="3" placeholder="Short description of this piece..."></textarea></div>
+                <div class="admin-form-group"><label>Image</label><input type="hidden" id="product-image"><input type="file" id="product-image-file" accept="image/*" onchange="handleFilePick(this,'product-image')" hidden><img id="product-image-preview" class="admin-preview-img" src="" alt="" hidden><button type="button" class="admin-btn admin-img-browse" onclick="document.getElementById('product-image-file').click()">Browse</button></div>
+                <input type="hidden" id="product-image-alt">
+                <input type="hidden" id="product-learn-link" value="/about/">
+                <input type="hidden" id="product-gallery-link" value="/gallery/">
+                <div class="admin-form-group"><label for="product-visibility">Visibility</label>
+                    <select id="product-visibility"><option value="visible">Visible</option><option value="hidden">Hidden</option></select>
+                </div>
+                <div class="admin-form-group admin-toggle-row">
+                    <span>Mark as sold</span>
+                    <label class="admin-toggle">
+                        <input type="checkbox" id="product-sold">
+                        <span class="admin-toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Feature Modal -->
+    <div id="feature-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2>Edit Feature Section</h2>
+            <form id="feature-form">
+                <div class="admin-form-group"><label for="feature-title">Title</label><input type="text" id="feature-title"></div>
+                <div class="admin-form-group"><label for="feature-desc">Description</label><textarea id="feature-desc" rows="3"></textarea></div>
+                <div class="admin-form-group"><label>Image</label><input type="hidden" id="feature-image"><input type="file" id="feature-image-file" accept="image/*" onchange="handleFilePick(this,'feature-image')" hidden><img id="feature-image-preview" class="admin-preview-img" src="" alt="" hidden><button type="button" class="admin-btn admin-img-browse" onclick="document.getElementById('feature-image-file').click()">Browse</button></div>
+                <input type="hidden" id="feature-image-alt">
+                <div class="admin-form-group"><label for="feature-link-text">Link Text</label><input type="text" id="feature-link-text"></div>
+                <input type="hidden" id="feature-link-url">
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Value Modal -->
+    <div id="value-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2 id="value-modal-title">New Value</h2>
+            <form id="value-form">
+                <input type="hidden" id="value-id">
+                <div class="admin-form-group"><label for="value-title">Title</label><input type="text" id="value-title" required></div>
+                <div class="admin-form-group"><label for="value-desc">Description</label><textarea id="value-desc" rows="3"></textarea></div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Journal Modal -->
+    <div id="journal-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2 id="journal-modal-title">New Journal Card</h2>
+            <form id="journal-form">
+                <input type="hidden" id="journal-id">
+                <div class="admin-form-group"><label for="journal-title">Title</label><input type="text" id="journal-title" required></div>
+                <div class="admin-form-group"><label>Image</label><input type="hidden" id="journal-image"><input type="file" id="journal-image-file" accept="image/*" onchange="handleFilePick(this,'journal-image')" hidden><img id="journal-image-preview" class="admin-preview-img" src="" alt="" hidden><button type="button" class="admin-btn admin-img-browse" onclick="document.getElementById('journal-image-file').click()">Browse</button></div>
+                <input type="hidden" id="journal-image-alt">
+                <div class="admin-form-group"><label for="journal-visibility">Visibility</label>
+                    <select id="journal-visibility"><option value="visible">Visible</option><option value="hidden">Hidden</option></select>
+                </div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Journal Post Modal -->
+    <div id="journal-post-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2 id="journal-post-modal-title">New Journal Post</h2>
+            <form id="journal-post-form">
+                <input type="hidden" id="journal-post-id">
+                <div class="admin-form-group"><label for="journal-post-title">Title</label><input type="text" id="journal-post-title" required></div>
+                <div class="admin-form-group"><label for="journal-post-date">Date <small style="color:#888;font-weight:400">(e.g. "May 2026")</small></label><input type="text" id="journal-post-date" placeholder="May 2026"></div>
+                <div class="admin-form-group"><label for="journal-post-excerpt">Excerpt <small style="color:#888;font-weight:400">(1–2 sentence summary)</small></label><textarea id="journal-post-excerpt" rows="2"></textarea></div>
+                <div class="admin-form-group"><label for="journal-post-body">Body <small style="color:#888;font-weight:400">(blank line = new paragraph)</small></label><textarea id="journal-post-body" rows="8"></textarea></div>
+                <div class="admin-form-group"><label>Cover image</label><input type="hidden" id="journal-post-cover"><input type="file" id="journal-post-cover-file" accept="image/*" onchange="handleFilePick(this,'journal-post-cover')" hidden><img id="journal-post-cover-preview" class="admin-preview-img" src="" alt="" hidden><button type="button" class="admin-btn admin-img-browse" onclick="document.getElementById('journal-post-cover-file').click()">Browse</button></div>
+                <input type="hidden" id="journal-post-cover-alt">
+                <div class="admin-form-group"><label for="journal-post-visibility">Visibility</label>
+                    <select id="journal-post-visibility"><option value="visible">Visible</option><option value="hidden">Hidden</option></select>
+                </div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Event Modal -->
+    <div id="event-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2 id="event-modal-title">New Event</h2>
+            <form id="event-form">
+                <input type="hidden" id="event-id">
+                <div class="admin-form-group"><label for="event-title">Title</label><input type="text" id="event-title" required></div>
+                <div class="admin-form-group"><label for="event-date">Date <small style="color:#888;font-weight:400">(e.g. "October 12, 2026" or "Oct 12–14")</small></label><input type="text" id="event-date" placeholder="October 12, 2026"></div>
+                <div class="admin-form-group"><label for="event-location">Location</label><input type="text" id="event-location" placeholder="Santa Barbara, CA"></div>
+                <div class="admin-form-group"><label for="event-desc">Description</label><textarea id="event-desc" rows="4"></textarea></div>
+                <div class="admin-form-group"><label for="event-link">Link <small style="color:#888;font-weight:400">(optional, full URL)</small></label><input type="text" id="event-link" placeholder="https://..."></div>
+                <div class="admin-form-group"><label for="event-link-text">Link label <small style="color:#888;font-weight:400">(optional, e.g. "Event details")</small></label><input type="text" id="event-link-text" placeholder="Event details"></div>
+                <div class="admin-form-group"><label for="event-visibility">Visibility</label>
+                    <select id="event-visibility"><option value="visible">Visible</option><option value="hidden">Hidden</option></select>
+                </div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div id="about-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2>Edit About Content</h2>
+            <form id="about-form">
+                <div class="admin-form-group"><label for="about-kicker">Kicker <small style="color:#888;font-weight:400">(short label only, e.g. "About")</small></label><input type="text" id="about-kicker" maxlength="40" placeholder="About"></div>
+                <div class="admin-form-group"><label for="about-hero-title">Hero Title</label><input type="text" id="about-hero-title"></div>
+                <div class="admin-form-group"><label for="about-hero-desc">Hero Description <small style="color:#888;font-weight:400">(short intro under the title)</small></label><textarea id="about-hero-desc" rows="3"></textarea></div>
+                <div class="admin-form-group"><label for="about-bio">Biography <small style="color:#888;font-weight:400">(long-form bio paragraph)</small></label><textarea id="about-bio" rows="6"></textarea></div>
+                <div class="admin-form-group"><label for="about-origin-title">Origin Section Title</label><input type="text" id="about-origin-title"></div>
+                <div class="admin-form-group"><label for="about-origin-1">Origin Text 1</label><textarea id="about-origin-1" rows="3"></textarea></div>
+                <div class="admin-form-group"><label for="about-origin-2">Origin Text 2</label><textarea id="about-origin-2" rows="3"></textarea></div>
+                <div class="admin-form-group"><label>Origin Image</label><input type="hidden" id="about-origin-image"><input type="file" id="about-origin-image-file" accept="image/*" onchange="handleFilePick(this,'about-origin-image')" hidden><img id="about-origin-image-preview" class="admin-preview-img" src="" alt="" hidden><button type="button" class="admin-btn admin-img-browse" onclick="document.getElementById('about-origin-image-file').click()">Browse</button></div>
+                <input type="hidden" id="about-origin-image-alt">
+                <div class="admin-form-group"><label for="about-extra-title">Extra Section Title <small style="color:#888;font-weight:400">(new section below Studio Origin)</small></label><input type="text" id="about-extra-title"></div>
+                <div class="admin-form-group"><label for="about-extra-text">Extra Section Text <small style="color:#888;font-weight:400">(blank line = new paragraph)</small></label><textarea id="about-extra-text" rows="5"></textarea></div>
+                <div class="admin-form-group"><label>Extra Section Image</label><input type="hidden" id="about-extra-image"><input type="file" id="about-extra-image-file" accept="image/*" onchange="handleFilePick(this,'about-extra-image')" hidden><img id="about-extra-image-preview" class="admin-preview-img" src="" alt="" hidden><button type="button" class="admin-btn admin-img-browse" onclick="document.getElementById('about-extra-image-file').click()">Browse</button></div>
+                <input type="hidden" id="about-extra-image-alt">
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Principle Modal -->
+    <div id="principle-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2 id="principle-modal-title">New Principle</h2>
+            <form id="principle-form">
+                <input type="hidden" id="principle-id">
+                <div class="admin-form-group"><label for="principle-title">Title</label><input type="text" id="principle-title" required></div>
+                <div class="admin-form-group"><label for="principle-desc">Description</label><textarea id="principle-desc" rows="3"></textarea></div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Engagement Modal -->
+    <div id="engagement-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2 id="engagement-modal-title">New Tier</h2>
+            <form id="engagement-form">
+                <input type="hidden" id="engagement-id">
+                <div class="admin-form-group"><label for="engagement-title">Title</label><input type="text" id="engagement-title" required></div>
+                <div class="admin-form-group"><label for="engagement-desc">Description</label><textarea id="engagement-desc" rows="3"></textarea></div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Gallery Item Modal -->
+    <div id="gallery-item-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2 id="gallery-item-modal-title">New Gallery Item</h2>
+            <form id="gallery-item-form">
+                <input type="hidden" id="gitem-id">
+                <div class="admin-form-group"><label for="gitem-title">Title</label><input type="text" id="gitem-title" required></div>
+                <div class="admin-form-group"><label>Image</label><input type="hidden" id="gitem-image"><input type="file" id="gitem-image-file" accept="image/*" onchange="handleFilePick(this,'gitem-image')" hidden><img id="gitem-image-preview" class="admin-preview-img" src="" alt="" hidden><button type="button" class="admin-btn admin-img-browse" onclick="document.getElementById('gitem-image-file').click()">Browse</button></div>
+                <input type="hidden" id="gitem-image-alt">
+                <div class="admin-form-group"><label for="gitem-categories">Categories (space-separated)</label><input type="text" id="gitem-categories" placeholder="coast portrait studio travel"></div>
+                <div class="admin-form-group"><label for="gitem-price">Price (USD, numbers only)</label><input type="text" id="gitem-price" inputmode="numeric" placeholder="250"></div>
+                <div class="admin-form-group"><label for="gitem-visibility">Visibility</label>
+                    <select id="gitem-visibility"><option value="visible">Visible</option><option value="hidden">Hidden</option></select>
+                </div>
+                <div class="admin-form-group admin-toggle-row">
+                    <span>Mark as sold</span>
+                    <label class="admin-toggle">
+                        <input type="checkbox" id="gitem-sold">
+                        <span class="admin-toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2>Edit Contact Copy</h2>
+            <form id="contact-form">
+                <div class="admin-form-group"><label for="contact-intro">Intro Paragraph 1</label><textarea id="contact-intro" rows="4" placeholder="First paragraph that appears above the contact form..."></textarea></div>
+                <div class="admin-form-group"><label for="contact-intro-2">Intro Paragraph 2</label><textarea id="contact-intro-2" rows="4" placeholder="Second paragraph (optional)..."></textarea></div>
+                <div class="admin-form-actions">
+                    <button type="button" class="admin-btn cancel-modal">Cancel</button>
+                    <button type="submit" class="admin-btn primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+    (() => {
+        'use strict';
+
+        const CMS_WORKER_URL = 'https://suzannemckenzie-cms.suzanneshwagerwebsite.workers.dev';
+        let cmsData = null;
+        let cmsSyncTimer = null;
+        let cmsSyncReason = '';
+        let cmsSyncInFlight = false;
+        let cmsSyncFailCount = 0;
+        const CMS_SYNC_MAX_RETRIES = 5;
+        let deployKnownBroken = false;
+        let pendingFilePromises = [];
+        let resolvedFiles = [];
+        // Paths whose image bytes failed to prepare this session (e.g. an undecodable
+        // HEIC). If cmsData still references one, the form was submitted pointing at an
+        // image that will never upload, so we must not silently "save" it.
+        let failedImagePaths = new Set();
+
+        // B#4: warn before leaving only when there is work NOT yet committed to
+        // GitHub: a queued save, or images buffered but not uploaded. Once the POST
+        // succeeds these are all cleared, so the post-save "waiting to publish" poll
+        // does not trigger a spurious warning.
+        function hasUncommittedWork() {
+            return !!cmsSyncReason || pendingFilePromises.length > 0 || resolvedFiles.length > 0;
+        }
+        window.addEventListener('beforeunload', (e) => {
+            if (hasUncommittedWork()) {
+                e.preventDefault();
+                e.returnValue = '';
+                return '';
+            }
+        });
+
+        // A sticky image error must not be silently clobbered by routine sync chatter
+        // ("Saving...", "Saved.") within a few seconds, or the user never learns why
+        // their picture vanished. setImageError(null) clears it (e.g. on a good pick).
+        let imageErrorMsg = null;
+        let imageErrorAt = 0;
+
+        function setSyncStatus(msg, opts) {
+            const force = opts && opts.force;
+            // While an image error is fresh and unacknowledged, only a forced/error
+            // update may overwrite it.
+            if (!force && imageErrorMsg && (Date.now() - imageErrorAt) < 8000) return;
+            const el = document.getElementById('cms-sync-status');
+            if (el) el.textContent = msg;
+        }
+
+        function setImageError(msg) {
+            imageErrorMsg = msg || null;
+            imageErrorAt = msg ? Date.now() : 0;
+            const el = document.getElementById('cms-sync-status');
+            if (el && msg) el.textContent = `Image error: ${msg}`;
+        }
+
+        // Walk the CMS object and collect every /assets/img/... string it references,
+        // so we can detect items pointing at an image that failed to upload.
+        function collectReferencedImagePaths(obj) {
+            const found = [];
+            (function walk(o) {
+                if (!o) return;
+                if (typeof o === 'string') {
+                    if (o.indexOf('/assets/img/') === 0) found.push(o);
+                } else if (Array.isArray(o)) {
+                    o.forEach(walk);
+                } else if (typeof o === 'object') {
+                    Object.values(o).forEach(walk);
+                }
+            })(obj);
+            return found;
+        }
+
+        function generateId(prefix) {
+            return (prefix || 'item') + '_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
+        }
+
+        // ===== Image helpers =====
+        function showPreview(inputId) {
+            const url = document.getElementById(inputId).value;
+            const preview = document.getElementById(inputId + '-preview');
+            if (preview) {
+                if (url) { preview.src = url; preview.hidden = false; }
+                else { preview.src = ''; preview.hidden = true; }
+            }
+        }
+
+        function readFileAsBase64(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => resolve(reader.result);
+                reader.onerror = () => reject(new Error('Failed to read file'));
+                reader.readAsDataURL(file);
+            });
+        }
+
+        function isHeic(file) {
+            const name = (file.name || '').toLowerCase();
+            const type = (file.type || '').toLowerCase();
+            return /\.(heic|heif)$/.test(name) || type === 'image/heic' || type === 'image/heif';
+        }
+
+        // iPhone .heic photos upload fine but do not render in Chrome/Firefox/Android,
+        // so they look like a failed upload. Convert to JPEG in-browser before upload.
+        // Returns { dataUrl, ext } with the (possibly) converted bytes.
+        function prepareImageForUpload(file) {
+            if (!isHeic(file)) {
+                return readFileAsBase64(file).then((dataUrl) => ({ dataUrl, ext: null }));
+            }
+            return readFileAsBase64(file).then((dataUrl) => new Promise((resolve, reject) => {
+                const img = new Image();
+                img.onload = () => {
+                    try {
+                        const canvas = document.createElement('canvas');
+                        canvas.width = img.naturalWidth;
+                        canvas.height = img.naturalHeight;
+                        canvas.getContext('2d').drawImage(img, 0, 0);
+                        resolve({ dataUrl: canvas.toDataURL('image/jpeg', 0.85), ext: 'jpg' });
+                    } catch (e) {
+                        reject(new Error('Could not convert HEIC image. Please upload a JPEG.'));
+                    }
+                };
+                // Most browsers cannot decode HEIC into an <img> at all; fail loudly
+                // rather than silently committing an unrenderable file.
+                img.onerror = () => reject(new Error('This browser cannot read HEIC photos. Please upload a JPEG or PNG.'));
+                img.src = dataUrl;
+            }));
+        }
+
+        window.handleFilePick = function(fileInput, inputId) {
+            const file = fileInput.files[0];
+            if (!file) return;
+            let safeName = file.name.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9._-]/g, '').toLowerCase();
+            // HEIC will be converted to JPEG below; rewrite the stored path to match.
+            // Normalize the extension whenever HEIC is detected (by name OR MIME type),
+            // so the path, the input value, and the actual JPEG bytes always agree even
+            // when iOS delivers a HEIC with a generic/extensionless filename.
+            if (isHeic(file)) {
+                safeName = /\.[^.]+$/.test(safeName) ? safeName.replace(/\.[^.]+$/, '.jpg') : safeName + '.jpg';
+            }
+            const url = '/assets/img/' + safeName;
+            const repoPath = 'mckenzie/assets/img/' + safeName;
+            document.getElementById(inputId).value = url;
+
+            const promise = prepareImageForUpload(file).then(({ dataUrl }) => {
+                const preview = document.getElementById(inputId + '-preview');
+                if (preview) { preview.src = dataUrl; preview.hidden = false; }
+                const base64 = dataUrl.split(',')[1];
+                resolvedFiles = resolvedFiles.filter(f => f.path !== repoPath);
+                resolvedFiles.push({ path: repoPath, base64: base64 });
+                failedImagePaths.delete(url); // this path is good now
+                setImageError(null); // a clean pick clears any prior image error
+                console.log('File ready for upload:', repoPath, '(' + Math.round(base64.length / 1024) + ' KB)');
+            }).catch((err) => {
+                document.getElementById(inputId).value = '';
+                failedImagePaths.add(url); // referencing this path = a broken image
+                setImageError(err.message);
+                console.error('Image prep failed:', err);
+                throw err;
+            }).finally(() => {
+                // Drop the settled promise so hasUncommittedWork() doesn't nag forever
+                // after an acknowledged failure, and so a flush doesn't re-await it.
+                pendingFilePromises = pendingFilePromises.filter(p => p !== promise);
+            });
+            pendingFilePromises.push(promise);
+            // NOTE: we deliberately do NOT queueSync() here. A picked image is bound to
+            // its gallery/product item on form submit (which builds the item, updates
+            // cmsData, then calls save()). Syncing on pick would upload the image with a
+            // stale cmsData that doesn't yet reference it. The beforeunload guard below
+            // covers the "picked but never submitted" loss window instead.
+        };
+
+
+        // ===== CMS Sync =====
+        function getSyncConfig() {
+            return { workerUrl: CMS_WORKER_URL, adminKey: 'mckenzie-admin-2026' };
+        }
+
+        async function flushCmsSync() {
+            if (cmsSyncInFlight || !cmsSyncReason) return;
+            cmsSyncInFlight = true;
+            while (cmsSyncReason) {
+                const reason = cmsSyncReason;
+                cmsSyncReason = '';
+
+                // Wait for ALL file reads to complete before uploading. Snapshot and
+                // clear the array first so a file picked DURING this await accumulates
+                // into the fresh array for the next pass instead of being dropped.
+                // allSettled: a failed read (handled in handleFilePick) doesn't abort.
+                if (pendingFilePromises.length) {
+                    setSyncStatus('Reading files...');
+                    const toAwait = pendingFilePromises;
+                    pendingFilePromises = [];
+                    await Promise.allSettled(toAwait);
+                }
+
+                // Guard against saving an item that references an image whose bytes
+                // failed to prepare (e.g. an undecodable HEIC picked then submitted).
+                // That would commit a permanent broken image on the live site.
+                const dangling = collectReferencedImagePaths(cmsData).filter(p => failedImagePaths.has(p));
+                if (dangling.length) {
+                    setSyncStatus(`Could not save: an image did not process (${dangling.map(p => p.replace('/assets/img/', '')).join(', ')}). Please re-pick a JPEG or PNG for it, then save again.`, { force: true });
+                    cmsSyncReason = ''; // do not retry until the user fixes the image
+                    break;
+                }
+
+                const filesToUpload = resolvedFiles.slice();
+                resolvedFiles = [];
+
+                try {
+                    if (filesToUpload.length) {
+                        setSyncStatus(`Uploading ${filesToUpload.length} image(s)...`);
+                        console.log('Uploading files:', filesToUpload.map(f => f.path + ' (' + Math.round(f.base64.length / 1024) + ' KB)'));
+                    } else {
+                        setSyncStatus(`Saving... (${reason})`, { force: true });
+                    }
+                    const { workerUrl, adminKey } = getSyncConfig();
+                    const result = await window.CMS.saveCmsViaWorker(cmsData, { workerUrl, adminKey, commitMessage: `cms: ${reason} ${new Date().toISOString()}`, files: filesToUpload });
+                    cmsSyncFailCount = 0;
+
+                    // The worker drops files it can't store (oversized, bad path) and
+                    // reports them in skipped[]. Never claim success while an image the
+                    // user picked was silently dropped.
+                    const skipped = (result && Array.isArray(result.skipped)) ? result.skipped : [];
+                    if (skipped.length) {
+                        const names = skipped.map(s => (s.path || '').replace('mckenzie/assets/img/', '')).join(', ');
+                        setSyncStatus(`Saved your text, but ${skipped.length} image(s) could not be uploaded (${names}). Please use a smaller JPEG or PNG.`, { force: true });
+                        console.warn('Worker skipped files:', skipped);
+                        continue; // skip the publish-verify; this save needs the user's attention
+                    }
+
+                    // A 200 only means "saved to GitHub". The change is NOT visible to
+                    // visitors until the site redeploys. Verify against the live site,
+                    // but reassure the user first: their work is safe regardless.
+                    const committedAt = (result && result.updatedAt) || cmsData.updatedAt;
+                    setSyncStatus('Saved. Your changes are stored safely and the site usually updates within a few minutes.', { force: true });
+                    // If we already know the auto-publish is stuck this session, don't make
+                    // every later save sit through the full verify timeout.
+                    const verifyTimeout = deployKnownBroken ? 20000 : 90000;
+                    const live = await window.CMS.verifyLiveDeploy(committedAt, {
+                        timeoutMs: verifyTimeout,
+                        intervalMs: 4000,
+                        onTick: () => setSyncStatus('Saved. Waiting for the live site to update...', { force: true })
+                    });
+                    if (live) {
+                        deployKnownBroken = false;
+                        setSyncStatus(`Published live at ${new Date().toLocaleTimeString()}.`, { force: true });
+                    } else {
+                        deployKnownBroken = true;
+                        setSyncStatus('Saved. Your changes are stored safely, but the live site has not refreshed yet (it can take a few minutes). If it stays behind, let Daniel know.', { force: true });
+                        console.warn('Save committed but live site did not reflect updatedAt within timeout:', committedAt);
+                    }
+                } catch (err) {
+                    resolvedFiles = filesToUpload.concat(resolvedFiles);
+                    cmsSyncFailCount += 1;
+                    console.error('Sync error:', err);
+                    // B#4: re-arm the retry after a backoff instead of stranding queued
+                    // work until the next manual edit. We must NOT set cmsSyncReason here
+                    // (that would make the while-loop retry immediately with no delay);
+                    // instead let the loop exit and re-enter via the timer.
+                    if (cmsSyncFailCount <= CMS_SYNC_MAX_RETRIES) {
+                        const delay = Math.min(30000, 5000 * cmsSyncFailCount);
+                        const retryReason = reason;
+                        setSyncStatus(`Save failed: ${err.message} — retrying in ${Math.round(delay / 1000)}s (${cmsSyncFailCount}/${CMS_SYNC_MAX_RETRIES})`, { force: true });
+                        clearTimeout(cmsSyncTimer);
+                        cmsSyncTimer = setTimeout(() => { cmsSyncReason = cmsSyncReason || retryReason; flushCmsSync(); }, delay);
+                    } else {
+                        setSyncStatus(`Save failed: ${err.message}. Stopped retrying — your changes are cached locally. Reload to retry.`, { force: true });
+                    }
+                    // Stop draining this pass; the timer (if armed) restarts the cycle.
+                    break;
+                }
+            }
+            cmsSyncInFlight = false;
+        }
+
+        function queueSync(reason) {
+            cmsSyncReason = reason || 'save';
+            clearTimeout(cmsSyncTimer);
+            cmsSyncTimer = setTimeout(flushCmsSync, 1500);
+        }
+
+        function save(reason) {
+            cmsData.updatedAt = new Date().toISOString();
+            window.CMS.writeCachedCms(cmsData);
+            // A fresh user edit gets a clean retry budget.
+            cmsSyncFailCount = 0;
+            queueSync(reason);
+        }
+
+        // ===== Modal helpers =====
+        function openModal(id) { document.getElementById(id).style.display = 'flex'; }
+        function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+
+        document.querySelectorAll('.cancel-modal').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.closest('.admin-modal').style.display = 'none';
+            });
+        });
+
+        document.querySelectorAll('.admin-modal').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) modal.style.display = 'none';
+            });
+        });
+
+        // ===== Render helpers =====
+        function cardHtml(title, subtitle, id, editFn, deleteFn, image) {
+            return `<div class="admin-card" data-id="${id}">
+                ${image ? `<img class="admin-card-thumb" src="${image}" alt="">` : ''}
+                <div class="admin-card-info"><strong>${esc(title)}</strong>${subtitle ? `<small>${esc(subtitle)}</small>` : ''}</div>
+                <div class="admin-card-actions">
+                    <button class="admin-btn small" onclick="${editFn}('${id}')">Edit</button>
+                    <button class="admin-btn small danger" onclick="${deleteFn}('${id}')">Delete</button>
+                </div>
+            </div>`;
+        }
+
+        function singletonCard(title, subtitle) {
+            return `<div class="admin-card"><div class="admin-card-info"><strong>${esc(title)}</strong>${subtitle ? `<small>${esc(subtitle)}</small>` : ''}</div></div>`;
+        }
+
+        function esc(str) {
+            const d = document.createElement('div');
+            d.textContent = str || '';
+            return d.innerHTML;
+        }
+
+        // ===== HERO =====
+        function renderHero() {
+            document.getElementById('hero-preview').innerHTML = singletonCard(cmsData.hero.title, cmsData.hero.cta_text);
+        }
+        document.getElementById('edit-hero-btn').addEventListener('click', () => {
+            document.getElementById('hero-title').value = cmsData.hero.title || '';
+            document.getElementById('hero-cta-text').value = cmsData.hero.cta_text || '';
+            document.getElementById('hero-cta-link').value = cmsData.hero.cta_link || '';
+            document.getElementById('hero-image').value = cmsData.hero.image || '';
+            document.getElementById('hero-image-alt').value = cmsData.hero.image_alt || '';
+            showPreview('hero-image');
+            openModal('hero-modal');
+        });
+        document.getElementById('hero-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            cmsData.hero.title = document.getElementById('hero-title').value;
+            cmsData.hero.cta_text = document.getElementById('hero-cta-text').value;
+            cmsData.hero.cta_link = document.getElementById('hero-cta-link').value;
+            cmsData.hero.image = document.getElementById('hero-image').value;
+            cmsData.hero.image_alt = document.getElementById('hero-image-alt').value;
+            save('hero-update');
+            closeModal('hero-modal');
+            renderHero();
+        });
+
+        // ===== PRODUCTS =====
+        function renderProducts() {
+            const el = document.getElementById('product-list');
+            if (!cmsData.products.items.length) { el.innerHTML = '<p class="admin-empty">No products.</p>'; return; }
+            el.innerHTML = cmsData.products.items.map(p =>
+                cardHtml(p.title, p.visibility === 'hidden' ? 'Hidden' : '', p.id, 'editProduct', 'deleteProduct', p.image)
+            ).join('');
+        }
+        window.editProduct = function(id) {
+            const p = cmsData.products.items.find(x => x.id === id);
+            if (!p) return;
+            document.getElementById('product-modal-title').textContent = 'Edit Product';
+            document.getElementById('product-id').value = p.id;
+            document.getElementById('product-title').value = p.title || '';
+            document.getElementById('product-desc').value = p.description || '';
+            document.getElementById('product-image').value = p.image || '';
+            document.getElementById('product-image-alt').value = p.image_alt || '';
+            showPreview('product-image');
+            document.getElementById('product-learn-link').value = p.learn_more_link || '/about/';
+            document.getElementById('product-gallery-link').value = p.gallery_link || '/gallery/';
+            document.getElementById('product-visibility').value = p.visibility || 'visible';
+            document.getElementById('product-sold').checked = !!p.sold;
+            openModal('product-modal');
+        };
+        window.deleteProduct = function(id) {
+            if (!confirm('Delete this product?')) return;
+            cmsData.products.items = cmsData.products.items.filter(x => x.id !== id);
+            save('product-delete');
+            renderProducts();
+        };
+        document.getElementById('new-product-btn').addEventListener('click', () => {
+            document.getElementById('product-modal-title').textContent = 'New Product';
+            document.getElementById('product-form').reset();
+            document.getElementById('product-id').value = '';
+            document.getElementById('product-learn-link').value = '/about/';
+            document.getElementById('product-gallery-link').value = '/gallery/';
+            document.getElementById('product-sold').checked = false;
+            showPreview('product-image');
+            openModal('product-modal');
+        });
+        document.getElementById('product-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const id = document.getElementById('product-id').value;
+            const item = {
+                id: id || generateId('product'),
+                title: document.getElementById('product-title').value,
+                description: document.getElementById('product-desc').value,
+                image: document.getElementById('product-image').value,
+                image_alt: document.getElementById('product-image-alt').value,
+                learn_more_link: document.getElementById('product-learn-link').value,
+                gallery_link: document.getElementById('product-gallery-link').value,
+                visibility: document.getElementById('product-visibility').value,
+                sold: document.getElementById('product-sold').checked
+            };
+            if (id) {
+                const idx = cmsData.products.items.findIndex(x => x.id === id);
+                if (idx !== -1) cmsData.products.items[idx] = item;
+            } else {
+                cmsData.products.items.push(item);
+            }
+            save('product-update');
+            closeModal('product-modal');
+            renderProducts();
+        });
+
+        // ===== FEATURE =====
+        function renderFeature() {
+            document.getElementById('feature-preview').innerHTML = singletonCard(cmsData.feature.title, cmsData.feature.description);
+        }
+        document.getElementById('edit-feature-btn').addEventListener('click', () => {
+            document.getElementById('feature-title').value = cmsData.feature.title || '';
+            document.getElementById('feature-desc').value = cmsData.feature.description || '';
+            document.getElementById('feature-image').value = cmsData.feature.image || '';
+            document.getElementById('feature-image-alt').value = cmsData.feature.image_alt || '';
+            showPreview('feature-image');
+            document.getElementById('feature-link-text').value = cmsData.feature.link_text || '';
+            document.getElementById('feature-link-url').value = cmsData.feature.link_url || '';
+            openModal('feature-modal');
+        });
+        document.getElementById('feature-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            cmsData.feature.title = document.getElementById('feature-title').value;
+            cmsData.feature.description = document.getElementById('feature-desc').value;
+            cmsData.feature.image = document.getElementById('feature-image').value;
+            cmsData.feature.image_alt = document.getElementById('feature-image-alt').value;
+            cmsData.feature.link_text = document.getElementById('feature-link-text').value;
+            cmsData.feature.link_url = document.getElementById('feature-link-url').value;
+            save('feature-update');
+            closeModal('feature-modal');
+            renderFeature();
+        });
+
+        // ===== VALUES =====
+        function renderValues() {
+            const el = document.getElementById('values-list');
+            if (!cmsData.values.items.length) { el.innerHTML = '<p class="admin-empty">No values.</p>'; return; }
+            el.innerHTML = cmsData.values.items.map(v =>
+                cardHtml(v.title, v.description, v.id, 'editValue', 'deleteValue')
+            ).join('');
+        }
+        window.editValue = function(id) {
+            const v = cmsData.values.items.find(x => x.id === id);
+            if (!v) return;
+            document.getElementById('value-modal-title').textContent = 'Edit Value';
+            document.getElementById('value-id').value = v.id;
+            document.getElementById('value-title').value = v.title || '';
+            document.getElementById('value-desc').value = v.description || '';
+            openModal('value-modal');
+        };
+        window.deleteValue = function(id) {
+            if (!confirm('Delete this value?')) return;
+            cmsData.values.items = cmsData.values.items.filter(x => x.id !== id);
+            save('value-delete');
+            renderValues();
+        };
+        document.getElementById('new-value-btn').addEventListener('click', () => {
+            document.getElementById('value-modal-title').textContent = 'New Value';
+            document.getElementById('value-form').reset();
+            document.getElementById('value-id').value = '';
+            openModal('value-modal');
+        });
+        document.getElementById('value-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const id = document.getElementById('value-id').value;
+            const item = { id: id || generateId('value'), title: document.getElementById('value-title').value, description: document.getElementById('value-desc').value };
+            if (id) { const idx = cmsData.values.items.findIndex(x => x.id === id); if (idx !== -1) cmsData.values.items[idx] = item; }
+            else { cmsData.values.items.push(item); }
+            save('value-update');
+            closeModal('value-modal');
+            renderValues();
+        });
+
+        // ===== JOURNAL =====
+        function renderJournal() {
+            const el = document.getElementById('journal-list');
+            if (!cmsData.journal.cards.length) { el.innerHTML = '<p class="admin-empty">No journal cards.</p>'; return; }
+            el.innerHTML = cmsData.journal.cards.map(j =>
+                cardHtml(j.title, j.visibility === 'hidden' ? 'Hidden' : '', j.id, 'editJournal', 'deleteJournal', j.image)
+            ).join('');
+        }
+        window.editJournal = function(id) {
+            const j = cmsData.journal.cards.find(x => x.id === id);
+            if (!j) return;
+            document.getElementById('journal-modal-title').textContent = 'Edit Journal Card';
+            document.getElementById('journal-id').value = j.id;
+            document.getElementById('journal-title').value = j.title || '';
+            document.getElementById('journal-image').value = j.image || '';
+            document.getElementById('journal-image-alt').value = j.image_alt || '';
+            showPreview('journal-image');
+            document.getElementById('journal-visibility').value = j.visibility || 'visible';
+            openModal('journal-modal');
+        };
+        window.deleteJournal = function(id) {
+            if (!confirm('Delete this journal card?')) return;
+            cmsData.journal.cards = cmsData.journal.cards.filter(x => x.id !== id);
+            save('journal-delete');
+            renderJournal();
+        };
+        document.getElementById('new-journal-btn').addEventListener('click', () => {
+            document.getElementById('journal-modal-title').textContent = 'New Journal Card';
+            document.getElementById('journal-form').reset();
+            document.getElementById('journal-id').value = '';
+            showPreview('journal-image');
+            openModal('journal-modal');
+        });
+        document.getElementById('journal-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const id = document.getElementById('journal-id').value;
+            const item = { id: id || generateId('journal'), title: document.getElementById('journal-title').value, image: document.getElementById('journal-image').value, image_alt: document.getElementById('journal-image-alt').value, visibility: document.getElementById('journal-visibility').value };
+            if (id) { const idx = cmsData.journal.cards.findIndex(x => x.id === id); if (idx !== -1) cmsData.journal.cards[idx] = item; }
+            else { cmsData.journal.cards.push(item); }
+            save('journal-update');
+            closeModal('journal-modal');
+            renderJournal();
+        });
+
+        // ===== JOURNAL BANNER (homepage teaser) =====
+        function renderJournalBanner() {
+            const intro = document.getElementById('journal-intro-text');
+            if (intro) intro.value = cmsData.journal.intro_text || '';
+            const cta = document.getElementById('journal-cta-text');
+            if (cta) cta.value = cmsData.journal.cta_text || '';
+            const link = document.getElementById('journal-cta-link');
+            if (link) link.value = cmsData.journal.cta_link || '/journal/';
+        }
+        const journalIntroInput = document.getElementById('journal-intro-text');
+        if (journalIntroInput) {
+            journalIntroInput.addEventListener('input', () => {
+                cmsData.journal.intro_text = journalIntroInput.value;
+                save('journal-banner');
+            });
+        }
+        const journalCtaInput = document.getElementById('journal-cta-text');
+        if (journalCtaInput) {
+            journalCtaInput.addEventListener('input', () => {
+                cmsData.journal.cta_text = journalCtaInput.value;
+                save('journal-banner');
+            });
+        }
+
+        // ===== EVENTS (top of /journal/ page) =====
+        function renderEvents() {
+            const el = document.getElementById('events-list');
+            if (!el) return;
+            const events = cmsData.journal.events || [];
+            if (!events.length) { el.innerHTML = '<p class="admin-empty">No events yet.</p>'; return; }
+            el.innerHTML = events.map(ev =>
+                cardHtml(ev.title || 'Untitled', [ev.date, ev.location, ev.visibility === 'hidden' ? 'Hidden' : ''].filter(Boolean).join(' · '), ev.id, 'editEvent', 'deleteEvent')
+            ).join('');
+        }
+        window.editEvent = function(id) {
+            const ev = (cmsData.journal.events || []).find(x => x.id === id);
+            if (!ev) return;
+            document.getElementById('event-modal-title').textContent = 'Edit Event';
+            document.getElementById('event-id').value = ev.id;
+            document.getElementById('event-title').value = ev.title || '';
+            document.getElementById('event-date').value = ev.date || '';
+            document.getElementById('event-location').value = ev.location || '';
+            document.getElementById('event-desc').value = ev.description || '';
+            document.getElementById('event-link').value = ev.link || '';
+            document.getElementById('event-link-text').value = ev.link_text || '';
+            document.getElementById('event-visibility').value = ev.visibility || 'visible';
+            openModal('event-modal');
+        };
+        window.deleteEvent = function(id) {
+            if (!confirm('Delete this event?')) return;
+            cmsData.journal.events = (cmsData.journal.events || []).filter(x => x.id !== id);
+            save('event-delete');
+            renderEvents();
+        };
+        const newEventBtn = document.getElementById('new-event-btn');
+        if (newEventBtn) {
+            newEventBtn.addEventListener('click', () => {
+                document.getElementById('event-modal-title').textContent = 'New Event';
+                document.getElementById('event-form').reset();
+                document.getElementById('event-id').value = '';
+                openModal('event-modal');
+            });
+        }
+        const eventForm = document.getElementById('event-form');
+        if (eventForm) {
+            eventForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const id = document.getElementById('event-id').value;
+                const item = {
+                    id: id || generateId('event'),
+                    title: document.getElementById('event-title').value,
+                    date: document.getElementById('event-date').value,
+                    location: document.getElementById('event-location').value,
+                    description: document.getElementById('event-desc').value,
+                    link: document.getElementById('event-link').value,
+                    link_text: document.getElementById('event-link-text').value,
+                    visibility: document.getElementById('event-visibility').value
+                };
+                cmsData.journal.events = cmsData.journal.events || [];
+                if (id) { const idx = cmsData.journal.events.findIndex(x => x.id === id); if (idx !== -1) cmsData.journal.events[idx] = item; }
+                else { cmsData.journal.events.push(item); }
+                save('event-update');
+                closeModal('event-modal');
+                renderEvents();
+            });
+        }
+
+        // ===== JOURNAL POSTS (full /journal/ page) =====
+        function renderJournalPosts() {
+            const introInput = document.getElementById('journal-page-intro');
+            if (introInput) introInput.value = cmsData.journal.page_intro || '';
+            const el = document.getElementById('journal-posts-list');
+            if (!el) return;
+            const posts = cmsData.journal.posts || [];
+            if (!posts.length) { el.innerHTML = '<p class="admin-empty">No posts yet.</p>'; return; }
+            el.innerHTML = posts.map(p =>
+                cardHtml(p.title || 'Untitled', [p.date, p.visibility === 'hidden' ? 'Hidden' : ''].filter(Boolean).join(' · '), p.id, 'editJournalPost', 'deleteJournalPost', p.cover)
+            ).join('');
+        }
+        const journalPageIntroInput = document.getElementById('journal-page-intro');
+        if (journalPageIntroInput) {
+            journalPageIntroInput.addEventListener('input', () => {
+                cmsData.journal.page_intro = journalPageIntroInput.value;
+                save('journal-page-intro');
+            });
+        }
+        window.editJournalPost = function(id) {
+            const p = (cmsData.journal.posts || []).find(x => x.id === id);
+            if (!p) return;
+            document.getElementById('journal-post-modal-title').textContent = 'Edit Journal Post';
+            document.getElementById('journal-post-id').value = p.id;
+            document.getElementById('journal-post-title').value = p.title || '';
+            document.getElementById('journal-post-date').value = p.date || '';
+            document.getElementById('journal-post-excerpt').value = p.excerpt || '';
+            document.getElementById('journal-post-body').value = p.body || '';
+            document.getElementById('journal-post-cover').value = p.cover || '';
+            document.getElementById('journal-post-cover-alt').value = p.cover_alt || '';
+            showPreview('journal-post-cover');
+            document.getElementById('journal-post-visibility').value = p.visibility || 'visible';
+            openModal('journal-post-modal');
+        };
+        window.deleteJournalPost = function(id) {
+            if (!confirm('Delete this journal post?')) return;
+            cmsData.journal.posts = (cmsData.journal.posts || []).filter(x => x.id !== id);
+            save('journal-post-delete');
+            renderJournalPosts();
+        };
+        const newJournalPostBtn = document.getElementById('new-journal-post-btn');
+        if (newJournalPostBtn) {
+            newJournalPostBtn.addEventListener('click', () => {
+                document.getElementById('journal-post-modal-title').textContent = 'New Journal Post';
+                document.getElementById('journal-post-form').reset();
+                document.getElementById('journal-post-id').value = '';
+                showPreview('journal-post-cover');
+                openModal('journal-post-modal');
+            });
+        }
+        const journalPostForm = document.getElementById('journal-post-form');
+        if (journalPostForm) {
+            journalPostForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const id = document.getElementById('journal-post-id').value;
+                const item = {
+                    id: id || generateId('post'),
+                    title: document.getElementById('journal-post-title').value,
+                    date: document.getElementById('journal-post-date').value,
+                    excerpt: document.getElementById('journal-post-excerpt').value,
+                    body: document.getElementById('journal-post-body').value,
+                    cover: document.getElementById('journal-post-cover').value,
+                    cover_alt: document.getElementById('journal-post-cover-alt').value,
+                    visibility: document.getElementById('journal-post-visibility').value
+                };
+                cmsData.journal.posts = cmsData.journal.posts || [];
+                if (id) { const idx = cmsData.journal.posts.findIndex(x => x.id === id); if (idx !== -1) cmsData.journal.posts[idx] = item; }
+                else { cmsData.journal.posts.push(item); }
+                save('journal-post-update');
+                closeModal('journal-post-modal');
+                renderJournalPosts();
+            });
+        }
+
+        // ===== ABOUT =====
+        function renderAbout() {
+            document.getElementById('about-preview').innerHTML = singletonCard(cmsData.about.hero_title, cmsData.about.kicker);
+        }
+        document.getElementById('edit-about-btn').addEventListener('click', () => {
+            document.getElementById('about-kicker').value = cmsData.about.kicker || '';
+            document.getElementById('about-hero-title').value = cmsData.about.hero_title || '';
+            document.getElementById('about-hero-desc').value = cmsData.about.hero_description || '';
+            document.getElementById('about-bio').value = cmsData.about.bio || '';
+            document.getElementById('about-origin-title').value = cmsData.about.origin_title || '';
+            document.getElementById('about-origin-1').value = cmsData.about.origin_text_1 || '';
+            document.getElementById('about-origin-2').value = cmsData.about.origin_text_2 || '';
+            document.getElementById('about-origin-image').value = cmsData.about.origin_image || '';
+            document.getElementById('about-origin-image-alt').value = cmsData.about.origin_image_alt || '';
+            showPreview('about-origin-image');
+            document.getElementById('about-extra-title').value = cmsData.about.extra_title || '';
+            document.getElementById('about-extra-text').value = cmsData.about.extra_text || '';
+            document.getElementById('about-extra-image').value = cmsData.about.extra_image || '';
+            document.getElementById('about-extra-image-alt').value = cmsData.about.extra_image_alt || '';
+            showPreview('about-extra-image');
+            openModal('about-modal');
+        });
+        document.getElementById('about-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            cmsData.about.kicker = document.getElementById('about-kicker').value;
+            cmsData.about.hero_title = document.getElementById('about-hero-title').value;
+            cmsData.about.hero_description = document.getElementById('about-hero-desc').value;
+            cmsData.about.bio = document.getElementById('about-bio').value;
+            cmsData.about.origin_title = document.getElementById('about-origin-title').value;
+            cmsData.about.origin_text_1 = document.getElementById('about-origin-1').value;
+            cmsData.about.origin_text_2 = document.getElementById('about-origin-2').value;
+            cmsData.about.origin_image = document.getElementById('about-origin-image').value;
+            cmsData.about.origin_image_alt = document.getElementById('about-origin-image-alt').value;
+            cmsData.about.extra_title = document.getElementById('about-extra-title').value;
+            cmsData.about.extra_text = document.getElementById('about-extra-text').value;
+            cmsData.about.extra_image = document.getElementById('about-extra-image').value;
+            cmsData.about.extra_image_alt = document.getElementById('about-extra-image-alt').value;
+            save('about-update');
+            closeModal('about-modal');
+            renderAbout();
+        });
+
+        // ===== PRINCIPLES =====
+        function renderPrinciples() {
+            const el = document.getElementById('principles-list');
+            if (!cmsData.about.principles.length) { el.innerHTML = '<p class="admin-empty">No principles.</p>'; return; }
+            el.innerHTML = cmsData.about.principles.map(p =>
+                cardHtml(p.title, p.description, p.id, 'editPrinciple', 'deletePrinciple')
+            ).join('');
+        }
+        window.editPrinciple = function(id) {
+            const p = cmsData.about.principles.find(x => x.id === id);
+            if (!p) return;
+            document.getElementById('principle-modal-title').textContent = 'Edit Principle';
+            document.getElementById('principle-id').value = p.id;
+            document.getElementById('principle-title').value = p.title || '';
+            document.getElementById('principle-desc').value = p.description || '';
+            openModal('principle-modal');
+        };
+        window.deletePrinciple = function(id) {
+            if (!confirm('Delete?')) return;
+            cmsData.about.principles = cmsData.about.principles.filter(x => x.id !== id);
+            save('principle-delete');
+            renderPrinciples();
+        };
+        document.getElementById('new-principle-btn').addEventListener('click', () => {
+            document.getElementById('principle-modal-title').textContent = 'New Principle';
+            document.getElementById('principle-form').reset();
+            document.getElementById('principle-id').value = '';
+            openModal('principle-modal');
+        });
+        document.getElementById('principle-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const id = document.getElementById('principle-id').value;
+            const item = { id: id || generateId('principle'), title: document.getElementById('principle-title').value, description: document.getElementById('principle-desc').value };
+            if (id) { const idx = cmsData.about.principles.findIndex(x => x.id === id); if (idx !== -1) cmsData.about.principles[idx] = item; }
+            else { cmsData.about.principles.push(item); }
+            save('principle-update');
+            closeModal('principle-modal');
+            renderPrinciples();
+        });
+
+        // ===== ENGAGEMENT =====
+        function renderEngagement() {
+            const el = document.getElementById('engagement-list');
+            if (!cmsData.about.engagement.length) { el.innerHTML = '<p class="admin-empty">No tiers.</p>'; return; }
+            el.innerHTML = cmsData.about.engagement.map(e =>
+                cardHtml(e.title, e.description, e.id, 'editEngagement', 'deleteEngagement')
+            ).join('');
+        }
+        window.editEngagement = function(id) {
+            const e = cmsData.about.engagement.find(x => x.id === id);
+            if (!e) return;
+            document.getElementById('engagement-modal-title').textContent = 'Edit Tier';
+            document.getElementById('engagement-id').value = e.id;
+            document.getElementById('engagement-title').value = e.title || '';
+            document.getElementById('engagement-desc').value = e.description || '';
+            openModal('engagement-modal');
+        };
+        window.deleteEngagement = function(id) {
+            if (!confirm('Delete?')) return;
+            cmsData.about.engagement = cmsData.about.engagement.filter(x => x.id !== id);
+            save('engagement-delete');
+            renderEngagement();
+        };
+        document.getElementById('new-engagement-btn').addEventListener('click', () => {
+            document.getElementById('engagement-modal-title').textContent = 'New Tier';
+            document.getElementById('engagement-form').reset();
+            document.getElementById('engagement-id').value = '';
+            openModal('engagement-modal');
+        });
+        document.getElementById('engagement-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const id = document.getElementById('engagement-id').value;
+            const item = { id: id || generateId('engage'), title: document.getElementById('engagement-title').value, description: document.getElementById('engagement-desc').value };
+            if (id) { const idx = cmsData.about.engagement.findIndex(x => x.id === id); if (idx !== -1) cmsData.about.engagement[idx] = item; }
+            else { cmsData.about.engagement.push(item); }
+            save('engagement-update');
+            closeModal('engagement-modal');
+            renderEngagement();
+        });
+
+        // ===== GALLERY ITEMS =====
+        function renderGalleryItems() {
+            const el = document.getElementById('gallery-list');
+            if (!cmsData.gallery.items.length) { el.innerHTML = '<p class="admin-empty">No gallery items.</p>'; return; }
+            el.innerHTML = cmsData.gallery.items.map(g =>
+                cardHtml(g.title, g.categories, g.id, 'editGalleryItem', 'deleteGalleryItem', g.image)
+            ).join('');
+        }
+        window.editGalleryItem = function(id) {
+            const g = cmsData.gallery.items.find(x => x.id === id);
+            if (!g) return;
+            document.getElementById('gallery-item-modal-title').textContent = 'Edit Gallery Item';
+            document.getElementById('gitem-id').value = g.id;
+            document.getElementById('gitem-title').value = g.title || '';
+            document.getElementById('gitem-image').value = g.image || '';
+            document.getElementById('gitem-image-alt').value = g.image_alt || '';
+            showPreview('gitem-image');
+            document.getElementById('gitem-categories').value = g.categories || '';
+            document.getElementById('gitem-price').value = g.price || '';
+            document.getElementById('gitem-visibility').value = g.visibility || 'visible';
+            document.getElementById('gitem-sold').checked = !!g.sold;
+            openModal('gallery-item-modal');
+        };
+        window.deleteGalleryItem = function(id) {
+            if (!confirm('Delete?')) return;
+            cmsData.gallery.items = cmsData.gallery.items.filter(x => x.id !== id);
+            save('gallery-delete');
+            renderGalleryItems();
+        };
+        document.getElementById('new-gallery-btn').addEventListener('click', () => {
+            document.getElementById('gallery-item-modal-title').textContent = 'New Gallery Item';
+            document.getElementById('gallery-item-form').reset();
+            document.getElementById('gitem-id').value = '';
+            document.getElementById('gitem-sold').checked = false;
+            showPreview('gitem-image');
+            openModal('gallery-item-modal');
+        });
+        document.getElementById('gallery-item-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const id = document.getElementById('gitem-id').value;
+            const item = { id: id || generateId('gallery'), title: document.getElementById('gitem-title').value, image: document.getElementById('gitem-image').value, image_alt: document.getElementById('gitem-image-alt').value, categories: document.getElementById('gitem-categories').value, visibility: document.getElementById('gitem-visibility').value, sold: document.getElementById('gitem-sold').checked, price: document.getElementById('gitem-price').value.replace(/[$,\s]/g, '') };
+            if (id) { const idx = cmsData.gallery.items.findIndex(x => x.id === id); if (idx !== -1) cmsData.gallery.items[idx] = item; }
+            else { cmsData.gallery.items.push(item); }
+            save('gallery-update');
+            closeModal('gallery-item-modal');
+            renderGalleryItems();
+        });
+
+        // ===== CONTACT =====
+        function renderContact() {
+            if (!cmsData.contact) cmsData.contact = {};
+            const preview = (cmsData.contact.intro || '').slice(0, 80) + ((cmsData.contact.intro || '').length > 80 ? '...' : '');
+            document.getElementById('contact-preview').innerHTML = singletonCard('Contact Page Intro', preview || '(empty)');
+        }
+        document.getElementById('edit-contact-btn').addEventListener('click', () => {
+            if (!cmsData.contact) cmsData.contact = {};
+            document.getElementById('contact-intro').value = cmsData.contact.intro || '';
+            document.getElementById('contact-intro-2').value = cmsData.contact.intro_2 || '';
+            openModal('contact-modal');
+        });
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (!cmsData.contact) cmsData.contact = {};
+            cmsData.contact.intro = document.getElementById('contact-intro').value;
+            cmsData.contact.intro_2 = document.getElementById('contact-intro-2').value;
+            save('contact-update');
+            closeModal('contact-modal');
+            renderContact();
+        });
+
+        // ===== SETTINGS =====
+        function renderToggleList(targetId, items) {
+            const el = document.getElementById(targetId);
+            if (!el) return;
+            el.innerHTML = items.map(s => `
+                <div class="admin-sortable-item" data-section="${s.key}">
+                    <span class="admin-item-name">${s.label}</span>
+                    <label class="admin-toggle">
+                        <input type="checkbox" data-setting="${s.setting}" ${cmsData.settings[s.setting] !== false ? 'checked' : ''}>
+                        <span class="admin-toggle-slider"></span>
+                    </label>
+                </div>
+            `).join('');
+            el.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+                cb.addEventListener('change', () => {
+                    cmsData.settings[cb.dataset.setting] = cb.checked;
+                    save('settings-update');
+                });
+            });
+        }
+
+        function renderSettings() {
+            const sections = [
+                { key: 'hero', label: 'Hero', setting: 'showHeroSection' },
+                { key: 'products', label: 'Products', setting: 'showProductsSection' },
+                { key: 'feature', label: 'Feature', setting: 'showFeatureSection' },
+                { key: 'values', label: 'Values', setting: 'showValuesSection' },
+                { key: 'journal', label: 'Journal', setting: 'showJournalSection' }
+            ];
+            const order = cmsData.settings.sectionOrder || sections.map(s => s.key);
+            const ordered = order.map(k => sections.find(s => s.key === k)).filter(Boolean);
+            const el = document.getElementById('section-list');
+            el.innerHTML = ordered.map(s => `
+                <div class="admin-sortable-item" data-section="${s.key}" draggable="true">
+                    <span class="admin-drag-handle">☰</span>
+                    <span class="admin-item-name">${s.label}</span>
+                    <label class="admin-toggle">
+                        <input type="checkbox" data-setting="${s.setting}" ${cmsData.settings[s.setting] !== false ? 'checked' : ''}>
+                        <span class="admin-toggle-slider"></span>
+                    </label>
+                </div>
+            `).join('');
+
+            el.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+                cb.addEventListener('change', () => {
+                    cmsData.settings[cb.dataset.setting] = cb.checked;
+                    save('settings-update');
+                });
+            });
+
+            setupDragAndDrop(el);
+
+            renderToggleList('about-section-list', [
+                { key: 'aboutHero', label: 'Hero', setting: 'showAboutHero' },
+                { key: 'aboutOrigin', label: 'Studio Origin', setting: 'showAboutOrigin' },
+                { key: 'aboutPrinciples', label: 'Creative Principles', setting: 'showAboutPrinciples' },
+                { key: 'aboutEngagement', label: 'Engagement Model', setting: 'showAboutEngagement' },
+                { key: 'aboutExtra', label: 'Extra Section', setting: 'showAboutExtra' },
+                { key: 'aboutCta', label: 'CTA Band', setting: 'showAboutCta' }
+            ]);
+
+            renderToggleList('gallery-section-list', [
+                { key: 'galleryFilters', label: 'Category Filters', setting: 'showGalleryFilters' },
+                { key: 'galleryGrid', label: 'Image Grid', setting: 'showGalleryGrid' }
+            ]);
+
+            renderSizeSliders();
+        }
+
+        function renderSizeSliders() {
+            const defaults = { logoSize: 4.85, brandTitleSize: 2.55, navLinkSize: 1.0 };
+            document.querySelectorAll('input[type="range"][data-setting]').forEach(input => {
+                const key = input.dataset.setting;
+                const stored = cmsData.settings[key];
+                const value = stored != null && stored !== '' && !isNaN(Number(stored)) ? Number(stored) : defaults[key];
+                input.value = value;
+                const valueEl = document.querySelector(`[data-slider-value-for="${input.id}"]`);
+                const updateValueLabel = () => {
+                    if (valueEl) valueEl.textContent = Number(input.value).toFixed(2) + 'rem';
+                };
+                updateValueLabel();
+                input.addEventListener('input', () => {
+                    cmsData.settings[key] = Number(input.value);
+                    updateValueLabel();
+                    if (window.CMS && window.CMS.applySettingsToDocument) {
+                        window.CMS.applySettingsToDocument(cmsData);
+                    }
+                    save('settings-slider');
+                });
+            });
+            document.querySelectorAll('[data-reset-setting]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const key = btn.dataset.resetSetting;
+                    cmsData.settings[key] = null;
+                    const input = document.querySelector(`input[data-setting="${key}"]`);
+                    if (input) {
+                        input.value = defaults[key];
+                        const valueEl = document.querySelector(`[data-slider-value-for="${input.id}"]`);
+                        if (valueEl) valueEl.textContent = 'default';
+                    }
+                    if (window.CMS && window.CMS.applySettingsToDocument) {
+                        window.CMS.applySettingsToDocument(cmsData);
+                    }
+                    save('settings-slider-reset');
+                });
+            });
+        }
+
+        function setupDragAndDrop(list) {
+            let draggedItem = null;
+            list.addEventListener('dragstart', (e) => {
+                if (e.target.classList.contains('admin-sortable-item')) {
+                    draggedItem = e.target;
+                    e.target.classList.add('dragging');
+                }
+            });
+            list.addEventListener('dragend', (e) => {
+                if (e.target.classList.contains('admin-sortable-item')) {
+                    e.target.classList.remove('dragging');
+                    draggedItem = null;
+                    const items = list.querySelectorAll('.admin-sortable-item');
+                    cmsData.settings.sectionOrder = Array.from(items).map(i => i.dataset.section);
+                    save('reorder-sections');
+                }
+            });
+            list.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                const els = [...list.querySelectorAll('.admin-sortable-item:not(.dragging)')];
+                const after = els.reduce((closest, child) => {
+                    const box = child.getBoundingClientRect();
+                    const offset = e.clientY - box.top - box.height / 2;
+                    if (offset < 0 && offset > closest.offset) return { offset, element: child };
+                    return closest;
+                }, { offset: Number.NEGATIVE_INFINITY }).element;
+                if (draggedItem) {
+                    if (after) list.insertBefore(draggedItem, after);
+                    else list.appendChild(draggedItem);
+                }
+            });
+        }
+
+        // ===== PANEL TOGGLES =====
+        document.querySelectorAll('.admin-capsule[data-panel]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.admin-capsule[data-panel]').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                document.querySelectorAll('.admin-panel').forEach(p => p.style.display = 'none');
+                const panel = document.getElementById('panel-' + btn.dataset.panel);
+                if (panel) panel.style.display = 'block';
+            });
+        });
+
+
+        // ===== INIT =====
+        function renderAll() {
+            renderHero();
+            renderProducts();
+            renderFeature();
+            renderValues();
+            renderJournal();
+            renderJournalBanner();
+            renderEvents();
+            renderJournalPosts();
+            renderAbout();
+            renderPrinciples();
+            renderEngagement();
+            renderGalleryItems();
+            renderContact();
+            renderSettings();
+        }
+
+        async function init() {
+            try {
+                cmsData = await window.CMS.fetchCms();
+                setSyncStatus('Loaded from CMS.');
+            } catch {
+                cmsData = window.CMS.mergeCms({});
+                setSyncStatus('Using defaults (CMS fetch failed).');
+            }
+            renderAll();
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    })();
+    </script>
+</body>
+</html>

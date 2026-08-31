@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery | Suzanne Schwager McKenzie</title>
+    <meta
+      name="description"
+      content="Explore Suzanne Schwager McKenzie's gallery layout for coastal portraits, editorial still life, travel sequences, and studio textures."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/tokens.css" />
+    <link rel="stylesheet" href="/assets/css/base.css" />
+    <link rel="stylesheet" href="/assets/css/layout.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="stylesheet" href="/assets/css/pages.css" />
+  </head>
+  <body class="home-template gallery-template">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="site-shell">
+      <header class="site-header home-header">
+        <div class="container-wide home-header__brandrow">
+          <button
+            class="menu-toggle home-menu-toggle"
+            type="button"
+            data-menu-toggle
+            aria-expanded="false"
+            aria-controls="primary-nav"
+            aria-label="Toggle navigation"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M3 6h18M3 12h18M3 18h18" />
+            </svg>
+          </button>
+
+          <a class="home-brand" href="/">
+            <span class="home-brand__name">Suzanne Schwager McKenzie</span>
+          </a>
+
+          <nav id="primary-nav" class="home-nav" data-site-nav aria-label="Primary navigation">
+            <a href="/" data-nav-link>Home</a>
+            <a href="/gallery/" data-nav-link>Gallery</a>
+            <a href="/journal/" data-nav-link>Journal</a>
+            <a href="/about/" data-nav-link>About</a>
+            <a href="/contact/" data-nav-link>Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <main id="main-content">
+        <section class="section">
+          <div class="container-wide">
+            <div class="gallery-toolbar" data-section="galleryFilters" data-reveal>
+              <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All</button>
+              <button class="filter-button" type="button" data-filter="landscape" aria-pressed="false">Landscape</button>
+              <button class="filter-button" type="button" data-filter="floral" aria-pressed="false">Floral</button>
+              <button class="filter-button" type="button" data-filter="coastal" aria-pressed="false">Coastal</button>
+              <button class="filter-button" type="button" data-filter="vases" aria-pressed="false">Vases</button>
+              <button class="filter-button" type="button" data-filter="bowls" aria-pressed="false">Bowls</button>
+            </div>
+
+            <div class="work-grid" data-section="galleryGrid">
+              <article class="gallery-item" data-category="landscape vases" data-reveal>
+                <figure class="gallery-card">
+                  <img src="/assets/img/sunset-tree-vase.jpg" alt="Handmade vase with painted sunset tree landscape" loading="lazy" />
+                  <figcaption class="gallery-card__info">
+                    <strong>Sunset Tree Vase</strong>
+                    <span>Landscape / Vases</span>
+                  </figcaption>
+                  <button class="gallery-card__open" type="button" data-lightbox-trigger data-lightbox-image="/assets/img/sunset-tree-vase.jpg" data-lightbox-caption="Sunset Tree Vase" data-lightbox-alt="Handmade vase with painted sunset tree landscape">View</button>
+                </figure>
+              </article>
+
+              <article class="gallery-item" data-category="floral bowls" data-reveal>
+                <figure class="gallery-card">
+                  <img src="/assets/img/garden-vine-bowl.jpg" alt="Handmade bowl with trailing garden vines and flowers" loading="lazy" />
+                  <figcaption class="gallery-card__info">
+                    <strong>Garden Vine Bowl</strong>
+                    <span>Floral / Bowls</span>
+                  </figcaption>
+                  <button class="gallery-card__open" type="button" data-lightbox-trigger data-lightbox-image="/assets/img/garden-vine-bowl.jpg" data-lightbox-caption="Garden Vine Bowl" data-lightbox-alt="Handmade bowl with trailing garden vines and flowers">View</button>
+                </figure>
+              </article>
+
+              <article class="gallery-item" data-category="floral bowls" data-reveal>
+                <figure class="gallery-card">
+                  <img src="/assets/img/cherry-blossom-bowl.jpg" alt="Handmade bowl with pink cherry blossom branches" loading="lazy" />
+                  <figcaption class="gallery-card__info">
+                    <strong>Cherry Blossom Bowl</strong>
+                    <span>Floral / Bowls</span>
+                  </figcaption>
+                  <button class="gallery-card__open" type="button" data-lightbox-trigger data-lightbox-image="/assets/img/cherry-blossom-bowl.jpg" data-lightbox-caption="Cherry Blossom Bowl" data-lightbox-alt="Handmade bowl with pink cherry blossom branches">View</button>
+                </figure>
+              </article>
+
+              <article class="gallery-item" data-category="coastal vases" data-reveal>
+                <figure class="gallery-card">
+                  <img src="/assets/img/sailboat-vase.jpg" alt="Handmade vase with painted sailboat on blue water" loading="lazy" />
+                  <figcaption class="gallery-card__info">
+                    <strong>Sailboat Vase</strong>
+                    <span>Coastal / Vases</span>
+                  </figcaption>
+                  <button class="gallery-card__open" type="button" data-lightbox-trigger data-lightbox-image="/assets/img/sailboat-vase.jpg" data-lightbox-caption="Sailboat Vase" data-lightbox-alt="Handmade vase with painted sailboat on blue water">View</button>
+                </figure>
+              </article>
+
+              <article class="gallery-item" data-category="floral bowls" data-reveal>
+                <figure class="gallery-card">
+                  <img src="/assets/img/wisteria-bowl.jpg" alt="Handmade bowl with cascading purple wisteria" loading="lazy" />
+                  <figcaption class="gallery-card__info">
+                    <strong>Wisteria Bowl</strong>
+                    <span>Floral / Bowls</span>
+                  </figcaption>
+                  <button class="gallery-card__open" type="button" data-lightbox-trigger data-lightbox-image="/assets/img/wisteria-bowl.jpg" data-lightbox-caption="Wisteria Bowl" data-lightbox-alt="Handmade bowl with cascading purple wisteria">View</button>
+                </figure>
+              </article>
+
+              <article class="gallery-item" data-category="coastal landscape" data-reveal>
+                <figure class="gallery-card">
+                  <img src="/assets/img/palm-shore-planter.jpg" alt="Handmade planter with palm trees and beach scene" loading="lazy" />
+                  <figcaption class="gallery-card__info">
+                    <strong>Palm Shore Planter</strong>
+                    <span>Coastal / Landscape</span>
+                  </figcaption>
+                  <button class="gallery-card__open" type="button" data-lightbox-trigger data-lightbox-image="/assets/img/palm-shore-planter.jpg" data-lightbox-caption="Palm Shore Planter" data-lightbox-alt="Handmade planter with palm trees and beach scene">View</button>
+                </figure>
+              </article>
+
+              <article class="gallery-item" data-category="landscape bowls" data-reveal>
+                <figure class="gallery-card">
+                  <img src="/assets/img/meadow-sunset-bowl.jpg" alt="Handmade bowl with painted meadow and sunset" loading="lazy" />
+                  <figcaption class="gallery-card__info">
+                    <strong>Meadow Sunset Bowl</strong>
+                    <span>Landscape / Bowls</span>
+                  </figcaption>
+                  <button class="gallery-card__open" type="button" data-lightbox-trigger data-lightbox-image="/assets/img/meadow-sunset-bowl.jpg" data-lightbox-caption="Meadow Sunset Bowl" data-lightbox-alt="Handmade bowl with painted meadow and sunset">View</button>
+                </figure>
+              </article>
+
+              <article class="gallery-item" data-category="floral" data-reveal>
+                <figure class="gallery-card">
+                  <img src="/assets/img/magnolia-plate.jpg" alt="Handmade plate with magnolia flower" loading="lazy" />
+                  <figcaption class="gallery-card__info">
+                    <strong>Magnolia Plate</strong>
+                    <span>Floral</span>
+                  </figcaption>
+                  <button class="gallery-card__open" type="button" data-lightbox-trigger data-lightbox-image="/assets/img/magnolia-plate.jpg" data-lightbox-caption="Magnolia Plate" data-lightbox-alt="Handmade plate with magnolia flower">View</button>
+                </figure>
+              </article>
+
+              <article class="gallery-item" data-category="landscape vases" data-reveal>
+                <figure class="gallery-card">
+                  <img src="/assets/img/hillside-tree-vase.jpg" alt="Handmade vase with green hillside tree landscape" loading="lazy" />
+                  <figcaption class="gallery-card__info">
+                    <strong>Hillside Tree Vase</strong>
+                    <span>Landscape / Vases</span>
+                  </figcaption>
+                  <button class="gallery-card__open" type="button" data-lightbox-trigger data-lightbox-image="/assets/img/hillside-tree-vase.jpg" data-lightbox-caption="Hillside Tree Vase" data-lightbox-alt="Handmade vase with green hillside tree landscape">View</button>
+                </figure>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="home-newsletter">
+        <div class="container-wide home-newsletter__inner">
+          <nav class="home-newsletter__links" aria-label="Footer links" data-reveal>
+            <a href="/journal/" data-nav-link>Journal</a>
+            <a href="/about/">About</a>
+            <a href="/gallery/">Gallery</a>
+            <a href="/contact/">Contact</a>
+          </nav>
+        </div>
+
+        <div class="container-wide home-legal">
+          <p>(c) <span data-year></span> Suzanne Schwager McKenzie.</p>
+        </div>
+      </footer>
+    </div>
+
+    <div class="lightbox" data-lightbox hidden role="dialog" aria-modal="true" aria-label="Expanded gallery image">
+      <div class="lightbox__panel">
+        <button class="lightbox__close" type="button" data-lightbox-close aria-label="Close image">X</button>
+        <img data-lightbox-image src="" alt="" />
+        <p class="lightbox__caption" data-lightbox-caption></p>
+      </div>
+    </div>
+
+    <script src="/cms-client.js?v=3"></script>
+    <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/reveal.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', async () => {
+        try {
+          const cms = await window.CMS.fetchCms();
+          const g = cms.gallery;
+
+          const grid = document.querySelector('.work-grid');
+          if (grid && g.items.length) {
+            const visible = g.items.filter(i => i.visibility !== 'hidden');
+            grid.innerHTML = visible.map(i => {
+              const cats = (i.categories || '').split(' ').filter(Boolean);
+              const catLabel = cats.map(c => c.charAt(0).toUpperCase() + c.slice(1)).join(' / ');
+              return `<article class="gallery-item is-visible" data-category="${i.categories}">
+                <figure class="gallery-card">
+                  <img src="${i.image}" alt="${i.image_alt || ''}" loading="lazy" />
+                  ${i.sold ? '<span class="sold-badge">SOLD</span>' : ''}
+                  <figcaption class="gallery-card__info">
+                    <strong>${i.title}</strong>
+                    <span>${catLabel}</span>
+                    <span class="gallery-card__price">${i.price ? '$' + i.price : 'Price on request'}</span>
+                  </figcaption>
+                  <button class="gallery-card__open" type="button"
+                    data-lightbox-trigger
+                    data-lightbox-image="${i.image}"
+                    data-lightbox-caption="${i.title}"
+                    data-lightbox-alt="${i.image_alt || ''}">View</button>
+                </figure>
+              </article>`;
+            }).join('');
+          }
+
+          const sectionMap = {
+            galleryFilters: 'showGalleryFilters',
+            galleryGrid: 'showGalleryGrid'
+          };
+          Object.entries(sectionMap).forEach(([key, setting]) => {
+            if (cms.settings[setting] === false) {
+              const el = document.querySelector(`[data-section="${key}"]`);
+              if (el) el.style.display = 'none';
+            }
+          });
+        } catch (e) {
+          // CMS fetch failed; static HTML remains.
+        }
+      });
+    </script>
+  </body>
+</html>

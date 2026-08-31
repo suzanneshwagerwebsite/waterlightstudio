@@ -1,0 +1,1160 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-25T16:07:50.745Z",
+  "settings": {
+    "sectionOrder": [
+      "hero",
+      "products",
+      "feature",
+      "values",
+      "journal"
+    ],
+    "showHeroSection": true,
+    "showProductsSection": true,
+    "showFeatureSection": true,
+    "showValuesSection": true,
+    "showJournalSection": true,
+    "showNewsletterSection": true,
+    "showAboutHero": true,
+    "showAboutOrigin": true,
+    "showAboutPrinciples": true,
+    "showAboutEngagement": false,
+    "showAboutCta": false,
+    "showGalleryFilters": true,
+    "showGalleryGrid": true,
+    "logoSize": 7,
+    "brandTitleSize": 4,
+    "navLinkSize": 1.5,
+    "showGalleryHero": true,
+    "showAboutExtra": true
+  },
+  "hero": {
+    "title": "Fine Art Pottery",
+    "cta_text": "View Gallery",
+    "cta_link": "/gallery/",
+    "image": "/assets/img/shoot-showroom-shelves.jpg",
+    "image_alt": "Showroom shelves lined with hand-painted pottery"
+  },
+  "products": {
+    "section_title": "View our favorite ceramics",
+    "items": [
+      {
+        "id": "product_1",
+        "image": "/assets/img/sunset-tree-vase.jpg",
+        "image_alt": "Handmade vase with painted sunset tree landscape",
+        "title": "Sunset Tree Vase",
+        "learn_more_link": "/about/",
+        "gallery_link": "/gallery/",
+        "visibility": "visible"
+      },
+      {
+        "id": "product_2",
+        "title": "Cherry Blossom Bowl",
+        "description": "",
+        "image": "/assets/img/cherry-blossom-bowl.jpg",
+        "image_alt": "Handmade bowl with pink cherry blossom branches",
+        "learn_more_link": "/about/",
+        "gallery_link": "/gallery/",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "product_3",
+        "image": "/assets/img/sailboat-vase.jpg",
+        "image_alt": "Handmade vase with painted sailboat on blue water",
+        "title": "Sailboat Vase",
+        "learn_more_link": "/about/",
+        "gallery_link": "/gallery/",
+        "visibility": "visible"
+      }
+    ]
+  },
+  "feature": {
+    "image": "/assets/img/shoot-landscape-bowl.jpg",
+    "image_alt": "Hand-thrown bowl painted with a coastal landscape scene",
+    "title": "Collectibles",
+    "description": "Every piece is hand-thrown, kiln-fired, and finished in small batches.",
+    "link_text": "Learn More",
+    "link_url": "/about/"
+  },
+  "values": {
+    "title": "Forever and Always",
+    "items": [
+      {
+        "id": "value_1",
+        "title": "Pure Materials",
+        "description": "Stoneware clay bodies and mineral glazes selected for daily use and longevity."
+      },
+      {
+        "id": "value_2",
+        "title": "Small Batch",
+        "description": "Limited drops let each collection stay unique."
+      },
+      {
+        "id": "value_3",
+        "title": "Made by Hand",
+        "description": "No two forms are identical. Natural variation is treated as part of the signature."
+      }
+    ]
+  },
+  "journal": {
+    "intro_text": "It all begins with an idea. Maybe you want a collection for your table.",
+    "cta_text": "All Posts",
+    "cta_link": "/journal/",
+    "cards": [
+      {
+        "id": "journal_1",
+        "title": "Painting with underglaze and stains",
+        "image": "/assets/img/wisteria-bowl.jpg",
+        "image_alt": "Handmade bowl with cascading purple wisteria",
+        "visibility": "visible"
+      },
+      {
+        "id": "journal_2",
+        "title": "Introducing our spring floral collection",
+        "image": "/assets/img/magnolia-plate.jpg",
+        "image_alt": "Handmade plate with magnolia flower",
+        "visibility": "visible"
+      }
+    ],
+    "page_intro": "\nAmerican Art Pottery Association\nhttps://aapa.info › journal\n",
+    "posts": [
+      {
+        "id": "post_1782427333009_tk8c1q",
+        "title": "Exhibits",
+        "date": "",
+        "excerpt": "Test",
+        "body": "Test",
+        "cover": "",
+        "cover_alt": "",
+        "visibility": "visible"
+      }
+    ],
+    "events": []
+  },
+  "newsletter": {
+    "signup_text": "",
+    "image": "/assets/img/placeholders/home-newsletter-visual.svg",
+    "image_alt": "Ceramic detail",
+    "instagram_text": "Follow us on Instagram"
+  },
+  "about": {
+    "kicker": "About",
+    "hero_title": "Art Pottery",
+    "hero_description": "Suzanne continues to create decorative pottery similar to the work of turn of the 19th century American Art Pottery studios. Rookwood, Van Briggle and Newcomb College designs are her inspiration.",
+    "bio": "Suzanne Schwager McKenzie began her pottery career while studying ceramics at the University of California Santa Barbara. She was hired by Santa Barbara Ceramic Design to design and decorate art pottery that would be exhibited in various craft shows in the 1980's. One of these shows included the Smithsonian Institute's American Art Pottery Exhibit. She has exhibited her pottery in the Los Angeles Art Pottery Show and sells her pieces to private collectors. Suzanne creates her pottery in her home studio where she hand throws each piece on the potter's wheel. She fires the clay pieces after hand painting the individual ware.",
+    "origin_title": "Studio Origin",
+    "origin_text_1": "Suzanne's home studio in the Riviera district of Santa Barbara California is a beautiful inspiration for her designs. The views of the Santa Barbara marina, Spanish tiled homes, and scenic foothills are reminiscent of early California days. Her over glazes cast a subtle vintage tone over carefully drawn underglazes. Her travels to the countries of Italy, Greece, France, and Spain have brought a Mediterranean flair to her home pottery studio. ",
+    "origin_text_2": "After Suzanne completes a group of individual hand thrown pieces she will bring them to her small art gallery for display. The art gallery is located in the Arlington district in downtown Santa Barbara at 18 West Micheltorena Street Suite D Santa Barbara California 93101. Suzanne can be contacted by sending her a message through email located in the contact tab. ",
+    "origin_image": "/assets/img/shoot-wisteria-vase.jpg",
+    "origin_image_alt": "Hand-painted wisteria vase on a stone ledge",
+    "principles": [
+      {
+        "id": "principle_1",
+        "title": "Stoneware and Pure Oxide Stains",
+        "description": "Each hand thrown piece is carefully painted in a style that is similar to watercolor. The washes are light and delicate. "
+      }
+    ],
+    "engagement": [
+      {
+        "id": "engage_1",
+        "title": "New Happenings in the studio",
+        "description": ""
+      },
+      {
+        "id": "engage_2",
+        "title": "Brand Narrative Package",
+        "description": "Multi-location coverage and expanded library for website, social, and seasonal releases."
+      }
+    ],
+    "extra_title": "From the Studio",
+    "extra_text": "New work is always underway at the wheel. This space is for a closer look at the studio, the process, and the pieces in progress.",
+    "extra_image": "/assets/img/shoot-waterlight-sign.jpg",
+    "extra_image_alt": "Studio sign on the showroom wall beside a palm"
+  },
+  "gallery": {
+    "kicker": "Image Library",
+    "hero_title": "Gallery rhythms in the same calm, earthy direction.",
+    "hero_description": "Placeholder image blocks are organized by mood and context so final photography can be inserted quickly once selections are approved.",
+    "categories": [
+      "landscape",
+      "floral",
+      "coastal",
+      "vases",
+      "bowls"
+    ],
+    "items": [
+      {
+        "id": "gallery_1",
+        "title": "Riviera Sunset Vase",
+        "image": "/assets/img/sunset-tree-vase.jpg",
+        "image_alt": "Handmade vase with painted sunset tree landscape",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": false,
+        "price": "250"
+      },
+      {
+        "id": "gallery_2",
+        "title": "Honey Bee Bowl",
+        "image": "/assets/img/garden-vine-bowl.jpg",
+        "image_alt": "Handmade bowl with trailing garden vines and flowers",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_3",
+        "image": "/assets/img/cherry-blossom-bowl.jpg",
+        "image_alt": "Handmade bowl with pink cherry blossom branches",
+        "title": "Cherry Blossom Bowl",
+        "categories": "floral bowls",
+        "visibility": "visible"
+      },
+      {
+        "id": "gallery_4",
+        "image": "/assets/img/sailboat-vase.jpg",
+        "image_alt": "Handmade vase with painted sailboat on blue water",
+        "title": "Sailboat Vase",
+        "categories": "coastal vases",
+        "visibility": "visible"
+      },
+      {
+        "id": "gallery_5",
+        "image": "/assets/img/wisteria-bowl.jpg",
+        "image_alt": "Handmade bowl with cascading purple wisteria",
+        "title": "Wisteria Bowl",
+        "categories": "floral bowls",
+        "visibility": "visible"
+      },
+      {
+        "id": "gallery_6",
+        "image": "/assets/img/palm-shore-planter.jpg",
+        "image_alt": "Handmade planter with palm trees and beach scene",
+        "title": "Palm Shore Planter",
+        "categories": "coastal landscape",
+        "visibility": "visible"
+      },
+      {
+        "id": "gallery_7",
+        "image": "/assets/img/meadow-sunset-bowl.jpg",
+        "image_alt": "Handmade bowl with painted meadow and sunset",
+        "title": "Meadow Sunset Bowl",
+        "categories": "landscape bowls",
+        "visibility": "visible"
+      },
+      {
+        "id": "gallery_8",
+        "image": "/assets/img/magnolia-plate.jpg",
+        "image_alt": "Handmade plate with magnolia flower",
+        "title": "Magnolia Plate",
+        "categories": "floral",
+        "visibility": "visible"
+      },
+      {
+        "id": "gallery_9",
+        "title": "Hillside Tree Vase",
+        "image": "/assets/img/hillside-tree-vase.jpg",
+        "image_alt": "Handmade vase with green hillside tree landscape",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": true,
+        "price": ""
+      },
+      {
+        "id": "gallery_32",
+        "title": "Dolphin Bowl",
+        "image": "/assets/img/waterlight-edits-01.jpg",
+        "image_alt": "Hand-thrown bowl painted with blue dolphins swimming in a green swirl",
+        "categories": "coastal bowls",
+        "visibility": "visible",
+        "sold": true,
+        "price": ""
+      },
+      {
+        "id": "gallery_34",
+        "title": "Gardenia Bowl",
+        "image": "/assets/img/waterlight-edits-03.jpg",
+        "image_alt": "Hand-painted bowl with a white magnolia blossom",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_35",
+        "title": "Plumeria Bowl",
+        "image": "/assets/img/waterlight-edits-04.jpg",
+        "image_alt": "Hand-painted bowl with pink cherry blossoms",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_36",
+        "title": "Sunrise Bowl",
+        "image": "/assets/img/waterlight-edits-05.jpg",
+        "image_alt": "Hand-painted bowl with birch trees beside water",
+        "categories": "landscape bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_37",
+        "title": "Sunrise Bowl",
+        "image": "/assets/img/waterlight-edits-06.jpg",
+        "image_alt": "Hand-painted bowl with trees and a red setting sun",
+        "categories": "landscape bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_38",
+        "title": "Plumeria Bowl",
+        "image": "/assets/img/waterlight-edits-07.jpg",
+        "image_alt": "Hand-painted bowl with a yellow hibiscus flower",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_39",
+        "title": "Cherry Blossom Bowl",
+        "image": "/assets/img/waterlight-edits-08.jpg",
+        "image_alt": "Hand-painted bowl with trailing pink blossoms",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_40",
+        "title": "Cherry Blossom Bowl",
+        "image": "/assets/img/waterlight-edits-09.jpg",
+        "image_alt": "Hand-painted bowl with pink cherry blossoms and a golden center",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_41",
+        "title": "Hillside Sunrise Bowl",
+        "image": "/assets/img/waterlight-edits-10.jpg",
+        "image_alt": "Hand-painted bowl with rolling hills and a red sun",
+        "categories": "landscape bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_42",
+        "title": "Sand Dollar  Bowl",
+        "image": "/assets/img/waterlight-edits-11.jpg",
+        "image_alt": "Hand-thrown blue bowl with a star motif at the center",
+        "categories": "bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_43",
+        "title": "Lemon Bowl",
+        "image": "/assets/img/waterlight-edits-12.jpg",
+        "image_alt": "Hand-painted bowl with lemons and green leaves",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_44",
+        "title": "Lemon Bowl",
+        "image": "/assets/img/waterlight-edits-13.jpg",
+        "image_alt": "Hand-painted bowl with lemons on leafy branches",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_45",
+        "title": "Sunrise Santa Barbara Bowl",
+        "image": "/assets/img/waterlight-edits-14.jpg",
+        "image_alt": "Hand-painted vase with trailing leaves and honeybees",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_46",
+        "title": "Sunrise Santa Barbara Bowl",
+        "image": "/assets/img/waterlight-edits-15.jpg",
+        "image_alt": "Hand-painted bowl with vines and honeybees",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_47",
+        "title": "Honeybee Bowl",
+        "image": "/assets/img/waterlight-edits-16.jpg",
+        "image_alt": "Hand-painted bowl with leaves and honeybees",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_48",
+        "title": "Honey Bee Bowl",
+        "image": "/assets/img/waterlight-edits-17.jpg",
+        "image_alt": "Hand-painted vase with sailboats at sunset",
+        "categories": "coastal vases",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_49",
+        "title": "Bee Bowl ",
+        "image": "/assets/img/waterlight-edits-18.jpg",
+        "image_alt": "Hand-painted vase with green marsh reeds",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_50",
+        "title": "Regatta Bowl",
+        "image": "/assets/img/waterlight-edits-19.jpg",
+        "image_alt": "Hand-painted vase with a single palm tree",
+        "categories": "coastal vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_51",
+        "title": "Bamboo Vase",
+        "image": "/assets/img/waterlight-edits-20.jpg",
+        "image_alt": "Hand-painted vase with palm trees",
+        "categories": "coastal vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_52",
+        "title": "Palm Bowl",
+        "image": "/assets/img/waterlight-edits-21.jpg",
+        "image_alt": "Hand-painted vase with a pink and white wild rose",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_53",
+        "title": "Palm Bowl",
+        "image": "/assets/img/waterlight-edits-22.jpg",
+        "image_alt": "Hand-painted vase with peach poppies",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_54",
+        "title": "Wild Rose Vase",
+        "image": "/assets/img/waterlight-edits-23.jpg",
+        "image_alt": "Hand-painted vase with trailing vines and berries",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_55",
+        "title": "Wild Rose Vase",
+        "image": "/assets/img/waterlight-edits-24.jpg",
+        "image_alt": "Hand-painted vase with a palm tree and foliage",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": true,
+        "price": ""
+      },
+      {
+        "id": "gallery_56",
+        "title": "Colorful Vines Vase",
+        "image": "/assets/img/waterlight-edits-25.jpg",
+        "image_alt": "Hand-painted vase with two palm trees",
+        "categories": "coastal vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_57",
+        "title": "Riviera Palm Vase",
+        "image": "/assets/img/waterlight-edits-26.jpg",
+        "image_alt": "Hand-painted vase with purple irises",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_58",
+        "title": "Riviera Palm Vase",
+        "image": "/assets/img/waterlight-edits-27.jpg",
+        "image_alt": "Hand-painted vase with willow buds",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_59",
+        "title": "Lavender Iris Vase",
+        "image": "/assets/img/waterlight-edits-28.jpg",
+        "image_alt": "Hand-painted vase with a lone tree on a hillside",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_60",
+        "title": "Willow Vase ",
+        "image": "/assets/img/waterlight-edits-29.jpg",
+        "image_alt": "Hand-painted bowl with green leaves and golden wash",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_61",
+        "title": "Riviera Sunrise Vase",
+        "image": "/assets/img/waterlight-edits-30.jpg",
+        "image_alt": "Hand-painted vase scattered with ladybugs",
+        "categories": "vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_62",
+        "title": "Ginkgo Bowl",
+        "image": "/assets/img/waterlight-edits-31.jpg",
+        "image_alt": "Hand-painted bowl with pastel trees",
+        "categories": "landscape bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_63",
+        "title": "Ladybug Cup",
+        "image": "/assets/img/waterlight-edits-32.jpg",
+        "image_alt": "Hand-painted vase with blue irises",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_64",
+        "title": "Sun at Noon Bowl",
+        "image": "/assets/img/waterlight-edits-33.jpg",
+        "image_alt": "Hand-painted vase with lavender irises",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_65",
+        "title": "Iris Vase",
+        "image": "/assets/img/waterlight-edits-34.jpg",
+        "image_alt": "Hand-painted vase with pink berry branches",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_66",
+        "title": "Iris Vase",
+        "image": "/assets/img/waterlight-edits-35.jpg",
+        "image_alt": "Hand-painted vase with a palm frond",
+        "categories": "coastal vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_67",
+        "title": "Spring Vase",
+        "image": "/assets/img/waterlight-edits-36.jpg",
+        "image_alt": "Hand-painted vase with a figure walking a hillside path",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": true,
+        "price": ""
+      },
+      {
+        "id": "gallery_68",
+        "title": "Palm Branch Vase",
+        "image": "/assets/img/waterlight-edits-37.jpg",
+        "image_alt": "Hand-painted vase with lemons and leaves",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_69",
+        "title": "Hiker Vase",
+        "image": "/assets/img/waterlight-edits-38.jpg",
+        "image_alt": "Hand-painted vase with white dandelions",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_70",
+        "title": "Lemon Vase",
+        "image": "/assets/img/waterlight-edits-39.jpg",
+        "image_alt": "Hand-painted vase with a painter and black cat in a landscape",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_71",
+        "title": "Dandelion Vase",
+        "image": "/assets/img/waterlight-edits-40.jpg",
+        "image_alt": "Hand-painted vase with pink blossoms",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_72",
+        "title": "Fall Leaves Vase",
+        "image": "/assets/img/waterlight-edits-41.jpg",
+        "image_alt": "Hand-painted vase with a white sailboat on the bay",
+        "categories": "coastal vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_73",
+        "title": "Sailboat Vase",
+        "image": "/assets/img/waterlight-edits-42.jpg",
+        "image_alt": "Hand-painted vase with pink tulips",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_74",
+        "title": "Tulip Vase",
+        "image": "/assets/img/waterlight-edits-43.jpg",
+        "image_alt": "Hand-painted vase with drifting wisteria vines",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_75",
+        "title": "Windy Sky Vase",
+        "image": "/assets/img/waterlight-edits-44.jpg",
+        "image_alt": "Hand-painted vase with purple wisteria",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_76",
+        "title": "Dolphin Sea Bowl",
+        "image": "/assets/img/waterlight-edits-45.jpg",
+        "image_alt": "Hand-painted bowl with blue dolphins",
+        "categories": "coastal bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_77",
+        "title": "Spring Sprig Bowl",
+        "image": "/assets/img/waterlight-edits-46.jpg",
+        "image_alt": "Hand-thrown blue bowl with delicate green sprigs",
+        "categories": "bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_78",
+        "title": "Woodland Tree Vase",
+        "image": "/assets/img/waterlight-edits-47.jpg",
+        "image_alt": "Hand-painted vase with bare woodland trees",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_79",
+        "title": "Sunrise Vase",
+        "image": "/assets/img/waterlight-edits-48.jpg",
+        "image_alt": "Hand-painted vase with a field of purple irises",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_80",
+        "title": "Rosebud Bowl",
+        "image": "/assets/img/waterlight-edits-49.jpg",
+        "image_alt": "Hand-painted bowl with tiny pink rosebuds",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_81",
+        "title": "Seashell & Star Bowl",
+        "image": "/assets/img/waterlight-edits-50.jpg",
+        "image_alt": "Hand-painted bowl with a seashell and starfish",
+        "categories": "coastal bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_82",
+        "title": "Abalone Shell Bowl",
+        "image": "/assets/img/waterlight-edits-51.jpg",
+        "image_alt": "Hand-painted bowl with abalone and spiral shells",
+        "categories": "coastal bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_83",
+        "title": "Sunlit Grove Vase",
+        "image": "/assets/img/waterlight-edits-52.jpg",
+        "image_alt": "Hand-painted vase with a sunlit pastel grove",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_84",
+        "title": "Purple Iris Vase",
+        "image": "/assets/img/waterlight-edits-53.jpg",
+        "image_alt": "Hand-painted vase with purple irises",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_85",
+        "title": "Willow Vase",
+        "image": "/assets/img/waterlight-edits-54.jpg",
+        "image_alt": "Hand-painted vase with willow branches",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_86",
+        "title": "Tree at Dawn Vase",
+        "image": "/assets/img/waterlight-edits-55.jpg",
+        "image_alt": "Hand-painted vase with a tree against a pink dawn sky",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_87",
+        "title": "Butterfly Vase",
+        "image": "/assets/img/waterlight-edits-56.jpg",
+        "image_alt": "Hand-painted vase with pastel butterflies",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_90",
+        "title": "Castle Hill Vase",
+        "image": "/assets/img/waterlight-edits-59.jpg",
+        "image_alt": "Hand-painted vase with a castle on a green hill",
+        "categories": "landscape vases",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_92",
+        "title": "Bee Garden Bowl",
+        "image": "/assets/img/waterlight-edits-61.jpg",
+        "image_alt": "Hand-painted bowl with leaves, berries and honeybees",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_93",
+        "title": "Orange Rose Bowl",
+        "image": "/assets/img/waterlight-edits-62.jpg",
+        "image_alt": "Hand-painted bowl with an orange rose",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false
+      },
+      {
+        "id": "gallery_1784775640869_q46i72",
+        "title": "Palm Trees at Dusk",
+        "image": "/assets/img/img_0510.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1784775682451_9reatv",
+        "title": "Mountain Peaks Jar",
+        "image": "/assets/img/img_0502.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130527532_n6fdy2",
+        "title": "Eucalyptus in the Wind",
+        "image": "/assets/img/img_0799.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130558315_706ib8",
+        "title": "Wysteria Plate",
+        "image": "/assets/img/img_0796.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130617516_i9y6us",
+        "title": "Cherry Blossom Spring Bowl",
+        "image": "/assets/img/img_0792.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130644450_u2rztl",
+        "title": "Leaf Cup",
+        "image": "/assets/img/img_0787.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130684033_4mcj4p",
+        "title": "Wysteria Vine ",
+        "image": "/assets/img/img_0784.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130706533_w6trq6",
+        "title": "Plumeria Cup",
+        "image": "/assets/img/img_0783.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130805401_n2mtu7",
+        "title": "Peach Rose Bowl",
+        "image": "/assets/img/img_0781.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130831417_t3adug",
+        "title": "Peach Rose Bowl",
+        "image": "/assets/img/img_0778.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130867134_jw5tsg",
+        "title": "Wild Herbs Plate",
+        "image": "/assets/img/img_0776.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130902368_q194rv",
+        "title": "Sage Bowl",
+        "image": "/assets/img/img_0770.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130925551_u3k3q1",
+        "title": "Sage Bowl",
+        "image": "/assets/img/img_0769.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786130963534_b1g0el",
+        "title": "Grapes Plate",
+        "image": "/assets/img/img_0767.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131008051_6kbnm1",
+        "title": "Grapes Plate",
+        "image": "/assets/img/img_0768.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131048151_4bawz6",
+        "title": "Rosebud Bowl",
+        "image": "/assets/img/img_0763.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131084369_uuzc97",
+        "title": "Rosebud Vase",
+        "image": "/assets/img/img_0762.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131111668_scosoa",
+        "title": "Rosebud Plate",
+        "image": "/assets/img/img_0760.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131208901_ewuzy6",
+        "title": "Windy Branches",
+        "image": "/assets/img/img_0755.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131245319_862r82",
+        "title": "Rosebud Jar",
+        "image": "/assets/img/img_0752.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131283952_s0cuqd",
+        "title": "Lavender Plate",
+        "image": "/assets/img/img_0751.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131320053_7slvcc",
+        "title": "Grapes Plate medium",
+        "image": "/assets/img/img_0750.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131380503_lptv9j",
+        "title": "Tangerine Plate",
+        "image": "/assets/img/img_0749.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131409603_b9mcjn",
+        "title": "Plumeria Jar",
+        "image": "/assets/img/img_0727.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131481020_visy6e",
+        "title": "Spring Blossoms Bowl",
+        "image": "/assets/img/img_0745.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131529370_dbsnci",
+        "title": "Herb Vines Bowl",
+        "image": "/assets/img/img_0747.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131567520_8a1lqp",
+        "title": "California Poppy Jar",
+        "image": "/assets/img/img_0742.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131605937_xhq0o1",
+        "title": "Willow Vase",
+        "image": "/assets/img/img_0741.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131643604_5xqynr",
+        "title": "California Sunrise Vase",
+        "image": "/assets/img/img_0740.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131698553_dbkchl",
+        "title": "California Poppy Bowl",
+        "image": "/assets/img/img_0730.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131836486_vc36ac",
+        "title": "Meadow and Leaves Bowl",
+        "image": "/assets/img/img_0733.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131937021_0q229o",
+        "title": "Meadow and Leaves Vase",
+        "image": "/assets/img/img_0725.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786131989470_g4mwqj",
+        "title": "Elderberry Bowl",
+        "image": "/assets/img/img_0724.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786132045503_mithra",
+        "title": "China Sunset Jar",
+        "image": "/assets/img/img_0721.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786132080855_5k93c9",
+        "title": "China Sunset Jar lid",
+        "image": "/assets/img/img_0722.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1786132109505_8he7vj",
+        "title": "Malibu Palms",
+        "image": "/assets/img/img_0720.jpeg",
+        "image_alt": "",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      }
+    ]
+  },
+  "contact": {
+    "intro": "If you have questions about a piece, a commission, or a studio visit, send a note and I will respond within a few days.      \n         suzanne@waterlightstudio.com",
+    "intro_2": "If you would like to arrange a studio visit please contact me via email or text me at 805-450-8598. \nThank you!",
+    "kicker": "Contact",
+    "title": "Get in touch."
+  }
+}
