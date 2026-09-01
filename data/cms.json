@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-25T16:07:50.745Z",
+  "updatedAt": "2026-09-01T20:59:03.187Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -19,20 +19,20 @@
     "showAboutOrigin": true,
     "showAboutPrinciples": true,
     "showAboutEngagement": false,
+    "showAboutExtra": true,
     "showAboutCta": false,
     "showGalleryFilters": true,
     "showGalleryGrid": true,
     "logoSize": 7,
     "brandTitleSize": 4,
     "navLinkSize": 1.5,
-    "showGalleryHero": true,
-    "showAboutExtra": true
+    "showGalleryHero": true
   },
   "hero": {
     "title": "Fine Art Pottery",
     "cta_text": "View Gallery",
     "cta_link": "/gallery/",
-    "image": "/assets/img/shoot-showroom-shelves.jpg",
+    "image": "/assets/img/screen-shot-2026-07-31-at-9.30.05-pm-2.png",
     "image_alt": "Showroom shelves lined with hand-painted Waterlight Studio pottery"
   },
   "products": {
@@ -148,6 +148,10 @@
     "origin_text_2": "After Suzanne completes a group of individual hand thrown pieces she will bring them to her small art gallery for display. The art gallery is located in the Arlington district in downtown Santa Barbara at 18 West Micheltorena Street Suite D Santa Barbara California 93101. Suzanne can be contacted by sending her a message through email located in the contact tab. ",
     "origin_image": "/assets/img/shoot-wisteria-vase.jpg",
     "origin_image_alt": "Hand-painted wisteria vase on a stone ledge",
+    "extra_title": "From the Studio",
+    "extra_text": "New work is always underway at the wheel. This space is for a closer look at the studio, the process, and the pieces in progress.",
+    "extra_image": "/assets/img/shoot-waterlight-sign.jpg",
+    "extra_image_alt": "Waterlight Studio sign on the showroom wall beside a palm",
     "principles": [
       {
         "id": "principle_1",
@@ -166,11 +170,7 @@
         "title": "Brand Narrative Package",
         "description": "Multi-location coverage and expanded library for website, social, and seasonal releases."
       }
-    ],
-    "extra_title": "From the Studio",
-    "extra_text": "New work is always underway at the wheel. This space is for a closer look at the studio, the process, and the pieces in progress.",
-    "extra_image": "/assets/img/shoot-waterlight-sign.jpg",
-    "extra_image_alt": "Waterlight Studio sign on the showroom wall beside a palm"
+    ]
   },
   "gallery": {
     "kicker": "Image Library",
