@@ -55,8 +55,10 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           wranglerVersion: "4.97.0"
-          workingDirectory: worker
-          command: deploy
+          # NOT workingDirectory: wrangler walks up from there and finds the root
+          # wrangler.jsonc, which silently redeploys the static site under the
+          # wrong name. An explicit --config is the only reliable selector.
+          command: deploy --config worker/wrangler.toml
 
   deploy-mckenzie-site:
     name: Deploy static site (suzannemckenzie)
@@ -89,5 +91,4 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           wranglerVersion: "4.97.0"
-          workingDirectory: mckenzie/worker
-          command: deploy
+          command: deploy --config mckenzie/worker/wrangler.toml
