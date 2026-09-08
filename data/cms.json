@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:48:58.694Z",
+  "updatedAt": "2026-09-08T22:49:20.716Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -757,7 +757,8 @@
         "image_alt": "Hand-painted bowl with a seashell and starfish",
         "categories": "coastal bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_82",
@@ -766,7 +767,8 @@
         "image_alt": "Hand-painted bowl with abalone and spiral shells",
         "categories": "coastal bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_83",
