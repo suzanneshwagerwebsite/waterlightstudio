@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T23:36:35.516Z",
+  "updatedAt": "2026-09-08T23:36:57.369Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -321,7 +321,8 @@
         "image_alt": "Hand-painted bowl with trees and a red setting sun",
         "categories": "landscape bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_38",
