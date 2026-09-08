@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:44:21.066Z",
+  "updatedAt": "2026-09-08T22:44:43.063Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -578,7 +578,8 @@
         "image_alt": "Hand-painted vase with blue irises",
         "categories": "floral vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "50"
       },
       {
         "id": "gallery_64",
