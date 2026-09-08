@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:51:33.521Z",
+  "updatedAt": "2026-09-08T22:51:55.745Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -907,7 +907,7 @@
         "categories": "",
         "visibility": "visible",
         "sold": false,
-        "price": ""
+        "price": "50"
       },
       {
         "id": "gallery_1786130684033_4mcj4p",
