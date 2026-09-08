@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:45:49.255Z",
+  "updatedAt": "2026-09-08T22:46:11.655Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -657,7 +657,8 @@
         "image_alt": "Hand-painted vase with pink blossoms",
         "categories": "floral vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "50"
       },
       {
         "id": "gallery_72",
@@ -666,7 +667,8 @@
         "image_alt": "Hand-painted vase with a white sailboat on the bay",
         "categories": "coastal vases",
         "visibility": "visible",
-        "sold": false
+        "sold": true,
+        "price": ""
       },
       {
         "id": "gallery_73",
