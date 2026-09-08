@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:42:30.329Z",
+  "updatedAt": "2026-09-08T22:42:52.397Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -435,12 +435,13 @@
       },
       {
         "id": "gallery_49",
-        "title": "Bee Bowl ",
+        "title": "Honey Bee Bowl ",
         "image": "/assets/img/waterlight-edits-18.jpg",
         "image_alt": "Hand-painted vase with green marsh reeds",
         "categories": "landscape vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_50",
@@ -449,7 +450,8 @@
         "image_alt": "Hand-painted vase with a single palm tree",
         "categories": "coastal vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_51",
