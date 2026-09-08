@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:43:14.380Z",
+  "updatedAt": "2026-09-08T22:43:36.283Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -480,7 +480,8 @@
         "image_alt": "Hand-painted vase with peach poppies",
         "categories": "floral vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_54",
@@ -490,7 +491,7 @@
         "categories": "floral vases",
         "visibility": "visible",
         "sold": false,
-        "price": ""
+        "price": "100"
       },
       {
         "id": "gallery_55",
@@ -500,7 +501,7 @@
         "categories": "landscape vases",
         "visibility": "visible",
         "sold": true,
-        "price": ""
+        "price": "100"
       },
       {
         "id": "gallery_56",
