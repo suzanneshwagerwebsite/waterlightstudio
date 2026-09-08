@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:45:27.297Z",
+  "updatedAt": "2026-09-08T22:45:49.255Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -647,7 +647,8 @@
         "image_alt": "Hand-painted vase with a painter and black cat in a landscape",
         "categories": "landscape vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_71",
