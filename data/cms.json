@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:54:08.831Z",
+  "updatedAt": "2026-09-08T22:54:30.874Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -1027,7 +1027,7 @@
         "categories": "",
         "visibility": "visible",
         "sold": false,
-        "price": ""
+        "price": "50"
       },
       {
         "id": "gallery_1786131208901_ewuzy6",
@@ -1207,7 +1207,7 @@
         "categories": "",
         "visibility": "visible",
         "sold": false,
-        "price": ""
+        "price": "50"
       }
     ]
   },
