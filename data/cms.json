@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:44:43.063Z",
+  "updatedAt": "2026-09-08T22:45:05.172Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -588,7 +588,8 @@
         "image_alt": "Hand-painted vase with lavender irises",
         "categories": "floral vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "50"
       },
       {
         "id": "gallery_65",
@@ -597,7 +598,8 @@
         "image_alt": "Hand-painted vase with pink berry branches",
         "categories": "floral vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_66",
