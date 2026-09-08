@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:41:23.417Z",
+  "updatedAt": "2026-09-08T22:41:46.002Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -390,7 +390,8 @@
         "image_alt": "Hand-painted bowl with lemons on leafy branches",
         "categories": "floral bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_45",
@@ -399,7 +400,8 @@
         "image_alt": "Hand-painted vase with trailing leaves and honeybees",
         "categories": "floral vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_46",
