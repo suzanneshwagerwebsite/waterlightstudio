@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:50:05.002Z",
+  "updatedAt": "2026-09-08T22:50:27.083Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -826,7 +826,8 @@
         "image_alt": "Hand-painted vase with a castle on a green hill",
         "categories": "landscape vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_92",
