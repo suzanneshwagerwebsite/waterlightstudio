@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:41:46.002Z",
+  "updatedAt": "2026-09-08T22:42:07.936Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -410,7 +410,8 @@
         "image_alt": "Hand-painted bowl with vines and honeybees",
         "categories": "floral bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_47",
