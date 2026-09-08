@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:47:30.461Z",
+  "updatedAt": "2026-09-08T22:47:52.615Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -717,7 +717,8 @@
         "image_alt": "Hand-thrown blue bowl with delicate green sprigs",
         "categories": "bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_78",
