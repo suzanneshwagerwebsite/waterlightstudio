@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:46:33.496Z",
+  "updatedAt": "2026-09-08T22:46:55.763Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -687,7 +687,8 @@
         "image_alt": "Hand-painted vase with drifting wisteria vines",
         "categories": "floral vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_75",
@@ -696,7 +697,8 @@
         "image_alt": "Hand-painted vase with purple wisteria",
         "categories": "floral vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_76",
