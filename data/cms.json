@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:55:35.409Z",
+  "updatedAt": "2026-09-08T22:55:57.554Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -1147,7 +1147,7 @@
         "categories": "",
         "visibility": "visible",
         "sold": false,
-        "price": ""
+        "price": "250"
       },
       {
         "id": "gallery_1786131836486_vc36ac",
@@ -1157,7 +1157,7 @@
         "categories": "",
         "visibility": "visible",
         "sold": false,
-        "price": ""
+        "price": "100"
       },
       {
         "id": "gallery_1786131937021_0q229o",
@@ -1167,7 +1167,7 @@
         "categories": "",
         "visibility": "visible",
         "sold": false,
-        "price": ""
+        "price": "100"
       },
       {
         "id": "gallery_1786131989470_g4mwqj",
