@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:52:18.193Z",
+  "updatedAt": "2026-09-08T22:52:40.144Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -911,13 +911,13 @@
       },
       {
         "id": "gallery_1786130684033_4mcj4p",
-        "title": "Wysteria Vine ",
+        "title": "Wysteria Vine Bowl",
         "image": "/assets/img/img_0784.jpeg",
         "image_alt": "",
         "categories": "",
         "visibility": "visible",
         "sold": false,
-        "price": ""
+        "price": "100"
       },
       {
         "id": "gallery_1786130706533_w6trq6",
