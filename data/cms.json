@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:52:40.144Z",
+  "updatedAt": "2026-09-08T22:53:02.368Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -937,7 +937,7 @@
         "categories": "",
         "visibility": "visible",
         "sold": false,
-        "price": ""
+        "price": "250"
       },
       {
         "id": "gallery_1786130831417_t3adug",
