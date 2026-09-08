@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:49:43.070Z",
+  "updatedAt": "2026-09-08T22:50:05.002Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -797,7 +797,8 @@
         "image_alt": "Hand-painted vase with willow branches",
         "categories": "floral vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_86",
@@ -815,7 +816,8 @@
         "image_alt": "Hand-painted vase with pastel butterflies",
         "categories": "floral vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_90",
