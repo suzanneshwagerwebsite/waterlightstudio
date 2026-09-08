@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:41:01.214Z",
+  "updatedAt": "2026-09-08T22:41:23.417Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -370,7 +370,8 @@
         "image_alt": "Hand-thrown blue bowl with a star motif at the center",
         "categories": "bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_43",
@@ -379,7 +380,8 @@
         "image_alt": "Hand-painted bowl with lemons and green leaves",
         "categories": "floral bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_44",
