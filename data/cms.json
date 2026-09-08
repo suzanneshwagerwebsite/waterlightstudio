@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:47:52.615Z",
+  "updatedAt": "2026-09-08T22:48:14.748Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -722,12 +722,13 @@
       },
       {
         "id": "gallery_78",
-        "title": "Woodland Tree Vase",
+        "title": "Spring Bowl",
         "image": "/assets/img/waterlight-edits-47.jpg",
         "image_alt": "Hand-painted vase with bare woodland trees",
         "categories": "landscape vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_79",
