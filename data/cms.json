@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:46:55.763Z",
+  "updatedAt": "2026-09-08T22:47:30.461Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -702,12 +702,13 @@
       },
       {
         "id": "gallery_76",
-        "title": "Dolphin Sea Bowl",
+        "title": "Wisteria Sunset",
         "image": "/assets/img/waterlight-edits-45.jpg",
         "image_alt": "Hand-painted bowl with blue dolphins",
         "categories": "coastal bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_77",
