@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:50:27.083Z",
+  "updatedAt": "2026-09-08T22:50:49.324Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -836,7 +836,8 @@
         "image_alt": "Hand-painted bowl with leaves, berries and honeybees",
         "categories": "floral bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_93",
@@ -845,7 +846,8 @@
         "image_alt": "Hand-painted bowl with an orange rose",
         "categories": "floral bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_1784775640869_q46i72",
