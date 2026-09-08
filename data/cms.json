@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T23:43:48.885Z",
+  "updatedAt": "2026-09-08T23:44:12.086Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -609,7 +609,8 @@
         "image_alt": "Hand-painted vase with a palm frond",
         "categories": "coastal vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_67",
