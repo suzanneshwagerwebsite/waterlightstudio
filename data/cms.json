@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:40:38.897Z",
+  "updatedAt": "2026-09-08T22:41:01.214Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -340,7 +340,8 @@
         "image_alt": "Hand-painted bowl with trailing pink blossoms",
         "categories": "floral bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_40",
@@ -349,7 +350,8 @@
         "image_alt": "Hand-painted bowl with pink cherry blossoms and a golden center",
         "categories": "floral bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_41",
@@ -358,7 +360,8 @@
         "image_alt": "Hand-painted bowl with rolling hills and a red sun",
         "categories": "landscape bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_42",
