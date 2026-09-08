@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:38:27.915Z",
+  "updatedAt": "2026-09-08T22:39:06.757Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -222,7 +222,7 @@
         "categories": "coastal vases",
         "visibility": "visible",
         "sold": false,
-        "price": ""
+        "price": "250"
       },
       {
         "id": "gallery_5",
@@ -232,7 +232,7 @@
         "categories": "floral bowls",
         "visibility": "visible",
         "sold": false,
-        "price": ""
+        "price": "250"
       },
       {
         "id": "gallery_6",
