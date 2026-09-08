@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:55:13.349Z",
+  "updatedAt": "2026-09-08T22:55:35.409Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -1177,7 +1177,7 @@
         "categories": "",
         "visibility": "visible",
         "sold": false,
-        "price": ""
+        "price": "250"
       },
       {
         "id": "gallery_1786132045503_mithra",
@@ -1187,7 +1187,7 @@
         "categories": "",
         "visibility": "visible",
         "sold": false,
-        "price": ""
+        "price": "250"
       },
       {
         "id": "gallery_1786132080855_5k93c9",
