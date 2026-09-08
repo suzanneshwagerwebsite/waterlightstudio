@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-01T21:01:04.419Z",
+  "updatedAt": "2026-09-08T21:00:38.848Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -125,7 +125,7 @@
         "date": "",
         "excerpt": "Test",
         "body": "Test",
-        "cover": "",
+        "cover": "/assets/img/img_8581.jpeg",
         "cover_alt": "",
         "visibility": "visible"
       }
