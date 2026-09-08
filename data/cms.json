@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:39:06.757Z",
+  "updatedAt": "2026-09-08T22:40:38.897Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -256,11 +256,13 @@
       },
       {
         "id": "gallery_8",
+        "title": "Magnolia Plate",
         "image": "/assets/img/magnolia-plate.jpg",
         "image_alt": "Handmade plate with magnolia flower",
-        "title": "Magnolia Plate",
         "categories": "floral",
-        "visibility": "visible"
+        "visibility": "visible",
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_9",
@@ -270,7 +272,7 @@
         "categories": "landscape vases",
         "visibility": "visible",
         "sold": true,
-        "price": ""
+        "price": "250"
       },
       {
         "id": "gallery_32",
@@ -280,7 +282,7 @@
         "categories": "coastal bowls",
         "visibility": "visible",
         "sold": true,
-        "price": ""
+        "price": "250"
       },
       {
         "id": "gallery_34",
@@ -289,7 +291,8 @@
         "image_alt": "Hand-painted bowl with a white magnolia blossom",
         "categories": "floral bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_35",
@@ -298,7 +301,8 @@
         "image_alt": "Hand-painted bowl with pink cherry blossoms",
         "categories": "floral bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_36",
@@ -307,7 +311,8 @@
         "image_alt": "Hand-painted bowl with birch trees beside water",
         "categories": "landscape bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_37",
@@ -325,7 +330,8 @@
         "image_alt": "Hand-painted bowl with a yellow hibiscus flower",
         "categories": "floral bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_39",
