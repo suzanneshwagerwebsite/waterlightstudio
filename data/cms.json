@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:42:52.397Z",
+  "updatedAt": "2026-09-08T22:43:14.380Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -460,7 +460,8 @@
         "image_alt": "Hand-painted vase with palm trees",
         "categories": "coastal vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_52",
@@ -469,7 +470,8 @@
         "image_alt": "Hand-painted vase with a pink and white wild rose",
         "categories": "floral vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_53",
