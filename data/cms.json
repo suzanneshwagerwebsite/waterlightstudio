@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:51:55.745Z",
+  "updatedAt": "2026-09-08T22:52:18.193Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -927,7 +927,7 @@
         "categories": "",
         "visibility": "visible",
         "sold": false,
-        "price": ""
+        "price": "50"
       },
       {
         "id": "gallery_1786130805401_n2mtu7",
