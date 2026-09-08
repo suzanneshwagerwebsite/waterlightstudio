@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:43:36.283Z",
+  "updatedAt": "2026-09-08T22:43:58.865Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -510,7 +510,8 @@
         "image_alt": "Hand-painted vase with two palm trees",
         "categories": "coastal vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_57",
@@ -520,7 +521,7 @@
         "categories": "floral vases",
         "visibility": "visible",
         "sold": false,
-        "price": ""
+        "price": "100"
       },
       {
         "id": "gallery_58",
