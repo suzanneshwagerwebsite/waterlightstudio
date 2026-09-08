@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:42:07.936Z",
+  "updatedAt": "2026-09-08T22:42:30.329Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -420,7 +420,8 @@
         "image_alt": "Hand-painted bowl with leaves and honeybees",
         "categories": "floral bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_48",
@@ -430,7 +431,7 @@
         "categories": "coastal vases",
         "visibility": "visible",
         "sold": false,
-        "price": ""
+        "price": "250"
       },
       {
         "id": "gallery_49",
