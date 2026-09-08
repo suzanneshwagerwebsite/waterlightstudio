@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:49:20.716Z",
+  "updatedAt": "2026-09-08T22:49:43.070Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -777,7 +777,8 @@
         "image_alt": "Hand-painted vase with a sunlit pastel grove",
         "categories": "landscape vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_84",
@@ -786,7 +787,8 @@
         "image_alt": "Hand-painted vase with purple irises",
         "categories": "floral vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_85",
