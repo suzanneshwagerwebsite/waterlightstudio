@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:43:58.865Z",
+  "updatedAt": "2026-09-08T22:44:21.066Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -530,7 +530,8 @@
         "image_alt": "Hand-painted vase with willow buds",
         "categories": "floral vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_59",
@@ -548,7 +549,8 @@
         "image_alt": "Hand-painted bowl with green leaves and golden wash",
         "categories": "floral bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_61",
@@ -566,7 +568,8 @@
         "image_alt": "Hand-painted bowl with pastel trees",
         "categories": "landscape bowls",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_63",
