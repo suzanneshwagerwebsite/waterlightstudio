@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:45:05.172Z",
+  "updatedAt": "2026-09-08T22:45:27.297Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -618,7 +618,7 @@
         "categories": "landscape vases",
         "visibility": "visible",
         "sold": true,
-        "price": ""
+        "price": "50"
       },
       {
         "id": "gallery_68",
@@ -627,7 +627,8 @@
         "image_alt": "Hand-painted vase with lemons and leaves",
         "categories": "floral vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "50"
       },
       {
         "id": "gallery_69",
@@ -636,7 +637,8 @@
         "image_alt": "Hand-painted vase with white dandelions",
         "categories": "floral vases",
         "visibility": "visible",
-        "sold": false
+        "sold": false,
+        "price": "50"
       },
       {
         "id": "gallery_70",
