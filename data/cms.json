@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T22:37:45.202Z",
+  "updatedAt": "2026-09-08T22:38:27.915Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -202,7 +202,7 @@
         "categories": "floral bowls",
         "visibility": "visible",
         "sold": false,
-        "price": ""
+        "price": "250"
       },
       {
         "id": "gallery_3",
@@ -212,7 +212,7 @@
         "categories": "floral bowls",
         "visibility": "visible",
         "sold": false,
-        "price": ""
+        "price": "250"
       },
       {
         "id": "gallery_4",
@@ -236,19 +236,23 @@
       },
       {
         "id": "gallery_6",
+        "title": "Palm Shore Planter",
         "image": "/assets/img/palm-shore-planter.jpg",
         "image_alt": "Handmade planter with palm trees and beach scene",
-        "title": "Palm Shore Planter",
         "categories": "coastal landscape",
-        "visibility": "visible"
+        "visibility": "visible",
+        "sold": false,
+        "price": "100"
       },
       {
         "id": "gallery_7",
+        "title": "Meadow Sunset Bowl",
         "image": "/assets/img/meadow-sunset-bowl.jpg",
         "image_alt": "Handmade bowl with painted meadow and sunset",
-        "title": "Meadow Sunset Bowl",
         "categories": "landscape bowls",
-        "visibility": "visible"
+        "visibility": "visible",
+        "sold": false,
+        "price": "250"
       },
       {
         "id": "gallery_8",
