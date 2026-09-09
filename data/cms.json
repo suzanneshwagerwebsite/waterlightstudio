@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-09T01:03:41.739Z",
+  "updatedAt": "2026-09-09T01:04:17.350Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -20,7 +20,7 @@
     "showAboutPrinciples": true,
     "showAboutEngagement": false,
     "showAboutExtra": true,
-    "showAboutCta": true,
+    "showAboutCta": false,
     "showGalleryFilters": true,
     "showGalleryGrid": true,
     "logoSize": 7,
