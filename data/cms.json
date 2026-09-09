@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-09T00:36:52.076Z",
+  "updatedAt": "2026-09-09T00:37:31.260Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -13,13 +13,13 @@
     "showProductsSection": true,
     "showFeatureSection": true,
     "showValuesSection": true,
-    "showJournalSection": false,
+    "showJournalSection": true,
     "showNewsletterSection": true,
     "showAboutHero": true,
     "showAboutOrigin": true,
     "showAboutPrinciples": true,
     "showAboutEngagement": false,
-    "showAboutExtra": true,
+    "showAboutExtra": false,
     "showAboutCta": false,
     "showGalleryFilters": true,
     "showGalleryGrid": true,
