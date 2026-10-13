@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-09T01:20:50.496Z",
+  "updatedAt": "2026-10-13T16:44:36.593Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -126,6 +126,16 @@
         "excerpt": "Test",
         "body": "Test",
         "cover": "/assets/img/img_8581.jpeg",
+        "cover_alt": "",
+        "visibility": "visible"
+      },
+      {
+        "id": "post_1791909874278_154ph4",
+        "title": "New work",
+        "date": "",
+        "excerpt": "",
+        "body": "",
+        "cover": "",
         "cover_alt": "",
         "visibility": "visible"
       }
