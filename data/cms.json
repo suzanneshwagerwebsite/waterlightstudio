@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-13T20:38:04.638Z",
+  "updatedAt": "2026-10-13T20:39:09.218Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -165,8 +165,8 @@
     "principles": [
       {
         "id": "principle_1",
-        "title": "Stoneware and Pure Oxide Stains",
-        "description": "Each hand thrown piece is carefully painted in a style that is similar to watercolor. The washes are light and delicate. "
+        "title": "Process",
+        "description": "Glazes"
       }
     ],
     "engagement": [
