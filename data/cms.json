@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-13T20:39:09.218Z",
+  "updatedAt": "2026-11-02T00:07:36.000Z",
   "settings": {
     "sectionOrder": [
       "hero",
@@ -485,6 +485,16 @@
         "price": "250"
       },
       {
+        "id": "gallery_1793578053762_wl2026",
+        "title": "Palm Bowl",
+        "image": "/assets/img/studio-palm-bowl.jpg",
+        "image_alt": "Hand-painted Palm Bowl by Waterlight Studio",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false,
+        "price": "250"
+      },
+      {
         "id": "gallery_53",
         "title": "Palm Bowl",
         "image": "/assets/img/waterlight-edits-22.jpg",
@@ -884,8 +894,8 @@
       {
         "id": "gallery_1786130527532_n6fdy2",
         "title": "Eucalyptus in the Wind",
-        "image": "/assets/img/img_0799.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-eucalyptus-in-the-wind.jpg",
+        "image_alt": "Hand-painted Eucalyptus in the Wind by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -894,8 +904,18 @@
       {
         "id": "gallery_1786130558315_706ib8",
         "title": "Wysteria Plate",
-        "image": "/assets/img/img_0796.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-wysteria-plate.jpg",
+        "image_alt": "Hand-painted Wysteria Plate by Waterlight Studio",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": "100"
+      },
+      {
+        "id": "gallery_1793578053756_wl2026",
+        "title": "Wysteria Plate",
+        "image": "/assets/img/studio-wysteria-plate-2.jpg",
+        "image_alt": "Hand-painted Wysteria Plate by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -904,8 +924,18 @@
       {
         "id": "gallery_1786130617516_i9y6us",
         "title": "Cherry Blossom Spring Bowl",
-        "image": "/assets/img/img_0792.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-cherry-blossom-spring-bowl.jpg",
+        "image_alt": "Hand-painted Cherry Blossom Spring Bowl by Waterlight Studio",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": "250"
+      },
+      {
+        "id": "gallery_1793578053758_wl2026",
+        "title": "Cherry Blossom Spring Bowl",
+        "image": "/assets/img/studio-cherry-blossom-spring-bowl-2.jpg",
+        "image_alt": "Hand-painted Cherry Blossom Spring Bowl by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -914,8 +944,8 @@
       {
         "id": "gallery_1786130644450_u2rztl",
         "title": "Leaf Cup",
-        "image": "/assets/img/img_0787.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-leaf-cup.jpg",
+        "image_alt": "Hand-painted Leaf Cup by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -924,8 +954,8 @@
       {
         "id": "gallery_1786130684033_4mcj4p",
         "title": "Wysteria Vine Bowl",
-        "image": "/assets/img/img_0784.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-wysteria-vine-bowl.jpg",
+        "image_alt": "Hand-painted Wysteria Vine Bowl by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -934,8 +964,18 @@
       {
         "id": "gallery_1786130706533_w6trq6",
         "title": "Plumeria Cup",
-        "image": "/assets/img/img_0783.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-plumeria-cup.jpg",
+        "image_alt": "Hand-painted Plumeria Cup by Waterlight Studio",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": "50"
+      },
+      {
+        "id": "gallery_1793578053760_wl2026",
+        "title": "Plumeria Cup",
+        "image": "/assets/img/studio-plumeria-cup-2.jpg",
+        "image_alt": "Hand-painted Plumeria Cup by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -944,8 +984,8 @@
       {
         "id": "gallery_1786130805401_n2mtu7",
         "title": "Peach Rose Bowl",
-        "image": "/assets/img/img_0781.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-peach-rose-bowl.jpg",
+        "image_alt": "Hand-painted Peach Rose Bowl by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -954,8 +994,8 @@
       {
         "id": "gallery_1786130831417_t3adug",
         "title": "Peach Rose Bowl",
-        "image": "/assets/img/img_0778.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-peach-rose-bowl-2.jpg",
+        "image_alt": "Hand-painted Peach Rose Bowl by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -964,8 +1004,8 @@
       {
         "id": "gallery_1786130867134_jw5tsg",
         "title": "Wild Herbs Plate",
-        "image": "/assets/img/img_0776.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-wild-herbs-plate.jpg",
+        "image_alt": "Hand-painted Wild Herbs Plate by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -974,8 +1014,8 @@
       {
         "id": "gallery_1786130902368_q194rv",
         "title": "Sage Bowl",
-        "image": "/assets/img/img_0770.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-sage-bowl-2.jpg",
+        "image_alt": "Hand-painted Sage Bowl by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -984,8 +1024,8 @@
       {
         "id": "gallery_1786130925551_u3k3q1",
         "title": "Sage Bowl",
-        "image": "/assets/img/img_0769.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-sage-bowl.jpg",
+        "image_alt": "Hand-painted Sage Bowl by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -994,8 +1034,8 @@
       {
         "id": "gallery_1786130963534_b1g0el",
         "title": "Grapes Plate",
-        "image": "/assets/img/img_0767.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-grapes-plate.jpg",
+        "image_alt": "Hand-painted Grapes Plate by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1004,8 +1044,8 @@
       {
         "id": "gallery_1786131008051_6kbnm1",
         "title": "Grapes Plate",
-        "image": "/assets/img/img_0768.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-grapes-plate-2.jpg",
+        "image_alt": "Hand-painted Grapes Plate by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1014,8 +1054,8 @@
       {
         "id": "gallery_1786131048151_4bawz6",
         "title": "Rosebud Bowl",
-        "image": "/assets/img/img_0763.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-rosebud-bowl.jpg",
+        "image_alt": "Hand-painted Rosebud Bowl by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1024,8 +1064,8 @@
       {
         "id": "gallery_1786131084369_uuzc97",
         "title": "Rosebud Vase",
-        "image": "/assets/img/img_0762.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-rosebud-vase.jpg",
+        "image_alt": "Hand-painted Rosebud Vase by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1034,18 +1074,28 @@
       {
         "id": "gallery_1786131111668_scosoa",
         "title": "Rosebud Plate",
-        "image": "/assets/img/img_0760.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-rosebud-plate.jpg",
+        "image_alt": "Hand-painted Rosebud Plate by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
         "price": "50"
       },
       {
+        "id": "gallery_1793578053738_wl2026",
+        "title": "Rosebud Set",
+        "image": "/assets/img/studio-rosebud-set.jpg",
+        "image_alt": "Hand-painted rosebud vase, plate and bowl by Waterlight Studio",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
         "id": "gallery_1786131208901_ewuzy6",
         "title": "Windy Branches",
-        "image": "/assets/img/img_0755.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-windy-branches.jpg",
+        "image_alt": "Hand-painted Windy Branches by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1054,8 +1104,18 @@
       {
         "id": "gallery_1786131245319_862r82",
         "title": "Rosebud Jar",
-        "image": "/assets/img/img_0752.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-rosebud-jar.jpg",
+        "image_alt": "Hand-painted Rosebud Jar by Waterlight Studio",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": "50"
+      },
+      {
+        "id": "gallery_1793578053735_wl2026",
+        "title": "Rosebud Jar",
+        "image": "/assets/img/studio-rosebud-jar-2.jpg",
+        "image_alt": "Hand-painted Rosebud Jar by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1064,8 +1124,8 @@
       {
         "id": "gallery_1786131283952_s0cuqd",
         "title": "Lavender Plate",
-        "image": "/assets/img/img_0751.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-lavender-plate.jpg",
+        "image_alt": "Hand-painted Lavender Plate by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1074,8 +1134,8 @@
       {
         "id": "gallery_1786131320053_7slvcc",
         "title": "Grapes Plate medium",
-        "image": "/assets/img/img_0750.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-grapes-plate-medium.jpg",
+        "image_alt": "Hand-painted Grapes Plate medium by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1084,8 +1144,8 @@
       {
         "id": "gallery_1786131380503_lptv9j",
         "title": "Tangerine Plate",
-        "image": "/assets/img/img_0749.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-tangerine-plate.jpg",
+        "image_alt": "Hand-painted Tangerine Plate by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1094,8 +1154,8 @@
       {
         "id": "gallery_1786131409603_b9mcjn",
         "title": "Plumeria Jar",
-        "image": "/assets/img/img_0727.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-plumeria-jar.jpg",
+        "image_alt": "Hand-painted Plumeria Jar by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1104,8 +1164,8 @@
       {
         "id": "gallery_1786131481020_visy6e",
         "title": "Spring Blossoms Bowl",
-        "image": "/assets/img/img_0745.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-spring-blossoms-bowl.jpg",
+        "image_alt": "Hand-painted Spring Blossoms Bowl by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1114,8 +1174,8 @@
       {
         "id": "gallery_1786131529370_dbsnci",
         "title": "Herb Vines Bowl",
-        "image": "/assets/img/img_0747.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-herb-vines-bowl.jpg",
+        "image_alt": "Hand-painted Herb Vines Bowl by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1124,8 +1184,18 @@
       {
         "id": "gallery_1786131567520_8a1lqp",
         "title": "California Poppy Jar",
-        "image": "/assets/img/img_0742.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-california-poppy-jar.jpg",
+        "image_alt": "Hand-painted California Poppy Jar by Waterlight Studio",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": "100"
+      },
+      {
+        "id": "gallery_1793578053744_wl2026",
+        "title": "California Poppy Jar",
+        "image": "/assets/img/studio-california-poppy-jar-2.jpg",
+        "image_alt": "Hand-painted California Poppy Jar by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1134,8 +1204,8 @@
       {
         "id": "gallery_1786131605937_xhq0o1",
         "title": "Willow Vase",
-        "image": "/assets/img/img_0741.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-willow-vase.jpg",
+        "image_alt": "Hand-painted Willow Vase by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1144,8 +1214,8 @@
       {
         "id": "gallery_1786131643604_5xqynr",
         "title": "California Sunrise Vase",
-        "image": "/assets/img/img_0740.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-california-sunrise-vase.jpg",
+        "image_alt": "Hand-painted California Sunrise Vase by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1154,8 +1224,18 @@
       {
         "id": "gallery_1786131698553_dbkchl",
         "title": "California Poppy Bowl",
-        "image": "/assets/img/img_0730.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-california-poppy-bowl.jpg",
+        "image_alt": "Hand-painted California Poppy Bowl by Waterlight Studio",
+        "categories": "",
+        "visibility": "visible",
+        "sold": false,
+        "price": "250"
+      },
+      {
+        "id": "gallery_1793578053722_wl2026",
+        "title": "California Poppy Bowl",
+        "image": "/assets/img/studio-california-poppy-bowl-2.jpg",
+        "image_alt": "Hand-painted California Poppy Bowl by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1164,8 +1244,8 @@
       {
         "id": "gallery_1786131836486_vc36ac",
         "title": "Meadow and Leaves Bowl",
-        "image": "/assets/img/img_0733.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-meadow-and-leaves-bowl.jpg",
+        "image_alt": "Hand-painted Meadow and Leaves Bowl by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1174,8 +1254,8 @@
       {
         "id": "gallery_1786131937021_0q229o",
         "title": "Meadow and Leaves Vase",
-        "image": "/assets/img/img_0725.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-meadow-and-leaves-vase.jpg",
+        "image_alt": "Hand-painted Meadow and Leaves Vase by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1184,8 +1264,8 @@
       {
         "id": "gallery_1786131989470_g4mwqj",
         "title": "Elderberry Bowl",
-        "image": "/assets/img/img_0724.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-elderberry-bowl.jpg",
+        "image_alt": "Hand-painted Elderberry Bowl by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1194,8 +1274,8 @@
       {
         "id": "gallery_1786132045503_mithra",
         "title": "China Sunset Jar",
-        "image": "/assets/img/img_0721.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-china-sunset-jar.jpg",
+        "image_alt": "Hand-painted China Sunset Jar by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1204,8 +1284,8 @@
       {
         "id": "gallery_1786132080855_5k93c9",
         "title": "China Sunset Jar lid",
-        "image": "/assets/img/img_0722.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-china-sunset-jar-lid.jpg",
+        "image_alt": "Hand-painted China Sunset Jar lid by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
@@ -1214,12 +1294,42 @@
       {
         "id": "gallery_1786132109505_8he7vj",
         "title": "Malibu Palms",
-        "image": "/assets/img/img_0720.jpeg",
-        "image_alt": "",
+        "image": "/assets/img/studio-malibu-palms.jpg",
+        "image_alt": "Hand-painted Malibu Palms by Waterlight Studio",
         "categories": "",
         "visibility": "visible",
         "sold": false,
         "price": "50"
+      },
+      {
+        "id": "gallery_1793578053725_wl2026",
+        "title": "Weeping Vines Vase",
+        "image": "/assets/img/studio-weeping-vines-vase.jpg",
+        "image_alt": "Hand-painted Weeping Vines Vase by Waterlight Studio",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1793578053726_wl2026",
+        "title": "Spring Garland Bowl",
+        "image": "/assets/img/studio-spring-garland-bowl.jpg",
+        "image_alt": "Hand-painted Spring Garland Bowl by Waterlight Studio",
+        "categories": "floral bowls",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
+      },
+      {
+        "id": "gallery_1793578053747_wl2026",
+        "title": "California Poppy Vase",
+        "image": "/assets/img/studio-california-poppy-vase.jpg",
+        "image_alt": "Hand-painted California Poppy Vase by Waterlight Studio",
+        "categories": "floral vases",
+        "visibility": "visible",
+        "sold": false,
+        "price": ""
       }
     ]
   },
