@@ -68,6 +68,9 @@ jobs:
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
     steps:
       - uses: actions/checkout@v4
+      # The gallery is shared: Waterlight's data/cms.json is the source of truth.
+      - name: Sync gallery from Waterlight
+        run: node .github/scripts/sync-mckenzie-gallery.js
       - name: Deploy Static Assets Worker
         uses: cloudflare/wrangler-action@v3
         with:
